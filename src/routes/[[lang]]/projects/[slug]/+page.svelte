@@ -54,8 +54,8 @@
 
 <ProjectDetailHeader {project} />
 
-<section class="bg-bg-primary py-20 md:py-28">
-	<div class="mx-auto max-w-4xl px-6 lg:px-8">
+<section class="bg-bg-primary py-20 md:py-32 lg:py-40">
+	<div class="mx-auto max-w-5xl px-6 md:px-12 lg:px-16">
 		<div class="space-y-16">
 			<div>
 				<span class="text-sm font-medium uppercase tracking-widest text-accent"
@@ -82,8 +82,8 @@
 	</div>
 </section>
 
-<section class="bg-bg-secondary py-20 md:py-28">
-	<div class="mx-auto max-w-7xl px-6 lg:px-8">
+<section class="bg-bg-secondary py-20 md:py-32 lg:py-40">
+	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
 		<span class="text-sm font-medium uppercase tracking-widest text-accent"
 			>{$_('project_detail.gallery_eyebrow')}</span
 		>
@@ -94,8 +94,8 @@
 	</div>
 </section>
 
-<section class="bg-bg-primary py-20 md:py-28">
-	<div class="mx-auto max-w-4xl px-6 lg:px-8">
+<section class="bg-bg-primary py-20 md:py-32 lg:py-40">
+	<div class="mx-auto max-w-5xl px-6 md:px-12 lg:px-16">
 		<span class="text-sm font-medium uppercase tracking-widest text-accent"
 			>{$_('project_detail.specs_eyebrow')}</span
 		>

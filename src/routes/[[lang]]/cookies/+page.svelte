@@ -28,7 +28,7 @@
 />
 
 <section class="bg-bg-primary py-24 md:py-32">
-	<div class="mx-auto max-w-3xl px-6 lg:px-8">
+	<div class="mx-auto max-w-3xl px-6 md:px-12 lg:px-16">
 		<h1 class="font-serif text-4xl font-light md:text-5xl lg:text-6xl">{pageData.title}</h1>
 		<p class="mt-4 text-sm text-text-secondary">
 			{$_('legal.last_updated')}: {pageData.lastUpdated}

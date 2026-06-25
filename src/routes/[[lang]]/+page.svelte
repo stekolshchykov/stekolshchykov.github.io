@@ -89,7 +89,7 @@
 <BrandIntroSection />
 
 <!-- Signature Detail -->
-<section class="relative overflow-hidden bg-bg-primary py-20 md:py-28 lg:py-36">
+<section class="relative overflow-hidden bg-bg-primary py-20 md:py-32 lg:py-40 lg:py-36">
 	<div
 		class="mx-auto grid max-w-[1440px] items-center gap-10 px-6 md:px-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:px-16"
 	>
@@ -189,7 +189,7 @@
 <ServicesPreviewSection />
 
 <!-- By the Numbers -->
-<section class="border-y border-text-primary/10 bg-bg-secondary py-16 md:py-24">
+<section class="border-y border-text-primary/10 bg-bg-secondary py-20 md:py-32 lg:py-40">
 	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
 		<div class="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-12">
 			{#each stats as stat}

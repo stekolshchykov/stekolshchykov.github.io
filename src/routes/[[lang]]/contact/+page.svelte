@@ -47,14 +47,14 @@
 	alignment="center"
 />
 
-<section class="bg-bg-primary py-20 md:py-28">
-	<div class="mx-auto max-w-7xl px-6 lg:px-8">
+<section class="bg-bg-primary py-20 md:py-32 lg:py-40">
+	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
 		<ContactInfoSection />
 	</div>
 </section>
 
-<section class="bg-bg-secondary py-20 md:py-28">
-	<div class="mx-auto max-w-7xl px-6 lg:px-8">
+<section class="bg-bg-secondary py-20 md:py-32 lg:py-40">
+	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
 		<div class="grid gap-12 lg:grid-cols-2">
 			<div>
 				<h2 class="font-serif text-2xl font-light md:text-3xl">{$_('contact.hours_label')}</h2>

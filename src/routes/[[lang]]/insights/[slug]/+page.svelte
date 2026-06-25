@@ -72,8 +72,8 @@
 	height="large"
 />
 
-<article class="bg-bg-primary py-20 md:py-28">
-	<div class="mx-auto max-w-3xl px-6 lg:px-8">
+<article class="bg-bg-primary py-20 md:py-32 lg:py-40">
+	<div class="mx-auto max-w-3xl px-6 md:px-12 lg:px-16">
 		<div
 			class="mb-12 flex items-center gap-4 font-sans text-xs uppercase tracking-[0.12em] text-text-secondary"
 		>
@@ -115,7 +115,7 @@
 </article>
 
 {#if related.length > 0}
-	<section class="bg-bg-secondary py-20 md:py-28">
+	<section class="bg-bg-secondary py-20 md:py-32 lg:py-40">
 		<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
 			<h2 class="mb-12 font-serif text-3xl text-text-primary md:text-4xl">
 				<SplitTextReveal as="span" text={$_('insights.related_projects_label')} />
@@ -131,7 +131,7 @@
 	</section>
 {/if}
 
-<section class="bg-bg-primary py-16 md:py-24">
+<section class="bg-bg-primary py-20 md:py-32 lg:py-40">
 	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
 		<a
 			href="/en/insights/"

@@ -23,7 +23,7 @@
 	];
 </script>
 
-<section class="bg-bg-secondary py-16 md:py-24">
+<section class="bg-bg-secondary py-20 md:py-32 lg:py-40">
 	<div class="mx-auto max-w-4xl px-6 md:px-12 lg:px-16">
 		<Eyebrow text={$_('project_detail.specs_eyebrow')} class="mb-4" />
 		<Heading as="h2" variant="serif" class="mb-10 text-3xl text-text-primary md:text-4xl">

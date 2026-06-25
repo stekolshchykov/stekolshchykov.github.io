@@ -49,7 +49,7 @@
 	}
 </script>
 
-<section bind:this={section} class="bg-bg-primary py-16 md:py-24">
+<section bind:this={section} class="bg-bg-primary py-20 md:py-32 lg:py-40">
 	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
 		<div class="mb-12">
 			<Eyebrow text={$_('project_detail.gallery_eyebrow')} class="gallery-item mb-4" />

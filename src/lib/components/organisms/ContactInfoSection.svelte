@@ -56,7 +56,7 @@
 	});
 </script>
 
-<section bind:this={section} class="bg-bg-primary">
+<div bind:this={section}>
 	<div class="grid gap-12 lg:grid-cols-2 lg:gap-20">
 		<div class="space-y-6">
 			<Heading as="h2" variant="serif" class="contact-fade text-3xl text-text-primary md:text-4xl">
@@ -101,4 +101,4 @@
 			{/each}
 		</div>
 	</div>
-</section>
+</div>

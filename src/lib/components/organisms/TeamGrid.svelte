@@ -32,14 +32,12 @@
 	});
 </script>
 
-<section bind:this={section} class="bg-bg-primary py-16 md:py-24">
-	<div class="mx-auto max-w-7xl px-6">
-		<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-			{#each team as member}
-				<div class="team-fade">
-					<TeamCard {member} />
-				</div>
-			{/each}
-		</div>
+<div bind:this={section}>
+	<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+		{#each team as member}
+			<div class="team-fade">
+				<TeamCard {member} />
+			</div>
+		{/each}
 	</div>
-</section>
+</div>

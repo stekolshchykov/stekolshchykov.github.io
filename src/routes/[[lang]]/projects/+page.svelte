@@ -33,8 +33,8 @@
 	image="/images/projects-hero.jpg"
 />
 
-<section class="bg-bg-primary py-20 md:py-28">
-	<div class="mx-auto max-w-7xl px-6 lg:px-8">
+<section class="bg-bg-primary py-20 md:py-32 lg:py-40">
+	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
 		<ProjectGrid {projects} />
 	</div>
 </section>

@@ -38,8 +38,8 @@
 
 <StickyScrollNarrative items={narrativeItems} eyebrow={$_('process.hero_eyebrow')} />
 
-<section class="bg-bg-secondary py-20 md:py-28">
-	<div class="mx-auto max-w-4xl px-6 text-center lg:px-8">
+<section class="bg-bg-secondary py-20 md:py-32 lg:py-40">
+	<div class="mx-auto max-w-4xl px-6 text-center md:px-12 lg:px-16">
 		<h2 class="mb-6 font-serif text-3xl font-light text-text-primary md:text-4xl">
 			{$_('process.cta_headline')}
 		</h2>

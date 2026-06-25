@@ -59,8 +59,8 @@
 	image="/images/services-hero.jpg"
 />
 
-<section class="bg-bg-secondary py-20 md:py-28">
-	<div class="mx-auto max-w-7xl px-6 lg:px-8">
+<section class="bg-bg-secondary py-20 md:py-32 lg:py-40">
+	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
 		<div class="mb-12 max-w-2xl">
 			<span class="text-sm font-medium uppercase tracking-widest text-accent"
 				>{$_('services.residential_eyebrow')}</span
@@ -76,8 +76,8 @@
 	</div>
 </section>
 
-<section class="bg-bg-primary py-20 md:py-28">
-	<div class="mx-auto max-w-7xl px-6 lg:px-8">
+<section class="bg-bg-primary py-20 md:py-32 lg:py-40">
+	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
 		<div class="mb-12 max-w-2xl">
 			<span class="text-sm font-medium uppercase tracking-widest text-accent"
 				>{$_('services.commercial_eyebrow')}</span
@@ -93,8 +93,8 @@
 	</div>
 </section>
 
-<section class="bg-bg-secondary py-20 md:py-28">
-	<div class="mx-auto max-w-7xl px-6 lg:px-8">
+<section class="bg-bg-secondary py-20 md:py-32 lg:py-40">
+	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
 		<div class="mb-12 text-center">
 			<span class="text-sm font-medium uppercase tracking-widest text-accent"
 				>{$_('services.process_eyebrow')}</span
@@ -107,16 +107,8 @@
 	</div>
 </section>
 
-<section class="bg-bg-primary py-20 md:py-28">
-	<div class="mx-auto max-w-7xl px-6 lg:px-8">
-		<div class="mb-12 text-center">
-			<span class="text-sm font-medium uppercase tracking-widest text-accent"
-				>{$_('services.materials_eyebrow')}</span
-			>
-			<h2 class="mt-4 font-serif text-3xl font-light md:text-4xl lg:text-5xl">
-				{$_('services.materials_headline')}
-			</h2>
-		</div>
+<section class="bg-bg-primary py-20 md:py-32 lg:py-40">
+	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
 		<MaterialsShowcase {materials} />
 	</div>
 </section>

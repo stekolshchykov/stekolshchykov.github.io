@@ -38,8 +38,8 @@
 	alignment="center"
 />
 
-<section class="bg-bg-primary py-20 md:py-28">
-	<div class="mx-auto max-w-7xl px-6 lg:px-8">
+<section class="bg-bg-primary py-20 md:py-32 lg:py-40">
+	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
 		<div class="grid gap-12 lg:grid-cols-2 lg:gap-20">
 			<div>
 				<span class="text-sm font-medium uppercase tracking-widest text-accent"
@@ -57,8 +57,8 @@
 	</div>
 </section>
 
-<section class="bg-bg-secondary py-20 md:py-28">
-	<div class="mx-auto max-w-7xl px-6 lg:px-8">
+<section class="bg-bg-secondary py-20 md:py-32 lg:py-40">
+	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
 		<div class="grid gap-12 lg:grid-cols-2 lg:gap-20">
 			<div class="order-2 lg:order-1">
 				<img
@@ -89,8 +89,8 @@
 	</div>
 </section>
 
-<section class="bg-bg-primary py-20 md:py-28">
-	<div class="mx-auto max-w-7xl px-6 lg:px-8">
+<section class="bg-bg-primary py-20 md:py-32 lg:py-40">
+	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
 		<div class="mb-12 max-w-2xl">
 			<span class="text-sm font-medium uppercase tracking-widest text-accent"
 				>{$_('about.team_eyebrow')}</span
@@ -104,8 +104,8 @@
 	</div>
 </section>
 
-<section class="bg-bg-secondary py-20 md:py-28">
-	<div class="mx-auto max-w-7xl px-6 lg:px-8">
+<section class="bg-bg-secondary py-20 md:py-32 lg:py-40">
+	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
 		<div class="mb-12 text-center">
 			<span class="text-sm font-medium uppercase tracking-widest text-accent"
 				>{$_('about.why_us_eyebrow')}</span

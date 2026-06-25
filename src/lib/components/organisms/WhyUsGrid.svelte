@@ -31,26 +31,22 @@
 	});
 </script>
 
-<section bind:this={section} class="bg-bg-secondary py-20 md:py-32 lg:py-40">
-	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
-		<div class="border-t border-text-primary/10">
-			{#each items as item, i}
-				<div
-					class="why-fade flex flex-col gap-4 border-b border-text-primary/10 py-8 md:flex-row md:items-baseline md:gap-12 lg:gap-20"
-				>
-					<span class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-accent">
-						{String(i + 1).padStart(2, '0')}
-					</span>
-					<h3
-						class="flex-1 font-serif text-2xl font-light text-text-primary md:text-3xl lg:text-4xl"
-					>
-						{item.title}
-					</h3>
-					<p class="flex-1 font-sans text-text-secondary md:max-w-md">
-						{item.description}
-					</p>
-				</div>
-			{/each}
-		</div>
+<div bind:this={section}>
+	<div class="border-t border-text-primary/10">
+		{#each items as item, i}
+			<div
+				class="why-fade flex flex-col gap-4 border-b border-text-primary/10 py-8 md:flex-row md:items-baseline md:gap-12 lg:gap-20"
+			>
+				<span class="font-sans text-xs font-medium uppercase tracking-[0.2em] text-accent">
+					{String(i + 1).padStart(2, '0')}
+				</span>
+				<h3 class="flex-1 font-serif text-2xl font-light text-text-primary md:text-3xl lg:text-4xl">
+					{item.title}
+				</h3>
+				<p class="flex-1 font-sans text-text-secondary md:max-w-md">
+					{item.description}
+				</p>
+			</div>
+		{/each}
 	</div>
-</section>
+</div>

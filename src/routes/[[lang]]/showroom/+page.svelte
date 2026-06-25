@@ -145,7 +145,7 @@
 	</div>
 </section>
 
-<section class="bg-bg-secondary py-20 md:py-28">
+<section class="bg-bg-secondary py-20 md:py-32 lg:py-40">
 	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
 		<div class="grid gap-12 lg:grid-cols-2 lg:gap-20">
 			<div>

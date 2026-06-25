@@ -67,8 +67,8 @@
 	height="large"
 />
 
-<section class="bg-bg-primary py-20 md:py-28">
-	<div class="mx-auto max-w-4xl px-6 lg:px-8">
+<section class="bg-bg-primary py-20 md:py-32 lg:py-40">
+	<div class="mx-auto max-w-5xl px-6 md:px-12 lg:px-16">
 		<div class="grid gap-12 lg:grid-cols-3">
 			<div class="lg:col-span-2">
 				<p
@@ -113,8 +113,8 @@
 	</div>
 </section>
 
-<section class="bg-bg-secondary py-20 md:py-28">
-	<div class="mx-auto max-w-7xl px-6 lg:px-8">
+<section class="bg-bg-secondary py-20 md:py-32 lg:py-40">
+	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
 		<div class="grid gap-6 md:grid-cols-2">
 			<ImageReveal
 				src={imageWithFallback(
@@ -135,8 +135,8 @@
 	</div>
 </section>
 
-<section class="bg-bg-primary py-20 md:py-28">
-	<div class="mx-auto max-w-4xl px-6 lg:px-8">
+<section class="bg-bg-primary py-20 md:py-32 lg:py-40">
+	<div class="mx-auto max-w-5xl px-6 md:px-12 lg:px-16">
 		<div class="grid gap-12 md:grid-cols-2">
 			<div>
 				<h2 class="mb-4 font-sans text-xs uppercase tracking-[0.15em] text-accent">
@@ -155,7 +155,7 @@
 </section>
 
 {#if related.length > 0}
-	<section class="bg-bg-secondary py-20 md:py-28">
+	<section class="bg-bg-secondary py-20 md:py-32 lg:py-40">
 		<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
 			<h2 class="mb-12 font-serif text-3xl text-text-primary md:text-4xl">
 				<SplitTextReveal as="span" text="Related materials" />
@@ -189,8 +189,8 @@
 	</section>
 {/if}
 
-<section class="bg-bg-primary py-20 md:py-28">
-	<div class="mx-auto max-w-4xl px-6 text-center lg:px-8">
+<section class="bg-bg-primary py-20 md:py-32 lg:py-40">
+	<div class="mx-auto max-w-4xl px-6 text-center md:px-12 lg:px-16">
 		<h2 class="mb-6 font-serif text-3xl font-light text-text-primary md:text-4xl">
 			{$_('materials.cta_headline')}
 		</h2>

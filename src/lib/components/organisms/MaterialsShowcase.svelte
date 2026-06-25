@@ -47,52 +47,50 @@
 	});
 </script>
 
-<section bind:this={section} class="bg-bg-secondary py-20 md:py-32 lg:py-40">
-	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
-		<div class="mb-12 max-w-2xl md:mb-16">
-			<div class="material-fade">
-				<Eyebrow text={eyebrow} class="mb-4" />
-			</div>
-			<div class="material-fade">
-				<Heading as="h2" variant="serif" class="text-3xl text-text-primary md:text-4xl lg:text-5xl">
-					{headline}
-				</Heading>
-			</div>
-			<div class="material-fade mt-6">
-				<Text variant="body-lg" class="text-text-secondary">
-					{statement}
-				</Text>
-			</div>
+<div bind:this={section}>
+	<div class="mb-12 max-w-2xl md:mb-16">
+		<div class="material-fade">
+			<Eyebrow text={eyebrow} class="mb-4" />
 		</div>
-
-		{#if hero}
-			<div
-				class="material-fade group relative mb-4 aspect-[21/9] overflow-hidden bg-bg-primary md:mb-6"
-			>
-				<img
-					src={hero.image.src}
-					alt={hero.image.alt}
-					loading="lazy"
-					class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-				/>
-				<div
-					class="absolute inset-0 bg-gradient-to-r from-bg-primary/80 via-bg-primary/20 to-transparent"
-				></div>
-				<div class="absolute inset-x-0 bottom-0 p-6 md:p-10">
-					<p class="mb-2 font-sans text-xs font-medium uppercase tracking-[0.2em] text-accent">
-						Featured material
-					</p>
-					<h3 class="font-serif text-3xl text-text-primary md:text-4xl lg:text-5xl">{hero.name}</h3>
-				</div>
-			</div>
-		{/if}
-
-		<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6">
-			{#each remainder as material}
-				<div class="material-fade">
-					<MaterialCard {material} class="text-lg" />
-				</div>
-			{/each}
+		<div class="material-fade">
+			<Heading as="h2" variant="serif" class="text-3xl text-text-primary md:text-4xl lg:text-5xl">
+				{headline}
+			</Heading>
+		</div>
+		<div class="material-fade mt-6">
+			<Text variant="body-lg" class="text-text-secondary">
+				{statement}
+			</Text>
 		</div>
 	</div>
-</section>
+
+	{#if hero}
+		<div
+			class="material-fade group relative mb-4 aspect-[21/9] overflow-hidden bg-bg-primary md:mb-6"
+		>
+			<img
+				src={hero.image.src}
+				alt={hero.image.alt}
+				loading="lazy"
+				class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+			/>
+			<div
+				class="absolute inset-0 bg-gradient-to-r from-bg-primary/80 via-bg-primary/20 to-transparent"
+			></div>
+			<div class="absolute inset-x-0 bottom-0 p-6 md:p-10">
+				<p class="mb-2 font-sans text-xs font-medium uppercase tracking-[0.2em] text-accent">
+					Featured material
+				</p>
+				<h3 class="font-serif text-3xl text-text-primary md:text-4xl lg:text-5xl">{hero.name}</h3>
+			</div>
+		</div>
+	{/if}
+
+	<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6">
+		{#each remainder as material}
+			<div class="material-fade">
+				<MaterialCard {material} class="text-lg" />
+			</div>
+		{/each}
+	</div>
+</div>

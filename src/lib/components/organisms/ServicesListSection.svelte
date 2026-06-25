@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { _ } from 'svelte-i18n';
 	import gsap from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	import type { Service } from '$lib/types/furniture';
@@ -34,14 +33,12 @@
 	});
 </script>
 
-<section {id} bind:this={section} class="bg-bg-primary py-16 md:py-24">
-	<div class="mx-auto max-w-7xl px-6">
-		<div class="space-y-16">
-			{#each services as service}
-				<div class="service-list-fade">
-					<ServiceCard {service} variant="horizontal" />
-				</div>
-			{/each}
-		</div>
+<div {id} bind:this={section}>
+	<div class="space-y-14 md:space-y-16">
+		{#each services as service}
+			<div class="service-list-fade">
+				<ServiceCard {service} variant="horizontal" />
+			</div>
+		{/each}
 	</div>
-</section>
+</div>
