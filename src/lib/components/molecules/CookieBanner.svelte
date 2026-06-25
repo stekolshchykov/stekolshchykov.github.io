@@ -41,7 +41,7 @@
 	<div
 		class="{embedded
 			? ''
-			: 'fixed bottom-3 left-3 right-3 z-50 md:left-auto md:right-5 md:bottom-5 md:w-[min(560px,calc(100vw-2.5rem))]'} luxury-corners border border-text-primary/12 bg-bg-primary/88 p-3 shadow-[0_24px_90px_rgba(0,0,0,0.48),0_0_0_1px_rgba(196,149,106,0.08)] backdrop-blur-xl md:p-4"
+			: 'cookie-banner-fixed'} luxury-corners border border-text-primary/12 bg-bg-primary/88 p-3 shadow-[0_24px_90px_rgba(0,0,0,0.48),0_0_0_1px_rgba(196,149,106,0.08)] backdrop-blur-xl md:p-4"
 		role="dialog"
 		aria-modal="true"
 		aria-label={$t('cookie_banner.message')}

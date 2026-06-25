@@ -84,6 +84,17 @@ body {
 		var(--color-bg-primary);
 }
 
+.cookie-banner-fixed.luxury-corners {
+	position: fixed;
+	left: 0.75rem;
+	right: 0.75rem;
+	bottom: max(0.75rem, env(safe-area-inset-bottom));
+	z-index: 10030;
+	width: auto;
+	isolation: isolate;
+	transform: translateZ(0);
+}
+
 .luxury-ambient {
 	position: fixed;
 	inset: 0;
@@ -114,6 +125,15 @@ body {
 	bottom: 6vh;
 	animation-delay: -7s;
 	opacity: 0.28;
+}
+
+@media (min-width: 768px) {
+	.cookie-banner-fixed.luxury-corners {
+		left: auto;
+		right: 1.25rem;
+		bottom: max(1.25rem, env(safe-area-inset-bottom));
+		width: min(560px, calc(100vw - 2.5rem));
+	}
 }
 
 .luxury-section {

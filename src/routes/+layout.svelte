@@ -14,6 +14,7 @@
 	import NoiseOverlay from '$lib/components/atoms/NoiseOverlay.svelte';
 	import ScrollProgress from '$lib/components/atoms/ScrollProgress.svelte';
 	import LuxuryCursor from '$lib/components/atoms/LuxuryCursor.svelte';
+	import WoodSoundLayer from '$lib/components/atoms/WoodSoundLayer.svelte';
 	import { cookieConsent } from '$lib/stores/cookieConsent.svelte';
 
 	addMessages('en', en);
@@ -35,6 +36,7 @@
 	<NoiseOverlay />
 	<ScrollProgress />
 	<LuxuryCursor />
+	<WoodSoundLayer />
 	<div class="luxury-ambient" aria-hidden="true">
 		<span></span>
 		<span></span>
