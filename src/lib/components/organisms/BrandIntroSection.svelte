@@ -47,17 +47,31 @@
 					{$_('home.intro_body')}
 				</Text>
 				<div class="brand-fade pt-2">
-					<Button variant="secondary" href="/about/">
+					<Button variant="secondary" href="/en/about/">
 						{$_('home.intro_cta')}
 					</Button>
 				</div>
 			</div>
 			<div class="brand-fade space-y-8">
-				<Image
-					src="/images/about/workshop.jpg"
-					alt="Áras Living workshop craftsman working on bespoke timber furniture"
-					class="aspect-[4/5] w-full object-cover"
-				/>
+				<div class="relative">
+					<Image
+						src="/images/generated/workshop-makers.webp"
+						alt="Áras Living makers reviewing walnut joinery and brass details in the workshop"
+						class="aspect-[4/5] w-full object-cover"
+						objectPosition="center"
+					/>
+					<div
+						class="absolute -bottom-8 right-0 hidden w-[46%] border border-text-primary/12 bg-bg-primary p-2 shadow-2xl shadow-black/35 md:block"
+						aria-hidden="true"
+					>
+						<img
+							src="/images/generated/material-detail.webp"
+							alt=""
+							class="aspect-[4/3] w-full object-cover"
+							loading="lazy"
+						/>
+					</div>
+				</div>
 				<blockquote class="border-l border-accent pl-6">
 					<p class="font-serif text-2xl font-light leading-snug text-text-primary md:text-3xl">
 						{$_('home.intro_quote')}

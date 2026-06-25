@@ -153,9 +153,11 @@
 			</div>
 		</nav>
 
-		<Button variant="primary" size="sm" href="/en/contact/" class="hidden md:inline-flex">
-			{$_('nav.discuss_project')}
-		</Button>
+		<div class="hidden lg:block">
+			<Button variant="primary" size="sm" href="/en/contact/">
+				{$_('nav.discuss_project')}
+			</Button>
+		</div>
 
 		<button
 			type="button"

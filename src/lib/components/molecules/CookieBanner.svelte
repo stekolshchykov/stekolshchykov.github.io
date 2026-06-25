@@ -41,37 +41,35 @@
 	<div
 		class="{embedded
 			? ''
-			: 'fixed bottom-0 left-0 right-0 z-50'} border-t border-white/10 bg-bg-primary p-3 md:p-5"
+			: 'fixed bottom-3 left-3 right-3 z-50 md:left-auto md:right-5 md:bottom-5 md:w-[min(560px,calc(100vw-2.5rem))]'} border border-white/10 bg-bg-primary/94 p-3 shadow-2xl shadow-black/35 backdrop-blur md:p-4"
 		role="dialog"
 		aria-modal="true"
 		aria-label={$t('cookie_banner.message')}
 	>
-		<div
-			class="mx-auto flex max-w-7xl flex-col gap-3 md:flex-row md:items-center md:justify-between"
-		>
-			<p class="max-w-2xl font-sans text-xs leading-relaxed text-text-secondary">
+		<div class="mx-auto flex max-w-7xl flex-col gap-3">
+			<p class="font-sans text-[11px] leading-relaxed text-text-secondary md:text-xs">
 				{$t('cookie_banner.message')}
 			</p>
 
-			<div class="grid grid-cols-2 gap-2 md:flex md:flex-wrap md:items-center">
+			<div class="grid grid-cols-2 gap-2 sm:grid-cols-[auto_auto_1fr] sm:items-center">
 				<button
 					type="button"
 					onclick={handleAcceptAll}
-					class="inline-flex items-center justify-center rounded-none bg-accent px-4 py-2 font-sans text-xs font-medium uppercase tracking-[0.06em] text-bg-primary transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-[#D4A57A] active:scale-[0.97]"
+					class="inline-flex items-center justify-center rounded-none bg-accent px-4 py-2 font-sans text-[11px] font-medium uppercase tracking-[0.06em] text-bg-primary transition-all duration-[250ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-[#D4A57A] active:scale-[0.97]"
 				>
 					{$t('cookie_banner.accept_all')}
 				</button>
 				<button
 					type="button"
 					onclick={handleRejectOptional}
-					class="hidden items-center justify-center border border-white/20 px-4 py-2 font-sans text-xs text-text-primary transition-colors hover:bg-white/5 md:inline-flex"
+					class="inline-flex items-center justify-center border border-white/20 px-4 py-2 font-sans text-[11px] text-text-primary transition-colors hover:bg-white/5"
 				>
 					{$t('cookie_banner.reject_optional')}
 				</button>
 				<button
 					type="button"
 					onclick={customize ? hideCustomize : showCustomize}
-					class="col-span-2 px-4 py-2 font-sans text-xs text-text-secondary underline underline-offset-4 transition-colors hover:text-text-primary md:col-span-1"
+					class="col-span-2 px-3 py-2 text-left font-sans text-[11px] text-text-secondary underline underline-offset-4 transition-colors hover:text-text-primary sm:col-span-1 sm:text-right"
 				>
 					{$t('cookie_banner.customise')}
 				</button>
@@ -125,13 +123,6 @@
 				</div>
 
 				<div class="mt-4 flex flex-wrap items-center justify-end gap-2">
-					<button
-						type="button"
-						onclick={handleRejectOptional}
-						class="inline-flex items-center justify-center border border-white/20 px-4 py-2 font-sans text-xs text-text-primary transition-colors hover:bg-white/5 md:hidden"
-					>
-						{$t('cookie_banner.reject_optional')}
-					</button>
 					<button
 						type="button"
 						onclick={handleSavePreferences}

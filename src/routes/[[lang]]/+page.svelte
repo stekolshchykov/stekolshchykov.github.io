@@ -62,7 +62,7 @@
 	<link
 		rel="preload"
 		as="image"
-		href="/images/hero-poster.webp"
+		href="/images/generated/hero-wardrobe.webp"
 		type="image/webp"
 		fetchpriority="high"
 	/>
@@ -78,13 +78,54 @@
 />
 
 <HeroSection
-	videoPoster="/images/hero-poster.jpg"
+	videoPoster="/images/generated/hero-wardrobe.jpg"
+	webpPoster="/images/generated/hero-wardrobe.webp"
+	videoSrc="/videos/hero.mp4"
 	headline={$_('home.hero_headline')}
 	subheadline={$_('home.hero_subheadline')}
 	ctaLabel={$_('home.hero_cta')}
 />
 
 <BrandIntroSection />
+
+<!-- Signature Detail -->
+<section class="relative overflow-hidden bg-bg-primary py-20 md:py-28 lg:py-36">
+	<div
+		class="mx-auto grid max-w-[1440px] items-center gap-10 px-6 md:px-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:px-16"
+	>
+		<div class="order-2 space-y-8 lg:order-1">
+			<div>
+				<Heading
+					as="h2"
+					variant="serif"
+					class="max-w-xl text-3xl text-text-primary md:text-4xl lg:text-6xl"
+				>
+					The detail is the design.
+				</Heading>
+				<Text variant="body-lg" class="mt-6 max-w-lg text-text-secondary">
+					Every handle, veneer run and drawer shadow is resolved before a board reaches the saw.
+				</Text>
+			</div>
+			<div class="divide-y divide-text-primary/10 border-y border-text-primary/10">
+				{#each [['01', 'Matched grain sets across every visible elevation'], ['02', 'Brass and stone specified by touch, not catalogue code'], ['03', 'Workshop drawings checked against the room millimetre by millimetre']] as detail}
+					<div class="grid grid-cols-[48px_minmax(0,1fr)] gap-5 py-5">
+						<span class="font-serif text-2xl text-accent">{detail[0]}</span>
+						<p class="font-sans text-sm leading-relaxed text-text-primary/84">{detail[1]}</p>
+					</div>
+				{/each}
+			</div>
+			<Button variant="ghost" href="/en/process/">See the process</Button>
+		</div>
+		<div class="order-1 lg:order-2">
+			<ImageReveal
+				src="/images/generated/material-detail.webp"
+				alt="Walnut, brass, stone and lacquer samples arranged for bespoke furniture specification"
+				class="aspect-[5/4] w-full"
+				direction="right"
+			/>
+		</div>
+	</div>
+</section>
 
 <!-- Material World -->
 <section class="bg-bg-primary py-20 md:py-32 lg:py-40">
@@ -126,7 +167,7 @@
 							class="absolute inset-0 bg-gradient-to-t from-bg-primary/90 via-bg-primary/30 to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-90"
 						></div>
 						<div
-							class="absolute inset-x-0 bottom-0 translate-y-4 p-6 opacity-0 transition-all duration-500 ease-ui group-hover:translate-y-0 group-hover:opacity-100"
+							class="absolute inset-x-0 bottom-0 translate-y-0 p-6 opacity-100 transition-all duration-500 ease-ui md:translate-y-4 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100"
 						>
 							<p class="mb-2 font-sans text-xs uppercase tracking-[0.2em] text-accent">
 								{material.family}
