@@ -1,0 +1,263 @@
+<script lang="ts">
+	import { _ } from 'svelte-i18n';
+	import { site } from '$lib/data/site';
+	import { services } from '$lib/data/services';
+	import { insights } from '$lib/data/insights';
+	import { imageWithFallback } from '$lib/utils/imageFallback';
+	import Heading from '$lib/components/atoms/Heading.svelte';
+	import Text from '$lib/components/atoms/Text.svelte';
+	import Divider from '$lib/components/atoms/Divider.svelte';
+	import Button from '$lib/components/atoms/Button.svelte';
+
+	const currentYear = new Date().getFullYear();
+
+	const navLinks = [
+		{ href: '/en/', label: 'nav.home' },
+		{ href: '/en/about/', label: 'nav.about' },
+		{ href: '/en/services/', label: 'nav.services' },
+		{ href: '/en/projects/', label: 'nav.projects' },
+		{ href: '/en/contact/', label: 'nav.contact' }
+	];
+
+	const exploreLinks = [
+		{ href: '/en/materials/', label: 'nav.materials' },
+		{ href: '/en/process/', label: 'nav.process' },
+		{ href: '/en/showroom/', label: 'nav.showroom' },
+		{ href: '/en/commercial/', label: 'nav.commercial' },
+		{ href: '/en/insights/', label: 'nav.insights' },
+		{ href: '/en/faq/', label: 'nav.faq' }
+	];
+
+	const legalLinks = [
+		{ href: '/en/privacy/', label: 'footer.privacy' },
+		{ href: '/en/terms/', label: 'footer.terms' },
+		{ href: '/en/cookies/', label: 'footer.cookies' }
+	];
+
+	const serviceLinks = services.slice(0, 6);
+	const latestInsight = insights[0];
+</script>
+
+<footer class="border-t border-text-secondary/20 bg-bg-secondary">
+	<div class="mx-auto max-w-[1440px] px-6 py-20 md:px-12 md:py-32 lg:px-16">
+		<div class="grid gap-16 lg:grid-cols-2 lg:gap-24">
+			<div class="space-y-8">
+				<Heading as="h2" variant="display" class="max-w-md text-4xl text-text-primary md:text-5xl">
+					{$_('footer.cta_title')}
+				</Heading>
+				<Text variant="body-lg" class="max-w-md text-text-secondary">
+					{site.tagline}
+				</Text>
+				<Button variant="primary" size="md" href="/en/contact/">
+					{$_('footer.cta_button')}
+				</Button>
+			</div>
+
+			<div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+				<div>
+					<Heading
+						as="h3"
+						variant="sans"
+						class="mb-5 text-xs uppercase tracking-[0.12em] text-text-secondary"
+					>
+						{$_('footer.navigation_title')}
+					</Heading>
+					<ul class="space-y-3">
+						{#each navLinks as link}
+							<li>
+								<a
+									href={link.href}
+									class="font-sans text-text-primary/80 transition-colors duration-200 hover:text-accent"
+								>
+									{$_(link.label)}
+								</a>
+							</li>
+						{/each}
+					</ul>
+				</div>
+
+				<div>
+					<Heading
+						as="h3"
+						variant="sans"
+						class="mb-5 text-xs uppercase tracking-[0.12em] text-text-secondary"
+					>
+						{$_('footer.explore_title')}
+					</Heading>
+					<ul class="space-y-3">
+						{#each exploreLinks as link}
+							<li>
+								<a
+									href={link.href}
+									class="font-sans text-text-primary/80 transition-colors duration-200 hover:text-accent"
+								>
+									{$_(link.label)}
+								</a>
+							</li>
+						{/each}
+					</ul>
+				</div>
+
+				<div>
+					<Heading
+						as="h3"
+						variant="sans"
+						class="mb-5 text-xs uppercase tracking-[0.12em] text-text-secondary"
+					>
+						{$_('footer.services_title')}
+					</Heading>
+					<ul class="space-y-3">
+						{#each serviceLinks as service}
+							<li>
+								<a
+									href="/en/services/"
+									class="font-sans text-text-primary/80 transition-colors duration-200 hover:text-accent"
+								>
+									{service.title}
+								</a>
+							</li>
+						{/each}
+					</ul>
+				</div>
+
+				<div>
+					<Heading
+						as="h3"
+						variant="sans"
+						class="mb-5 text-xs uppercase tracking-[0.12em] text-text-secondary"
+					>
+						{$_('footer.contact_title')}
+					</Heading>
+					<ul class="space-y-3 font-sans text-text-primary/80">
+						<li>
+							<a href="mailto:{site.email}" class="transition-colors duration-200 hover:text-accent"
+								>{site.email}</a
+							>
+						</li>
+						<li>
+							<a
+								href="https://wa.me/{site.whatsapp.replace(/\D/g, '')}"
+								class="transition-colors duration-200 hover:text-accent"
+							>
+								{site.whatsapp}
+							</a>
+						</li>
+						<li>{site.address}</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		{#if latestInsight}
+			<Divider class="my-16" />
+			<div class="grid gap-10 lg:grid-cols-2">
+				<div class="space-y-4">
+					<Heading
+						as="h3"
+						variant="sans"
+						class="text-xs uppercase tracking-[0.12em] text-text-secondary"
+					>
+						{$_('footer.journal_title')}
+					</Heading>
+					<a href="/en/insights/{latestInsight.slug}/" class="group block max-w-xl">
+						<h4
+							class="mb-2 font-serif text-2xl text-text-primary transition-colors group-hover:text-accent md:text-3xl"
+						>
+							{latestInsight.title}
+						</h4>
+						<p class="font-sans text-sm leading-relaxed text-text-secondary">
+							{latestInsight.excerpt}
+						</p>
+					</a>
+				</div>
+				<div
+					class="relative aspect-[16/9] overflow-hidden bg-bg-primary lg:aspect-auto lg:min-h-[240px]"
+				>
+					<a href="/en/insights/{latestInsight.slug}/" class="block h-full w-full">
+						<img
+							src={imageWithFallback(latestInsight.heroImage.src, '/images/hero-poster.jpg')}
+							alt={latestInsight.heroImage.alt}
+							loading="lazy"
+							class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+						/>
+					</a>
+				</div>
+			</div>
+		{/if}
+
+		<Divider class="my-16" />
+
+		<div class="flex flex-col items-center justify-between gap-8 md:flex-row">
+			<Text variant="caption" class="text-center text-text-secondary md:text-left">
+				© {currentYear}
+				{site.companyLegalName} trading as {site.brand}. {$_('footer.rights')}
+				<span class="md:ml-1">Handcrafted in Ireland.</span>
+			</Text>
+
+			<div class="flex flex-wrap items-center justify-center gap-6">
+				{#each legalLinks as link}
+					<a
+						href={link.href}
+						class="font-sans text-sm text-text-secondary transition-colors duration-200 hover:text-accent"
+					>
+						{$_(link.label)}
+					</a>
+				{/each}
+
+				<div class="flex items-center gap-4">
+					{#each site.social as social}
+						<a
+							href={social.url}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="text-text-secondary transition-colors duration-200 hover:text-accent"
+							aria-label={social.platform}
+						>
+							{#if social.platform === 'Instagram'}
+								<svg
+									class="h-5 w-5"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="1.5"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									aria-hidden="true"
+								>
+									<rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+									<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+									<line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+								</svg>
+							{:else if social.platform === 'Pinterest'}
+								<svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+									<path
+										d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"
+									/>
+								</svg>
+							{:else if social.platform === 'LinkedIn'}
+								<svg
+									class="h-5 w-5"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="1.5"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									aria-hidden="true"
+								>
+									<path
+										d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+									></path>
+									<rect x="2" y="9" width="4" height="12"></rect>
+									<circle cx="4" cy="4" r="2"></circle>
+								</svg>
+							{:else}
+								<span class="font-sans text-sm">{social.platform}</span>
+							{/if}
+						</a>
+					{/each}
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>

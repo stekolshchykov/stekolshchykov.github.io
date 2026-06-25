@@ -1,0 +1,225 @@
+- generic [ref=e3]:
+  - img [ref=e6]:
+    - generic [ref=e7]: Á
+  - banner [ref=e9]:
+    - generic [ref=e10]:
+      - link "Áras Living" [ref=e11] [cursor=pointer]:
+        - /url: /en/
+        - img "Áras Living" [ref=e12]:
+          - generic [ref=e13]: Áras Living
+      - navigation "Primary" [ref=e14]:
+        - link "Home" [ref=e15] [cursor=pointer]:
+          - /url: /en/
+        - link "Services" [ref=e16] [cursor=pointer]:
+          - /url: /en/services/
+        - link "Projects" [ref=e17] [cursor=pointer]:
+          - /url: /en/projects/
+        - link "Materials" [ref=e18] [cursor=pointer]:
+          - /url: /en/materials/
+        - link "Insights" [ref=e19] [cursor=pointer]:
+          - /url: /en/insights/
+        - link "Contact" [ref=e20] [cursor=pointer]:
+          - /url: /en/contact/
+        - group "Studio menu" [ref=e21]:
+          - button "Studio" [ref=e22]:
+            - text: Studio
+            - img [ref=e23]
+      - link "Discuss a Project" [ref=e26] [cursor=pointer]:
+        - /url: /en/contact/
+  - main [ref=e27]:
+    - generic [ref=e32]:
+      - generic [ref=e33]: About
+      - heading "Craftsmanship, considered" [level=1] [ref=e34]
+      - paragraph [ref=e35]: A Dublin workshop where traditional skill meets contemporary design.
+    - generic [ref=e38]:
+      - generic [ref=e39]:
+        - text: Our Story
+        - heading "Built on patience and precision" [level=2] [ref=e40]
+      - generic [ref=e41]:
+        - paragraph [ref=e42]: Áras Living was founded on the belief that enduring furniture is made slowly, by people who understand timber. From the first sketch to the final installation, every decision is guided by proportion, material, and purpose.
+        - paragraph [ref=e43]: We work with architects, interior designers, and private clients across Ireland, turning complex spaces into calm, considered interiors.
+    - generic [ref=e46]:
+      - img "Áras Living workshop craftsmanship" [ref=e48]
+      - generic [ref=e49]:
+        - text: Craft
+        - heading "Materials that endure" [level=2] [ref=e50]
+        - paragraph [ref=e51]: We source solid hardwoods and curated veneers from trusted European suppliers. Our finishes are applied by hand, and our hardware is chosen for how it feels after years of daily use.
+        - list [ref=e52]:
+          - listitem [ref=e53]: European Oak
+          - listitem [ref=e55]: American Walnut
+          - listitem [ref=e57]: White Ash
+          - listitem [ref=e59]: Painted Finishes
+    - generic [ref=e62]:
+      - generic [ref=e63]:
+        - text: People
+        - heading "The Team" [level=2] [ref=e64]
+        - paragraph [ref=e65]: "A small team of designers, makers, and installers. Everyone who works on your project shares the same standard: would this sit comfortably in our own home?"
+      - generic [ref=e68]:
+        - generic [ref=e70]:
+          - img "Portrait of Áras Living founder and lead designer" [ref=e72]
+          - heading "Conor Byrne" [level=3] [ref=e73]
+          - paragraph [ref=e74]: Founder & Lead Designer
+        - generic [ref=e76]:
+          - img "Portrait of Áras Living workshop manager" [ref=e78]
+          - heading "Niamh Kelly" [level=3] [ref=e79]
+          - paragraph [ref=e80]: Workshop Manager
+        - generic [ref=e82]:
+          - img "Portrait of Áras Living senior craftsman" [ref=e84]
+          - heading "Sean Murphy" [level=3] [ref=e85]
+          - paragraph [ref=e86]: Senior Craftsman
+        - generic [ref=e88]:
+          - img "Portrait of Áras Living design consultant" [ref=e90]
+          - heading "Aoife O'Brien" [level=3] [ref=e91]
+          - paragraph [ref=e92]: Design Consultant
+    - generic [ref=e94]:
+      - generic [ref=e95]:
+        - text: Why Áras Living
+        - heading "The Difference" [level=2] [ref=e96]
+      - generic [ref=e99]:
+        - generic [ref=e100]:
+          - generic [ref=e101]: "01"
+          - heading "Made to Measure" [level=3] [ref=e102]
+          - paragraph [ref=e103]: Every piece is drawn around your room, your habits, and the light. No standard sizes. No concessions.
+        - generic [ref=e104]:
+          - generic [ref=e105]: "02"
+          - heading "Dublin Workshop" [level=3] [ref=e106]
+          - paragraph [ref=e107]: Built in our Dublin workshop by makers who understand timber, tolerance, and the weight of a well-made joint.
+        - generic [ref=e108]:
+          - generic [ref=e109]: "03"
+          - heading "Materials First" [level=3] [ref=e110]
+          - paragraph [ref=e111]: Solid hardwoods, curated veneers, and European hardware chosen for how they age, not just how they look.
+        - generic [ref=e112]:
+          - generic [ref=e113]: "04"
+          - heading "One Studio" [level=3] [ref=e114]
+          - paragraph [ref=e115]: From first drawing to final installation, the same team designs, builds, and sets every piece in place.
+        - generic [ref=e116]:
+          - generic [ref=e117]: "05"
+          - heading "Quiet Luxury" [level=3] [ref=e118]
+          - paragraph [ref=e119]: Understated detailing, refined proportions, and finishes that settle into a room over decades.
+        - generic [ref=e120]:
+          - generic [ref=e121]: "06"
+          - heading "Precision Fit" [level=3] [ref=e122]
+          - paragraph [ref=e123]: Site surveys and meticulous templating ensure every unit sits exactly — even in rooms that refuse straight lines.
+    - generic [ref=e127]:
+      - heading "Begin your project." [level=2] [ref=e128]
+      - link "Arrange a Consultation" [ref=e129] [cursor=pointer]:
+        - /url: /en/contact/
+        - generic [ref=e130]: Arrange a Consultation
+        - img [ref=e131]
+  - contentinfo [ref=e134]:
+    - generic [ref=e135]:
+      - generic [ref=e136]:
+        - generic [ref=e137]:
+          - heading "Begin your project." [level=2] [ref=e138]
+          - paragraph [ref=e139]: Furniture, measured in millimetres.
+          - link "Discuss a Project" [ref=e140] [cursor=pointer]:
+            - /url: /en/contact/
+        - generic [ref=e141]:
+          - generic [ref=e142]:
+            - heading "Navigation" [level=3] [ref=e143]
+            - list [ref=e144]:
+              - listitem [ref=e145]:
+                - link "Home" [ref=e146] [cursor=pointer]:
+                  - /url: /en/
+              - listitem [ref=e147]:
+                - link "About" [ref=e148] [cursor=pointer]:
+                  - /url: /en/about/
+              - listitem [ref=e149]:
+                - link "Services" [ref=e150] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e151]:
+                - link "Projects" [ref=e152] [cursor=pointer]:
+                  - /url: /en/projects/
+              - listitem [ref=e153]:
+                - link "Contact" [ref=e154] [cursor=pointer]:
+                  - /url: /en/contact/
+          - generic [ref=e155]:
+            - heading "Explore" [level=3] [ref=e156]
+            - list [ref=e157]:
+              - listitem [ref=e158]:
+                - link "Materials" [ref=e159] [cursor=pointer]:
+                  - /url: /en/materials/
+              - listitem [ref=e160]:
+                - link "Process" [ref=e161] [cursor=pointer]:
+                  - /url: /en/process/
+              - listitem [ref=e162]:
+                - link "Showroom" [ref=e163] [cursor=pointer]:
+                  - /url: /en/showroom/
+              - listitem [ref=e164]:
+                - link "Commercial" [ref=e165] [cursor=pointer]:
+                  - /url: /en/commercial/
+              - listitem [ref=e166]:
+                - link "Insights" [ref=e167] [cursor=pointer]:
+                  - /url: /en/insights/
+              - listitem [ref=e168]:
+                - link "FAQ" [ref=e169] [cursor=pointer]:
+                  - /url: /en/faq/
+          - generic [ref=e170]:
+            - heading "Services" [level=3] [ref=e171]
+            - list [ref=e172]:
+              - listitem [ref=e173]:
+                - link "Wardrobes & Dressing Rooms" [ref=e174] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e175]:
+                - link "Kitchens" [ref=e176] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e177]:
+                - link "Dressing Rooms" [ref=e178] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e179]:
+                - link "Living Joinery" [ref=e180] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e181]:
+                - link "Workplaces" [ref=e182] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e183]:
+                - link "Retail Spaces" [ref=e184] [cursor=pointer]:
+                  - /url: /en/services/
+          - generic [ref=e185]:
+            - heading "Contact" [level=3] [ref=e186]
+            - list [ref=e187]:
+              - listitem [ref=e188]:
+                - link "hello@arasliving.ie" [ref=e189] [cursor=pointer]:
+                  - /url: mailto:hello@arasliving.ie
+              - listitem [ref=e190]:
+                - link "+353 1 234 5678" [ref=e191] [cursor=pointer]:
+                  - /url: https://wa.me/35312345678
+              - listitem [ref=e192]: Unit 4, Grand Canal Street Lower, Dublin 2, D02 A342, Ireland
+      - separator [ref=e193]
+      - generic [ref=e194]:
+        - generic [ref=e195]:
+          - heading "Latest Insight" [level=3] [ref=e196]
+          - link "Why Handleless Kitchens Still Feel Future-Proof Twenty years after they first appeared in European kitchens, handleless cabinets remain the default choice for architects and interior designers who want a room to age gracefully." [ref=e197] [cursor=pointer]:
+            - /url: /en/insights/why-handleless-kitchens-still-feel-future-proof/
+            - heading "Why Handleless Kitchens Still Feel Future-Proof" [level=4] [ref=e198]
+            - paragraph [ref=e199]: Twenty years after they first appeared in European kitchens, handleless cabinets remain the default choice for architects and interior designers who want a room to age gracefully.
+        - link "Handleless charcoal kitchen with island and pendant lighting" [ref=e201] [cursor=pointer]:
+          - /url: /en/insights/why-handleless-kitchens-still-feel-future-proof/
+          - img "Handleless charcoal kitchen with island and pendant lighting" [ref=e202]
+      - separator [ref=e203]
+      - generic [ref=e204]:
+        - generic [ref=e205]: © 2026 Áras Living Furniture & Interiors Ltd trading as Áras Living. All rights reserved. Handcrafted in Ireland.
+        - generic [ref=e206]:
+          - link "Privacy Policy" [ref=e207] [cursor=pointer]:
+            - /url: /en/privacy/
+          - link "Terms of Service" [ref=e208] [cursor=pointer]:
+            - /url: /en/terms/
+          - link "Cookie Policy" [ref=e209] [cursor=pointer]:
+            - /url: /en/cookies/
+          - generic [ref=e210]:
+            - link "Instagram" [ref=e211] [cursor=pointer]:
+              - /url: https://instagram.com/arasliving
+              - img [ref=e212]
+            - link "Pinterest" [ref=e215] [cursor=pointer]:
+              - /url: https://pinterest.com/arasliving
+              - img [ref=e216]
+            - link "LinkedIn" [ref=e218] [cursor=pointer]:
+              - /url: https://linkedin.com/company/aras-living
+              - img [ref=e219]
+  - dialog "We use cookies to understand how visitors use our site and to manage your preferences." [ref=e223]:
+    - generic [ref=e224]:
+      - paragraph [ref=e225]: We use cookies to understand how visitors use our site and to manage your preferences.
+      - generic [ref=e226]:
+        - button "Accept All" [ref=e227]
+        - button "Reject Optional" [ref=e228]
+        - button "Customise" [ref=e229]

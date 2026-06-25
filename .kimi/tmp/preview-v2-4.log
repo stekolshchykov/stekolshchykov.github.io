@@ -1,0 +1,5 @@
+$ vite preview --port 4184
+  ➜  Local:   http://localhost:4184/
+  ➜  Network: use --host to expose
+
+[1;31m[404] GET /llms.txt[0m

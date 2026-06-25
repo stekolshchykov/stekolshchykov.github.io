@@ -1,0 +1,261 @@
+- generic [ref=e3]:
+  - banner [ref=e9]:
+    - generic [ref=e10]:
+      - link "TINEO" [ref=e11] [cursor=pointer]:
+        - /url: /en/
+        - img "TINEO" [ref=e12]:
+          - generic [ref=e13]: T
+          - generic [ref=e14]: I
+          - generic [ref=e15]: "N"
+          - generic [ref=e16]: E
+          - generic [ref=e17]: O
+      - link "Discuss a Project" [ref=e18] [cursor=pointer]:
+        - /url: /en/contact/
+      - button "Open menu" [ref=e19]:
+        - img [ref=e20]
+  - main [ref=e21]:
+    - generic [ref=e22]:
+      - generic [ref=e28]:
+        - heading "Furniture, measured in millimetres." [level=1] [ref=e29]
+        - paragraph [ref=e30]: Bespoke wardrobes, kitchens, and interior joinery from our Dublin workshop.
+        - link "Discuss a Project" [ref=e32] [cursor=pointer]:
+          - /url: /en/contact/
+      - generic [ref=e34]: Scroll
+    - generic [ref=e39]:
+      - generic [ref=e40]:
+        - generic [ref=e41]: The Studio
+        - heading "Quiet luxury, made to measure" [level=2] [ref=e42]
+        - paragraph [ref=e43]: For over two decades, TINEO has designed and built furniture for homes and spaces across Ireland. Every piece begins with a conversation and ends with a measured fit.
+        - link "Our Story" [ref=e45] [cursor=pointer]:
+          - /url: /about/
+      - generic [ref=e46]:
+        - img "TINEO workshop craftsman working on bespoke timber furniture" [ref=e47]
+        - blockquote [ref=e48]:
+          - paragraph [ref=e49]: Furniture, measured in millimetres.
+    - generic [ref=e51]:
+      - generic [ref=e52]:
+        - generic [ref=e53]:
+          - generic [ref=e54]: Services
+          - heading "What we make" [level=2] [ref=e55]
+        - link "View All Services" [ref=e57] [cursor=pointer]:
+          - /url: /services/
+          - text: View All Services
+          - img [ref=e58]
+      - generic [ref=e60]:
+        - link "Bespoke fitted wardrobe with soft-close drawers and integrated lighting residential Wardrobes & Dressing Rooms Fitted wardrobes designed around the architecture of your room and the rhythm of your day. Get in Touch →" [ref=e62] [cursor=pointer]:
+          - /url: /contact/
+          - generic:
+            - img "Bespoke fitted wardrobe with soft-close drawers and integrated lighting"
+          - generic [ref=e64]:
+            - paragraph [ref=e65]: residential
+            - heading "Wardrobes & Dressing Rooms" [level=3] [ref=e66]
+            - paragraph [ref=e67]: Fitted wardrobes designed around the architecture of your room and the rhythm of your day.
+            - generic [ref=e68]:
+              - text: Get in Touch
+              - generic [ref=e69]: →
+        - link "Modern office reception desk and boardroom joinery commercial Workplaces Reception desks, boardroom tables, and breakout joinery that communicate quality before anyone sits down. Get in Touch →" [ref=e71] [cursor=pointer]:
+          - /url: /contact/
+          - generic:
+            - img "Modern office reception desk and boardroom joinery"
+          - generic [ref=e73]:
+            - paragraph [ref=e74]: commercial
+            - heading "Workplaces" [level=3] [ref=e75]
+            - paragraph [ref=e76]: Reception desks, boardroom tables, and breakout joinery that communicate quality before anyone sits down.
+            - generic [ref=e77]:
+              - text: Get in Touch
+              - generic [ref=e78]: →
+      - generic [ref=e79]:
+        - paragraph [ref=e80]: View All Services
+        - generic [ref=e81]:
+          - link "Kitchens" [ref=e82] [cursor=pointer]:
+            - /url: /services/
+            - generic [ref=e83]: Kitchens
+          - link "Dressing Rooms" [ref=e84] [cursor=pointer]:
+            - /url: /services/
+            - generic [ref=e85]: Dressing Rooms
+          - link "Living Joinery" [ref=e86] [cursor=pointer]:
+            - /url: /services/
+            - generic [ref=e87]: Living Joinery
+          - link "Retail Spaces" [ref=e88] [cursor=pointer]:
+            - /url: /services/
+            - generic [ref=e89]: Retail Spaces
+          - link "Hotels & Restaurants" [ref=e90] [cursor=pointer]:
+            - /url: /services/
+            - generic [ref=e91]: Hotels & Restaurants
+          - link "One-Off Commissions" [ref=e92] [cursor=pointer]:
+            - /url: /services/
+            - generic [ref=e93]: One-Off Commissions
+    - generic [ref=e95]:
+      - generic [ref=e97]:
+        - generic [ref=e98]:
+          - generic [ref=e99]: Selected Work
+          - heading "Selected Work" [level=2] [ref=e100]
+        - link "View All Projects" [ref=e102] [cursor=pointer]:
+          - /url: /projects/
+          - text: View All Projects
+          - img [ref=e103]
+      - generic [ref=e105]:
+        - link "Penthouse walk-in wardrobe suite in American walnut with brass hardware residential / 2024 Dublin Bay Dressing Room View Project →" [ref=e107] [cursor=pointer]:
+          - /url: /projects/penthouse-wardrobe-suite/
+          - img "Penthouse walk-in wardrobe suite in American walnut with brass hardware" [ref=e109]
+          - generic [ref=e111]:
+            - paragraph [ref=e112]: residential / 2024
+            - heading "Dublin Bay Dressing Room" [level=3] [ref=e113]
+            - generic [ref=e114]:
+              - text: View Project
+              - generic [ref=e115]: →
+        - link "Handleless matte charcoal kitchen with island and stone worktop residential / 2024 Blackrock Family Kitchen View Project →" [ref=e117] [cursor=pointer]:
+          - /url: /projects/blackrock-kitchen/
+          - img "Handleless matte charcoal kitchen with island and stone worktop" [ref=e119]
+          - generic [ref=e121]:
+            - paragraph [ref=e122]: residential / 2024
+            - heading "Blackrock Family Kitchen" [level=3] [ref=e123]
+            - generic [ref=e124]:
+              - text: View Project
+              - generic [ref=e125]: →
+        - link "Hotel lobby with walnut reception desk and lounge seating commercial / 2023 Hotel Reception & Lounge View Project →" [ref=e127] [cursor=pointer]:
+          - /url: /projects/shelbourne-fittings/
+          - img "Hotel lobby with walnut reception desk and lounge seating" [ref=e129]
+          - generic [ref=e131]:
+            - paragraph [ref=e132]: commercial / 2023
+            - heading "Hotel Reception & Lounge" [level=3] [ref=e133]
+            - generic [ref=e134]:
+              - text: View Project
+              - generic [ref=e135]: →
+    - generic [ref=e137]:
+      - generic [ref=e138]:
+        - generic [ref=e139]: Process
+        - heading "From Sketch to Space" [level=2] [ref=e140]
+      - generic [ref=e142]:
+        - generic [ref=e144]:
+          - generic [ref=e146]: "1"
+          - generic [ref=e147]:
+            - generic: "1"
+            - heading "Consult" [level=3] [ref=e148]
+            - paragraph [ref=e149]: We visit your home or site, listen to how you live, and define the brief, budget, and timeline together.
+        - generic [ref=e151]:
+          - generic [ref=e153]: "2"
+          - generic [ref=e154]:
+            - generic: "2"
+            - heading "Design" [level=3] [ref=e155]
+            - paragraph [ref=e156]: Drawings, material samples, and 3D visuals let you see every detail before the first piece of timber is cut.
+        - generic [ref=e158]:
+          - generic [ref=e160]: "3"
+          - generic [ref=e161]:
+            - generic: "3"
+            - heading "Craft" [level=3] [ref=e162]
+            - paragraph [ref=e163]: Your furniture is made in our Dublin workshop by makers who measure twice, cut once, and finish by hand.
+        - generic [ref=e165]:
+          - generic [ref=e167]: "4"
+          - generic [ref=e168]:
+            - generic: "4"
+            - heading "Install" [level=3] [ref=e169]
+            - paragraph [ref=e170]: We deliver and install with the same care we built it with, then leave the space ready to live in.
+    - generic [ref=e172]:
+      - generic [ref=e173]:
+        - generic [ref=e174]: Client Words
+        - heading "What They Say" [level=2] [ref=e175]
+      - generic [ref=e176]:
+        - article [ref=e178]:
+          - generic: “
+          - blockquote [ref=e179]: Every drawer, every light, every joint feels considered. The dressing room has become the calmest room in the house.
+          - generic [ref=e180]:
+            - paragraph [ref=e181]: Sarah M.
+            - paragraph [ref=e182]: Dublin 6
+        - generic [ref=e183]:
+          - button "Previous testimonial" [ref=e184]:
+            - img [ref=e185]
+          - generic [ref=e187]: 01 / 03
+          - button "Next testimonial" [ref=e188]:
+            - img [ref=e189]
+    - generic [ref=e194]:
+      - heading "Begin your project." [level=2] [ref=e195]
+      - paragraph [ref=e196]: Tell us about your space. We will respond within two business days.
+      - link "Start a Conversation" [ref=e197] [cursor=pointer]:
+        - /url: /en/contact/
+        - generic [ref=e198]: Start a Conversation
+        - img [ref=e199]
+  - contentinfo [ref=e202]:
+    - generic [ref=e203]:
+      - generic [ref=e204]:
+        - generic [ref=e205]:
+          - heading "Begin your project." [level=2] [ref=e206]
+          - paragraph [ref=e207]: Furniture, measured in millimetres.
+          - link "Discuss a Project" [ref=e208] [cursor=pointer]:
+            - /url: /en/contact/
+        - generic [ref=e209]:
+          - generic [ref=e210]:
+            - heading "Navigation" [level=3] [ref=e211]
+            - list [ref=e212]:
+              - listitem [ref=e213]:
+                - link "Home" [ref=e214] [cursor=pointer]:
+                  - /url: /en/
+              - listitem [ref=e215]:
+                - link "About" [ref=e216] [cursor=pointer]:
+                  - /url: /en/about/
+              - listitem [ref=e217]:
+                - link "Services" [ref=e218] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e219]:
+                - link "Projects" [ref=e220] [cursor=pointer]:
+                  - /url: /en/projects/
+              - listitem [ref=e221]:
+                - link "Contact" [ref=e222] [cursor=pointer]:
+                  - /url: /en/contact/
+          - generic [ref=e223]:
+            - heading "Services" [level=3] [ref=e224]
+            - list [ref=e225]:
+              - listitem [ref=e226]:
+                - link "Wardrobes & Dressing Rooms" [ref=e227] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e228]:
+                - link "Kitchens" [ref=e229] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e230]:
+                - link "Dressing Rooms" [ref=e231] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e232]:
+                - link "Living Joinery" [ref=e233] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e234]:
+                - link "Workplaces" [ref=e235] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e236]:
+                - link "Retail Spaces" [ref=e237] [cursor=pointer]:
+                  - /url: /en/services/
+          - generic [ref=e238]:
+            - heading "Contact" [level=3] [ref=e239]
+            - list [ref=e240]:
+              - listitem [ref=e241]:
+                - link "hello@tineo.ie" [ref=e242] [cursor=pointer]:
+                  - /url: mailto:hello@tineo.ie
+              - listitem [ref=e243]:
+                - link "+353 1 234 5678" [ref=e244] [cursor=pointer]:
+                  - /url: https://wa.me/35312345678
+              - listitem [ref=e245]: Unit 4, Grand Canal Street Lower, Dublin 2, D02 A342, Ireland
+      - separator [ref=e246]
+      - generic [ref=e247]:
+        - generic [ref=e248]: © 2026 TINEO Furniture & Interiors Ltd trading as TINEO. All rights reserved. Handcrafted in Ireland.
+        - generic [ref=e249]:
+          - link "Privacy Policy" [ref=e250] [cursor=pointer]:
+            - /url: /en/privacy/
+          - link "Terms of Service" [ref=e251] [cursor=pointer]:
+            - /url: /en/terms/
+          - link "Cookie Policy" [ref=e252] [cursor=pointer]:
+            - /url: /en/cookies/
+          - generic [ref=e253]:
+            - link "Instagram" [ref=e254] [cursor=pointer]:
+              - /url: https://instagram.com/tineoireland
+              - img [ref=e255]
+            - link "Pinterest" [ref=e258] [cursor=pointer]:
+              - /url: https://pinterest.com/tineoireland
+              - img [ref=e259]
+            - link "LinkedIn" [ref=e261] [cursor=pointer]:
+              - /url: https://linkedin.com/company/tineo
+              - img [ref=e262]
+  - dialog "We use cookies to understand how visitors use our site and to manage your preferences." [ref=e266]:
+    - generic [ref=e267]:
+      - paragraph [ref=e268]: We use cookies to understand how visitors use our site and to manage your preferences.
+      - generic [ref=e269]:
+        - button "Accept All" [ref=e270]
+        - button "Customise" [ref=e271]

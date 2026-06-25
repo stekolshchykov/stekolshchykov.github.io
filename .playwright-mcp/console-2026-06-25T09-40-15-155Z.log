@@ -1,0 +1,3 @@
+[      96ms] [WARNING] Invalid property scrollTrigger set to {trigger: section.bg-bg-primary.py-16.md:py-24, start: top 75%} Missing plugin? gsap.registerPlugin() @ http://localhost:4173/_app/immutable/chunks/CjKOKo0w.js:0
+[      97ms] [WARNING] Invalid property scrollTrigger set to {trigger: section.bg-bg-primary.py-16.md:py-24, start: top 75%} Missing plugin? gsap.registerPlugin() @ http://localhost:4173/_app/immutable/chunks/CjKOKo0w.js:0
+[      97ms] [WARNING] Invalid property scrollTrigger set to {trigger: section.bg-bg-secondary.py-24.md:py-32, start: top 75%} Missing plugin? gsap.registerPlugin() @ http://localhost:4173/_app/immutable/chunks/CjKOKo0w.js:0

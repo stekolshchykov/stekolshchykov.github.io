@@ -1,0 +1,162 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "Home" [ref=e6] [cursor=pointer]:
+        - /url: /en/
+        - img "TINEO" [ref=e7]:
+          - generic [ref=e8]: TINEO
+      - navigation "Primary" [ref=e9]:
+        - link "Home" [ref=e10] [cursor=pointer]:
+          - /url: /en/
+        - link "About" [ref=e11] [cursor=pointer]:
+          - /url: /en/about/
+        - link "Services" [ref=e12] [cursor=pointer]:
+          - /url: /en/services/
+        - link "Projects" [ref=e13] [cursor=pointer]:
+          - /url: /en/projects/
+        - link "Contact" [ref=e14] [cursor=pointer]:
+          - /url: /en/contact/
+      - link "Discuss a Project" [ref=e16] [cursor=pointer]:
+        - /url: /en/contact/
+  - main [ref=e17]:
+    - generic [ref=e19]:
+      - heading "Privacy Policy" [level=1] [ref=e20]
+      - paragraph [ref=e21]: "Last updated: 2024-06-01"
+      - generic [ref=e22]:
+        - article [ref=e23]:
+          - heading "1. Identity & Contact Details of the Data Controller" [level=2] [ref=e24]
+          - generic [ref=e25]:
+            - paragraph [ref=e26]: This Privacy Policy explains how [Existing Company Name] (trading as TINEO) collects, uses, and protects your personal data.
+            - paragraph [ref=e27]: "Data controller: [Existing Company Name]"
+            - paragraph [ref=e28]: "Registered address: [Registered Office Address], Ireland."
+            - paragraph [ref=e29]: "Operational address: Dublin, Ireland."
+            - paragraph [ref=e30]: "Email: hello@tineo.ie"
+            - paragraph [ref=e31]: "Telephone: +353 87 123 4567"
+        - article [ref=e32]:
+          - heading "2. Data Protection Officer" [level=2] [ref=e33]
+          - paragraph [ref=e35]: "[Existing Company Name] is not currently required to appoint a Data Protection Officer under Article 37 GDPR. Questions about data protection should be directed to hello@tineo.ie."
+        - article [ref=e36]:
+          - heading "3. Categories of Personal Data Collected" [level=2] [ref=e37]
+          - generic [ref=e38]:
+            - paragraph [ref=e39]: We collect personal data that you provide through our contact form, email, telephone, or in-person consultations. This may include your name, email address, phone number, project location, project type, budget range, message, and any files or images you upload.
+            - paragraph [ref=e40]: We also collect technical data via cookies and similar technologies when you browse our website, including IP address, browser type, device information, and pages visited.
+        - article [ref=e41]:
+          - heading "4. Purposes & Legal Basis for Processing" [level=2] [ref=e42]
+          - generic [ref=e43]:
+            - paragraph [ref=e44]: "We process your personal data for the following purposes and on the following legal bases:"
+            - paragraph [ref=e45]: (a) To respond to enquiries and provide quotes — performance of pre-contractual measures or contract.
+            - paragraph [ref=e46]: (b) To manage projects, communicate during design and installation — performance of contract.
+            - paragraph [ref=e47]: (c) To send occasional project updates or marketing communications — consent, which you can withdraw at any time.
+            - paragraph [ref=e48]: (d) To improve our website and understand visitor behaviour — legitimate interest, where consent is not required, or consent for non-essential cookies.
+        - article [ref=e49]:
+          - heading "5. Recipients & Third-Party Processors" [level=2] [ref=e50]
+          - generic [ref=e51]:
+            - paragraph [ref=e52]: Your personal data may be shared with trusted third-party service providers who assist us in operating our business, such as form processing services, email providers, hosting platforms, and analytics providers.
+            - paragraph [ref=e53]: We do not sell your personal data. Any third-party processors are contractually bound to use your data only for the specified purposes and to protect it in accordance with GDPR.
+        - article [ref=e54]:
+          - heading "6. International Transfers" [level=2] [ref=e55]
+          - paragraph [ref=e57]: Some of our processors may store or process data outside the European Economic Area. Where this occurs, we ensure appropriate safeguards are in place, such as Standard Contractual Clauses approved by the European Commission, or processing in countries recognised as providing an adequate level of protection.
+        - article [ref=e58]:
+          - heading "7. Retention Periods" [level=2] [ref=e59]
+          - generic [ref=e60]:
+            - paragraph [ref=e61]: We retain your personal data only for as long as necessary to fulfil the purposes for which it was collected. Enquiry data is typically retained for up to two years unless you request deletion earlier.
+            - paragraph [ref=e62]: Project records, including contracts and correspondence, are retained for the duration required by applicable law, including tax and warranty obligations.
+        - article [ref=e63]:
+          - heading "8. Your Data Subject Rights" [level=2] [ref=e64]
+          - generic [ref=e65]:
+            - paragraph [ref=e66]: Under GDPR, you have the right to access, rectify, erase, restrict, or object to the processing of your personal data. You also have the right to data portability and to withdraw consent at any time.
+            - paragraph [ref=e67]: To exercise any of these rights, please contact us at hello@tineo.ie. We will respond within one month of receiving your request.
+        - article [ref=e68]:
+          - heading "9. Right to Lodge a Complaint" [level=2] [ref=e69]
+          - generic [ref=e70]:
+            - paragraph [ref=e71]: If you believe we have not handled your personal data in accordance with the law, you have the right to lodge a complaint with the Data Protection Commission of Ireland.
+            - paragraph [ref=e72]: "Website: www.dataprotection.ie"
+        - article [ref=e73]:
+          - heading "10. Voluntary Nature of Data & Automated Decision-Making" [level=2] [ref=e74]
+          - generic [ref=e75]:
+            - paragraph [ref=e76]: Providing your personal data is voluntary, but we may not be able to respond to your enquiry or proceed with a project without certain information.
+            - paragraph [ref=e77]: We do not use automated decision-making or profiling that produces legal or similarly significant effects on individuals.
+  - contentinfo [ref=e78]:
+    - generic [ref=e79]:
+      - generic [ref=e80]:
+        - generic [ref=e81]:
+          - heading "Have a project in mind?" [level=2] [ref=e82]
+          - generic [ref=e83]: Handcrafted Furniture, Designed for Your Space
+          - link "Discuss a Project" [ref=e84] [cursor=pointer]:
+            - /url: /en/contact/
+        - generic [ref=e85]:
+          - generic [ref=e86]:
+            - heading "Navigation" [level=3] [ref=e87]
+            - list [ref=e88]:
+              - listitem [ref=e89]:
+                - link "Home" [ref=e90] [cursor=pointer]:
+                  - /url: /en/
+              - listitem [ref=e91]:
+                - link "About" [ref=e92] [cursor=pointer]:
+                  - /url: /en/about/
+              - listitem [ref=e93]:
+                - link "Services" [ref=e94] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e95]:
+                - link "Projects" [ref=e96] [cursor=pointer]:
+                  - /url: /en/projects/
+              - listitem [ref=e97]:
+                - link "Contact" [ref=e98] [cursor=pointer]:
+                  - /url: /en/contact/
+          - generic [ref=e99]:
+            - heading "Services" [level=3] [ref=e100]
+            - list [ref=e101]:
+              - listitem [ref=e102]:
+                - link "Custom Wardrobes" [ref=e103] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e104]:
+                - link "Bespoke Kitchens" [ref=e105] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e106]:
+                - link "Walk-in Closets" [ref=e107] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e108]:
+                - link "Living Spaces" [ref=e109] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e110]:
+                - link "Office Fit-outs" [ref=e111] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e112]:
+                - link "Retail Interiors" [ref=e113] [cursor=pointer]:
+                  - /url: /en/services/
+          - generic [ref=e114]:
+            - heading "Contact" [level=3] [ref=e115]
+            - list [ref=e116]:
+              - listitem [ref=e117]:
+                - link "hello@tineo.ie" [ref=e118] [cursor=pointer]:
+                  - /url: mailto:hello@tineo.ie
+              - listitem [ref=e119]:
+                - link "+353 87 123 4567" [ref=e120] [cursor=pointer]:
+                  - /url: https://wa.me/353871234567
+              - listitem [ref=e121]: Dublin, Ireland
+      - separator [ref=e122]
+      - generic [ref=e123]:
+        - generic [ref=e124]: © 2026 [Existing Company Name] trading as TINEO. All rights reserved.
+        - generic [ref=e125]:
+          - link "Privacy Policy" [ref=e126] [cursor=pointer]:
+            - /url: /en/privacy/
+          - link "Terms of Service" [ref=e127] [cursor=pointer]:
+            - /url: /en/terms/
+          - link "Cookie Policy" [ref=e128] [cursor=pointer]:
+            - /url: /en/cookies/
+          - link "Instagram" [ref=e129] [cursor=pointer]:
+            - /url: https://instagram.com/tineoireland
+          - link "Pinterest" [ref=e130] [cursor=pointer]:
+            - /url: https://pinterest.com/tineoireland
+          - link "LinkedIn" [ref=e131] [cursor=pointer]:
+            - /url: https://linkedin.com/company/tineo
+  - link "Chat on WhatsApp" [ref=e132] [cursor=pointer]:
+    - /url: https://wa.me/353871234567?text=Hi%20TINEO%2C%20I%20would%20like%20to%20discuss%20a%20custom%20furniture%20project.
+    - img [ref=e134]
+  - dialog "We use cookies to improve your experience and analyse site traffic. You can manage your preferences at any time." [ref=e136]:
+    - generic [ref=e137]:
+      - paragraph [ref=e138]: We use cookies to improve your experience and analyse site traffic. You can manage your preferences at any time.
+      - generic [ref=e139]:
+        - button "Accept All" [ref=e140]
+        - button "Reject Optional" [ref=e141]
+        - button "Customise" [ref=e142]

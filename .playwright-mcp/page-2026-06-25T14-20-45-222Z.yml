@@ -1,0 +1,286 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "TINEO" [ref=e6] [cursor=pointer]:
+        - /url: /en/
+        - img "TINEO" [ref=e7]:
+          - generic [ref=e8]: T
+          - generic [ref=e9]: I
+          - generic [ref=e10]: "N"
+          - generic [ref=e11]: E
+          - generic [ref=e12]: O
+      - navigation "Primary" [ref=e13]:
+        - link "Home" [ref=e14] [cursor=pointer]:
+          - /url: /en/
+        - link "Services" [ref=e15] [cursor=pointer]:
+          - /url: /en/services/
+        - link "Projects" [ref=e16] [cursor=pointer]:
+          - /url: /en/projects/
+        - link "Materials" [ref=e17] [cursor=pointer]:
+          - /url: /en/materials/
+          - text: Materials
+        - link "Insights" [ref=e19] [cursor=pointer]:
+          - /url: /en/insights/
+        - link "Contact" [ref=e20] [cursor=pointer]:
+          - /url: /en/contact/
+        - group "Studio menu" [ref=e21]:
+          - button "Studio" [ref=e22]:
+            - text: Studio
+            - img [ref=e23]
+      - link "Discuss a Project" [ref=e25] [cursor=pointer]:
+        - /url: /en/contact/
+  - main [ref=e26]:
+    - generic [ref=e32]:
+      - generic [ref=e33]: Materials
+      - heading "Surfaces that age beautifully" [level=1] [ref=e34]
+      - paragraph [ref=e35]: Solid timbers, curated veneers, and refined finishes chosen for how they feel and endure.
+    - generic [ref=e37]:
+      - generic [ref=e38]:
+        - heading "Surfaces that age beautifully" [level=2] [ref=e40]:
+          - generic "Surfaces that age beautifully" [ref=e41]:
+            - generic [ref=e43]: Surfaces
+            - generic [ref=e46]: that
+            - generic [ref=e49]: age
+            - generic [ref=e52]: beautifully
+        - generic [ref=e53]:
+          - button "All" [ref=e54]
+          - button "solid timbers (4)" [ref=e55]
+          - button "veneers (2)" [ref=e56]
+          - button "painted & lacquered (2)" [ref=e57]
+          - button "stone & composite (1)" [ref=e58]
+          - button "metals & leather (1)" [ref=e59]
+      - generic [ref=e60]:
+        - group [ref=e61]:
+          - link "European oak timber swatch solid timbers European Oak The timber most at home in an Irish room." [ref=e62] [cursor=pointer]:
+            - /url: /en/materials/european-oak/
+            - img "European oak timber swatch" [ref=e64]
+            - generic [ref=e65]:
+              - paragraph [ref=e66]: solid timbers
+              - heading "European Oak" [level=3] [ref=e67]
+              - paragraph [ref=e68]: The timber most at home in an Irish room.
+        - group [ref=e69]:
+          - link "American walnut timber swatch solid timbers American Walnut Depth, drama, and everyday calm." [ref=e70] [cursor=pointer]:
+            - /url: /en/materials/american-walnut/
+            - img "American walnut timber swatch" [ref=e72]
+            - generic [ref=e73]:
+              - paragraph [ref=e74]: solid timbers
+              - heading "American Walnut" [level=3] [ref=e75]
+              - paragraph [ref=e76]: Depth, drama, and everyday calm.
+        - group [ref=e77]:
+          - link "White ash timber swatch solid timbers White Ash Lightness without sterility." [ref=e78] [cursor=pointer]:
+            - /url: /en/materials/white-ash/
+            - img "White ash timber swatch" [ref=e80]
+            - generic [ref=e81]:
+              - paragraph [ref=e82]: solid timbers
+              - heading "White Ash" [level=3] [ref=e83]
+              - paragraph [ref=e84]: Lightness without sterility.
+        - group [ref=e85]:
+          - link "Fumed oak timber swatch solid timbers Fumed Oak Aged by ammonia, not imitation." [ref=e86] [cursor=pointer]:
+            - /url: /en/materials/fumed-oak/
+            - img "Fumed oak timber swatch" [ref=e88]
+            - generic [ref=e89]:
+              - paragraph [ref=e90]: solid timbers
+              - heading "Fumed Oak" [level=3] [ref=e91]
+              - paragraph [ref=e92]: Aged by ammonia, not imitation.
+        - group [ref=e93]:
+          - link "Crown-cut walnut veneer swatch veneers Crown-Cut Walnut Veneer Consistency across large surfaces." [ref=e94] [cursor=pointer]:
+            - /url: /en/materials/crown-walnut-veneer/
+            - img "Crown-cut walnut veneer swatch" [ref=e96]
+            - generic [ref=e97]:
+              - paragraph [ref=e98]: veneers
+              - heading "Crown-Cut Walnut Veneer" [level=3] [ref=e99]
+              - paragraph [ref=e100]: Consistency across large surfaces.
+        - group [ref=e101]:
+          - link "Quarter-sawn oak veneer swatch veneers Quarter-Sawn Oak Veneer The shimmer of stable grain." [ref=e102] [cursor=pointer]:
+            - /url: /en/materials/quarter-sawn-oak-veneer/
+            - img "Quarter-sawn oak veneer swatch" [ref=e104]
+            - generic [ref=e105]:
+              - paragraph [ref=e106]: veneers
+              - heading "Quarter-Sawn Oak Veneer" [level=3] [ref=e107]
+              - paragraph [ref=e108]: The shimmer of stable grain.
+        - group [ref=e109]:
+          - link "Satin lacquer colour swatch painted & lacquered Satin Lacquer Pigment, precision, and a surface that stays clean." [ref=e110] [cursor=pointer]:
+            - /url: /en/materials/satin-lacquer/
+            - img "Satin lacquer colour swatch" [ref=e112]
+            - generic [ref=e113]:
+              - paragraph [ref=e114]: painted & lacquered
+              - heading "Satin Lacquer" [level=3] [ref=e115]
+              - paragraph [ref=e116]: Pigment, precision, and a surface that stays clean.
+        - group [ref=e117]:
+          - link "Deep charcoal lacquer swatch painted & lacquered Deep Charcoal Lacquer Dark, disciplined, and quietly dramatic." [ref=e118] [cursor=pointer]:
+            - /url: /en/materials/deep-charcoal-lacquer/
+            - img "Deep charcoal lacquer swatch" [ref=e120]
+            - generic [ref=e121]:
+              - paragraph [ref=e122]: painted & lacquered
+              - heading "Deep Charcoal Lacquer" [level=3] [ref=e123]
+              - paragraph [ref=e124]: Dark, disciplined, and quietly dramatic.
+        - group [ref=e125]:
+          - link "Honed quartz composite swatch stone & composite Honed Quartz Composite Stone practicality with a soft touch." [ref=e126] [cursor=pointer]:
+            - /url: /en/materials/honed-quartz/
+            - img "Honed quartz composite swatch" [ref=e128]
+            - generic [ref=e129]:
+              - paragraph [ref=e130]: stone & composite
+              - heading "Honed Quartz Composite" [level=3] [ref=e131]
+              - paragraph [ref=e132]: Stone practicality with a soft touch.
+        - group [ref=e133]:
+          - link "Aged brass metal swatch metals & leather Aged Brass Warm metal that grows richer with time." [ref=e134] [cursor=pointer]:
+            - /url: /en/materials/aged-brass/
+            - img "Aged brass metal swatch" [ref=e136]
+            - generic [ref=e137]:
+              - paragraph [ref=e138]: metals & leather
+              - heading "Aged Brass" [level=3] [ref=e139]
+              - paragraph [ref=e140]: Warm metal that grows richer with time.
+    - generic [ref=e142]:
+      - generic [ref=e143]:
+        - heading "Build your palette" [level=2] [ref=e144]
+        - paragraph [ref=e145]: Select up to four materials to request samples or discuss on your project.
+      - generic [ref=e146]:
+        - generic [ref=e147]:
+          - button "European Oak" [ref=e148]:
+            - heading "European Oak" [level=3] [ref=e151]
+          - button "American Walnut" [ref=e152]:
+            - heading "American Walnut" [level=3] [ref=e155]
+          - button "White Ash" [ref=e156]:
+            - heading "White Ash" [level=3] [ref=e159]
+          - button "Fumed Oak" [ref=e160]:
+            - heading "Fumed Oak" [level=3] [ref=e163]
+          - button "Crown-Cut Walnut Veneer" [ref=e164]:
+            - heading "Crown-Cut Walnut Veneer" [level=3] [ref=e167]
+          - button "Quarter-Sawn Oak Veneer" [ref=e168]:
+            - heading "Quarter-Sawn Oak Veneer" [level=3] [ref=e171]
+          - button "Satin Lacquer" [ref=e172]:
+            - heading "Satin Lacquer" [level=3] [ref=e175]
+          - button "Deep Charcoal Lacquer" [ref=e176]:
+            - heading "Deep Charcoal Lacquer" [level=3] [ref=e179]
+          - button "Honed Quartz Composite" [ref=e180]:
+            - heading "Honed Quartz Composite" [level=3] [ref=e183]
+          - button "Aged Brass" [ref=e184]:
+            - heading "Aged Brass" [level=3] [ref=e187]
+        - generic [ref=e189]:
+          - generic [ref=e190]:
+            - generic [ref=e191]: No materials selected
+            - button "Clear" [ref=e192]
+          - list
+          - link "Request samples" [ref=e193] [cursor=pointer]:
+            - /url: /en/contact/?samples=
+    - generic [ref=e195]:
+      - heading "Discuss material options." [level=2] [ref=e196]
+      - link "Get in Touch" [ref=e197] [cursor=pointer]:
+        - /url: /en/contact/
+  - contentinfo [ref=e198]:
+    - generic [ref=e199]:
+      - generic [ref=e200]:
+        - generic [ref=e201]:
+          - heading "Begin your project." [level=2] [ref=e202]
+          - paragraph [ref=e203]: Furniture, measured in millimetres.
+          - link "Discuss a Project" [ref=e204] [cursor=pointer]:
+            - /url: /en/contact/
+        - generic [ref=e205]:
+          - generic [ref=e206]:
+            - heading "Navigation" [level=3] [ref=e207]
+            - list [ref=e208]:
+              - listitem [ref=e209]:
+                - link "Home" [ref=e210] [cursor=pointer]:
+                  - /url: /en/
+              - listitem [ref=e211]:
+                - link "About" [ref=e212] [cursor=pointer]:
+                  - /url: /en/about/
+              - listitem [ref=e213]:
+                - link "Services" [ref=e214] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e215]:
+                - link "Projects" [ref=e216] [cursor=pointer]:
+                  - /url: /en/projects/
+              - listitem [ref=e217]:
+                - link "Contact" [ref=e218] [cursor=pointer]:
+                  - /url: /en/contact/
+          - generic [ref=e219]:
+            - heading "Explore" [level=3] [ref=e220]
+            - list [ref=e221]:
+              - listitem [ref=e222]:
+                - link "Materials" [ref=e223] [cursor=pointer]:
+                  - /url: /en/materials/
+              - listitem [ref=e224]:
+                - link "Process" [ref=e225] [cursor=pointer]:
+                  - /url: /en/process/
+              - listitem [ref=e226]:
+                - link "Showroom" [ref=e227] [cursor=pointer]:
+                  - /url: /en/showroom/
+              - listitem [ref=e228]:
+                - link "Commercial" [ref=e229] [cursor=pointer]:
+                  - /url: /en/commercial/
+              - listitem [ref=e230]:
+                - link "Insights" [ref=e231] [cursor=pointer]:
+                  - /url: /en/insights/
+              - listitem [ref=e232]:
+                - link "FAQ" [ref=e233] [cursor=pointer]:
+                  - /url: /en/faq/
+          - generic [ref=e234]:
+            - heading "Services" [level=3] [ref=e235]
+            - list [ref=e236]:
+              - listitem [ref=e237]:
+                - link "Wardrobes & Dressing Rooms" [ref=e238] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e239]:
+                - link "Kitchens" [ref=e240] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e241]:
+                - link "Dressing Rooms" [ref=e242] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e243]:
+                - link "Living Joinery" [ref=e244] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e245]:
+                - link "Workplaces" [ref=e246] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e247]:
+                - link "Retail Spaces" [ref=e248] [cursor=pointer]:
+                  - /url: /en/services/
+          - generic [ref=e249]:
+            - heading "Contact" [level=3] [ref=e250]
+            - list [ref=e251]:
+              - listitem [ref=e252]:
+                - link "hello@tineo.ie" [ref=e253] [cursor=pointer]:
+                  - /url: mailto:hello@tineo.ie
+              - listitem [ref=e254]:
+                - link "+353 1 234 5678" [ref=e255] [cursor=pointer]:
+                  - /url: https://wa.me/35312345678
+              - listitem [ref=e256]: Unit 4, Grand Canal Street Lower, Dublin 2, D02 A342, Ireland
+      - separator [ref=e257]
+      - generic [ref=e258]:
+        - generic [ref=e259]:
+          - heading "Latest Insight" [level=3] [ref=e260]
+          - link "Why Handleless Kitchens Still Feel Future-Proof Twenty years after they first appeared in European kitchens, handleless cabinets remain the default choice for architects and interior designers who want a room to age gracefully." [ref=e261] [cursor=pointer]:
+            - /url: /en/insights/why-handleless-kitchens-still-feel-future-proof/
+            - heading "Why Handleless Kitchens Still Feel Future-Proof" [level=4] [ref=e262]
+            - paragraph [ref=e263]: Twenty years after they first appeared in European kitchens, handleless cabinets remain the default choice for architects and interior designers who want a room to age gracefully.
+        - link "Handleless charcoal kitchen with island and pendant lighting" [ref=e265] [cursor=pointer]:
+          - /url: /en/insights/why-handleless-kitchens-still-feel-future-proof/
+          - img "Handleless charcoal kitchen with island and pendant lighting" [ref=e266]
+      - separator [ref=e267]
+      - generic [ref=e268]:
+        - generic [ref=e269]: © 2026 TINEO Furniture & Interiors Ltd trading as TINEO. All rights reserved. Handcrafted in Ireland.
+        - generic [ref=e270]:
+          - link "Privacy Policy" [ref=e271] [cursor=pointer]:
+            - /url: /en/privacy/
+          - link "Terms of Service" [ref=e272] [cursor=pointer]:
+            - /url: /en/terms/
+          - link "Cookie Policy" [ref=e273] [cursor=pointer]:
+            - /url: /en/cookies/
+          - generic [ref=e274]:
+            - link "Instagram" [ref=e275] [cursor=pointer]:
+              - /url: https://instagram.com/tineoireland
+              - img [ref=e276]
+            - link "Pinterest" [ref=e279] [cursor=pointer]:
+              - /url: https://pinterest.com/tineoireland
+              - img [ref=e280]
+            - link "LinkedIn" [ref=e282] [cursor=pointer]:
+              - /url: https://linkedin.com/company/tineo
+              - img [ref=e283]
+  - dialog "We use cookies to understand how visitors use our site and to manage your preferences." [ref=e287]:
+    - generic [ref=e288]:
+      - paragraph [ref=e289]: We use cookies to understand how visitors use our site and to manage your preferences.
+      - generic [ref=e290]:
+        - button "Accept All" [ref=e291]
+        - button "Reject Optional" [ref=e292]
+        - button "Customise" [ref=e293]

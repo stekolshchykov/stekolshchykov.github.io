@@ -1,0 +1,175 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "TINEO" [ref=e6] [cursor=pointer]:
+        - /url: /en/
+        - img "TINEO" [ref=e7]:
+          - generic [ref=e8]: T
+          - generic [ref=e9]: I
+          - generic [ref=e10]: "N"
+          - generic [ref=e11]: E
+          - generic [ref=e12]: O
+      - navigation "Primary" [ref=e13]:
+        - link "Home" [ref=e14] [cursor=pointer]:
+          - /url: /en/
+        - link "About" [ref=e15] [cursor=pointer]:
+          - /url: /en/about/
+        - link "Services" [ref=e16] [cursor=pointer]:
+          - /url: /en/services/
+        - link "Projects" [ref=e17] [cursor=pointer]:
+          - /url: /en/projects/
+        - link "Contact" [ref=e18] [cursor=pointer]:
+          - /url: /en/contact/
+      - link "Discuss a Project" [ref=e19] [cursor=pointer]:
+        - /url: /en/contact/
+  - main [ref=e20]:
+    - generic [ref=e25]:
+      - generic [ref=e26]: Projects
+      - heading "Selected Work" [level=1] [ref=e27]
+      - paragraph [ref=e28]: Residential and commercial work from our Dublin workshop.
+    - generic [ref=e32]:
+      - generic [ref=e33]:
+        - button "All" [ref=e34]
+        - button "Residential" [ref=e35]
+        - button "Commercial" [ref=e36]
+      - generic [ref=e37]:
+        - link "Penthouse walk-in wardrobe suite in American walnut with brass hardware residential / 2024 Dublin Bay Dressing Room View Project →" [ref=e38] [cursor=pointer]:
+          - /url: /projects/penthouse-wardrobe-suite/
+          - img "Penthouse walk-in wardrobe suite in American walnut with brass hardware" [ref=e39]
+          - generic [ref=e41]:
+            - paragraph [ref=e42]: residential / 2024
+            - heading "Dublin Bay Dressing Room" [level=3] [ref=e43]
+            - generic [ref=e44]:
+              - text: View Project
+              - generic [ref=e45]: →
+        - link "Handleless matte charcoal kitchen with island and stone worktop residential / 2024 Blackrock Family Kitchen View Project →" [ref=e46] [cursor=pointer]:
+          - /url: /projects/blackrock-kitchen/
+          - img "Handleless matte charcoal kitchen with island and stone worktop" [ref=e47]
+          - generic [ref=e49]:
+            - paragraph [ref=e50]: residential / 2024
+            - heading "Blackrock Family Kitchen" [level=3] [ref=e51]
+            - generic [ref=e52]:
+              - text: View Project
+              - generic [ref=e53]: →
+        - link "Hotel lobby with walnut reception desk and lounge seating commercial / 2023 Hotel Reception & Lounge View Project →" [ref=e54] [cursor=pointer]:
+          - /url: /projects/shelbourne-fittings/
+          - img "Hotel lobby with walnut reception desk and lounge seating" [ref=e55]
+          - generic [ref=e57]:
+            - paragraph [ref=e58]: commercial / 2023
+            - heading "Hotel Reception & Lounge" [level=3] [ref=e59]
+            - generic [ref=e60]:
+              - text: View Project
+              - generic [ref=e61]: →
+        - link "Built-in oak library shelving around a period bay window residential / 2024 Ranelagh Alcove Library View Project →" [ref=e62] [cursor=pointer]:
+          - /url: /projects/ranelagh-alcove-library/
+          - img "Built-in oak library shelving around a period bay window" [ref=e63]
+          - generic [ref=e65]:
+            - paragraph [ref=e66]: residential / 2024
+            - heading "Ranelagh Alcove Library" [level=3] [ref=e67]
+            - generic [ref=e68]:
+              - text: View Project
+              - generic [ref=e69]: →
+        - link "Creative agency reception with ash desk and black steel details commercial / 2023 Dublin Office Fit-out View Project →" [ref=e70] [cursor=pointer]:
+          - /url: /projects/dublin-office-fitout/
+          - img "Creative agency reception with ash desk and black steel details" [ref=e71]
+          - generic [ref=e73]:
+            - paragraph [ref=e74]: commercial / 2023
+            - heading "Dublin Office Fit-out" [level=3] [ref=e75]
+            - generic [ref=e76]:
+              - text: View Project
+              - generic [ref=e77]: →
+        - link "Boutique-style walk-in closet with walnut island and mirror wall residential / 2024 Howth Dressing Room View Project →" [ref=e78] [cursor=pointer]:
+          - /url: /projects/howth-walk-in-closet/
+          - img "Boutique-style walk-in closet with walnut island and mirror wall" [ref=e79]
+          - generic [ref=e81]:
+            - paragraph [ref=e82]: residential / 2024
+            - heading "Howth Dressing Room" [level=3] [ref=e83]
+            - generic [ref=e84]:
+              - text: View Project
+              - generic [ref=e85]: →
+      - button "Load More" [ref=e87]
+  - contentinfo [ref=e88]:
+    - generic [ref=e89]:
+      - generic [ref=e90]:
+        - generic [ref=e91]:
+          - heading "Begin your project." [level=2] [ref=e92]
+          - paragraph [ref=e93]: Furniture, measured in millimetres.
+          - link "Discuss a Project" [ref=e94] [cursor=pointer]:
+            - /url: /en/contact/
+        - generic [ref=e95]:
+          - generic [ref=e96]:
+            - heading "Navigation" [level=3] [ref=e97]
+            - list [ref=e98]:
+              - listitem [ref=e99]:
+                - link "Home" [ref=e100] [cursor=pointer]:
+                  - /url: /en/
+              - listitem [ref=e101]:
+                - link "About" [ref=e102] [cursor=pointer]:
+                  - /url: /en/about/
+              - listitem [ref=e103]:
+                - link "Services" [ref=e104] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e105]:
+                - link "Projects" [ref=e106] [cursor=pointer]:
+                  - /url: /en/projects/
+              - listitem [ref=e107]:
+                - link "Contact" [ref=e108] [cursor=pointer]:
+                  - /url: /en/contact/
+          - generic [ref=e109]:
+            - heading "Services" [level=3] [ref=e110]
+            - list [ref=e111]:
+              - listitem [ref=e112]:
+                - link "Wardrobes & Dressing Rooms" [ref=e113] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e114]:
+                - link "Kitchens" [ref=e115] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e116]:
+                - link "Dressing Rooms" [ref=e117] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e118]:
+                - link "Living Joinery" [ref=e119] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e120]:
+                - link "Workplaces" [ref=e121] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e122]:
+                - link "Retail Spaces" [ref=e123] [cursor=pointer]:
+                  - /url: /en/services/
+          - generic [ref=e124]:
+            - heading "Contact" [level=3] [ref=e125]
+            - list [ref=e126]:
+              - listitem [ref=e127]:
+                - link "hello@tineo.ie" [ref=e128] [cursor=pointer]:
+                  - /url: mailto:hello@tineo.ie
+              - listitem [ref=e129]:
+                - link "+353 1 234 5678" [ref=e130] [cursor=pointer]:
+                  - /url: https://wa.me/35312345678
+              - listitem [ref=e131]: Unit 4, Grand Canal Street Lower, Dublin 2, D02 A342, Ireland
+      - separator [ref=e132]
+      - generic [ref=e133]:
+        - generic [ref=e134]: © 2026 TINEO Furniture & Interiors Ltd trading as TINEO. All rights reserved. Handcrafted in Ireland.
+        - generic [ref=e135]:
+          - link "Privacy Policy" [ref=e136] [cursor=pointer]:
+            - /url: /en/privacy/
+          - link "Terms of Service" [ref=e137] [cursor=pointer]:
+            - /url: /en/terms/
+          - link "Cookie Policy" [ref=e138] [cursor=pointer]:
+            - /url: /en/cookies/
+          - generic [ref=e139]:
+            - link "Instagram" [ref=e140] [cursor=pointer]:
+              - /url: https://instagram.com/tineoireland
+              - img [ref=e141]
+            - link "Pinterest" [ref=e144] [cursor=pointer]:
+              - /url: https://pinterest.com/tineoireland
+              - img [ref=e145]
+            - link "LinkedIn" [ref=e147] [cursor=pointer]:
+              - /url: https://linkedin.com/company/tineo
+              - img [ref=e148]
+  - dialog "We use cookies to understand how visitors use our site and to manage your preferences." [ref=e152]:
+    - generic [ref=e153]:
+      - paragraph [ref=e154]: We use cookies to understand how visitors use our site and to manage your preferences.
+      - generic [ref=e155]:
+        - button "Accept All" [ref=e156]
+        - button "Reject Optional" [ref=e157]
+        - button "Customise" [ref=e158]

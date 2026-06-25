@@ -1,0 +1,3 @@
+$ vite preview --port 4185
+  ➜  Local:   http://localhost:4185/
+  ➜  Network: use --host to expose

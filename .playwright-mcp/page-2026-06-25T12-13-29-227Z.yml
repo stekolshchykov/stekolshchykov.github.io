@@ -1,0 +1,162 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "TINEO" [ref=e6] [cursor=pointer]:
+        - /url: /en/
+        - img "TINEO" [ref=e7]:
+          - generic [ref=e8]: T
+          - generic [ref=e9]: I
+          - generic [ref=e10]: "N"
+          - generic [ref=e11]: E
+          - generic [ref=e12]: O
+      - navigation "Primary" [ref=e13]:
+        - link "Home" [ref=e14] [cursor=pointer]:
+          - /url: /en/
+        - link "About" [ref=e15] [cursor=pointer]:
+          - /url: /en/about/
+        - link "Services" [ref=e16] [cursor=pointer]:
+          - /url: /en/services/
+        - link "Projects" [ref=e17] [cursor=pointer]:
+          - /url: /en/projects/
+        - link "Contact" [ref=e18] [cursor=pointer]:
+          - /url: /en/contact/
+      - link "Discuss a Project" [ref=e19] [cursor=pointer]:
+        - /url: /en/contact/
+  - main [ref=e20]:
+    - generic [ref=e25]:
+      - generic [ref=e26]: Contact
+      - heading "Start a Conversation" [level=1] [ref=e27]
+      - paragraph [ref=e28]: Tell us about your project. We will respond within two business days.
+    - generic [ref=e32]:
+      - generic [ref=e33]:
+        - heading "How to reach us" [level=2] [ref=e34]
+        - paragraph [ref=e35]: Email, call, or visit us by appointment. We reply within two business days.
+        - link "Discuss a Project" [ref=e37] [cursor=pointer]:
+          - /url: /en/contact/
+      - generic [ref=e38]:
+        - generic [ref=e39]:
+          - paragraph [ref=e40]: Email
+          - link "hello@tineo.ie" [ref=e41] [cursor=pointer]:
+            - /url: mailto:hello@tineo.ie
+        - generic [ref=e42]:
+          - paragraph [ref=e43]: Phone
+          - link "+353 1 234 5678" [ref=e44] [cursor=pointer]:
+            - /url: tel:+35312345678
+        - generic [ref=e45]:
+          - paragraph [ref=e46]: WhatsApp
+          - link "+353 1 234 5678" [ref=e47] [cursor=pointer]:
+            - /url: https://wa.me/35312345678
+        - generic [ref=e48]:
+          - paragraph [ref=e49]: Visit
+          - paragraph [ref=e50]: Unit 4, Grand Canal Street Lower, Dublin 2, D02 A342, Ireland
+    - generic [ref=e53]:
+      - heading "Hours" [level=2] [ref=e55]
+      - generic [ref=e57]:
+        - generic [ref=e58]:
+          - term [ref=e59]: Monday
+          - definition [ref=e60]: 09:00 – 17:30
+        - generic [ref=e61]:
+          - term [ref=e62]: Tuesday
+          - definition [ref=e63]: 09:00 – 17:30
+        - generic [ref=e64]:
+          - term [ref=e65]: Wednesday
+          - definition [ref=e66]: 09:00 – 17:30
+        - generic [ref=e67]:
+          - term [ref=e68]: Thursday
+          - definition [ref=e69]: 09:00 – 17:30
+        - generic [ref=e70]:
+          - term [ref=e71]: Friday
+          - definition [ref=e72]: 09:00 – 17:30
+        - generic [ref=e73]:
+          - term [ref=e74]: Saturday
+          - definition [ref=e75]: By appointment
+        - generic [ref=e76]:
+          - term [ref=e77]: Sunday
+          - definition [ref=e78]: Closed
+    - iframe [ref=e81]:
+      
+  - contentinfo [ref=e82]:
+    - generic [ref=e83]:
+      - generic [ref=e84]:
+        - generic [ref=e85]:
+          - heading "Begin your project." [level=2] [ref=e86]
+          - paragraph [ref=e87]: Furniture, measured in millimetres.
+          - link "Discuss a Project" [ref=e88] [cursor=pointer]:
+            - /url: /en/contact/
+        - generic [ref=e89]:
+          - generic [ref=e90]:
+            - heading "Navigation" [level=3] [ref=e91]
+            - list [ref=e92]:
+              - listitem [ref=e93]:
+                - link "Home" [ref=e94] [cursor=pointer]:
+                  - /url: /en/
+              - listitem [ref=e95]:
+                - link "About" [ref=e96] [cursor=pointer]:
+                  - /url: /en/about/
+              - listitem [ref=e97]:
+                - link "Services" [ref=e98] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e99]:
+                - link "Projects" [ref=e100] [cursor=pointer]:
+                  - /url: /en/projects/
+              - listitem [ref=e101]:
+                - link "Contact" [ref=e102] [cursor=pointer]:
+                  - /url: /en/contact/
+          - generic [ref=e103]:
+            - heading "Services" [level=3] [ref=e104]
+            - list [ref=e105]:
+              - listitem [ref=e106]:
+                - link "Wardrobes & Dressing Rooms" [ref=e107] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e108]:
+                - link "Kitchens" [ref=e109] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e110]:
+                - link "Dressing Rooms" [ref=e111] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e112]:
+                - link "Living Joinery" [ref=e113] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e114]:
+                - link "Workplaces" [ref=e115] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e116]:
+                - link "Retail Spaces" [ref=e117] [cursor=pointer]:
+                  - /url: /en/services/
+          - generic [ref=e118]:
+            - heading "Contact" [level=3] [ref=e119]
+            - list [ref=e120]:
+              - listitem [ref=e121]:
+                - link "hello@tineo.ie" [ref=e122] [cursor=pointer]:
+                  - /url: mailto:hello@tineo.ie
+              - listitem [ref=e123]:
+                - link "+353 1 234 5678" [ref=e124] [cursor=pointer]:
+                  - /url: https://wa.me/35312345678
+              - listitem [ref=e125]: Unit 4, Grand Canal Street Lower, Dublin 2, D02 A342, Ireland
+      - separator [ref=e126]
+      - generic [ref=e127]:
+        - generic [ref=e128]: © 2026 TINEO Furniture & Interiors Ltd trading as TINEO. All rights reserved. Handcrafted in Ireland.
+        - generic [ref=e129]:
+          - link "Privacy Policy" [ref=e130] [cursor=pointer]:
+            - /url: /en/privacy/
+          - link "Terms of Service" [ref=e131] [cursor=pointer]:
+            - /url: /en/terms/
+          - link "Cookie Policy" [ref=e132] [cursor=pointer]:
+            - /url: /en/cookies/
+          - generic [ref=e133]:
+            - link "Instagram" [ref=e134] [cursor=pointer]:
+              - /url: https://instagram.com/tineoireland
+              - img [ref=e135]
+            - link "Pinterest" [ref=e138] [cursor=pointer]:
+              - /url: https://pinterest.com/tineoireland
+              - img [ref=e139]
+            - link "LinkedIn" [ref=e141] [cursor=pointer]:
+              - /url: https://linkedin.com/company/tineo
+              - img [ref=e142]
+  - dialog "We use cookies to understand how visitors use our site and to manage your preferences." [ref=e146]:
+    - generic [ref=e147]:
+      - paragraph [ref=e148]: We use cookies to understand how visitors use our site and to manage your preferences.
+      - generic [ref=e149]:
+        - button "Accept All" [ref=e150]
+        - button "Reject Optional" [ref=e151]
+        - button "Customise" [ref=e152]

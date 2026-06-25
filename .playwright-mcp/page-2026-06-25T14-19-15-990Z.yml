@@ -1,0 +1,438 @@
+- generic [ref=e3]:
+  - img [ref=e6]:
+    - generic [ref=e7]: T
+  - banner [ref=e9]:
+    - generic [ref=e10]:
+      - link "TINEO" [ref=e11] [cursor=pointer]:
+        - /url: /en/
+        - img "TINEO" [ref=e12]:
+          - generic [ref=e13]: T
+          - generic [ref=e14]: I
+          - generic [ref=e15]: "N"
+          - generic [ref=e16]: E
+          - generic [ref=e17]: O
+      - navigation "Primary" [ref=e18]:
+        - link "Home" [ref=e19] [cursor=pointer]:
+          - /url: /en/
+          - text: Home
+        - link "Services" [ref=e21] [cursor=pointer]:
+          - /url: /en/services/
+        - link "Projects" [ref=e22] [cursor=pointer]:
+          - /url: /en/projects/
+        - link "Materials" [ref=e23] [cursor=pointer]:
+          - /url: /en/materials/
+        - link "Insights" [ref=e24] [cursor=pointer]:
+          - /url: /en/insights/
+        - link "Contact" [ref=e25] [cursor=pointer]:
+          - /url: /en/contact/
+        - group "Studio menu" [ref=e26]:
+          - button "Studio" [ref=e27]:
+            - text: Studio
+            - img [ref=e28]
+      - link "Discuss a Project" [ref=e30] [cursor=pointer]:
+        - /url: /en/contact/
+  - main [ref=e31]:
+    - generic [ref=e32]:
+      - generic [ref=e38]:
+        - heading "Furniture, measured in millimetres." [level=1] [ref=e39]:
+          - generic "Furniture, measured in millimetres." [ref=e40]:
+            - generic [ref=e42]: Furniture,
+            - generic [ref=e45]: measured
+            - generic [ref=e48]: in
+            - generic [ref=e51]: millimetres.
+        - paragraph [ref=e52]: Bespoke wardrobes, kitchens, and interior joinery from our Dublin workshop.
+        - link "Discuss a Project" [ref=e54] [cursor=pointer]:
+          - /url: /en/contact/
+      - generic [ref=e56]: Scroll
+    - generic [ref=e61]:
+      - generic [ref=e62]:
+        - generic [ref=e63]: The Studio
+        - heading "Quiet luxury, made to measure" [level=2] [ref=e64]
+        - paragraph [ref=e65]: For over two decades, TINEO has designed and built furniture for homes and spaces across Ireland. Every piece begins with a conversation and ends with a measured fit.
+        - link "Our Story" [ref=e67] [cursor=pointer]:
+          - /url: /about/
+      - generic [ref=e68]:
+        - img "TINEO workshop craftsman working on bespoke timber furniture" [ref=e69]
+        - blockquote [ref=e70]:
+          - paragraph [ref=e71]: Furniture, measured in millimetres.
+    - generic [ref=e73]:
+      - generic [ref=e74]:
+        - generic [ref=e75]:
+          - generic [ref=e76]: Materials
+          - heading "The material world" [level=2] [ref=e77]:
+            - generic "The material world" [ref=e78]:
+              - generic [ref=e80]: The
+              - generic [ref=e83]: material
+              - generic [ref=e86]: world
+          - paragraph [ref=e87]: Timbers, lacquers, stone and metal — chosen for how they age, feel, and fit.
+        - link "Explore Materials" [ref=e88] [cursor=pointer]:
+          - /url: /en/materials/
+          - text: Explore Materials
+          - img [ref=e89]
+      - generic [ref=e91]:
+        - group [ref=e92]:
+          - link "European oak timber swatch solid timbers European Oak The timber most at home in an Irish room." [ref=e93] [cursor=pointer]:
+            - /url: /en/materials/european-oak/
+            - generic [ref=e94]:
+              - generic:
+                - img "European oak timber swatch"
+            - generic [ref=e96]:
+              - paragraph [ref=e97]: solid timbers
+              - heading "European Oak" [level=3] [ref=e98]
+              - paragraph [ref=e99]: The timber most at home in an Irish room.
+        - group [ref=e100]:
+          - link "American walnut timber swatch solid timbers American Walnut Depth, drama, and everyday calm." [ref=e101] [cursor=pointer]:
+            - /url: /en/materials/american-walnut/
+            - generic [ref=e102]:
+              - generic:
+                - img "American walnut timber swatch"
+            - generic [ref=e104]:
+              - paragraph [ref=e105]: solid timbers
+              - heading "American Walnut" [level=3] [ref=e106]
+              - paragraph [ref=e107]: Depth, drama, and everyday calm.
+        - group [ref=e108]:
+          - link "White ash timber swatch solid timbers White Ash Lightness without sterility." [ref=e109] [cursor=pointer]:
+            - /url: /en/materials/white-ash/
+            - generic [ref=e110]:
+              - generic:
+                - img "White ash timber swatch"
+            - generic [ref=e112]:
+              - paragraph [ref=e113]: solid timbers
+              - heading "White Ash" [level=3] [ref=e114]
+              - paragraph [ref=e115]: Lightness without sterility.
+    - generic [ref=e117]:
+      - generic [ref=e118]:
+        - generic [ref=e119]:
+          - generic [ref=e120]: Services
+          - heading "What we make" [level=2] [ref=e121]:
+            - generic "What we make" [ref=e122]:
+              - generic [ref=e124]: What
+              - generic [ref=e127]: we
+              - generic [ref=e130]: make
+        - link "View All Services" [ref=e132] [cursor=pointer]:
+          - /url: /en/services/
+          - text: View All Services
+          - img [ref=e133]
+      - generic [ref=e135]:
+        - group [ref=e137]:
+          - link "Bespoke fitted wardrobe with soft-close drawers and integrated lighting residential Wardrobes & Dressing Rooms Fitted wardrobes designed around the architecture of your room and the rhythm of your day. Get in Touch →" [ref=e138] [cursor=pointer]:
+            - /url: /en/services/custom-wardrobes/
+            - generic:
+              - img "Bespoke fitted wardrobe with soft-close drawers and integrated lighting"
+            - generic [ref=e140]:
+              - paragraph [ref=e141]: residential
+              - heading "Wardrobes & Dressing Rooms" [level=3] [ref=e142]
+              - paragraph [ref=e143]: Fitted wardrobes designed around the architecture of your room and the rhythm of your day.
+              - generic [ref=e144]:
+                - text: Get in Touch
+                - generic [ref=e145]: →
+        - group [ref=e147]:
+          - link "Modern office reception desk and boardroom joinery commercial Workplaces Reception desks, boardroom tables, and breakout joinery that communicate quality before anyone sits down. Get in Touch →" [ref=e148] [cursor=pointer]:
+            - /url: /en/services/office-fit-outs/
+            - generic:
+              - img "Modern office reception desk and boardroom joinery"
+            - generic [ref=e150]:
+              - paragraph [ref=e151]: commercial
+              - heading "Workplaces" [level=3] [ref=e152]
+              - paragraph [ref=e153]: Reception desks, boardroom tables, and breakout joinery that communicate quality before anyone sits down.
+              - generic [ref=e154]:
+                - text: Get in Touch
+                - generic [ref=e155]: →
+      - generic [ref=e156]:
+        - paragraph [ref=e157]: View All Services
+        - generic [ref=e158]:
+          - link "Kitchens" [ref=e159] [cursor=pointer]:
+            - /url: /en/services/bespoke-kitchens/
+            - generic [ref=e160]: Kitchens
+          - link "Dressing Rooms" [ref=e161] [cursor=pointer]:
+            - /url: /en/services/walk-in-closets/
+            - generic [ref=e162]: Dressing Rooms
+          - link "Living Joinery" [ref=e163] [cursor=pointer]:
+            - /url: /en/services/living-spaces/
+            - generic [ref=e164]: Living Joinery
+          - link "Retail Spaces" [ref=e165] [cursor=pointer]:
+            - /url: /en/services/retail-interiors/
+            - generic [ref=e166]: Retail Spaces
+          - link "Hotels & Restaurants" [ref=e167] [cursor=pointer]:
+            - /url: /en/services/hospitality/
+            - generic [ref=e168]: Hotels & Restaurants
+          - link "One-Off Commissions" [ref=e169] [cursor=pointer]:
+            - /url: /en/services/custom-solutions/
+            - generic [ref=e170]: One-Off Commissions
+    - generic [ref=e173]:
+      - generic [ref=e174]:
+        - paragraph [ref=e175]: 20+
+        - paragraph [ref=e176]: Years of craft
+      - generic [ref=e177]:
+        - paragraph [ref=e178]: 500+
+        - paragraph [ref=e179]: Projects delivered
+      - generic [ref=e180]:
+        - paragraph [ref=e181]: "12"
+        - paragraph [ref=e182]: Workshop makers
+      - generic [ref=e183]:
+        - paragraph [ref=e184]: "10"
+        - paragraph [ref=e185]: Year warranty
+    - generic [ref=e187]:
+      - generic [ref=e189]:
+        - generic [ref=e190]:
+          - generic [ref=e191]: Selected Work
+          - heading "Selected Work" [level=2] [ref=e192]:
+            - generic "Selected Work" [ref=e193]:
+              - generic [ref=e195]: Selected
+              - generic [ref=e198]: Work
+        - link "View All Projects" [ref=e200] [cursor=pointer]:
+          - /url: /en/projects/
+          - text: View All Projects
+          - img [ref=e201]
+      - generic [ref=e203]:
+        - group [ref=e205]:
+          - link "Penthouse walk-in wardrobe suite in American walnut with brass hardware residential / 2024 Dublin Bay Dressing Room View Project →" [ref=e206] [cursor=pointer]:
+            - /url: /projects/penthouse-wardrobe-suite/
+            - generic:
+              - img "Penthouse walk-in wardrobe suite in American walnut with brass hardware"
+            - generic [ref=e208]:
+              - paragraph [ref=e209]: residential / 2024
+              - heading "Dublin Bay Dressing Room" [level=3] [ref=e210]
+              - generic [ref=e211]:
+                - text: View Project
+                - generic [ref=e212]: →
+        - group [ref=e214]:
+          - link "Handleless matte charcoal kitchen with island and stone worktop residential / 2024 Blackrock Family Kitchen View Project →" [ref=e215] [cursor=pointer]:
+            - /url: /projects/blackrock-kitchen/
+            - generic:
+              - img "Handleless matte charcoal kitchen with island and stone worktop"
+            - generic [ref=e217]:
+              - paragraph [ref=e218]: residential / 2024
+              - heading "Blackrock Family Kitchen" [level=3] [ref=e219]
+              - generic [ref=e220]:
+                - text: View Project
+                - generic [ref=e221]: →
+        - group [ref=e223]:
+          - link "Hotel lobby with walnut reception desk and lounge seating commercial / 2023 Hotel Reception & Lounge View Project →" [ref=e224] [cursor=pointer]:
+            - /url: /projects/shelbourne-fittings/
+            - generic:
+              - img "Hotel lobby with walnut reception desk and lounge seating"
+            - generic [ref=e226]:
+              - paragraph [ref=e227]: commercial / 2023
+              - heading "Hotel Reception & Lounge" [level=3] [ref=e228]
+              - generic [ref=e229]:
+                - text: View Project
+                - generic [ref=e230]: →
+    - generic [ref=e232]:
+      - generic [ref=e233]:
+        - generic [ref=e234]: Process
+        - heading "From Sketch to Space" [level=2] [ref=e235]
+      - generic [ref=e238]:
+        - generic [ref=e240]:
+          - generic [ref=e242]: "1"
+          - generic [ref=e243]:
+            - generic: "1"
+            - heading "Consult" [level=3] [ref=e244]
+            - paragraph [ref=e245]: We visit your home or site, listen to how you live, and define the brief, budget, and timeline together.
+        - generic [ref=e247]:
+          - generic [ref=e249]: "2"
+          - generic [ref=e250]:
+            - generic: "2"
+            - heading "Design" [level=3] [ref=e251]
+            - paragraph [ref=e252]: Drawings, material samples, and 3D visuals let you see every detail before the first piece of timber is cut.
+        - generic [ref=e254]:
+          - generic [ref=e256]: "3"
+          - generic [ref=e257]:
+            - generic: "3"
+            - heading "Craft" [level=3] [ref=e258]
+            - paragraph [ref=e259]: Your furniture is made in our Dublin workshop by makers who measure twice, cut once, and finish by hand.
+        - generic [ref=e261]:
+          - generic [ref=e263]: "4"
+          - generic [ref=e264]:
+            - generic: "4"
+            - heading "Install" [level=3] [ref=e265]
+            - paragraph [ref=e266]: We deliver and install with the same care we built it with, then leave the space ready to live in.
+    - generic [ref=e268]:
+      - generic [ref=e269]:
+        - generic [ref=e270]:
+          - generic [ref=e271]: Insights
+          - heading "Notes from the studio" [level=2] [ref=e272]:
+            - generic "Notes from the studio" [ref=e273]:
+              - generic [ref=e275]: Notes
+              - generic [ref=e278]: from
+              - generic [ref=e281]: the
+              - generic [ref=e284]: studio
+        - link "Read All Insights" [ref=e285] [cursor=pointer]:
+          - /url: /en/insights/
+          - text: Read All Insights
+          - img [ref=e286]
+      - generic [ref=e288]:
+        - article [ref=e289]:
+          - link "Handleless charcoal kitchen with island and pendant lighting Design 5 min read Why Handleless Kitchens Still Feel Future-Proof Twenty years after they first appeared in European kitchens, handleless cabinets remain the default choice for architects and interior designers who want a room to age gracefully." [ref=e290] [cursor=pointer]:
+            - /url: /en/insights/why-handleless-kitchens-still-feel-future-proof/
+            - img "Handleless charcoal kitchen with island and pendant lighting" [ref=e292]
+            - generic [ref=e293]:
+              - generic [ref=e294]: Design
+              - generic [ref=e296]: 5 min read
+            - heading "Why Handleless Kitchens Still Feel Future-Proof" [level=3] [ref=e297]
+            - paragraph [ref=e298]: Twenty years after they first appeared in European kitchens, handleless cabinets remain the default choice for architects and interior designers who want a room to age gracefully.
+        - article [ref=e299]:
+          - link "American walnut dressing room with brass details Materials 4 min read The Quiet Luxury of American Walnut Few materials communicate luxury as quietly as American walnut. Its depth, stability, and fine grain make it the first timber we reach for when a room needs warmth without ostentation." [ref=e300] [cursor=pointer]:
+            - /url: /en/insights/the-quiet-luxury-of-american-walnut/
+            - img "American walnut dressing room with brass details" [ref=e302]
+            - generic [ref=e303]:
+              - generic [ref=e304]: Materials
+              - generic [ref=e306]: 4 min read
+            - heading "The Quiet Luxury of American Walnut" [level=3] [ref=e307]
+            - paragraph [ref=e308]: Few materials communicate luxury as quietly as American walnut. Its depth, stability, and fine grain make it the first timber we reach for when a room needs warmth without ostentation.
+    - generic [ref=e310]:
+      - generic [ref=e311]:
+        - generic [ref=e312]: Client Words
+        - heading "What They Say" [level=2] [ref=e313]
+      - generic [ref=e314]:
+        - article [ref=e316]:
+          - generic: “
+          - blockquote [ref=e317]: Every drawer, every light, every joint feels considered. The dressing room has become the calmest room in the house.
+          - generic [ref=e318]:
+            - paragraph [ref=e319]: Sarah M.
+            - paragraph [ref=e320]: Dublin 6
+        - generic [ref=e321]:
+          - button "Previous testimonial" [ref=e322]:
+            - img [ref=e323]
+          - generic [ref=e325]: 01 / 03
+          - button "Next testimonial" [ref=e326]:
+            - img [ref=e327]
+    - generic [ref=e331]:
+      - generic [ref=e333]:
+        - generic:
+          - img "TINEO showroom interior with full-size installations and material samples"
+      - generic [ref=e334]:
+        - generic [ref=e335]: Showroom
+        - heading "See it in person" [level=2] [ref=e336]:
+          - generic "See it in person" [ref=e337]:
+            - generic [ref=e339]: See
+            - generic [ref=e342]: it
+            - generic [ref=e345]: in
+            - generic [ref=e348]: person
+        - paragraph [ref=e349]: Visit our Dublin showroom to open drawers, feel handles, and see how timber responds to natural light.
+        - link "Book a Visit" [ref=e350] [cursor=pointer]:
+          - /url: /en/showroom/
+    - generic [ref=e354]:
+      - heading "Begin your project." [level=2] [ref=e355]
+      - paragraph [ref=e356]: Tell us about your space. We will respond within two business days.
+      - link "Start a Conversation" [ref=e357] [cursor=pointer]:
+        - /url: /en/contact/
+        - generic [ref=e358]: Start a Conversation
+        - img [ref=e359]
+  - contentinfo [ref=e362]:
+    - generic [ref=e363]:
+      - generic [ref=e364]:
+        - generic [ref=e365]:
+          - heading "Begin your project." [level=2] [ref=e366]
+          - paragraph [ref=e367]: Furniture, measured in millimetres.
+          - link "Discuss a Project" [ref=e368] [cursor=pointer]:
+            - /url: /en/contact/
+        - generic [ref=e369]:
+          - generic [ref=e370]:
+            - heading "Navigation" [level=3] [ref=e371]
+            - list [ref=e372]:
+              - listitem [ref=e373]:
+                - link "Home" [ref=e374] [cursor=pointer]:
+                  - /url: /en/
+              - listitem [ref=e375]:
+                - link "About" [ref=e376] [cursor=pointer]:
+                  - /url: /en/about/
+              - listitem [ref=e377]:
+                - link "Services" [ref=e378] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e379]:
+                - link "Projects" [ref=e380] [cursor=pointer]:
+                  - /url: /en/projects/
+              - listitem [ref=e381]:
+                - link "Contact" [ref=e382] [cursor=pointer]:
+                  - /url: /en/contact/
+          - generic [ref=e383]:
+            - heading "Explore" [level=3] [ref=e384]
+            - list [ref=e385]:
+              - listitem [ref=e386]:
+                - link "Materials" [ref=e387] [cursor=pointer]:
+                  - /url: /en/materials/
+              - listitem [ref=e388]:
+                - link "Process" [ref=e389] [cursor=pointer]:
+                  - /url: /en/process/
+              - listitem [ref=e390]:
+                - link "Showroom" [ref=e391] [cursor=pointer]:
+                  - /url: /en/showroom/
+              - listitem [ref=e392]:
+                - link "Commercial" [ref=e393] [cursor=pointer]:
+                  - /url: /en/commercial/
+              - listitem [ref=e394]:
+                - link "Insights" [ref=e395] [cursor=pointer]:
+                  - /url: /en/insights/
+              - listitem [ref=e396]:
+                - link "FAQ" [ref=e397] [cursor=pointer]:
+                  - /url: /en/faq/
+          - generic [ref=e398]:
+            - heading "Services" [level=3] [ref=e399]
+            - list [ref=e400]:
+              - listitem [ref=e401]:
+                - link "Wardrobes & Dressing Rooms" [ref=e402] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e403]:
+                - link "Kitchens" [ref=e404] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e405]:
+                - link "Dressing Rooms" [ref=e406] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e407]:
+                - link "Living Joinery" [ref=e408] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e409]:
+                - link "Workplaces" [ref=e410] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e411]:
+                - link "Retail Spaces" [ref=e412] [cursor=pointer]:
+                  - /url: /en/services/
+          - generic [ref=e413]:
+            - heading "Contact" [level=3] [ref=e414]
+            - list [ref=e415]:
+              - listitem [ref=e416]:
+                - link "hello@tineo.ie" [ref=e417] [cursor=pointer]:
+                  - /url: mailto:hello@tineo.ie
+              - listitem [ref=e418]:
+                - link "+353 1 234 5678" [ref=e419] [cursor=pointer]:
+                  - /url: https://wa.me/35312345678
+              - listitem [ref=e420]: Unit 4, Grand Canal Street Lower, Dublin 2, D02 A342, Ireland
+      - separator [ref=e421]
+      - generic [ref=e422]:
+        - generic [ref=e423]:
+          - heading "Latest Insight" [level=3] [ref=e424]
+          - link "Why Handleless Kitchens Still Feel Future-Proof Twenty years after they first appeared in European kitchens, handleless cabinets remain the default choice for architects and interior designers who want a room to age gracefully." [ref=e425] [cursor=pointer]:
+            - /url: /en/insights/why-handleless-kitchens-still-feel-future-proof/
+            - heading "Why Handleless Kitchens Still Feel Future-Proof" [level=4] [ref=e426]
+            - paragraph [ref=e427]: Twenty years after they first appeared in European kitchens, handleless cabinets remain the default choice for architects and interior designers who want a room to age gracefully.
+        - link "Handleless charcoal kitchen with island and pendant lighting" [ref=e429] [cursor=pointer]:
+          - /url: /en/insights/why-handleless-kitchens-still-feel-future-proof/
+          - img "Handleless charcoal kitchen with island and pendant lighting" [ref=e430]
+      - separator [ref=e431]
+      - generic [ref=e432]:
+        - generic [ref=e433]: © 2026 TINEO Furniture & Interiors Ltd trading as TINEO. All rights reserved. Handcrafted in Ireland.
+        - generic [ref=e434]:
+          - link "Privacy Policy" [ref=e435] [cursor=pointer]:
+            - /url: /en/privacy/
+          - link "Terms of Service" [ref=e436] [cursor=pointer]:
+            - /url: /en/terms/
+          - link "Cookie Policy" [ref=e437] [cursor=pointer]:
+            - /url: /en/cookies/
+          - generic [ref=e438]:
+            - link "Instagram" [ref=e439] [cursor=pointer]:
+              - /url: https://instagram.com/tineoireland
+              - img [ref=e440]
+            - link "Pinterest" [ref=e443] [cursor=pointer]:
+              - /url: https://pinterest.com/tineoireland
+              - img [ref=e444]
+            - link "LinkedIn" [ref=e446] [cursor=pointer]:
+              - /url: https://linkedin.com/company/tineo
+              - img [ref=e447]
+  - dialog "We use cookies to understand how visitors use our site and to manage your preferences." [ref=e451]:
+    - generic [ref=e452]:
+      - paragraph [ref=e453]: We use cookies to understand how visitors use our site and to manage your preferences.
+      - generic [ref=e454]:
+        - button "Accept All" [ref=e455]
+        - button "Reject Optional" [ref=e456]
+        - button "Customise" [ref=e457]

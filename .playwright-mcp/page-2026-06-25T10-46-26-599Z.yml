@@ -1,0 +1,165 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "Home" [ref=e6] [cursor=pointer]:
+        - /url: /en/
+        - img "TINEO" [ref=e7]:
+          - generic [ref=e8]: TINEO
+      - navigation "Primary" [ref=e9]:
+        - link "Home" [ref=e10] [cursor=pointer]:
+          - /url: /en/
+        - link "About" [ref=e11] [cursor=pointer]:
+          - /url: /en/about/
+        - link "Services" [ref=e12] [cursor=pointer]:
+          - /url: /en/services/
+        - link "Projects" [ref=e13] [cursor=pointer]:
+          - /url: /en/projects/
+        - link "Contact" [ref=e14] [cursor=pointer]:
+          - /url: /en/contact/
+      - link "Discuss a Project" [ref=e16] [cursor=pointer]:
+        - /url: /en/contact/
+  - main [ref=e17]:
+    - generic [ref=e21]:
+      - generic [ref=e22]: Contact
+      - heading "Start a Conversation" [level=1] [ref=e23]
+      - generic [ref=e24]: Tell us about your project. We will respond within two business days.
+    - generic [ref=e27]:
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - heading "How to reach us" [level=2] [ref=e33]
+          - generic [ref=e34]: Email, call, or visit us by appointment. We reply within two business days.
+          - link "Discuss a Project" [ref=e36] [cursor=pointer]:
+            - /url: /en/contact/
+        - generic [ref=e37]:
+          - generic [ref=e39]:
+            - img [ref=e41]
+            - generic [ref=e44]:
+              - paragraph [ref=e45]: Email
+              - link "hello@tineo.ie" [ref=e46] [cursor=pointer]:
+                - /url: mailto:hello@tineo.ie
+              - paragraph [ref=e47]: We reply within two business days
+          - generic [ref=e49]:
+            - img [ref=e51]
+            - generic [ref=e53]:
+              - paragraph [ref=e54]: WhatsApp
+              - link "+353 87 123 4567" [ref=e55] [cursor=pointer]:
+                - /url: https://wa.me/353871234567
+              - paragraph [ref=e56]: Message us on WhatsApp
+          - generic [ref=e58]:
+            - img [ref=e60]
+            - generic [ref=e63]:
+              - paragraph [ref=e64]: Visit
+              - paragraph [ref=e65]: Dublin, Ireland
+              - paragraph [ref=e66]: By appointment only
+      - generic [ref=e68]:
+        - heading "Hours" [level=2] [ref=e69]
+        - generic [ref=e70]:
+          - generic [ref=e71]:
+            - term [ref=e72]: Monday
+            - definition [ref=e73]: 09:00 – 17:30
+          - generic [ref=e74]:
+            - term [ref=e75]: Tuesday
+            - definition [ref=e76]: 09:00 – 17:30
+          - generic [ref=e77]:
+            - term [ref=e78]: Wednesday
+            - definition [ref=e79]: 09:00 – 17:30
+          - generic [ref=e80]:
+            - term [ref=e81]: Thursday
+            - definition [ref=e82]: 09:00 – 17:30
+          - generic [ref=e83]:
+            - term [ref=e84]: Friday
+            - definition [ref=e85]: 09:00 – 17:30
+          - generic [ref=e86]:
+            - term [ref=e87]: Saturday
+            - definition [ref=e88]: By appointment
+          - generic [ref=e89]:
+            - term [ref=e90]: Sunday
+            - definition [ref=e91]: Closed
+    - generic [ref=e93]:
+      - heading "Find Us" [level=2] [ref=e94]
+      - iframe [ref=e98]:
+        
+  - contentinfo [ref=e99]:
+    - generic [ref=e100]:
+      - generic [ref=e101]:
+        - generic [ref=e102]:
+          - heading "Have a project in mind?" [level=2] [ref=e103]
+          - generic [ref=e104]: Handcrafted Furniture, Designed for Your Space
+          - link "Discuss a Project" [ref=e105] [cursor=pointer]:
+            - /url: /en/contact/
+        - generic [ref=e106]:
+          - generic [ref=e107]:
+            - heading "Navigation" [level=3] [ref=e108]
+            - list [ref=e109]:
+              - listitem [ref=e110]:
+                - link "Home" [ref=e111] [cursor=pointer]:
+                  - /url: /en/
+              - listitem [ref=e112]:
+                - link "About" [ref=e113] [cursor=pointer]:
+                  - /url: /en/about/
+              - listitem [ref=e114]:
+                - link "Services" [ref=e115] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e116]:
+                - link "Projects" [ref=e117] [cursor=pointer]:
+                  - /url: /en/projects/
+              - listitem [ref=e118]:
+                - link "Contact" [ref=e119] [cursor=pointer]:
+                  - /url: /en/contact/
+          - generic [ref=e120]:
+            - heading "Services" [level=3] [ref=e121]
+            - list [ref=e122]:
+              - listitem [ref=e123]:
+                - link "Custom Wardrobes" [ref=e124] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e125]:
+                - link "Bespoke Kitchens" [ref=e126] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e127]:
+                - link "Walk-in Closets" [ref=e128] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e129]:
+                - link "Living Spaces" [ref=e130] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e131]:
+                - link "Office Fit-outs" [ref=e132] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e133]:
+                - link "Retail Interiors" [ref=e134] [cursor=pointer]:
+                  - /url: /en/services/
+          - generic [ref=e135]:
+            - heading "Contact" [level=3] [ref=e136]
+            - list [ref=e137]:
+              - listitem [ref=e138]:
+                - link "hello@tineo.ie" [ref=e139] [cursor=pointer]:
+                  - /url: mailto:hello@tineo.ie
+              - listitem [ref=e140]:
+                - link "+353 87 123 4567" [ref=e141] [cursor=pointer]:
+                  - /url: https://wa.me/353871234567
+              - listitem [ref=e142]: Dublin, Ireland
+      - separator [ref=e143]
+      - generic [ref=e144]:
+        - generic [ref=e145]: © 2026 [Existing Company Name] trading as TINEO. All rights reserved.
+        - generic [ref=e146]:
+          - link "Privacy Policy" [ref=e147] [cursor=pointer]:
+            - /url: /en/privacy/
+          - link "Terms of Service" [ref=e148] [cursor=pointer]:
+            - /url: /en/terms/
+          - link "Cookie Policy" [ref=e149] [cursor=pointer]:
+            - /url: /en/cookies/
+          - link "Instagram" [ref=e150] [cursor=pointer]:
+            - /url: https://instagram.com/tineoireland
+          - link "Pinterest" [ref=e151] [cursor=pointer]:
+            - /url: https://pinterest.com/tineoireland
+          - link "LinkedIn" [ref=e152] [cursor=pointer]:
+            - /url: https://linkedin.com/company/tineo
+  - link "Chat on WhatsApp" [ref=e153] [cursor=pointer]:
+    - /url: https://wa.me/353871234567?text=Hi%20TINEO%2C%20I%20would%20like%20to%20discuss%20a%20custom%20furniture%20project.
+    - img [ref=e155]
+  - dialog "We use cookies to improve your experience and analyse site traffic. You can manage your preferences at any time." [ref=e157]:
+    - generic [ref=e158]:
+      - paragraph [ref=e159]: We use cookies to improve your experience and analyse site traffic. You can manage your preferences at any time.
+      - generic [ref=e160]:
+        - button "Accept All" [ref=e161]
+        - button "Reject Optional" [ref=e162]
+        - button "Customise" [ref=e163]

@@ -1,0 +1,19 @@
+[     911ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:4173/videos/hero.mp4:0
+[     985ms] [WARNING] Please gsap.registerPlugin(ScrollTrigger) @ http://localhost:4173/_app/immutable/chunks/CjKOKo0w.js:0
+[    1075ms] TypeError: ro is not a function
+    at new e (http://localhost:4173/_app/immutable/chunks/CjKOKo0w.js:1:90728)
+    at $.create (http://localhost:4173/_app/immutable/chunks/CjKOKo0w.js:1:107414)
+    at e.<anonymous> (http://localhost:4173/_app/immutable/nodes/3.qoU84Lt0.js:1:2150)
+    at i (http://localhost:4173/_app/immutable/chunks/CjKOKo0w.js:1:45422)
+    at t.add (http://localhost:4173/_app/immutable/chunks/CjKOKo0w.js:1:45518)
+    at new e (http://localhost:4173/_app/immutable/chunks/CjKOKo0w.js:1:45239)
+    at Object.context (http://localhost:4173/_app/immutable/chunks/CjKOKo0w.js:1:49251)
+    at http://localhost:4173/_app/immutable/nodes/3.qoU84Lt0.js:1:1945
+    at Q (http://localhost:4173/_app/immutable/chunks/BdJM3IiG.js:1:31528)
+    at http://localhost:4173/_app/immutable/chunks/BdJM3IiG.js:3:11369
+[     995ms] [WARNING] Invalid property scrollTrigger set to {trigger: section.bg-bg-primary.py-24.md:py-32, start: top 75%} Missing plugin? gsap.registerPlugin() @ http://localhost:4173/_app/immutable/chunks/CjKOKo0w.js:0
+[     996ms] [WARNING] Invalid property scrollTrigger set to {trigger: section.bg-bg-secondary.py-24.md:py-32, start: top 75%} Missing plugin? gsap.registerPlugin() @ http://localhost:4173/_app/immutable/chunks/CjKOKo0w.js:0
+[     996ms] [WARNING] Invalid property scrollTrigger set to {trigger: section.bg-bg-primary.py-24.md:py-32, start: top 75%} Missing plugin? gsap.registerPlugin() @ http://localhost:4173/_app/immutable/chunks/CjKOKo0w.js:0
+[     997ms] [WARNING] Invalid property scrollTrigger set to {trigger: section.bg-bg-secondary.py-24.md:py-32, start: top 75%} Missing plugin? gsap.registerPlugin() @ http://localhost:4173/_app/immutable/chunks/CjKOKo0w.js:0
+[     997ms] [WARNING] Invalid property scrollTrigger set to {trigger: section.bg-bg-primary.py-24.md:py-32, start: top 75%} Missing plugin? gsap.registerPlugin() @ http://localhost:4173/_app/immutable/chunks/CjKOKo0w.js:0
+[     999ms] [WARNING] Invalid property scrollTrigger set to {trigger: section.bg-bg-secondary.py-24.md:py-32, start: top 75%} Missing plugin? gsap.registerPlugin() @ http://localhost:4173/_app/immutable/chunks/CjKOKo0w.js:0

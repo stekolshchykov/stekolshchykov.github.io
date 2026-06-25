@@ -1,0 +1,113 @@
+- generic [ref=e3]:
+  - img [ref=e6]:
+    - generic [ref=e7]: T
+  - banner [ref=e9]:
+    - generic [ref=e10]:
+      - link "TINEO" [ref=e11] [cursor=pointer]:
+        - /url: /en/
+        - img "TINEO" [ref=e12]:
+          - generic [ref=e13]: T
+          - generic [ref=e14]: I
+          - generic [ref=e15]: "N"
+          - generic [ref=e16]: E
+          - generic [ref=e17]: O
+      - navigation "Primary" [ref=e18]:
+        - link "Home" [ref=e19] [cursor=pointer]:
+          - /url: /en/
+        - link "About" [ref=e20] [cursor=pointer]:
+          - /url: /en/about/
+        - link "Services" [ref=e21] [cursor=pointer]:
+          - /url: /en/services/
+        - link "Projects" [ref=e22] [cursor=pointer]:
+          - /url: /en/projects/
+          - text: Projects
+        - link "Contact" [ref=e24] [cursor=pointer]:
+          - /url: /en/contact/
+      - link "Discuss a Project" [ref=e25] [cursor=pointer]:
+        - /url: /en/contact/
+  - main [ref=e26]
+  - contentinfo [ref=e27]:
+    - generic [ref=e28]:
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - heading "Begin your project." [level=2] [ref=e31]
+          - paragraph [ref=e32]: Furniture, measured in millimetres.
+          - link "Discuss a Project" [ref=e33] [cursor=pointer]:
+            - /url: /en/contact/
+        - generic [ref=e34]:
+          - generic [ref=e35]:
+            - heading "Navigation" [level=3] [ref=e36]
+            - list [ref=e37]:
+              - listitem [ref=e38]:
+                - link "Home" [ref=e39] [cursor=pointer]:
+                  - /url: /en/
+              - listitem [ref=e40]:
+                - link "About" [ref=e41] [cursor=pointer]:
+                  - /url: /en/about/
+              - listitem [ref=e42]:
+                - link "Services" [ref=e43] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e44]:
+                - link "Projects" [ref=e45] [cursor=pointer]:
+                  - /url: /en/projects/
+              - listitem [ref=e46]:
+                - link "Contact" [ref=e47] [cursor=pointer]:
+                  - /url: /en/contact/
+          - generic [ref=e48]:
+            - heading "Services" [level=3] [ref=e49]
+            - list [ref=e50]:
+              - listitem [ref=e51]:
+                - link "Wardrobes & Dressing Rooms" [ref=e52] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e53]:
+                - link "Kitchens" [ref=e54] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e55]:
+                - link "Dressing Rooms" [ref=e56] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e57]:
+                - link "Living Joinery" [ref=e58] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e59]:
+                - link "Workplaces" [ref=e60] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e61]:
+                - link "Retail Spaces" [ref=e62] [cursor=pointer]:
+                  - /url: /en/services/
+          - generic [ref=e63]:
+            - heading "Contact" [level=3] [ref=e64]
+            - list [ref=e65]:
+              - listitem [ref=e66]:
+                - link "hello@tineo.ie" [ref=e67] [cursor=pointer]:
+                  - /url: mailto:hello@tineo.ie
+              - listitem [ref=e68]:
+                - link "+353 1 234 5678" [ref=e69] [cursor=pointer]:
+                  - /url: https://wa.me/35312345678
+              - listitem [ref=e70]: Unit 4, Grand Canal Street Lower, Dublin 2, D02 A342, Ireland
+      - separator [ref=e71]
+      - generic [ref=e72]:
+        - generic [ref=e73]: © 2026 TINEO Furniture & Interiors Ltd trading as TINEO. All rights reserved. Handcrafted in Ireland.
+        - generic [ref=e74]:
+          - link "Privacy Policy" [ref=e75] [cursor=pointer]:
+            - /url: /en/privacy/
+          - link "Terms of Service" [ref=e76] [cursor=pointer]:
+            - /url: /en/terms/
+          - link "Cookie Policy" [ref=e77] [cursor=pointer]:
+            - /url: /en/cookies/
+          - generic [ref=e78]:
+            - link "Instagram" [ref=e79] [cursor=pointer]:
+              - /url: https://instagram.com/tineoireland
+              - img [ref=e80]
+            - link "Pinterest" [ref=e83] [cursor=pointer]:
+              - /url: https://pinterest.com/tineoireland
+              - img [ref=e84]
+            - link "LinkedIn" [ref=e86] [cursor=pointer]:
+              - /url: https://linkedin.com/company/tineo
+              - img [ref=e87]
+  - dialog "We use cookies to understand how visitors use our site and to manage your preferences." [ref=e91]:
+    - generic [ref=e92]:
+      - paragraph [ref=e93]: We use cookies to understand how visitors use our site and to manage your preferences.
+      - generic [ref=e94]:
+        - button "Accept All" [ref=e95]
+        - button "Reject Optional" [ref=e96]
+        - button "Customise" [ref=e97]

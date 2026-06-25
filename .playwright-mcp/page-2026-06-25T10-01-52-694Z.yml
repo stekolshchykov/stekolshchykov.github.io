@@ -1,0 +1,238 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "Home" [ref=e6] [cursor=pointer]:
+        - /url: /en/
+        - img "TINEO" [ref=e7]:
+          - generic [ref=e8]: TINEO
+      - navigation "Primary" [ref=e9]:
+        - link "Home" [ref=e10] [cursor=pointer]:
+          - /url: /en/
+        - link "About" [ref=e11] [cursor=pointer]:
+          - /url: /en/about/
+        - link "Services" [ref=e12] [cursor=pointer]:
+          - /url: /en/services/
+        - link "Projects" [ref=e13] [cursor=pointer]:
+          - /url: /en/projects/
+        - link "Contact" [ref=e14] [cursor=pointer]:
+          - /url: /en/contact/
+      - link "Discuss a Project" [ref=e16] [cursor=pointer]:
+        - /url: /en/contact/
+  - main [ref=e17]:
+    - generic [ref=e19]:
+      - navigation "Breadcrumb" [ref=e20]:
+        - list [ref=e21]:
+          - listitem [ref=e22]:
+            - link "Home" [ref=e23] [cursor=pointer]:
+              - /url: /en/
+          - listitem [ref=e24]: /
+          - listitem [ref=e25]:
+            - link "Projects" [ref=e26] [cursor=pointer]:
+              - /url: /en/projects/
+          - listitem [ref=e27]: /
+          - listitem [ref=e28]: Blackrock Kitchen
+      - heading "Blackrock Kitchen" [level=1] [ref=e29]
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - img [ref=e32]
+          - generic [ref=e35]: Blackrock, Co. Dublin
+        - generic [ref=e36]: "Category: residential"
+        - generic [ref=e37]: Kitchen
+        - generic [ref=e38]: Handleless
+        - generic [ref=e39]: Charcoal
+    - img "Handleless matte charcoal kitchen with island and stone worktop" [ref=e41]
+    - generic [ref=e44]:
+      - generic [ref=e45]:
+        - text: Overview
+        - heading "Blackrock Kitchen" [level=2] [ref=e46]
+        - paragraph [ref=e47]: A full kitchen redesign for a Victorian-era home in Blackrock. The family wanted a contemporary kitchen that respected the original proportions of the house and could handle daily family life as well as weekend entertaining.
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - text: Challenge
+          - paragraph [ref=e50]: Ceiling heights varied across the room, and the existing chimney breast limited wall-run continuity. The client also requested a large island with seating without sacrificing circulation.
+        - generic [ref=e51]:
+          - text: Solution
+          - paragraph [ref=e52]: We wrapped the chimney breast in handleless charcoal lacquer cabinetry and extended the run with floor-to-ceiling units. The island houses a sink, bin, and breakfast storage, topped in a honed quartz worktop. Oak internals add warmth every time a door opens.
+    - generic [ref=e54]:
+      - text: Gallery
+      - heading "Blackrock Kitchen" [level=2] [ref=e55]
+      - generic [ref=e58]:
+        - generic [ref=e59]:
+          - generic [ref=e60]: Gallery
+          - heading "Gallery" [level=2] [ref=e61]
+        - generic [ref=e62]:
+          - button "Open image in lightbox" [ref=e222]:
+            - img "Kitchen island with quartz worktop and pendant lighting" [ref=e223]
+          - button "Open image in lightbox" [ref=e224]:
+            - img "Integrated appliances behind handleless cabinetry" [ref=e225]
+          - button "Open image in lightbox" [ref=e226]:
+            - img "Charcoal lacquer cabinets with oak internal shelving" [ref=e227]
+          - button "Open image in lightbox" [ref=e228]:
+            - img "Dining view from kitchen island" [ref=e229]
+          - button "Open image in lightbox" [ref=e230]:
+            - img "Detail of honed stone worktop and undermount sink" [ref=e231]
+          - button "Open image in lightbox" [ref=e232]:
+            - img "Breakfast pantry with pull-out storage" [ref=e233]
+          - button "Open image in lightbox" [ref=e234]:
+            - img "Evening view of the kitchen with ambient lighting" [ref=e235]
+    - generic [ref=e64]:
+      - text: Specifications
+      - heading "Specifications" [level=2] [ref=e65]
+      - generic [ref=e68]:
+        - generic [ref=e69]: Specifications
+        - heading "Specifications" [level=2] [ref=e70]
+        - generic [ref=e71]:
+          - generic [ref=e72]:
+            - term [ref=e73]: Client
+            - definition [ref=e74]: Private Residence
+          - generic [ref=e75]:
+            - term [ref=e76]: Location
+            - definition [ref=e77]: Blackrock, Co. Dublin
+          - generic [ref=e78]:
+            - term [ref=e79]: Category
+            - definition [ref=e80]: residential
+          - generic [ref=e81]:
+            - term [ref=e82]: Scope
+            - definition [ref=e83]: kitchen
+          - generic [ref=e84]:
+            - term [ref=e85]: Materials
+            - definition [ref=e86]: Charcoal lacquer, quartz worktop, oak internals
+          - generic [ref=e87]:
+            - term [ref=e88]: Finishes
+            - definition [ref=e89]: Matte satin lacquer, honed stone
+          - generic [ref=e90]:
+            - term [ref=e91]: Hardware
+            - definition [ref=e92]: Grass drawer systems, soft-close hinges
+          - generic [ref=e93]:
+            - term [ref=e94]: Timeline
+            - definition [ref=e95]: 10 weeks
+          - generic [ref=e96]:
+            - term [ref=e97]: Year
+            - definition [ref=e98]: "2024"
+        - separator [ref=e99]
+    - generic [ref=e101]:
+      - generic [ref=e102]:
+        - generic [ref=e103]: Related
+        - heading "More Projects" [level=2] [ref=e104]
+      - generic [ref=e105]:
+        - link "Penthouse walk-in wardrobe suite in American walnut with brass hardware residential Penthouse Wardrobe Suite Dublin 4 View Project" [ref=e107] [cursor=pointer]:
+          - /url: /projects/penthouse-wardrobe-suite/
+          - img "Penthouse walk-in wardrobe suite in American walnut with brass hardware" [ref=e108]
+          - generic [ref=e110]:
+            - paragraph [ref=e111]: residential
+            - heading "Penthouse Wardrobe Suite" [level=3] [ref=e112]
+            - paragraph [ref=e113]:
+              - img [ref=e114]
+              - text: Dublin 4
+          - generic "View Project" [ref=e117]:
+            - img [ref=e118]
+        - link "Built-in oak library shelving around a period bay window residential Ranelagh Alcove Library Ranelagh, Dublin 6 View Project" [ref=e122] [cursor=pointer]:
+          - /url: /projects/ranelagh-alcove-library/
+          - img "Built-in oak library shelving around a period bay window" [ref=e123]
+          - generic [ref=e125]:
+            - paragraph [ref=e126]: residential
+            - heading "Ranelagh Alcove Library" [level=3] [ref=e127]
+            - paragraph [ref=e128]:
+              - img [ref=e129]
+              - text: Ranelagh, Dublin 6
+          - generic "View Project" [ref=e132]:
+            - img [ref=e133]
+        - link "Boutique-style walk-in closet with walnut island and mirror wall residential Howth Walk-in Closet Howth, Co. Dublin View Project" [ref=e137] [cursor=pointer]:
+          - /url: /projects/howth-walk-in-closet/
+          - img "Boutique-style walk-in closet with walnut island and mirror wall" [ref=e138]
+          - generic [ref=e140]:
+            - paragraph [ref=e141]: residential
+            - heading "Howth Walk-in Closet" [level=3] [ref=e142]
+            - paragraph [ref=e143]:
+              - img [ref=e144]
+              - text: Howth, Co. Dublin
+          - generic "View Project" [ref=e147]:
+            - img [ref=e148]
+    - generic [ref=e152]:
+      - heading "Like what you see?" [level=2] [ref=e153]
+      - link "Discuss a Similar Project" [ref=e155] [cursor=pointer]:
+        - /url: /en/contact/
+  - contentinfo [ref=e156]:
+    - generic [ref=e157]:
+      - generic [ref=e158]:
+        - generic [ref=e159]:
+          - heading "Have a project in mind?" [level=2] [ref=e160]
+          - generic [ref=e161]: Handcrafted Furniture, Designed for Your Space
+          - link "Discuss a Project" [ref=e162] [cursor=pointer]:
+            - /url: /en/contact/
+        - generic [ref=e163]:
+          - generic [ref=e164]:
+            - heading "Navigation" [level=3] [ref=e165]
+            - list [ref=e166]:
+              - listitem [ref=e167]:
+                - link "Home" [ref=e168] [cursor=pointer]:
+                  - /url: /en/
+              - listitem [ref=e169]:
+                - link "About" [ref=e170] [cursor=pointer]:
+                  - /url: /en/about/
+              - listitem [ref=e171]:
+                - link "Services" [ref=e172] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e173]:
+                - link "Projects" [ref=e174] [cursor=pointer]:
+                  - /url: /en/projects/
+              - listitem [ref=e175]:
+                - link "Contact" [ref=e176] [cursor=pointer]:
+                  - /url: /en/contact/
+          - generic [ref=e177]:
+            - heading "Services" [level=3] [ref=e178]
+            - list [ref=e179]:
+              - listitem [ref=e180]:
+                - link "Custom Wardrobes" [ref=e181] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e182]:
+                - link "Bespoke Kitchens" [ref=e183] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e184]:
+                - link "Walk-in Closets" [ref=e185] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e186]:
+                - link "Living Spaces" [ref=e187] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e188]:
+                - link "Office Fit-outs" [ref=e189] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e190]:
+                - link "Retail Interiors" [ref=e191] [cursor=pointer]:
+                  - /url: /en/services/
+          - generic [ref=e192]:
+            - heading "Contact" [level=3] [ref=e193]
+            - list [ref=e194]:
+              - listitem [ref=e195]:
+                - link "hello@tineo.ie" [ref=e196] [cursor=pointer]:
+                  - /url: mailto:hello@tineo.ie
+              - listitem [ref=e197]:
+                - link "+353 87 123 4567" [ref=e198] [cursor=pointer]:
+                  - /url: https://wa.me/353871234567
+              - listitem [ref=e199]: Dublin, Ireland
+      - separator [ref=e200]
+      - generic [ref=e201]:
+        - generic [ref=e202]: © 2026 [Existing Company Name] trading as TINEO. All rights reserved.
+        - generic [ref=e203]:
+          - link "Privacy Policy" [ref=e204] [cursor=pointer]:
+            - /url: /en/privacy/
+          - link "Terms of Service" [ref=e205] [cursor=pointer]:
+            - /url: /en/terms/
+          - link "Cookie Policy" [ref=e206] [cursor=pointer]:
+            - /url: /en/cookies/
+          - link "Instagram" [ref=e207] [cursor=pointer]:
+            - /url: https://instagram.com/tineoireland
+          - link "Pinterest" [ref=e208] [cursor=pointer]:
+            - /url: https://pinterest.com/tineoireland
+          - link "LinkedIn" [ref=e209] [cursor=pointer]:
+            - /url: https://linkedin.com/company/tineo
+  - link "Chat on WhatsApp" [ref=e210] [cursor=pointer]:
+    - /url: https://wa.me/353871234567?text=Hi%20TINEO%2C%20I%20would%20like%20to%20discuss%20a%20custom%20furniture%20project.
+    - img [ref=e212]
+  - dialog "We use cookies to improve your experience and analyse site traffic. You can manage your preferences at any time." [ref=e214]:
+    - generic [ref=e215]:
+      - paragraph [ref=e216]: We use cookies to improve your experience and analyse site traffic. You can manage your preferences at any time.
+      - generic [ref=e217]:
+        - button "Accept All" [ref=e218]
+        - button "Reject Optional" [ref=e219]
+        - button "Customise" [ref=e220]

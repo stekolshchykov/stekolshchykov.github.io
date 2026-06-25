@@ -1,0 +1,273 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "TINEO" [ref=e6] [cursor=pointer]:
+        - /url: /en/
+        - img "TINEO" [ref=e7]:
+          - generic [ref=e8]: TINEO
+      - navigation "Primary" [ref=e9]:
+        - link "Home" [ref=e10] [cursor=pointer]:
+          - /url: /en/
+        - link "About" [ref=e11] [cursor=pointer]:
+          - /url: /en/about/
+        - link "Services" [ref=e12] [cursor=pointer]:
+          - /url: /en/services/
+        - link "Projects" [ref=e13] [cursor=pointer]:
+          - /url: /en/projects/
+        - link "Contact" [ref=e14] [cursor=pointer]:
+          - /url: /en/contact/
+      - link "Discuss a Project" [ref=e16] [cursor=pointer]:
+        - /url: /en/contact/
+  - main [ref=e17]:
+    - generic [ref=e18]:
+      - generic "Hero background video" [ref=e20]
+      - generic [ref=e22]:
+        - heading "Handcrafted Furniture, Designed for Your Space" [level=1] [ref=e23]
+        - generic [ref=e24]: Custom wardrobes, kitchens, and interiors. Built in Dublin, delivered across Ireland.
+        - link "Discuss a Project" [ref=e26] [cursor=pointer]:
+          - /url: /en/contact/
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e31]: The Studio
+        - heading "Quiet luxury, made to measure" [level=2] [ref=e32]
+        - generic [ref=e33]: For over two decades, TINEO has designed and built bespoke furniture for Ireland's finest homes and commercial spaces. Every piece begins with a conversation and ends with a perfect fit.
+        - link "Our Story" [ref=e35] [cursor=pointer]:
+          - /url: /en/about/
+      - img "TINEO workshop craftsman working on bespoke timber furniture" [ref=e37]
+    - generic [ref=e39]:
+      - generic [ref=e40]:
+        - generic [ref=e41]:
+          - generic [ref=e42]: Services
+          - heading "What we make" [level=2] [ref=e43]
+        - link "View All Services" [ref=e45] [cursor=pointer]:
+          - /url: /en/services/
+      - generic [ref=e46]:
+        - generic [ref=e48]:
+          - img [ref=e50]
+          - generic [ref=e52]:
+            - generic [ref=e53]:
+              - paragraph [ref=e54]: residential
+              - heading "Custom Wardrobes" [level=3] [ref=e55]
+            - paragraph [ref=e56]: Bespoke fitted wardrobes designed around your room, your routine, and your storage habits. From hinged to sliding doors, every detail is considered.
+            - list [ref=e57]:
+              - listitem [ref=e58]: Fitted, floor-to-ceiling designs
+              - listitem [ref=e60]: Sliding or hinged door options
+              - listitem [ref=e62]: Soft-close drawers and hardware
+              - listitem [ref=e64]: Integrated LED lighting
+              - listitem [ref=e66]: Interior accessories tailored to you
+            - link "Get in Touch" [ref=e68] [cursor=pointer]:
+              - /url: /contact/
+              - text: Get in Touch
+              - img [ref=e69]
+        - generic [ref=e72]:
+          - img [ref=e74]
+          - generic [ref=e76]:
+            - generic [ref=e77]:
+              - paragraph [ref=e78]: residential
+              - heading "Bespoke Kitchens" [level=3] [ref=e79]
+            - paragraph [ref=e80]: Kitchens built to last a lifetime. Handleless contemporary, timeless traditional, or a quiet blend of both — crafted around how you cook and gather.
+            - list [ref=e81]:
+              - listitem [ref=e82]: Handleless, traditional, or contemporary styles
+              - listitem [ref=e84]: Stone, timber, or composite worktops
+              - listitem [ref=e86]: Integrated appliance housing
+              - listitem [ref=e88]: Custom larders and pantries
+              - listitem [ref=e90]: Durable hardware and soft-close systems
+            - link "Get in Touch" [ref=e92] [cursor=pointer]:
+              - /url: /contact/
+              - text: Get in Touch
+              - img [ref=e93]
+        - generic [ref=e96]:
+          - img [ref=e98]
+          - generic [ref=e100]:
+            - generic [ref=e101]:
+              - paragraph [ref=e102]: residential
+              - heading "Walk-in Closets" [level=3] [ref=e103]
+            - paragraph [ref=e104]: Boutique-style dressing rooms that make everyday rituals feel effortless. Central islands, full-height mirrors, and lighting designed for clarity.
+            - list [ref=e105]:
+              - listitem [ref=e106]: Central island with jewellery and accessory storage
+              - listitem [ref=e108]: Full-height mirrors and dressing areas
+              - listitem [ref=e110]: Automated or sensor lighting
+              - listitem [ref=e112]: Shoe and handbag display options
+              - listitem [ref=e114]: Soft-close hanging and drawer systems
+            - link "Get in Touch" [ref=e116] [cursor=pointer]:
+              - /url: /contact/
+              - text: Get in Touch
+              - img [ref=e117]
+    - generic [ref=e120]:
+      - generic [ref=e121]:
+        - generic [ref=e122]:
+          - generic [ref=e123]: Selected Work
+          - heading "Recent Projects" [level=2] [ref=e124]
+        - link "View All Projects" [ref=e126] [cursor=pointer]:
+          - /url: /en/projects/
+      - generic [ref=e127]:
+        - link "Penthouse walk-in wardrobe suite in American walnut with brass hardware residential Penthouse Wardrobe Suite Dublin 4 View Project" [ref=e129] [cursor=pointer]:
+          - /url: /projects/penthouse-wardrobe-suite/
+          - img "Penthouse walk-in wardrobe suite in American walnut with brass hardware" [ref=e130]
+          - generic [ref=e132]:
+            - paragraph [ref=e133]: residential
+            - heading "Penthouse Wardrobe Suite" [level=3] [ref=e134]
+            - paragraph [ref=e135]:
+              - img [ref=e136]
+              - text: Dublin 4
+          - generic "View Project" [ref=e139]:
+            - img [ref=e140]
+        - link "Handleless matte charcoal kitchen with island and stone worktop residential Blackrock Kitchen Blackrock, Co. Dublin View Project" [ref=e144] [cursor=pointer]:
+          - /url: /projects/blackrock-kitchen/
+          - img "Handleless matte charcoal kitchen with island and stone worktop" [ref=e145]
+          - generic [ref=e147]:
+            - paragraph [ref=e148]: residential
+            - heading "Blackrock Kitchen" [level=3] [ref=e149]
+            - paragraph [ref=e150]:
+              - img [ref=e151]
+              - text: Blackrock, Co. Dublin
+          - generic "View Project" [ref=e154]:
+            - img [ref=e155]
+        - link "Hotel lobby with walnut reception desk and lounge seating commercial The Shelbourne Fittings Dublin 2 View Project" [ref=e159] [cursor=pointer]:
+          - /url: /projects/shelbourne-fittings/
+          - img "Hotel lobby with walnut reception desk and lounge seating" [ref=e160]
+          - generic [ref=e162]:
+            - paragraph [ref=e163]: commercial
+            - heading "The Shelbourne Fittings" [level=3] [ref=e164]
+            - paragraph [ref=e165]:
+              - img [ref=e166]
+              - text: Dublin 2
+          - generic "View Project" [ref=e169]:
+            - img [ref=e170]
+    - generic [ref=e174]:
+      - generic [ref=e175]:
+        - generic [ref=e176]: Process
+        - heading "From Sketch to Space" [level=2] [ref=e177]
+      - generic [ref=e178]:
+        - generic [ref=e180]:
+          - generic [ref=e182]: "1"
+          - generic [ref=e183]:
+            - heading "Consult" [level=3] [ref=e184]
+            - paragraph [ref=e185]: We visit your home or site, listen to how you live, and define the brief, budget, and timeline together.
+        - generic [ref=e187]:
+          - generic [ref=e189]: "2"
+          - generic [ref=e190]:
+            - heading "Design" [level=3] [ref=e191]
+            - paragraph [ref=e192]: Our designers develop detailed drawings, material samples, and 3D visuals so you can see every detail before we cut timber.
+        - generic [ref=e194]:
+          - generic [ref=e196]: "3"
+          - generic [ref=e197]:
+            - heading "Craft" [level=3] [ref=e198]
+            - paragraph [ref=e199]: Your furniture is made in our Dublin workshop by skilled craftspeople using premium materials and precision joinery.
+        - generic [ref=e201]:
+          - generic [ref=e203]: "4"
+          - generic [ref=e204]:
+            - heading "Install" [level=3] [ref=e205]
+            - paragraph [ref=e206]: We deliver and install with care, leaving your space clean, finished, and ready to use.
+    - generic [ref=e208]:
+      - generic [ref=e209]:
+        - generic [ref=e210]: Client Words
+        - heading "What They Say" [level=2] [ref=e211]
+      - generic [ref=e212]:
+        - article [ref=e214]:
+          - img [ref=e215]
+          - blockquote [ref=e218]: “The attention to detail was extraordinary. Our walk-in closet feels like a luxury hotel suite.”
+          - generic [ref=e219]:
+            - paragraph [ref=e220]: Sarah M.
+            - paragraph [ref=e221]: Dublin 6
+        - article [ref=e223]:
+          - img [ref=e224]
+          - blockquote [ref=e227]: “Professional from start to finish. The kitchen they built is the heart of our home now.”
+          - generic [ref=e228]:
+            - paragraph [ref=e229]: David & Aileen K.
+            - paragraph [ref=e230]: Blackrock
+        - article [ref=e232]:
+          - img [ref=e233]
+          - blockquote [ref=e236]: “They understood our brand and delivered a retail interior that our customers constantly compliment.”
+          - generic [ref=e237]:
+            - paragraph [ref=e238]: James T.
+            - paragraph [ref=e239]: Dublin 2
+    - generic [ref=e241]:
+      - heading "Have a project in mind?" [level=2] [ref=e242]
+      - generic [ref=e243]: Tell us about your space. We will respond within two business days.
+      - link "Start a Conversation" [ref=e245] [cursor=pointer]:
+        - /url: /en/contact/
+  - contentinfo [ref=e246]:
+    - generic [ref=e247]:
+      - generic [ref=e248]:
+        - generic [ref=e249]:
+          - heading "Have a project in mind?" [level=2] [ref=e250]
+          - generic [ref=e251]: Handcrafted Furniture, Designed for Your Space
+          - link "Discuss a Project" [ref=e252] [cursor=pointer]:
+            - /url: /en/contact/
+        - generic [ref=e253]:
+          - generic [ref=e254]:
+            - heading "Navigation" [level=3] [ref=e255]
+            - list [ref=e256]:
+              - listitem [ref=e257]:
+                - link "Home" [ref=e258] [cursor=pointer]:
+                  - /url: /en/
+              - listitem [ref=e259]:
+                - link "About" [ref=e260] [cursor=pointer]:
+                  - /url: /en/about/
+              - listitem [ref=e261]:
+                - link "Services" [ref=e262] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e263]:
+                - link "Projects" [ref=e264] [cursor=pointer]:
+                  - /url: /en/projects/
+              - listitem [ref=e265]:
+                - link "Contact" [ref=e266] [cursor=pointer]:
+                  - /url: /en/contact/
+          - generic [ref=e267]:
+            - heading "Services" [level=3] [ref=e268]
+            - list [ref=e269]:
+              - listitem [ref=e270]:
+                - link "Custom Wardrobes" [ref=e271] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e272]:
+                - link "Bespoke Kitchens" [ref=e273] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e274]:
+                - link "Walk-in Closets" [ref=e275] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e276]:
+                - link "Living Spaces" [ref=e277] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e278]:
+                - link "Office Fit-outs" [ref=e279] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e280]:
+                - link "Retail Interiors" [ref=e281] [cursor=pointer]:
+                  - /url: /en/services/
+          - generic [ref=e282]:
+            - heading "Contact" [level=3] [ref=e283]
+            - list [ref=e284]:
+              - listitem [ref=e285]:
+                - link "hello@tineo.ie" [ref=e286] [cursor=pointer]:
+                  - /url: mailto:hello@tineo.ie
+              - listitem [ref=e287]:
+                - link "+353 87 123 4567" [ref=e288] [cursor=pointer]:
+                  - /url: https://wa.me/353871234567
+              - listitem [ref=e289]: Dublin, Ireland
+      - separator [ref=e290]
+      - generic [ref=e291]:
+        - generic [ref=e292]: © 2026 [Existing Company Name] trading as TINEO. All rights reserved.
+        - generic [ref=e293]:
+          - link "Privacy Policy" [ref=e294] [cursor=pointer]:
+            - /url: /en/privacy/
+          - link "Terms of Service" [ref=e295] [cursor=pointer]:
+            - /url: /en/terms/
+          - link "Cookie Policy" [ref=e296] [cursor=pointer]:
+            - /url: /en/cookies/
+          - link "Instagram" [ref=e297] [cursor=pointer]:
+            - /url: https://instagram.com/tineoireland
+          - link "Pinterest" [ref=e298] [cursor=pointer]:
+            - /url: https://pinterest.com/tineoireland
+          - link "LinkedIn" [ref=e299] [cursor=pointer]:
+            - /url: https://linkedin.com/company/tineo
+  - link "Chat on WhatsApp" [ref=e300] [cursor=pointer]:
+    - /url: https://wa.me/353871234567?text=Hi%20TINEO%2C%20I%20would%20like%20to%20discuss%20a%20custom%20furniture%20project.
+    - img [ref=e302]
+  - dialog "We use cookies to improve your experience and analyse site traffic. You can manage your preferences at any time." [ref=e304]:
+    - generic [ref=e305]:
+      - paragraph [ref=e306]: We use cookies to improve your experience and analyse site traffic. You can manage your preferences at any time.
+      - generic [ref=e307]:
+        - button "Accept All" [ref=e308]
+        - button "Reject Optional" [ref=e309]
+        - button "Customise" [ref=e310]

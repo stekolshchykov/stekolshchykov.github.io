@@ -1,0 +1,289 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "TINEO" [ref=e6] [cursor=pointer]:
+        - /url: /en/
+        - img "TINEO" [ref=e7]:
+          - generic [ref=e8]: T
+          - generic [ref=e9]: I
+          - generic [ref=e10]: "N"
+          - generic [ref=e11]: E
+          - generic [ref=e12]: O
+      - navigation "Primary" [ref=e13]:
+        - link "Home" [ref=e14] [cursor=pointer]:
+          - /url: /en/
+        - link "About" [ref=e15] [cursor=pointer]:
+          - /url: /en/about/
+        - link "Services" [ref=e16] [cursor=pointer]:
+          - /url: /en/services/
+        - link "Projects" [ref=e17] [cursor=pointer]:
+          - /url: /en/projects/
+        - link "Contact" [ref=e18] [cursor=pointer]:
+          - /url: /en/contact/
+      - link "Discuss a Project" [ref=e19] [cursor=pointer]:
+        - /url: /en/contact/
+  - main [ref=e20]:
+    - generic [ref=e25]:
+      - generic [ref=e26]: Services
+      - heading "Furniture and interiors" [level=1] [ref=e27]
+      - paragraph [ref=e28]: Residential and commercial work from our Dublin workshop.
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - text: Residential
+        - heading "For your home" [level=2] [ref=e32]
+        - paragraph [ref=e33]: Wardrobes, kitchens, dressing rooms, and living spaces designed around the way you live.
+      - generic [ref=e36]:
+        - generic [ref=e38]:
+          - img "Bespoke fitted wardrobe with soft-close drawers and integrated lighting" [ref=e40]
+          - generic [ref=e41]:
+            - paragraph [ref=e42]: residential
+            - heading "Wardrobes & Dressing Rooms" [level=3] [ref=e43]
+            - paragraph [ref=e44]: Fitted wardrobes designed around the architecture of your room and the rhythm of your day.
+            - link "Get in Touch →" [ref=e45] [cursor=pointer]:
+              - /url: /contact/
+              - text: Get in Touch
+              - generic [ref=e46]: →
+        - generic [ref=e48]:
+          - img "Bespoke kitchen with island, stone worktop, and integrated appliances" [ref=e50]
+          - generic [ref=e51]:
+            - paragraph [ref=e52]: residential
+            - heading "Kitchens" [level=3] [ref=e53]
+            - paragraph [ref=e54]: Kitchens built for how you cook, gather, and live. Handleless contemporary, classic timber, or something quietly in between.
+            - link "Get in Touch →" [ref=e55] [cursor=pointer]:
+              - /url: /contact/
+              - text: Get in Touch
+              - generic [ref=e56]: →
+        - generic [ref=e58]:
+          - img "Boutique-style walk-in closet with central island and mirror" [ref=e60]
+          - generic [ref=e61]:
+            - paragraph [ref=e62]: residential
+            - heading "Dressing Rooms" [level=3] [ref=e63]
+            - paragraph [ref=e64]: Calm, organised dressing rooms where every garment has its place and every morning starts with ease.
+            - link "Get in Touch →" [ref=e65] [cursor=pointer]:
+              - /url: /contact/
+              - text: Get in Touch
+              - generic [ref=e66]: →
+        - generic [ref=e68]:
+          - img "Built-in living room shelving and media unit with warm lighting" [ref=e70]
+          - generic [ref=e71]:
+            - paragraph [ref=e72]: residential
+            - heading "Living Joinery" [level=3] [ref=e73]
+            - paragraph [ref=e74]: Media walls, libraries, alcove cabinets, and window seats that bring order and warmth to the rooms you use most.
+            - link "Get in Touch →" [ref=e75] [cursor=pointer]:
+              - /url: /contact/
+              - text: Get in Touch
+              - generic [ref=e76]: →
+    - generic [ref=e78]:
+      - generic [ref=e79]:
+        - text: Commercial
+        - heading "For your business" [level=2] [ref=e80]
+        - paragraph [ref=e81]: Workplaces, retail spaces, hospitality joinery, and one-off commissions for brands that value craft.
+      - generic [ref=e84]:
+        - generic [ref=e86]:
+          - img "Modern office reception desk and boardroom joinery" [ref=e88]
+          - generic [ref=e89]:
+            - paragraph [ref=e90]: commercial
+            - heading "Workplaces" [level=3] [ref=e91]
+            - paragraph [ref=e92]: Reception desks, boardroom tables, and breakout joinery that communicate quality before anyone sits down.
+            - link "Get in Touch →" [ref=e93] [cursor=pointer]:
+              - /url: /contact/
+              - text: Get in Touch
+              - generic [ref=e94]: →
+        - generic [ref=e96]:
+          - img "Retail interior with bespoke display shelving and counter" [ref=e98]
+          - generic [ref=e99]:
+            - paragraph [ref=e100]: commercial
+            - heading "Retail Spaces" [level=3] [ref=e101]
+            - paragraph [ref=e102]: Display shelving, counters, and fitting-room joinery that let the merchandise speak.
+            - link "Get in Touch →" [ref=e103] [cursor=pointer]:
+              - /url: /contact/
+              - text: Get in Touch
+              - generic [ref=e104]: →
+        - generic [ref=e106]:
+          - img "Hospitality interior with banquette seating and bar joinery" [ref=e108]
+          - generic [ref=e109]:
+            - paragraph [ref=e110]: commercial
+            - heading "Hotels & Restaurants" [level=3] [ref=e111]
+            - paragraph [ref=e112]: Bars, banquettes, wardrobes, and reception joinery built to endure daily use without losing character.
+            - link "Get in Touch →" [ref=e113] [cursor=pointer]:
+              - /url: /contact/
+              - text: Get in Touch
+              - generic [ref=e114]: →
+        - generic [ref=e116]:
+          - img "Unique custom furniture piece in a contemporary interior" [ref=e118]
+          - generic [ref=e119]:
+            - paragraph [ref=e120]: commercial
+            - heading "One-Off Commissions" [level=3] [ref=e121]
+            - paragraph [ref=e122]: Unusual briefs and singular pieces. If the drawing exists, we can find the right way to make it.
+            - link "Get in Touch →" [ref=e123] [cursor=pointer]:
+              - /url: /contact/
+              - text: Get in Touch
+              - generic [ref=e124]: →
+    - generic [ref=e126]:
+      - generic [ref=e127]:
+        - text: Process
+        - heading "How We Work" [level=2] [ref=e128]
+      - generic [ref=e133]:
+        - generic [ref=e134]:
+          - generic [ref=e136]:
+            - generic [ref=e138]: "1"
+            - generic [ref=e139]:
+              - generic: "1"
+              - heading "Consult" [level=3] [ref=e140]
+              - paragraph [ref=e141]: We visit your home or site, listen to how you live, and define the brief, budget, and timeline together.
+          - generic [ref=e143]: "1"
+        - generic [ref=e144]:
+          - generic [ref=e146]:
+            - generic [ref=e148]: "2"
+            - generic [ref=e149]:
+              - generic: "2"
+              - heading "Design" [level=3] [ref=e150]
+              - paragraph [ref=e151]: Drawings, material samples, and 3D visuals let you see every detail before the first piece of timber is cut.
+          - generic [ref=e153]: "2"
+        - generic [ref=e154]:
+          - generic [ref=e156]:
+            - generic [ref=e158]: "3"
+            - generic [ref=e159]:
+              - generic: "3"
+              - heading "Craft" [level=3] [ref=e160]
+              - paragraph [ref=e161]: Your furniture is made in our Dublin workshop by makers who measure twice, cut once, and finish by hand.
+          - generic [ref=e163]: "3"
+        - generic [ref=e164]:
+          - generic [ref=e166]:
+            - generic [ref=e168]: "4"
+            - generic [ref=e169]:
+              - generic: "4"
+              - heading "Install" [level=3] [ref=e170]
+              - paragraph [ref=e171]: We deliver and install with the same care we built it with, then leave the space ready to live in.
+          - generic [ref=e173]: "4"
+    - generic [ref=e175]:
+      - generic [ref=e176]:
+        - text: Materials
+        - heading "Finishes & Materials" [level=2] [ref=e177]
+      - generic [ref=e179]:
+        - generic [ref=e180]:
+          - generic [ref=e182]: Materials
+          - heading "Finishes & Materials" [level=2] [ref=e184]
+          - paragraph [ref=e186]: Materials chosen for how they age, feel, and fit.
+        - generic [ref=e187]:
+          - img "European oak timber swatch showing grain and warm tone" [ref=e188]
+          - generic [ref=e190]:
+            - paragraph [ref=e191]: Featured material
+            - heading "European Oak" [level=3] [ref=e192]
+        - generic [ref=e193]:
+          - generic [ref=e195]:
+            - img "American walnut timber swatch showing rich dark grain" [ref=e197]
+            - generic [ref=e199]:
+              - paragraph [ref=e200]: Deep in colour, fine in grain. Prized for its depth and elegant figuring in fine furniture.
+              - heading "American Walnut" [level=3] [ref=e201]
+          - generic [ref=e203]:
+            - img "White ash timber swatch showing light clean grain" [ref=e205]
+            - generic [ref=e207]:
+              - paragraph [ref=e208]: Pale, even, and quietly textured. Ideal for interiors that need light without sterility.
+              - heading "White Ash" [level=3] [ref=e209]
+          - generic [ref=e211]:
+            - img "Painted finish sample showing smooth hand-finished surface" [ref=e213]
+            - generic [ref=e215]:
+              - paragraph [ref=e216]: Mixed, sprayed, and hand-finished in any colour. From muted neutrals to deep, saturated tones.
+              - heading "Painted Finishes" [level=3] [ref=e217]
+          - generic [ref=e219]:
+            - img "Wood veneer sample showing consistent premium grain" [ref=e221]
+            - generic [ref=e223]:
+              - paragraph [ref=e224]: "Premium veneers for large surfaces: consistent grain, stable construction, refined visual impact."
+              - heading "Veneer Options" [level=3] [ref=e225]
+          - generic [ref=e227]:
+            - img "Selection of premium brass and steel furniture hardware" [ref=e229]
+            - generic [ref=e231]:
+              - paragraph [ref=e232]: Hinges, handles, and drawer systems from European specialists — chosen for feel after years of daily use.
+              - heading "Hardware" [level=3] [ref=e233]
+    - generic [ref=e237]:
+      - heading "Start a conversation." [level=2] [ref=e238]
+      - link "Get in Touch" [ref=e239] [cursor=pointer]:
+        - /url: /en/contact/
+        - generic [ref=e240]: Get in Touch
+        - img [ref=e241]
+  - contentinfo [ref=e244]:
+    - generic [ref=e245]:
+      - generic [ref=e246]:
+        - generic [ref=e247]:
+          - heading "Begin your project." [level=2] [ref=e248]
+          - paragraph [ref=e249]: Furniture, measured in millimetres.
+          - link "Discuss a Project" [ref=e250] [cursor=pointer]:
+            - /url: /en/contact/
+        - generic [ref=e251]:
+          - generic [ref=e252]:
+            - heading "Navigation" [level=3] [ref=e253]
+            - list [ref=e254]:
+              - listitem [ref=e255]:
+                - link "Home" [ref=e256] [cursor=pointer]:
+                  - /url: /en/
+              - listitem [ref=e257]:
+                - link "About" [ref=e258] [cursor=pointer]:
+                  - /url: /en/about/
+              - listitem [ref=e259]:
+                - link "Services" [ref=e260] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e261]:
+                - link "Projects" [ref=e262] [cursor=pointer]:
+                  - /url: /en/projects/
+              - listitem [ref=e263]:
+                - link "Contact" [ref=e264] [cursor=pointer]:
+                  - /url: /en/contact/
+          - generic [ref=e265]:
+            - heading "Services" [level=3] [ref=e266]
+            - list [ref=e267]:
+              - listitem [ref=e268]:
+                - link "Wardrobes & Dressing Rooms" [ref=e269] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e270]:
+                - link "Kitchens" [ref=e271] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e272]:
+                - link "Dressing Rooms" [ref=e273] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e274]:
+                - link "Living Joinery" [ref=e275] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e276]:
+                - link "Workplaces" [ref=e277] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e278]:
+                - link "Retail Spaces" [ref=e279] [cursor=pointer]:
+                  - /url: /en/services/
+          - generic [ref=e280]:
+            - heading "Contact" [level=3] [ref=e281]
+            - list [ref=e282]:
+              - listitem [ref=e283]:
+                - link "hello@tineo.ie" [ref=e284] [cursor=pointer]:
+                  - /url: mailto:hello@tineo.ie
+              - listitem [ref=e285]:
+                - link "+353 1 234 5678" [ref=e286] [cursor=pointer]:
+                  - /url: https://wa.me/35312345678
+              - listitem [ref=e287]: Unit 4, Grand Canal Street Lower, Dublin 2, D02 A342, Ireland
+      - separator [ref=e288]
+      - generic [ref=e289]:
+        - generic [ref=e290]: © 2026 TINEO Furniture & Interiors Ltd trading as TINEO. All rights reserved. Handcrafted in Ireland.
+        - generic [ref=e291]:
+          - link "Privacy Policy" [ref=e292] [cursor=pointer]:
+            - /url: /en/privacy/
+          - link "Terms of Service" [ref=e293] [cursor=pointer]:
+            - /url: /en/terms/
+          - link "Cookie Policy" [ref=e294] [cursor=pointer]:
+            - /url: /en/cookies/
+          - generic [ref=e295]:
+            - link "Instagram" [ref=e296] [cursor=pointer]:
+              - /url: https://instagram.com/tineoireland
+              - img [ref=e297]
+            - link "Pinterest" [ref=e300] [cursor=pointer]:
+              - /url: https://pinterest.com/tineoireland
+              - img [ref=e301]
+            - link "LinkedIn" [ref=e303] [cursor=pointer]:
+              - /url: https://linkedin.com/company/tineo
+              - img [ref=e304]
+  - dialog "We use cookies to understand how visitors use our site and to manage your preferences." [ref=e308]:
+    - generic [ref=e309]:
+      - paragraph [ref=e310]: We use cookies to understand how visitors use our site and to manage your preferences.
+      - generic [ref=e311]:
+        - button "Accept All" [ref=e312]
+        - button "Reject Optional" [ref=e313]
+        - button "Customise" [ref=e314]

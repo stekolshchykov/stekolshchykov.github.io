@@ -1,0 +1,50 @@
+{
+	"name": "tp",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"packageManager": "pnpm@11.5.2",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "pnpm generate-sitemap && vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "eslint src --ext .ts,.svelte",
+		"format": "prettier --write \"src/**/*.{ts,svelte,css}\" \"scripts/**/*.ts\"",
+		"generate-sitemap": "tsx scripts/generate-sitemap.ts"
+	},
+	"devDependencies": {
+		"@eslint/js": "^10.0.1",
+		"@sveltejs/kit": "^2.63.0",
+		"@sveltejs/vite-plugin-svelte": "^7.1.2",
+		"@types/node": "^26.0.0",
+		"chrome-launcher": "^1.2.1",
+		"eslint": "^10.5.0",
+		"eslint-plugin-svelte": "^3.19.0",
+		"globals": "^17.7.0",
+		"lighthouse": "^13.4.0",
+		"prettier": "^3.8.4",
+		"prettier-plugin-svelte": "^4.1.1",
+		"svelte": "^5.56.1",
+		"svelte-check": "^4.7.1",
+		"tsx": "^4.22.4",
+		"typescript": "^5.9.3",
+		"typescript-eslint": "^8.62.0",
+		"vite": "^8.0.16"
+	},
+	"dependencies": {
+		"@fontsource/cormorant-garamond": "^5.2.11",
+		"@fontsource/inter": "^5.2.8",
+		"@sveltejs/adapter-static": "^3.0.10",
+		"@sveltejs/enhanced-img": "^0.11.0",
+		"@tailwindcss/vite": "^4.3.1",
+		"embla-carousel-svelte": "^8.6.0",
+		"gsap": "^3.15.0",
+		"lucide-svelte": "^1.0.1",
+		"svelte-i18n": "^4.0.1",
+		"tailwindcss": "^4.3.1",
+		"zod": "^4.4.3"
+	}
+}

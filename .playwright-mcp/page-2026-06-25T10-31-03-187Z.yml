@@ -1,0 +1,178 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "Home" [ref=e6] [cursor=pointer]:
+        - /url: /en/
+        - img "TINEO" [ref=e7]:
+          - generic [ref=e8]: TINEO
+      - navigation "Primary" [ref=e9]:
+        - link "Home" [ref=e10] [cursor=pointer]:
+          - /url: /en/
+        - link "About" [ref=e11] [cursor=pointer]:
+          - /url: /en/about/
+        - link "Services" [ref=e12] [cursor=pointer]:
+          - /url: /en/services/
+        - link "Projects" [ref=e13] [cursor=pointer]:
+          - /url: /en/projects/
+        - link "Contact" [ref=e14] [cursor=pointer]:
+          - /url: /en/contact/
+      - link "Discuss a Project" [ref=e16] [cursor=pointer]:
+        - /url: /en/contact/
+  - main [ref=e17]:
+    - generic [ref=e21]:
+      - generic [ref=e22]: About
+      - heading "Craftsmanship, considered" [level=1] [ref=e23]
+      - generic [ref=e24]: A Dublin workshop where traditional skill meets contemporary design.
+    - generic [ref=e27]:
+      - generic [ref=e28]:
+        - text: Our Story
+        - heading "Built on patience and precision" [level=2] [ref=e29]
+      - generic [ref=e30]:
+        - paragraph [ref=e31]: TINEO was founded on the belief that the best furniture is made slowly, by people who understand timber. From the first sketch to the final installation, every decision is guided by proportion, material, and purpose.
+        - paragraph [ref=e32]: We work with architects, interior designers, and private clients across Ireland, turning complex spaces into calm, considered interiors.
+    - generic [ref=e35]:
+      - img "TINEO workshop craftsmanship" [ref=e37]
+      - generic [ref=e38]:
+        - text: Craft
+        - heading "Materials that endure" [level=2] [ref=e39]
+        - paragraph [ref=e40]: We source solid hardwoods and premium veneers from trusted European suppliers. Our finishes are applied by hand, and our hardware is chosen for how it feels after ten thousand uses.
+        - list [ref=e41]:
+          - listitem [ref=e42]: European Oak
+          - listitem [ref=e44]: American Walnut
+          - listitem [ref=e46]: White Ash
+          - listitem [ref=e48]: Painted Finishes
+    - generic [ref=e51]:
+      - generic [ref=e52]:
+        - text: People
+        - heading "The Team" [level=2] [ref=e53]
+        - paragraph [ref=e54]: "A small team of designers, makers, and installers. Everyone who works on your project shares the same standard: would this sit comfortably in our own home?"
+      - generic [ref=e57]:
+        - generic [ref=e59]:
+          - img "Portrait of TINEO founder and lead designer" [ref=e61]
+          - heading "[Founder Name]" [level=3] [ref=e62]
+          - paragraph [ref=e63]: Founder & Lead Designer
+        - generic [ref=e65]:
+          - img "Portrait of TINEO workshop manager" [ref=e67]
+          - heading "[Workshop Manager Name]" [level=3] [ref=e68]
+          - paragraph [ref=e69]: Workshop Manager
+        - generic [ref=e71]:
+          - img "Portrait of TINEO senior craftsman" [ref=e73]
+          - heading "[Senior Craftsman Name]" [level=3] [ref=e74]
+          - paragraph [ref=e75]: Senior Craftsman
+        - generic [ref=e77]:
+          - img "Portrait of TINEO design consultant" [ref=e79]
+          - heading "[Design Consultant Name]" [level=3] [ref=e80]
+          - paragraph [ref=e81]: Design Consultant
+    - generic [ref=e83]:
+      - generic [ref=e84]:
+        - text: Why TINEO
+        - heading "The Difference" [level=2] [ref=e85]
+      - generic [ref=e88]:
+        - generic [ref=e89]:
+          - img [ref=e91]
+          - heading "Truly Bespoke" [level=3] [ref=e97]
+          - generic [ref=e98]: Every piece is designed around your space, your habits, and your aesthetic. No templates. No compromises.
+        - generic [ref=e99]:
+          - img [ref=e101]
+          - heading "Irish Craftsmanship" [level=3] [ref=e105]
+          - generic [ref=e106]: Built in our Dublin workshop by experienced makers who understand timber, detail, and durable construction.
+        - generic [ref=e107]:
+          - heading "Premium Materials" [level=3] [ref=e110]
+          - generic [ref=e111]: Solid hardwoods, curated veneers, and hardware from trusted European suppliers chosen for longevity.
+        - generic [ref=e112]:
+          - heading "End-to-End Service" [level=3] [ref=e115]
+          - generic [ref=e116]: From first sketch to final installation, one team guides your project through every stage.
+        - generic [ref=e117]:
+          - heading "Quiet Luxury" [level=3] [ref=e120]
+          - generic [ref=e121]: Understated detailing, refined proportions, and finishes that age gracefully in real homes.
+        - generic [ref=e122]:
+          - heading "Precision Fit" [level=3] [ref=e125]
+          - generic [ref=e126]: Site surveys and meticulous templating ensure every unit sits perfectly, even in awkward spaces.
+    - generic [ref=e128]:
+      - heading "Experience the difference" [level=2] [ref=e129]
+      - link "Arrange a Consultation" [ref=e131] [cursor=pointer]:
+        - /url: /en/contact/
+  - contentinfo [ref=e132]:
+    - generic [ref=e133]:
+      - generic [ref=e134]:
+        - generic [ref=e135]:
+          - heading "Have a project in mind?" [level=2] [ref=e136]
+          - generic [ref=e137]: Handcrafted Furniture, Designed for Your Space
+          - link "Discuss a Project" [ref=e138] [cursor=pointer]:
+            - /url: /en/contact/
+        - generic [ref=e139]:
+          - generic [ref=e140]:
+            - heading "Navigation" [level=3] [ref=e141]
+            - list [ref=e142]:
+              - listitem [ref=e143]:
+                - link "Home" [ref=e144] [cursor=pointer]:
+                  - /url: /en/
+              - listitem [ref=e145]:
+                - link "About" [ref=e146] [cursor=pointer]:
+                  - /url: /en/about/
+              - listitem [ref=e147]:
+                - link "Services" [ref=e148] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e149]:
+                - link "Projects" [ref=e150] [cursor=pointer]:
+                  - /url: /en/projects/
+              - listitem [ref=e151]:
+                - link "Contact" [ref=e152] [cursor=pointer]:
+                  - /url: /en/contact/
+          - generic [ref=e153]:
+            - heading "Services" [level=3] [ref=e154]
+            - list [ref=e155]:
+              - listitem [ref=e156]:
+                - link "Custom Wardrobes" [ref=e157] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e158]:
+                - link "Bespoke Kitchens" [ref=e159] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e160]:
+                - link "Walk-in Closets" [ref=e161] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e162]:
+                - link "Living Spaces" [ref=e163] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e164]:
+                - link "Office Fit-outs" [ref=e165] [cursor=pointer]:
+                  - /url: /en/services/
+              - listitem [ref=e166]:
+                - link "Retail Interiors" [ref=e167] [cursor=pointer]:
+                  - /url: /en/services/
+          - generic [ref=e168]:
+            - heading "Contact" [level=3] [ref=e169]
+            - list [ref=e170]:
+              - listitem [ref=e171]:
+                - link "hello@tineo.ie" [ref=e172] [cursor=pointer]:
+                  - /url: mailto:hello@tineo.ie
+              - listitem [ref=e173]:
+                - link "+353 87 123 4567" [ref=e174] [cursor=pointer]:
+                  - /url: https://wa.me/353871234567
+              - listitem [ref=e175]: Dublin, Ireland
+      - separator [ref=e176]
+      - generic [ref=e177]:
+        - generic [ref=e178]: © 2026 [Existing Company Name] trading as TINEO. All rights reserved.
+        - generic [ref=e179]:
+          - link "Privacy Policy" [ref=e180] [cursor=pointer]:
+            - /url: /en/privacy/
+          - link "Terms of Service" [ref=e181] [cursor=pointer]:
+            - /url: /en/terms/
+          - link "Cookie Policy" [ref=e182] [cursor=pointer]:
+            - /url: /en/cookies/
+          - link "Instagram" [ref=e183] [cursor=pointer]:
+            - /url: https://instagram.com/tineoireland
+          - link "Pinterest" [ref=e184] [cursor=pointer]:
+            - /url: https://pinterest.com/tineoireland
+          - link "LinkedIn" [ref=e185] [cursor=pointer]:
+            - /url: https://linkedin.com/company/tineo
+  - link "Chat on WhatsApp" [ref=e186] [cursor=pointer]:
+    - /url: https://wa.me/353871234567?text=Hi%20TINEO%2C%20I%20would%20like%20to%20discuss%20a%20custom%20furniture%20project.
+    - img [ref=e188]
+  - dialog "We use cookies to improve your experience and analyse site traffic. You can manage your preferences at any time." [ref=e190]:
+    - generic [ref=e191]:
+      - paragraph [ref=e192]: We use cookies to improve your experience and analyse site traffic. You can manage your preferences at any time.
+      - generic [ref=e193]:
+        - button "Accept All" [ref=e194]
+        - button "Reject Optional" [ref=e195]
+        - button "Customise" [ref=e196]

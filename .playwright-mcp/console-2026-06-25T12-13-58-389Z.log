@@ -1,0 +1,4 @@
+[ 1425257ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:4183/images/projects/penthouse-wardrobe-suite/hero.jpg:0
+[ 1425257ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:4183/images/projects/ranelagh-alcove-library/hero.jpg:0
+[ 1425257ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:4183/images/projects/howth-walk-in-closet/hero.jpg:0
+[ 1594864ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:4183/images/craftsmanship.jpg:0
