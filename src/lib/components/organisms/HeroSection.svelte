@@ -37,9 +37,8 @@
 				poster={videoPoster}
 				autoplay
 				muted
-				loop
 				playsinline
-				preload="metadata"
+				preload="auto"
 				aria-hidden="true"
 			>
 				<source src={videoSrc} type="video/mp4" />
