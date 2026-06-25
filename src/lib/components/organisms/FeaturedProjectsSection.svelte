@@ -4,9 +4,9 @@
 	import gsap from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	import type { Project } from '$lib/types/furniture';
-	import Eyebrow from '$lib/components/atoms/Eyebrow.svelte';
-	import Heading from '$lib/components/atoms/Heading.svelte';
 	import Button from '$lib/components/atoms/Button.svelte';
+	import Section from '$lib/components/atoms/Section.svelte';
+	import SectionHeader from '$lib/components/atoms/SectionHeader.svelte';
 	import ProjectCard from '$lib/components/molecules/ProjectCard.svelte';
 	import MagneticCard from '$lib/components/molecules/MagneticCard.svelte';
 	import SplitTextReveal from '$lib/components/molecules/SplitTextReveal.svelte';
@@ -16,7 +16,7 @@
 	}
 
 	let { projects }: Props = $props();
-	let section: HTMLElement;
+	let section = $state<HTMLElement | undefined>(undefined);
 
 	const featured = $derived(projects.filter((p) => p.featured).slice(0, 3));
 
@@ -40,38 +40,27 @@
 	});
 </script>
 
-<section bind:this={section} class="bg-bg-primary py-20 md:py-32 lg:py-40">
-	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
-		<div class="border-t border-text-primary/10 pt-10 md:pt-14">
-			<div
-				class="mb-12 flex flex-col items-start justify-between gap-6 md:mb-16 md:flex-row md:items-end"
-			>
-				<div class="projects-fade max-w-2xl">
-					<Eyebrow text={$_('home.projects_eyebrow')} class="mb-4" />
-					<Heading
-						as="h2"
-						variant="serif"
-						class="text-3xl text-text-primary md:text-4xl lg:text-5xl"
-					>
-						<SplitTextReveal as="span" text={$_('home.projects_headline')} />
-					</Heading>
-				</div>
-				<div class="projects-fade">
-					<Button variant="ghost" href="/en/projects/">
-						{$_('home.projects_cta')}
-					</Button>
-				</div>
+<Section bind:element={section} border="top" containerClass="pt-10 md:pt-14">
+	<SectionHeader eyebrow={$_('home.projects_eyebrow')} align="between" class="projects-fade">
+		<h2 class="font-serif text-3xl text-text-primary md:text-4xl lg:text-5xl">
+			<SplitTextReveal as="span" text={$_('home.projects_headline')} />
+		</h2>
+		{#snippet actions()}
+			<div class="projects-fade">
+				<Button variant="ghost" href="/en/projects/">
+					{$_('home.projects_cta')}
+				</Button>
 			</div>
-		</div>
+		{/snippet}
+	</SectionHeader>
 
-		<div class="grid grid-cols-1 items-start gap-4 md:grid-cols-2 lg:grid-cols-3 md:gap-6">
-			{#each featured as project}
-				<div class="projects-fade">
-					<MagneticCard intensity={0.12}>
-						<ProjectCard {project} featured={false} class="h-full" />
-					</MagneticCard>
-				</div>
-			{/each}
-		</div>
+	<div class="grid grid-cols-1 items-start gap-4 md:grid-cols-2 lg:grid-cols-3 md:gap-6">
+		{#each featured as project}
+			<div class="projects-fade">
+				<MagneticCard intensity={0.12}>
+					<ProjectCard {project} featured={false} class="h-full" />
+				</MagneticCard>
+			</div>
+		{/each}
 	</div>
-</section>
+</Section>

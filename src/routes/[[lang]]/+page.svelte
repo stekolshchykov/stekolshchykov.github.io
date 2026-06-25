@@ -15,6 +15,8 @@
 	import ProcessOverviewSection from '$lib/components/organisms/ProcessOverviewSection.svelte';
 	import TestimonialsSection from '$lib/components/organisms/TestimonialsSection.svelte';
 	import CTABannerSection from '$lib/components/organisms/CTABannerSection.svelte';
+	import Section from '$lib/components/atoms/Section.svelte';
+	import SectionHeader from '$lib/components/atoms/SectionHeader.svelte';
 	import Eyebrow from '$lib/components/atoms/Eyebrow.svelte';
 	import Heading from '$lib/components/atoms/Heading.svelte';
 	import Text from '$lib/components/atoms/Text.svelte';
@@ -89,23 +91,15 @@
 <BrandIntroSection />
 
 <!-- Signature Detail -->
-<section class="relative overflow-hidden bg-bg-primary py-20 md:py-32 lg:py-40 lg:py-36">
-	<div
-		class="mx-auto grid max-w-[1440px] items-center gap-10 px-6 md:px-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:px-16"
-	>
+<Section class="relative overflow-hidden lg:py-36">
+	<div class="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
 		<div class="order-2 space-y-8 lg:order-1">
-			<div>
-				<Heading
-					as="h2"
-					variant="serif"
-					class="max-w-xl text-3xl text-text-primary md:text-4xl lg:text-6xl"
-				>
-					The detail is the design.
-				</Heading>
-				<Text variant="body-lg" class="mt-6 max-w-lg text-text-secondary">
-					Every handle, veneer run and drawer shadow is resolved before a board reaches the saw.
-				</Text>
-			</div>
+			<SectionHeader
+				headline="The detail is the design."
+				statement="Every handle, veneer run and drawer shadow is resolved before a board reaches the saw."
+				size="large"
+				class="mb-0"
+			/>
 			<div class="divide-y divide-text-primary/10 border-y border-text-primary/10">
 				{#each [['01', 'Matched grain sets across every visible elevation'], ['02', 'Brass and stone specified by touch, not catalogue code'], ['03', 'Workshop drawings checked against the room millimetre by millimetre']] as detail}
 					<div class="grid grid-cols-[48px_minmax(0,1fr)] gap-5 py-5">
@@ -125,171 +119,159 @@
 			/>
 		</div>
 	</div>
-</section>
+</Section>
 
 <!-- Material World -->
-<section class="bg-bg-primary py-20 md:py-32 lg:py-40">
-	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
-		<div
-			class="mb-12 flex flex-col items-start justify-between gap-6 md:mb-16 md:flex-row md:items-end"
-		>
-			<div class="max-w-2xl">
-				<Eyebrow text={$_('home.material_world_eyebrow')} class="mb-4" />
-				<Heading as="h2" variant="serif" class="text-3xl text-text-primary md:text-4xl lg:text-5xl">
-					{$_('home.material_world_headline')}
-				</Heading>
-				<Text variant="body-lg" class="mt-6 max-w-xl text-text-secondary">
-					{$_('home.material_world_statement')}
-				</Text>
-			</div>
+<Section>
+	<SectionHeader
+		eyebrow={$_('home.material_world_eyebrow')}
+		headline={$_('home.material_world_headline')}
+		statement={$_('home.material_world_statement')}
+		align="between"
+		size="large"
+	>
+		{#snippet actions()}
 			<Button variant="ghost" href="/en/materials/">
 				{$_('home.material_world_cta')}
 			</Button>
-		</div>
+		{/snippet}
+	</SectionHeader>
 
-		<div class="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
-			{#each materialWorld as material}
-				<MagneticCard intensity={0.12}>
-					<a
-						href="/en/materials/{material.id}/"
-						class="group relative block aspect-[4/5] overflow-hidden bg-bg-secondary"
+	<div class="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
+		{#each materialWorld as material}
+			<MagneticCard intensity={0.12}>
+				<a
+					href="/en/materials/{material.id}/"
+					class="group relative block aspect-[4/5] overflow-hidden bg-bg-secondary"
+				>
+					<ImageReveal
+						src={imageWithFallback(
+							material.images.swatch.src,
+							'/images/materials/european-oak.jpg'
+						)}
+						alt={material.images.swatch.alt}
+						class="absolute inset-0 h-full w-full"
+						direction="up"
+					/>
+					<div
+						class="absolute inset-0 bg-gradient-to-t from-bg-primary/96 via-bg-primary/34 to-transparent opacity-88 transition-opacity duration-500 group-hover:opacity-95"
+					></div>
+					<div
+						class="absolute inset-x-0 bottom-0 p-6 opacity-100 transition-all duration-500 ease-ui md:p-7"
 					>
-						<ImageReveal
-							src={imageWithFallback(
-								material.images.swatch.src,
-								'/images/materials/european-oak.jpg'
-							)}
-							alt={material.images.swatch.alt}
-							class="absolute inset-0 h-full w-full"
-							direction="up"
-						/>
-						<div
-							class="absolute inset-0 bg-gradient-to-t from-bg-primary/90 via-bg-primary/30 to-transparent opacity-60 transition-opacity duration-500 group-hover:opacity-90"
-						></div>
-						<div
-							class="absolute inset-x-0 bottom-0 translate-y-0 p-6 opacity-100 transition-all duration-500 ease-ui md:translate-y-4 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100"
-						>
-							<p class="mb-2 font-sans text-xs uppercase tracking-[0.2em] text-accent">
-								{material.family}
-							</p>
-							<h3 class="mb-2 font-serif text-2xl text-text-primary md:text-3xl">
-								{material.name}
-							</h3>
-							<p class="max-w-xs font-sans text-sm leading-relaxed text-text-secondary">
-								{material.tagline}
-							</p>
-						</div>
-					</a>
-				</MagneticCard>
-			{/each}
-		</div>
+						<p class="mb-2 font-sans text-xs uppercase tracking-[0.2em] text-accent">
+							{material.family}
+						</p>
+						<h3 class="mb-2 font-serif text-2xl text-text-primary md:text-3xl">
+							{material.name}
+						</h3>
+						<p class="max-w-xs font-sans text-sm leading-relaxed text-text-secondary">
+							{material.tagline}
+						</p>
+					</div>
+				</a>
+			</MagneticCard>
+		{/each}
 	</div>
-</section>
+</Section>
 
 <ServicesPreviewSection />
 
 <!-- By the Numbers -->
-<section class="border-y border-text-primary/10 bg-bg-secondary py-20 md:py-32 lg:py-40">
-	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
-		<div class="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-12">
-			{#each stats as stat}
-				<div class="text-center md:text-left">
-					<p class="mb-2 font-serif text-5xl text-accent md:text-6xl lg:text-7xl">{stat.value}</p>
-					<p class="font-sans text-xs uppercase tracking-[0.15em] text-text-secondary">
-						{stat.label}
-					</p>
-				</div>
-			{/each}
-		</div>
+<Section tone="secondary" border="y">
+	<div class="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-12">
+		{#each stats as stat}
+			<div class="text-center md:text-left">
+				<p class="mb-2 font-serif text-5xl text-accent md:text-6xl lg:text-7xl">{stat.value}</p>
+				<p class="font-sans text-xs uppercase tracking-[0.15em] text-text-secondary">
+					{stat.label}
+				</p>
+			</div>
+		{/each}
 	</div>
-</section>
+</Section>
 
 <FeaturedProjectsSection projects={featuredProjects} />
 
 <ProcessOverviewSection />
 
 <!-- Journal Teaser -->
-<section class="bg-bg-secondary py-20 md:py-32 lg:py-40">
-	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
-		<div
-			class="mb-12 flex flex-col items-start justify-between gap-6 md:mb-16 md:flex-row md:items-end"
-		>
-			<div class="max-w-2xl">
-				<Eyebrow text={$_('home.journal_teaser_eyebrow')} class="mb-4" />
-				<Heading as="h2" variant="serif" class="text-3xl text-text-primary md:text-4xl lg:text-5xl">
-					{$_('home.journal_teaser_headline')}
-				</Heading>
-			</div>
+<Section tone="secondary">
+	<SectionHeader
+		eyebrow={$_('home.journal_teaser_eyebrow')}
+		headline={$_('home.journal_teaser_headline')}
+		align="between"
+		size="large"
+	>
+		{#snippet actions()}
 			<Button variant="ghost" href="/en/insights/">
 				{$_('home.journal_teaser_cta')}
 			</Button>
-		</div>
+		{/snippet}
+	</SectionHeader>
 
-		<div class="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
-			{#each journalTeaser as article}
-				<article class="group">
-					<a href="/en/insights/{article.slug}/" class="block">
-						<div
-							class="image-warm-overlay relative mb-6 aspect-[16/10] overflow-hidden bg-bg-primary"
-						>
-							<img
-								src={imageWithFallback(article.heroImage.src, '/images/hero-poster.jpg')}
-								alt={article.heroImage.alt}
-								loading="lazy"
-								class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-							/>
-						</div>
-						<div
-							class="mb-3 flex items-center gap-4 font-sans text-xs uppercase tracking-[0.12em] text-text-secondary"
-						>
-							<span>{article.category}</span>
-							<span class="h-px w-6 bg-text-secondary/40"></span>
-							<span>{article.readTime}</span>
-						</div>
-						<h3
-							class="mb-3 font-serif text-2xl text-text-primary transition-colors group-hover:text-accent md:text-3xl"
-						>
-							{article.title}
-						</h3>
-						<p class="max-w-xl font-sans text-sm leading-relaxed text-text-secondary line-clamp-3">
-							{article.excerpt}
-						</p>
-					</a>
-				</article>
-			{/each}
-		</div>
+	<div class="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
+		{#each journalTeaser as article}
+			<article class="group">
+				<a href="/en/insights/{article.slug}/" class="block">
+					<div
+						class="image-warm-overlay relative mb-6 aspect-[16/10] overflow-hidden bg-bg-primary"
+					>
+						<img
+							src={imageWithFallback(article.heroImage.src, '/images/hero-poster.jpg')}
+							alt={article.heroImage.alt}
+							loading="lazy"
+							class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+						/>
+					</div>
+					<div
+						class="mb-3 flex items-center gap-4 font-sans text-xs uppercase tracking-[0.12em] text-text-secondary"
+					>
+						<span>{article.category}</span>
+						<span class="h-px w-6 bg-text-secondary/40"></span>
+						<span>{article.readTime}</span>
+					</div>
+					<h3
+						class="mb-3 font-serif text-2xl text-text-primary transition-colors group-hover:text-accent md:text-3xl"
+					>
+						{article.title}
+					</h3>
+					<p class="max-w-xl font-sans text-sm leading-relaxed text-text-secondary line-clamp-3">
+						{article.excerpt}
+					</p>
+				</a>
+			</article>
+		{/each}
 	</div>
-</section>
+</Section>
 
 <TestimonialsSection {testimonials} />
 
 <!-- Showroom Invitation -->
-<section class="bg-bg-primary py-20 md:py-32 lg:py-40">
-	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
-		<div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-			<div class="order-2 lg:order-1">
-				<ImageReveal
-					src={imageWithFallback('/images/showroom/interior.webp', '/images/craftsmanship.jpg')}
-					alt="Áras Living showroom interior with full-size installations and material samples"
-					class="aspect-[4/3] w-full"
-					direction="left"
-				/>
-			</div>
-			<div class="order-1 space-y-8 lg:order-2">
-				<Eyebrow text={$_('home.showroom_invitation_eyebrow')} />
-				<Heading as="h2" variant="serif" class="text-3xl text-text-primary md:text-4xl lg:text-5xl">
-					{$_('home.showroom_invitation_headline')}
-				</Heading>
-				<Text variant="body-lg" class="max-w-md text-text-secondary">
-					{$_('home.showroom_invitation_body')}
-				</Text>
-				<Button variant="primary" size="md" href="/en/showroom/">
-					{$_('home.showroom_invitation_cta')}
-				</Button>
-			</div>
+<Section>
+	<div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+		<div class="order-2 lg:order-1">
+			<ImageReveal
+				src={imageWithFallback('/images/showroom/interior.webp', '/images/craftsmanship.jpg')}
+				alt="Áras Living showroom interior with full-size installations and material samples"
+				class="aspect-[4/3] w-full"
+				direction="left"
+			/>
+		</div>
+		<div class="order-1 space-y-8 lg:order-2">
+			<SectionHeader
+				eyebrow={$_('home.showroom_invitation_eyebrow')}
+				headline={$_('home.showroom_invitation_headline')}
+				statement={$_('home.showroom_invitation_body')}
+				size="large"
+				class="mb-0"
+			/>
+			<Button variant="primary" size="md" href="/en/showroom/">
+				{$_('home.showroom_invitation_cta')}
+			</Button>
 		</div>
 	</div>
-</section>
+</Section>
 
 <CTABannerSection
 	headline={$_('home.cta_headline')}

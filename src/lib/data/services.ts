@@ -55,7 +55,7 @@ export const services: Service[] = [
 			location: 'Dublin 6'
 		},
 		image: {
-			src: '/images/services/custom-wardrobes.jpg',
+			src: '/images/generated/services/custom-wardrobes-luxury.webp',
 			alt: 'Bespoke fitted wardrobe with soft-close drawers and integrated lighting'
 		},
 		category: 'residential'
@@ -288,7 +288,7 @@ export const services: Service[] = [
 			location: 'Dublin 2'
 		},
 		image: {
-			src: '/images/services/office-fit-outs.jpg',
+			src: '/images/generated/services/workplaces-luxury.webp',
 			alt: 'Modern office reception desk and boardroom joinery'
 		},
 		category: 'commercial'

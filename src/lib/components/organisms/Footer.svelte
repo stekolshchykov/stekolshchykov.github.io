@@ -8,6 +8,7 @@
 	import Text from '$lib/components/atoms/Text.svelte';
 	import Divider from '$lib/components/atoms/Divider.svelte';
 	import Button from '$lib/components/atoms/Button.svelte';
+	import Container from '$lib/components/atoms/Container.svelte';
 
 	const currentYear = new Date().getFullYear();
 
@@ -39,7 +40,7 @@
 </script>
 
 <footer class="border-t border-text-secondary/20 bg-bg-secondary">
-	<div class="mx-auto max-w-[1440px] px-6 py-20 md:px-12 md:py-32 lg:px-16">
+	<Container class="py-20 md:py-32">
 		<div class="grid gap-16 lg:grid-cols-2 lg:gap-24">
 			<div class="space-y-8">
 				<Heading as="h2" variant="display" class="max-w-md text-4xl text-text-primary md:text-5xl">
@@ -259,5 +260,5 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</Container>
 </footer>

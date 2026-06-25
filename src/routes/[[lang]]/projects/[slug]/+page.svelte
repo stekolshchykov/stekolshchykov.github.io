@@ -4,6 +4,8 @@
 	import { site } from '$lib/data/site';
 	import { projects } from '$lib/data/projects';
 
+	import Section from '$lib/components/atoms/Section.svelte';
+	import SectionHeader from '$lib/components/atoms/SectionHeader.svelte';
 	import SeoHead from '$lib/components/molecules/SeoHead.svelte';
 	import ProjectDetailHeader from '$lib/components/organisms/ProjectDetailHeader.svelte';
 	import ProjectGallery from '$lib/components/organisms/ProjectGallery.svelte';
@@ -54,59 +56,32 @@
 
 <ProjectDetailHeader {project} />
 
-<section class="bg-bg-primary py-20 md:py-32 lg:py-40">
-	<div class="mx-auto max-w-5xl px-6 md:px-12 lg:px-16">
-		<div class="space-y-16">
-			<div>
-				<span class="text-sm font-medium uppercase tracking-widest text-accent"
-					>{$_('project_detail.overview_eyebrow')}</span
-				>
-				<h2 class="mt-4 font-serif text-3xl font-light md:text-4xl">{project.title}</h2>
-				<p class="mt-6 text-lg leading-relaxed text-text-secondary">{project.overview}</p>
-			</div>
-			<div class="grid gap-12 md:grid-cols-2">
-				<div>
-					<span class="text-sm font-medium uppercase tracking-widest text-accent"
-						>{$_('project_detail.challenge_eyebrow')}</span
-					>
-					<p class="mt-4 leading-relaxed text-text-secondary">{project.challenge}</p>
-				</div>
-				<div>
-					<span class="text-sm font-medium uppercase tracking-widest text-accent"
-						>{$_('project_detail.solution_eyebrow')}</span
-					>
-					<p class="mt-4 leading-relaxed text-text-secondary">{project.solution}</p>
-				</div>
-			</div>
+<Section container="content">
+	<div class="space-y-16">
+		<SectionHeader
+			eyebrow={$_('project_detail.overview_eyebrow')}
+			headline={project.title}
+			statement={project.overview}
+			class="mb-0"
+		/>
+		<div class="grid gap-12 md:grid-cols-2">
+			<SectionHeader
+				eyebrow={$_('project_detail.challenge_eyebrow')}
+				statement={project.challenge}
+				class="mb-0"
+			/>
+			<SectionHeader
+				eyebrow={$_('project_detail.solution_eyebrow')}
+				statement={project.solution}
+				class="mb-0"
+			/>
 		</div>
 	</div>
-</section>
+</Section>
 
-<section class="bg-bg-secondary py-20 md:py-32 lg:py-40">
-	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
-		<span class="text-sm font-medium uppercase tracking-widest text-accent"
-			>{$_('project_detail.gallery_eyebrow')}</span
-		>
-		<h2 class="mt-4 font-serif text-3xl font-light md:text-4xl">{project.title}</h2>
-		<div class="mt-12">
-			<ProjectGallery media={project.media.gallery} />
-		</div>
-	</div>
-</section>
+<ProjectGallery media={project.media.gallery} />
 
-<section class="bg-bg-primary py-20 md:py-32 lg:py-40">
-	<div class="mx-auto max-w-5xl px-6 md:px-12 lg:px-16">
-		<span class="text-sm font-medium uppercase tracking-widest text-accent"
-			>{$_('project_detail.specs_eyebrow')}</span
-		>
-		<h2 class="mt-4 font-serif text-3xl font-light md:text-4xl">
-			{$_('project_detail.specs_eyebrow')}
-		</h2>
-		<div class="mt-12">
-			<SpecificationsTable specs={project.specs} />
-		</div>
-	</div>
-</section>
+<SpecificationsTable specs={project.specs} />
 
 <RelatedProjects currentSlug={project.slug} {projects} />
 

@@ -5,6 +5,8 @@
 	import { processSteps } from '$lib/data/processSteps';
 	import { materials } from '$lib/data/materials';
 
+	import Section from '$lib/components/atoms/Section.svelte';
+	import SectionHeader from '$lib/components/atoms/SectionHeader.svelte';
 	import SeoHead from '$lib/components/molecules/SeoHead.svelte';
 	import PageHeroSection from '$lib/components/organisms/PageHeroSection.svelte';
 	import ServicesListSection from '$lib/components/organisms/ServicesListSection.svelte';
@@ -59,58 +61,38 @@
 	image="/images/services-hero.jpg"
 />
 
-<section class="bg-bg-secondary py-20 md:py-32 lg:py-40">
-	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
-		<div class="mb-12 max-w-2xl">
-			<span class="text-sm font-medium uppercase tracking-widest text-accent"
-				>{$_('services.residential_eyebrow')}</span
-			>
-			<h2 class="mt-4 font-serif text-3xl font-light md:text-4xl lg:text-5xl">
-				{$_('services.residential_headline')}
-			</h2>
-			<p class="mt-6 text-lg leading-relaxed text-text-secondary">
-				{$_('services.residential_body')}
-			</p>
-		</div>
-		<ServicesListSection id="residential" services={residentialServices} />
-	</div>
-</section>
+<Section tone="secondary">
+	<SectionHeader
+		eyebrow={$_('services.residential_eyebrow')}
+		headline={$_('services.residential_headline')}
+		statement={$_('services.residential_body')}
+		size="large"
+	/>
+	<ServicesListSection id="residential" services={residentialServices} />
+</Section>
 
-<section class="bg-bg-primary py-20 md:py-32 lg:py-40">
-	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
-		<div class="mb-12 max-w-2xl">
-			<span class="text-sm font-medium uppercase tracking-widest text-accent"
-				>{$_('services.commercial_eyebrow')}</span
-			>
-			<h2 class="mt-4 font-serif text-3xl font-light md:text-4xl lg:text-5xl">
-				{$_('services.commercial_headline')}
-			</h2>
-			<p class="mt-6 text-lg leading-relaxed text-text-secondary">
-				{$_('services.commercial_body')}
-			</p>
-		</div>
-		<ServicesListSection id="commercial" services={commercialServices} />
-	</div>
-</section>
+<Section>
+	<SectionHeader
+		eyebrow={$_('services.commercial_eyebrow')}
+		headline={$_('services.commercial_headline')}
+		statement={$_('services.commercial_body')}
+		size="large"
+	/>
+	<ServicesListSection id="commercial" services={commercialServices} />
+</Section>
 
-<section class="bg-bg-secondary py-20 md:py-32 lg:py-40">
-	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
-		<div class="mb-12 text-center">
-			<span class="text-sm font-medium uppercase tracking-widest text-accent"
-				>{$_('services.process_eyebrow')}</span
-			>
-			<h2 class="mt-4 font-serif text-3xl font-light md:text-4xl lg:text-5xl">
-				{$_('services.process_headline')}
-			</h2>
-		</div>
-		<ProcessTimeline steps={processSteps} />
-	</div>
-</section>
+<Section tone="secondary">
+	<SectionHeader
+		eyebrow={$_('services.process_eyebrow')}
+		headline={$_('services.process_headline')}
+		align="center"
+		size="large"
+	/>
+	<ProcessTimeline steps={processSteps} />
+</Section>
 
-<section class="bg-bg-primary py-20 md:py-32 lg:py-40">
-	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
-		<MaterialsShowcase {materials} />
-	</div>
-</section>
+<Section>
+	<MaterialsShowcase {materials} />
+</Section>
 
 <CTABannerSection headline={$_('services.cta_headline')} ctaLabel={$_('services.cta_button')} />

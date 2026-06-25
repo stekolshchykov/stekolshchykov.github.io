@@ -15,7 +15,6 @@
 
 	let {
 		videoPoster,
-		videoSrc = '/videos/hero.mp4',
 		webpPoster = '/images/generated/hero-wardrobe.webp',
 		headline,
 		subheadline,
@@ -32,17 +31,6 @@
 <section class="relative flex min-h-[100svh] items-end overflow-hidden bg-bg-primary">
 	<div class="hero-bg absolute inset-0 z-0">
 		<div class="hero-bg-inner h-full w-full overflow-hidden">
-			<video
-				class="hero-bg-video h-full w-full object-cover"
-				poster={videoPoster}
-				autoplay
-				muted
-				playsinline
-				preload="auto"
-				aria-hidden="true"
-			>
-				<source src={videoSrc} type="video/mp4" />
-			</video>
 			<picture>
 				<source srcset={webpPoster} type="image/webp" />
 				<img
@@ -139,7 +127,7 @@
 	</div>
 
 	<div
-		class="scroll-indicator absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-3"
+		class="scroll-indicator absolute bottom-8 left-1/2 z-10 hidden -translate-x-1/2 flex-col items-center gap-3 md:flex"
 	>
 		<span class="font-sans text-[10px] uppercase tracking-[0.2em] text-text-primary/60">Scroll</span
 		>
@@ -158,16 +146,6 @@
 
 	.hero-bg-inner {
 		opacity: 1;
-	}
-
-	.hero-bg-image {
-		animation: hero-ken-burns 20s ease-in-out infinite alternate;
-	}
-
-	.hero-bg-video {
-		position: absolute;
-		inset: 0;
-		z-index: 1;
 	}
 
 	.hero-bg-image {
@@ -221,24 +199,6 @@
 		animation: hero-scroll-fade 0.8s cubic-bezier(0.4, 0, 0.2, 1) 1.2s forwards;
 	}
 
-	@keyframes hero-fade-in {
-		from {
-			opacity: 0;
-		}
-		to {
-			opacity: 1;
-		}
-	}
-
-	@keyframes hero-ken-burns {
-		from {
-			transform: scale(1.01);
-		}
-		to {
-			transform: scale(1.055);
-		}
-	}
-
 	@keyframes hero-content-fade {
 		from {
 			opacity: 0;
@@ -285,17 +245,12 @@
 
 	@media (prefers-reduced-motion: reduce) {
 		.hero-bg-inner,
-		.hero-bg-video,
 		.hero-bg-image,
 		.hero-fade,
 		.scroll-indicator {
 			animation: none;
 			opacity: 1;
 			transform: none;
-		}
-
-		.hero-bg-video {
-			display: none;
 		}
 	}
 

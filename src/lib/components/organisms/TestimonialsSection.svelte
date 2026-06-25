@@ -7,8 +7,8 @@
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	import type { Testimonial } from '$lib/types/furniture';
 	import { ChevronLeft, ChevronRight } from 'lucide-svelte';
-	import Eyebrow from '$lib/components/atoms/Eyebrow.svelte';
-	import Heading from '$lib/components/atoms/Heading.svelte';
+	import Section from '$lib/components/atoms/Section.svelte';
+	import SectionHeader from '$lib/components/atoms/SectionHeader.svelte';
 	import TestimonialCard from '$lib/components/molecules/TestimonialCard.svelte';
 
 	interface Props {
@@ -16,7 +16,7 @@
 	}
 
 	let { testimonials }: Props = $props();
-	let section: HTMLElement;
+	let section = $state<HTMLElement | undefined>(undefined);
 	let index = $state(0);
 
 	const current = $derived(testimonials[index]);
@@ -49,52 +49,46 @@
 	});
 </script>
 
-<section bind:this={section} class="bg-bg-primary py-20 md:py-32 lg:py-40">
-	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
-		<div class="mb-12 md:mb-16">
-			<Eyebrow text={$_('home.testimonials_eyebrow')} class="testimonials-fade mb-4" />
-			<Heading
-				as="h2"
-				variant="serif"
-				class="testimonials-fade text-3xl text-text-primary md:text-4xl lg:text-5xl"
+<Section bind:element={section}>
+	<SectionHeader
+		eyebrow={$_('home.testimonials_eyebrow')}
+		headline={$_('home.testimonials_headline')}
+		size="large"
+		class="testimonials-fade"
+	/>
+
+	<div class="testimonials-fade relative">
+		{#key current}
+			<div
+				transition:fade={{ duration: prefersReducedMotion() ? 0 : 400 }}
+				class="mx-auto max-w-4xl"
 			>
-				{$_('home.testimonials_headline')}
-			</Heading>
-		</div>
+				<TestimonialCard {...current} variant="large" />
+			</div>
+		{/key}
 
-		<div class="testimonials-fade relative">
-			{#key current}
-				<div
-					transition:fade={{ duration: prefersReducedMotion() ? 0 : 400 }}
-					class="mx-auto max-w-4xl"
+		{#if testimonials.length > 1}
+			<div class="mt-12 flex items-center justify-center gap-6">
+				<button
+					type="button"
+					aria-label="Previous testimonial"
+					class="group inline-flex h-12 w-12 items-center justify-center border border-text-primary/10 text-text-primary transition-colors hover:border-accent hover:text-accent"
+					onclick={prev}
 				>
-					<TestimonialCard {...current} variant="large" />
-				</div>
-			{/key}
-
-			{#if testimonials.length > 1}
-				<div class="mt-12 flex items-center justify-center gap-6">
-					<button
-						type="button"
-						aria-label="Previous testimonial"
-						class="group inline-flex h-12 w-12 items-center justify-center border border-text-primary/10 text-text-primary transition-colors hover:border-accent hover:text-accent"
-						onclick={prev}
-					>
-						<ChevronLeft size={20} />
-					</button>
-					<span class="font-sans text-sm text-text-secondary">
-						{String(index + 1).padStart(2, '0')} / {String(testimonials.length).padStart(2, '0')}
-					</span>
-					<button
-						type="button"
-						aria-label="Next testimonial"
-						class="group inline-flex h-12 w-12 items-center justify-center border border-text-primary/10 text-text-primary transition-colors hover:border-accent hover:text-accent"
-						onclick={next}
-					>
-						<ChevronRight size={20} />
-					</button>
-				</div>
-			{/if}
-		</div>
+					<ChevronLeft size={20} />
+				</button>
+				<span class="font-sans text-sm text-text-secondary">
+					{String(index + 1).padStart(2, '0')} / {String(testimonials.length).padStart(2, '0')}
+				</span>
+				<button
+					type="button"
+					aria-label="Next testimonial"
+					class="group inline-flex h-12 w-12 items-center justify-center border border-text-primary/10 text-text-primary transition-colors hover:border-accent hover:text-accent"
+					onclick={next}
+				>
+					<ChevronRight size={20} />
+				</button>
+			</div>
+		{/if}
 	</div>
-</section>
+</Section>

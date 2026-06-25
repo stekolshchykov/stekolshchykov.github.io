@@ -9,7 +9,10 @@
 	import FilterPill from '$lib/components/molecules/FilterPill.svelte';
 	import MaterialPaletteBuilder from '$lib/components/molecules/MaterialPaletteBuilder.svelte';
 	import MagneticCard from '$lib/components/molecules/MagneticCard.svelte';
-	import SplitTextReveal from '$lib/components/molecules/SplitTextReveal.svelte';
+	import Section from '$lib/components/atoms/Section.svelte';
+	import SectionHeader from '$lib/components/atoms/SectionHeader.svelte';
+	import Heading from '$lib/components/atoms/Heading.svelte';
+	import Button from '$lib/components/atoms/Button.svelte';
 
 	const families = Array.from(new Set(materialsDetailed.map((m) => m.family)));
 	let activeFamily = $state<string>('all');
@@ -54,81 +57,75 @@
 	image={imageWithFallback('/images/materials/european-oak.jpg', '/images/hero-poster.jpg')}
 />
 
-<section class="bg-bg-primary py-20 md:py-32 lg:py-40">
-	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
-		<div
-			class="mb-12 flex flex-col items-start justify-between gap-6 md:mb-16 md:flex-row md:items-end"
-		>
-			<div class="max-w-2xl">
-				<h2 class="font-serif text-3xl text-text-primary md:text-4xl lg:text-5xl">
-					<SplitTextReveal as="span" text={$_('materials.hero_headline')} />
-				</h2>
-			</div>
-			<div class="flex flex-wrap gap-2">
-				<FilterPill
-					label={$_('projects.filter_all')}
-					value="all"
-					active={activeFamily === 'all'}
-					onclick={() => (activeFamily = 'all')}
-				/>
-				{#each families as family}
-					<FilterPill
-						label={family}
-						value={family}
-						active={activeFamily === family}
-						count={materialsDetailed.filter((m) => m.family === family).length}
-						onclick={() => (activeFamily = family)}
-					/>
-				{/each}
-			</div>
+<Section>
+	<div
+		class="mb-12 flex flex-col items-start justify-between gap-6 md:mb-16 md:flex-row md:items-end"
+	>
+		<div class="max-w-2xl">
+			<Heading as="h2" variant="serif" class="text-3xl text-text-primary md:text-4xl lg:text-5xl">
+				{$_('materials.hero_headline')}
+			</Heading>
 		</div>
-
-		<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-			{#each filteredMaterials as material}
-				<MagneticCard intensity={0.1}>
-					<a href="/en/materials/{material.id}/" class="group block bg-bg-secondary">
-						<div class="image-warm-overlay relative aspect-square overflow-hidden bg-bg-primary">
-							<img
-								src={imageWithFallback(
-									material.images.swatch.src,
-									'/images/materials/european-oak.jpg'
-								)}
-								alt={material.images.swatch.alt}
-								loading="lazy"
-								width="800"
-								height="800"
-								class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-							/>
-						</div>
-						<div class="p-5">
-							<p class="mb-1 font-sans text-[11px] uppercase tracking-[0.12em] text-accent">
-								{material.family}
-							</p>
-							<h3 class="mb-2 font-serif text-xl text-text-primary">{material.name}</h3>
-							<p class="font-sans text-sm leading-relaxed text-text-secondary line-clamp-2">
-								{material.tagline}
-							</p>
-						</div>
-					</a>
-				</MagneticCard>
+		<div class="flex flex-wrap gap-2">
+			<FilterPill
+				label={$_('projects.filter_all')}
+				value="all"
+				active={activeFamily === 'all'}
+				onclick={() => (activeFamily = 'all')}
+			/>
+			{#each families as family}
+				<FilterPill
+					label={family}
+					value={family}
+					active={activeFamily === family}
+					count={materialsDetailed.filter((m) => m.family === family).length}
+					onclick={() => (activeFamily = family)}
+				/>
 			{/each}
 		</div>
 	</div>
-</section>
 
-<section class="border-t border-text-primary/10 bg-bg-secondary py-20 md:py-32 lg:py-40">
-	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
-		<div class="mb-10 max-w-2xl md:mb-14">
-			<h2 class="mb-4 font-serif text-3xl text-text-primary md:text-4xl">Build your palette</h2>
-			<p class="font-sans text-body-lg text-text-secondary">
-				Select up to four materials to request samples or discuss on your project.
-			</p>
-		</div>
-		<MaterialPaletteBuilder materials={paletteMaterials} />
+	<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+		{#each filteredMaterials as material}
+			<MagneticCard intensity={0.1}>
+				<a href="/en/materials/{material.id}/" class="group block bg-bg-secondary">
+					<div class="image-warm-overlay relative aspect-square overflow-hidden bg-bg-primary">
+						<img
+							src={imageWithFallback(
+								material.images.swatch.src,
+								'/images/materials/european-oak.jpg'
+							)}
+							alt={material.images.swatch.alt}
+							loading="lazy"
+							width="800"
+							height="800"
+							class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+						/>
+					</div>
+					<div class="p-5">
+						<p class="mb-1 font-sans text-[11px] uppercase tracking-[0.12em] text-accent">
+							{material.family}
+						</p>
+						<h3 class="mb-2 font-serif text-xl text-text-primary">{material.name}</h3>
+						<p class="font-sans text-sm leading-relaxed text-text-secondary line-clamp-2">
+							{material.tagline}
+						</p>
+					</div>
+				</a>
+			</MagneticCard>
+		{/each}
 	</div>
-</section>
+</Section>
 
-<section class="relative overflow-hidden border-y border-text-primary/10 bg-bg-primary">
+<Section tone="secondary" border="top">
+	<SectionHeader
+		headline="Build your palette"
+		statement="Select up to four materials to request samples or discuss on your project."
+	/>
+	<MaterialPaletteBuilder materials={paletteMaterials} />
+</Section>
+
+<Section border="y" container="none" class="relative overflow-hidden">
 	<div class="absolute inset-0 opacity-80" aria-hidden="true">
 		<div
 			class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/60 to-transparent"
@@ -143,11 +140,13 @@
 			<p class="mb-5 font-sans text-[11px] uppercase tracking-[0.18em] text-accent">
 				Material consultation
 			</p>
-			<h2
-				class="max-w-3xl font-serif text-4xl font-light leading-tight text-text-primary md:text-5xl lg:text-6xl"
+			<Heading
+				as="h2"
+				variant="display"
+				class="max-w-3xl text-4xl font-light leading-tight text-text-primary md:text-5xl lg:text-6xl"
 			>
 				{$_('materials.cta_headline')}
-			</h2>
+			</Heading>
 			<p class="mt-6 max-w-2xl font-sans text-base leading-relaxed text-text-secondary md:text-lg">
 				Bring a room, a mood, or a difficult finish decision. We will compare samples under real
 				light, explain how each surface ages, and shape a palette that can be priced and built.
@@ -163,18 +162,8 @@
 			</div>
 
 			<div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
-				<a
-					href="/en/contact/"
-					class="inline-flex items-center justify-center bg-accent px-8 py-4 font-sans text-sm font-medium uppercase tracking-[0.06em] text-bg-primary transition-all duration-200 hover:-translate-y-px hover:bg-[#D4A57A]"
-				>
-					Book material consultation
-				</a>
-				<a
-					href="/en/showroom/"
-					class="inline-flex items-center justify-center border border-text-primary/18 px-8 py-4 font-sans text-sm font-medium uppercase tracking-[0.06em] text-text-primary transition-colors duration-200 hover:border-accent hover:text-accent"
-				>
-					Visit the showroom
-				</a>
+				<Button variant="primary" size="lg" href="/en/contact/">Book material consultation</Button>
+				<Button variant="secondary" size="lg" href="/en/showroom/">Visit the showroom</Button>
 			</div>
 		</div>
 
@@ -232,4 +221,4 @@
 			</div>
 		</div>
 	</div>
-</section>
+</Section>

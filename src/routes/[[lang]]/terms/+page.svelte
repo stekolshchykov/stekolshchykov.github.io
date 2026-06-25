@@ -4,6 +4,7 @@
 	import { legal } from '$lib/data/legal';
 
 	import SeoHead from '$lib/components/molecules/SeoHead.svelte';
+	import LegalDocumentSection from '$lib/components/organisms/LegalDocumentSection.svelte';
 
 	const pageData = legal.terms;
 </script>
@@ -26,24 +27,4 @@
 	canonical="{site.seo.siteUrl}/terms/"
 />
 
-<section class="bg-bg-primary py-24 md:py-32">
-	<div class="mx-auto max-w-3xl px-6 md:px-12 lg:px-16">
-		<h1 class="font-serif text-4xl font-light md:text-5xl lg:text-6xl">{pageData.title}</h1>
-		<p class="mt-4 text-sm text-text-secondary">
-			{$_('legal.last_updated')}: {pageData.lastUpdated}
-		</p>
-
-		<div class="mt-16 space-y-12">
-			{#each pageData.sections as section (section.id)}
-				<article>
-					<h2 class="font-serif text-2xl font-light md:text-3xl">{section.title}</h2>
-					<div class="mt-4 space-y-4 text-text-secondary">
-						{#each section.content as paragraph, i (i)}
-							<p class="leading-relaxed">{paragraph}</p>
-						{/each}
-					</div>
-				</article>
-			{/each}
-		</div>
-	</div>
-</section>
+<LegalDocumentSection document={pageData} />

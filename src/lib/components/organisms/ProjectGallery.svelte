@@ -4,8 +4,8 @@
 	import gsap from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	import type { MediaItem } from '$lib/types/furniture';
-	import Eyebrow from '$lib/components/atoms/Eyebrow.svelte';
-	import Heading from '$lib/components/atoms/Heading.svelte';
+	import Section from '$lib/components/atoms/Section.svelte';
+	import SectionHeader from '$lib/components/atoms/SectionHeader.svelte';
 	import Image from '$lib/components/atoms/Image.svelte';
 	import Lightbox from '$lib/components/molecules/Lightbox.svelte';
 
@@ -14,7 +14,7 @@
 	}
 
 	let { media }: Props = $props();
-	let section: HTMLElement;
+	let section = $state<HTMLElement | undefined>(undefined);
 	let lightboxOpen = $state(false);
 	let lightboxIndex = $state(0);
 
@@ -49,32 +49,29 @@
 	}
 </script>
 
-<section bind:this={section} class="bg-bg-primary py-20 md:py-32 lg:py-40">
-	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
-		<div class="mb-12">
-			<Eyebrow text={$_('project_detail.gallery_eyebrow')} class="gallery-item mb-4" />
-			<Heading as="h2" variant="serif" class="gallery-item text-3xl text-text-primary md:text-4xl">
-				{$_('project_detail.gallery_eyebrow')}
-			</Heading>
-		</div>
+<Section bind:element={section}>
+	<SectionHeader
+		eyebrow={$_('project_detail.gallery_eyebrow')}
+		headline={$_('project_detail.gallery_eyebrow')}
+		class="gallery-item"
+	/>
 
-		<div class="columns-1 gap-6 md:columns-2 lg:columns-3">
-			{#each imageItems as item, i}
-				<button
-					type="button"
-					class="gallery-item mb-6 block w-full overflow-hidden"
-					onclick={() => openLightbox(i)}
-					aria-label="Open image in lightbox"
-				>
-					<Image
-						src={item.src}
-						alt={item.alt}
-						loading={i === 0 ? 'eager' : 'lazy'}
-						class="w-full transition-transform duration-[600ms] hover:scale-[1.03]"
-					/>
-				</button>
-			{/each}
-		</div>
+	<div class="columns-1 gap-6 md:columns-2 lg:columns-3">
+		{#each imageItems as item, i}
+			<button
+				type="button"
+				class="gallery-item mb-6 block w-full overflow-hidden"
+				onclick={() => openLightbox(i)}
+				aria-label="Open image in lightbox"
+			>
+				<Image
+					src={item.src}
+					alt={item.alt}
+					loading={i === 0 ? 'eager' : 'lazy'}
+					class="w-full transition-transform duration-[600ms] hover:scale-[1.03]"
+				/>
+			</button>
+		{/each}
 	</div>
 
 	<Lightbox
@@ -83,4 +80,4 @@
 		open={lightboxOpen}
 		onclose={closeLightbox}
 	/>
-</section>
+</Section>

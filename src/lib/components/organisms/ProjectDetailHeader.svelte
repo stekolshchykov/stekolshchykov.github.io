@@ -4,6 +4,7 @@
 	import Heading from '$lib/components/atoms/Heading.svelte';
 	import Text from '$lib/components/atoms/Text.svelte';
 	import Image from '$lib/components/atoms/Image.svelte';
+	import Container from '$lib/components/atoms/Container.svelte';
 
 	interface Props {
 		project: Project;
@@ -19,7 +20,7 @@
 </script>
 
 <header class="bg-bg-primary pt-24 md:pt-28">
-	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
+	<Container>
 		<nav aria-label="Breadcrumb" class="mb-8">
 			<ol
 				class="flex flex-wrap items-center gap-2 font-sans text-xs uppercase tracking-[0.12em] text-text-secondary"
@@ -37,7 +38,7 @@
 				<li class="text-text-primary" aria-current="page">{project.title}</li>
 			</ol>
 		</nav>
-	</div>
+	</Container>
 
 	<div class="relative mx-auto max-w-[1440px] overflow-hidden border-y border-text-primary/10">
 		<div class="aspect-[5/4] w-full overflow-hidden md:aspect-[21/9] md:max-h-[82vh]">

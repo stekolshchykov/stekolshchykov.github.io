@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { cx } from '$lib/utils/helpers';
+	import Section from '$lib/components/atoms/Section.svelte';
+	import Container from '$lib/components/atoms/Container.svelte';
 
 	interface Item {
 		id: string;
@@ -24,8 +26,8 @@
 		class: className = ''
 	}: Props = $props();
 
-	let section: HTMLElement;
-	let track: HTMLElement;
+	let section = $state<HTMLElement | undefined>(undefined);
+	let track = $state<HTMLElement | undefined>(undefined);
 	let isMobile = $state(false);
 
 	onMount(() => {
@@ -40,19 +42,22 @@
 		let ctx: { revert: () => void } | null = null;
 		const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-		if (!prefersReducedMotion && !isMobile && track && section) {
+		const trackEl = track;
+		const sectionEl = section;
+
+		if (!prefersReducedMotion && !isMobile && trackEl && sectionEl) {
 			import('gsap').then(({ gsap }) => {
 				import('gsap/ScrollTrigger').then(({ ScrollTrigger }) => {
 					gsap.registerPlugin(ScrollTrigger);
 
-					const totalWidth = track.scrollWidth - window.innerWidth;
+					const totalWidth = trackEl.scrollWidth - window.innerWidth;
 
 					ctx = gsap.context(() => {
-						gsap.to(track, {
+						gsap.to(trackEl, {
 							x: -totalWidth,
 							ease: 'none',
 							scrollTrigger: {
-								trigger: section,
+								trigger: sectionEl,
 								start: 'top top',
 								end: () => `+=${totalWidth}`,
 								scrub: 1,
@@ -61,7 +66,7 @@
 								invalidateOnRefresh: true
 							}
 						});
-					}, section);
+					}, sectionEl);
 				});
 			});
 		}
@@ -73,10 +78,14 @@
 	});
 </script>
 
-<section bind:this={section} class={cx('relative overflow-hidden bg-bg-secondary', className)}>
-	<div
-		class="mx-auto max-w-[1440px] px-6 pb-8 pt-20 md:px-12 md:pb-12 md:pt-32 lg:px-16 lg:pb-16 lg:pt-40"
-	>
+<Section
+	bind:element={section}
+	tone="secondary"
+	container="none"
+	spacing="none"
+	class={cx('relative overflow-hidden', className)}
+>
+	<Container class="pb-8 pt-20 md:pb-12 md:pt-32 lg:pb-16 lg:pt-40">
 		<div class="mb-10 max-w-xl md:mb-14">
 			<h2 class="font-serif text-h2 tracking-tight leading-h2 text-text-primary text-balance">
 				{title}
@@ -85,7 +94,7 @@
 				{subtitle}
 			</p>
 		</div>
-	</div>
+	</Container>
 
 	<div
 		bind:this={track}
@@ -128,7 +137,7 @@
 			</article>
 		{/each}
 	</div>
-</section>
+</Section>
 
 <style>
 	.scrollbar-hide {

@@ -7,7 +7,9 @@
 	import SeoHead from '$lib/components/molecules/SeoHead.svelte';
 	import PageHeroSection from '$lib/components/organisms/PageHeroSection.svelte';
 	import ImageReveal from '$lib/components/molecules/ImageReveal.svelte';
-	import SplitTextReveal from '$lib/components/molecules/SplitTextReveal.svelte';
+	import Section from '$lib/components/atoms/Section.svelte';
+	import SectionHeader from '$lib/components/atoms/SectionHeader.svelte';
+	import Heading from '$lib/components/atoms/Heading.svelte';
 	import Input from '$lib/components/atoms/Input.svelte';
 	import Textarea from '$lib/components/atoms/Textarea.svelte';
 	import Button from '$lib/components/atoms/Button.svelte';
@@ -47,137 +49,117 @@
 	height="large"
 />
 
-<section class="bg-bg-primary py-20 md:py-32 lg:py-40">
-	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
-		<h2 class="mb-12 font-serif text-3xl text-text-primary md:text-4xl lg:text-5xl">
-			<SplitTextReveal as="span" text={$_('commercial.sectors_title')} />
-		</h2>
-		<div class="grid gap-6 md:grid-cols-2">
-			{#each commercialData.sectors as item}
-				<div class="group bg-bg-secondary">
-					<div class="image-warm-overlay relative aspect-[16/10] overflow-hidden">
-						<img
-							src={imageWithFallback(item.image.src, '/images/commercial/hero.webp')}
-							alt={item.image.alt}
-							loading="lazy"
-							class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-						/>
-					</div>
-					<div class="p-6 md:p-8">
-						<h3 class="mb-3 font-serif text-2xl text-text-primary">{item.title}</h3>
-						<p class="font-sans text-sm leading-relaxed text-text-secondary">{item.description}</p>
-					</div>
+<Section>
+	<SectionHeader headline={$_('commercial.sectors_title')} size="large" />
+	<div class="grid gap-6 md:grid-cols-2">
+		{#each commercialData.sectors as item}
+			<div class="group bg-bg-secondary">
+				<div class="image-warm-overlay relative aspect-[16/10] overflow-hidden">
+					<img
+						src={imageWithFallback(item.image.src, '/images/commercial/hero.webp')}
+						alt={item.image.alt}
+						loading="lazy"
+						class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+					/>
 				</div>
-			{/each}
-		</div>
-	</div>
-</section>
-
-<section class="bg-bg-secondary py-20 md:py-32 lg:py-40">
-	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
-		<h2 class="mb-12 font-serif text-3xl text-text-primary md:text-4xl">
-			<SplitTextReveal as="span" text={$_('commercial.case_studies_title')} />
-		</h2>
-		<div class="space-y-16">
-			{#each commercialData.caseStudies as study, i}
-				<div
-					class="grid items-center gap-8 md:grid-cols-2 md:gap-12 {i % 2 === 1
-						? 'md:flex-row-reverse'
-						: ''}"
-				>
-					<div class={i % 2 === 1 ? 'md:order-2' : ''}>
-						<ImageReveal
-							src={imageWithFallback(study.image.src, '/images/commercial/hero.webp')}
-							alt={study.image.alt}
-							class="aspect-[4/3] w-full"
-							direction={i % 2 === 0 ? 'right' : 'left'}
-						/>
-					</div>
-					<div class="space-y-6 {i % 2 === 1 ? 'md:order-1' : ''}">
-						<div
-							class="flex flex-wrap items-center gap-4 font-sans text-xs uppercase tracking-[0.12em] text-accent"
-						>
-							<span>{study.sector}</span>
-							<span class="h-px w-6 bg-accent/40"></span>
-							<span>{study.location}</span>
-						</div>
-						<h3 class="font-serif text-2xl text-text-primary md:text-3xl">{study.client}</h3>
-						<p class="font-sans text-sm leading-relaxed text-text-secondary">
-							<strong class="text-text-primary">Scope:</strong>
-							{study.scope}
-						</p>
-						<p class="font-sans text-sm leading-relaxed text-text-secondary">
-							<strong class="text-text-primary">Outcome:</strong>
-							{study.outcome}
-						</p>
-					</div>
+				<div class="p-6 md:p-8">
+					<h3 class="mb-3 font-serif text-2xl text-text-primary">{item.title}</h3>
+					<p class="font-sans text-sm leading-relaxed text-text-secondary">{item.description}</p>
 				</div>
-			{/each}
-		</div>
-	</div>
-</section>
-
-<section class="bg-bg-primary py-20 md:py-32 lg:py-40">
-	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
-		<div class="grid gap-12 lg:grid-cols-2 lg:gap-20">
-			<div>
-				<h2 class="font-serif text-3xl text-text-primary md:text-4xl">
-					<SplitTextReveal as="span" text={$_('commercial.process_title')} />
-				</h2>
 			</div>
-			<ol class="space-y-6">
-				{#each commercialData.b2bDifferences as difference, i}
-					<li class="flex gap-6">
-						<span class="font-serif text-3xl text-accent">{String(i + 1).padStart(2, '0')}</span>
-						<p class="pt-2 font-sans text-body-lg text-text-secondary">{difference}</p>
-					</li>
-				{/each}
-			</ol>
-		</div>
+		{/each}
 	</div>
-</section>
+</Section>
 
-<section class="bg-bg-secondary py-20 md:py-32 lg:py-40">
-	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
-		<div class="grid gap-12 lg:grid-cols-2 lg:gap-20">
-			<div class="space-y-6">
-				<h2 class="font-serif text-3xl text-text-primary md:text-4xl lg:text-5xl">
-					<SplitTextReveal as="span" text={$_('commercial.form_title')} />
-				</h2>
-				<p class="max-w-md font-sans text-body-lg text-text-secondary">
-					Tell us about your project and we will respond within two business days.
-				</p>
+<Section tone="secondary">
+	<SectionHeader headline={$_('commercial.case_studies_title')} />
+	<div class="space-y-16">
+		{#each commercialData.caseStudies as study, i}
+			<div class="grid items-center gap-8 md:grid-cols-2 md:gap-12">
+				<div class={i % 2 === 1 ? 'md:order-2' : ''}>
+					<ImageReveal
+						src={imageWithFallback(study.image.src, '/images/commercial/hero.webp')}
+						alt={study.image.alt}
+						class="aspect-[4/3] w-full"
+						direction={i % 2 === 0 ? 'right' : 'left'}
+					/>
+				</div>
+				<div class="space-y-6 {i % 2 === 1 ? 'md:order-1' : ''}">
+					<div
+						class="flex flex-wrap items-center gap-4 font-sans text-xs uppercase tracking-[0.12em] text-accent"
+					>
+						<span>{study.sector}</span>
+						<span class="h-px w-6 bg-accent/40"></span>
+						<span>{study.location}</span>
+					</div>
+					<h3 class="font-serif text-2xl text-text-primary md:text-3xl">{study.client}</h3>
+					<p class="font-sans text-sm leading-relaxed text-text-secondary">
+						<strong class="text-text-primary">Scope:</strong>
+						{study.scope}
+					</p>
+					<p class="font-sans text-sm leading-relaxed text-text-secondary">
+						<strong class="text-text-primary">Outcome:</strong>
+						{study.outcome}
+					</p>
+				</div>
 			</div>
-			<form onsubmit={handleSubmit} class="space-y-8">
-				<div class="grid gap-6 md:grid-cols-2">
-					<Input name="company" label="Company name" required bind:value={company} />
-					<Input name="sector" label="Sector" bind:value={sector} />
-				</div>
-				<div class="grid gap-6 md:grid-cols-2">
-					<Input name="email" type="email" label="Email" required bind:value={email} />
-					<Input name="phone" type="tel" label="Phone" bind:value={phone} />
-				</div>
-				<div class="grid gap-6 md:grid-cols-2">
-					<Input name="location" label="Project location" bind:value={location} />
-					<Input name="budget" label="Approximate budget" bind:value={budget} />
-				</div>
-				<Input name="programme" label="Required programme or opening date" bind:value={programme} />
-				<Textarea name="scope" label="Scope of joinery required" bind:value={scope} />
-				<Button variant="primary" type="submit">
-					{$_('commercial.form_button')}
-				</Button>
-			</form>
-		</div>
+		{/each}
 	</div>
-</section>
+</Section>
 
-<section class="bg-bg-primary py-20 md:py-32 lg:py-40">
-	<div class="mx-auto max-w-4xl px-6 text-center md:px-12 lg:px-16">
-		<h2 class="mb-6 font-serif text-3xl font-light text-text-primary md:text-4xl">
-			{$_('commercial.cta_headline')}
-		</h2>
-		<Button variant="primary" size="lg" href="/en/contact/">
-			{$_('commercial.cta_button')}
-		</Button>
+<Section>
+	<div class="grid gap-12 lg:grid-cols-2 lg:gap-20">
+		<Heading as="h2" variant="serif" class="text-3xl text-text-primary md:text-4xl">
+			{$_('commercial.process_title')}
+		</Heading>
+		<ol class="space-y-6">
+			{#each commercialData.b2bDifferences as difference, i}
+				<li class="flex gap-6">
+					<span class="font-serif text-3xl text-accent">{String(i + 1).padStart(2, '0')}</span>
+					<p class="pt-2 font-sans text-body-lg text-text-secondary">{difference}</p>
+				</li>
+			{/each}
+		</ol>
 	</div>
-</section>
+</Section>
+
+<Section tone="secondary">
+	<div class="grid gap-12 lg:grid-cols-2 lg:gap-20">
+		<div class="space-y-6">
+			<Heading as="h2" variant="serif" class="text-3xl text-text-primary md:text-4xl lg:text-5xl">
+				{$_('commercial.form_title')}
+			</Heading>
+			<p class="max-w-md font-sans text-body-lg text-text-secondary">
+				Tell us about your project and we will respond within two business days.
+			</p>
+		</div>
+		<form onsubmit={handleSubmit} class="space-y-8">
+			<div class="grid gap-6 md:grid-cols-2">
+				<Input name="company" label="Company name" required bind:value={company} />
+				<Input name="sector" label="Sector" bind:value={sector} />
+			</div>
+			<div class="grid gap-6 md:grid-cols-2">
+				<Input name="email" type="email" label="Email" required bind:value={email} />
+				<Input name="phone" type="tel" label="Phone" bind:value={phone} />
+			</div>
+			<div class="grid gap-6 md:grid-cols-2">
+				<Input name="location" label="Project location" bind:value={location} />
+				<Input name="budget" label="Approximate budget" bind:value={budget} />
+			</div>
+			<Input name="programme" label="Required programme or opening date" bind:value={programme} />
+			<Textarea name="scope" label="Scope of joinery required" bind:value={scope} />
+			<Button variant="primary" type="submit">
+				{$_('commercial.form_button')}
+			</Button>
+		</form>
+	</div>
+</Section>
+
+<Section container="narrow" align="center">
+	<Heading as="h2" variant="serif" class="mb-6 text-3xl font-light text-text-primary md:text-4xl">
+		{$_('commercial.cta_headline')}
+	</Heading>
+	<Button variant="primary" size="lg" href="/en/contact/">
+		{$_('commercial.cta_button')}
+	</Button>
+</Section>

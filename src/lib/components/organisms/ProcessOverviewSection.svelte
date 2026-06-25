@@ -5,8 +5,8 @@
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	import { processSteps as allProcessSteps } from '$lib/data/processSteps';
 	import type { ProcessStep as ProcessStepType } from '$lib/types/furniture';
-	import Eyebrow from '$lib/components/atoms/Eyebrow.svelte';
-	import Heading from '$lib/components/atoms/Heading.svelte';
+	import Section from '$lib/components/atoms/Section.svelte';
+	import SectionHeader from '$lib/components/atoms/SectionHeader.svelte';
 	import ProcessStep from '$lib/components/molecules/ProcessStep.svelte';
 
 	interface Props {
@@ -14,7 +14,7 @@
 	}
 
 	let { steps = allProcessSteps }: Props = $props();
-	let section: HTMLElement;
+	let section = $state<HTMLElement | undefined>(undefined);
 
 	onMount(() => {
 		const ctx = gsap.context(() => {
@@ -36,31 +36,25 @@
 	});
 </script>
 
-<section bind:this={section} class="bg-bg-secondary py-20 md:py-32 lg:py-40">
-	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
-		<div class="mb-12 md:mb-16">
-			<Eyebrow text={$_('home.process_eyebrow')} class="process-fade mb-4" />
-			<Heading
-				as="h2"
-				variant="serif"
-				class="process-fade text-3xl text-text-primary md:text-4xl lg:text-5xl"
-			>
-				{$_('home.process_headline')}
-			</Heading>
-		</div>
+<Section bind:element={section} tone="secondary">
+	<SectionHeader
+		eyebrow={$_('home.process_eyebrow')}
+		headline={$_('home.process_headline')}
+		size="large"
+		class="process-fade"
+	/>
 
-		<div class="relative">
-			<div
-				class="absolute top-[3.5rem] left-0 right-0 hidden h-px bg-text-primary/10 md:block"
-				aria-hidden="true"
-			></div>
-			<div class="flex flex-col gap-12 md:flex-row md:gap-4 lg:gap-8">
-				{#each steps as step}
-					<div class="process-fade relative flex-1">
-						<ProcessStep number={step.number} title={step.title} description={step.description} />
-					</div>
-				{/each}
-			</div>
+	<div class="relative">
+		<div
+			class="absolute top-[3.5rem] left-0 right-0 hidden h-px bg-text-primary/10 md:block"
+			aria-hidden="true"
+		></div>
+		<div class="flex flex-col gap-12 md:flex-row md:gap-4 lg:gap-8">
+			{#each steps as step}
+				<div class="process-fade relative flex-1">
+					<ProcessStep number={step.number} title={step.title} description={step.description} />
+				</div>
+			{/each}
 		</div>
 	</div>
-</section>
+</Section>

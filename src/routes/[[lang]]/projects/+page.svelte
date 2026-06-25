@@ -3,6 +3,7 @@
 	import { site } from '$lib/data/site';
 	import { projects } from '$lib/data/projects';
 
+	import Section from '$lib/components/atoms/Section.svelte';
 	import SeoHead from '$lib/components/molecules/SeoHead.svelte';
 	import PageHeroSection from '$lib/components/organisms/PageHeroSection.svelte';
 	import ProjectGrid from '$lib/components/organisms/ProjectGrid.svelte';
@@ -33,8 +34,6 @@
 	image="/images/projects-hero.jpg"
 />
 
-<section class="bg-bg-primary py-20 md:py-32 lg:py-40">
-	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
-		<ProjectGrid {projects} />
-	</div>
-</section>
+<Section>
+	<ProjectGrid {projects} />
+</Section>

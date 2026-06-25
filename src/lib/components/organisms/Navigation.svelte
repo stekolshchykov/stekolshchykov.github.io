@@ -79,10 +79,10 @@
 >
 	<div class="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-6 md:px-12 lg:px-16">
 		<a href="/en/" class="relative z-50">
-			<Logo variant="light" class="h-7 w-auto" />
+			<Logo variant="light" class="h-8 w-auto md:h-9 xl:h-7" />
 		</a>
 
-		<nav class="hidden items-center gap-8 md:flex" aria-label="Primary">
+		<nav class="hidden items-center gap-8 xl:flex" aria-label="Primary">
 			{#each primaryLinks as link}
 				<a
 					href={link.href}
@@ -153,7 +153,7 @@
 			</div>
 		</nav>
 
-		<div class="hidden lg:block">
+		<div class="hidden xl:block">
 			<Button variant="primary" size="sm" href="/en/contact/">
 				{$_('nav.discuss_project')}
 			</Button>
@@ -161,7 +161,7 @@
 
 		<button
 			type="button"
-			class="relative z-50 inline-flex items-center justify-center p-2 text-text-primary md:hidden"
+			class="relative z-50 inline-flex items-center justify-center p-2 text-text-primary xl:hidden"
 			onclick={toggleMenu}
 			aria-expanded={mobileOpen}
 			aria-controls="mobile-menu"
@@ -179,7 +179,7 @@
 {#if mobileOpen}
 	<div
 		id="mobile-menu"
-		class="fixed inset-0 z-40 flex flex-col bg-bg-primary px-6 pt-24 md:hidden"
+		class="fixed inset-0 z-40 flex flex-col bg-bg-primary px-6 pt-24 xl:hidden"
 		transition:fly={{ y: -20, duration: 400 }}
 	>
 		<nav class="flex flex-col gap-2" aria-label="Mobile">

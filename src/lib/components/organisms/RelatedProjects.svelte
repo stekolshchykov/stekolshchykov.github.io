@@ -4,8 +4,8 @@
 	import gsap from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	import type { Project } from '$lib/types/furniture';
-	import Eyebrow from '$lib/components/atoms/Eyebrow.svelte';
-	import Heading from '$lib/components/atoms/Heading.svelte';
+	import Section from '$lib/components/atoms/Section.svelte';
+	import SectionHeader from '$lib/components/atoms/SectionHeader.svelte';
 	import ProjectCard from '$lib/components/molecules/ProjectCard.svelte';
 
 	interface Props {
@@ -43,26 +43,19 @@
 </script>
 
 {#if related.length > 0}
-	<section bind:this={section} class="bg-bg-primary py-20 md:py-32 lg:py-40">
-		<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
-			<div class="mb-12">
-				<Eyebrow text={$_('project_detail.related_eyebrow')} class="related-fade mb-4" />
-				<Heading
-					as="h2"
-					variant="serif"
-					class="related-fade text-3xl text-text-primary md:text-4xl"
-				>
-					{$_('project_detail.related_headline')}
-				</Heading>
-			</div>
+	<Section bind:element={section}>
+		<SectionHeader
+			eyebrow={$_('project_detail.related_eyebrow')}
+			headline={$_('project_detail.related_headline')}
+			class="related-fade"
+		/>
 
-			<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-				{#each related as project}
-					<div class="related-fade">
-						<ProjectCard {project} />
-					</div>
-				{/each}
-			</div>
+		<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+			{#each related as project}
+				<div class="related-fade">
+					<ProjectCard {project} />
+				</div>
+			{/each}
 		</div>
-	</section>
+	</Section>
 {/if}
