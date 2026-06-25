@@ -86,8 +86,8 @@
 	</div>
 
 	<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-		{#each filteredMaterials as material}
-			<MagneticCard intensity={0.1}>
+		{#each filteredMaterials as material, i}
+			<MagneticCard intensity={0.1} revealDelay={(i % 6) * 70}>
 				<a href="/en/materials/{material.id}/" class="group block bg-bg-secondary">
 					<div class="image-warm-overlay relative aspect-square overflow-hidden bg-bg-primary">
 						<img
