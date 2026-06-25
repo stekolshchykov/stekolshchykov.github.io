@@ -1,4 +1,7 @@
+import { PUBLIC_SITE_URL } from '$env/static/public';
 import type { SiteConfig, WhyUsItem } from '$lib/types/furniture';
+
+const siteUrl = PUBLIC_SITE_URL?.replace(/\/$/, '') || 'https://arasliving.ie';
 
 export const site: SiteConfig = {
 	brand: 'Áras Living',
@@ -43,7 +46,7 @@ export const site: SiteConfig = {
 		defaultDescription:
 			'Wardrobes, kitchens, and interior joinery designed around Irish homes and built in our Dublin workshop.',
 		defaultImage: '/og-default.jpg',
-		siteUrl: 'https://arasliving.ie',
+		siteUrl,
 		twitterHandle: '@arasliving'
 	}
 };
