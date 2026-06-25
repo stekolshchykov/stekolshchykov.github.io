@@ -30,9 +30,9 @@
 	const preloadType = $derived(isWebp ? 'image/webp' : 'image/jpeg');
 
 	const heightClasses = {
-		full: 'min-h-screen',
-		large: 'min-h-[70vh]',
-		medium: 'min-h-[50vh]'
+		full: 'min-h-[100svh]',
+		large: 'min-h-[72svh]',
+		medium: 'min-h-[58svh]'
 	};
 
 	const alignmentClasses = {
@@ -66,19 +66,28 @@
 
 <section
 	bind:this={section}
-	class="relative flex overflow-hidden {heightClasses[height]} {alignmentClasses[alignment]}"
+	class="page-hero relative flex overflow-hidden bg-bg-primary {heightClasses[
+		height
+	]} {alignmentClasses[alignment]}"
 >
 	<div class="absolute inset-0 z-0">
-		<Image src={image} alt="" class="h-full w-full object-cover" loading="eager" overlay />
+		<Image src={image} alt="" class="page-hero-image h-full w-full object-cover" loading="eager" />
+		<div class="page-hero-shade absolute inset-0"></div>
 	</div>
 
-	<div class="relative z-10 mx-auto w-full max-w-[1440px] px-6 py-32 pb-20 md:px-12 lg:px-16">
-		<div class={alignment === 'center' ? 'mx-auto max-w-3xl' : 'max-w-3xl'}>
+	<div
+		class="relative z-10 mx-auto w-full max-w-[1440px] px-6 py-32 pb-16 md:px-12 md:pb-20 lg:px-16"
+	>
+		<div
+			class={alignment === 'center'
+				? 'mx-auto max-w-4xl text-center'
+				: 'max-w-4xl border-l border-text-primary/14 pl-6 md:pl-8'}
+		>
 			<Eyebrow text={eyebrow} class="page-hero-fade mb-4" />
 			<Heading
 				as="h1"
 				variant="display"
-				class="page-hero-fade mb-4 text-4xl text-text-primary md:text-5xl lg:text-6xl"
+				class="page-hero-fade mb-5 text-5xl text-text-primary md:text-6xl lg:text-7xl"
 			>
 				{headline}
 			</Heading>
@@ -94,4 +103,79 @@
 			{/if}
 		</div>
 	</div>
+
+	<div
+		class="page-hero-fade absolute bottom-0 left-0 right-0 z-10 hidden border-t border-text-primary/10 bg-bg-primary/24 backdrop-blur-[2px] md:block"
+		aria-hidden="true"
+	>
+		<div
+			class="mx-auto grid max-w-[1440px] grid-cols-3 divide-x divide-text-primary/10 px-12 lg:px-16"
+		>
+			<span class="py-4 font-sans text-[10px] uppercase tracking-[0.18em] text-text-secondary">
+				Dublin workshop
+			</span>
+			<span class="px-8 py-4 font-sans text-[10px] uppercase tracking-[0.18em] text-text-secondary">
+				Measured interiors
+			</span>
+			<span
+				class="px-8 py-4 text-right font-sans text-[10px] uppercase tracking-[0.18em] text-text-secondary"
+			>
+				Built in Ireland
+			</span>
+		</div>
+	</div>
 </section>
+
+<style>
+	:global(.page-hero-image img),
+	:global(.page-hero-image) {
+		transform-origin: center;
+		animation: page-hero-drift 18s ease-in-out infinite alternate;
+	}
+
+	.page-hero-shade {
+		background:
+			linear-gradient(
+				90deg,
+				rgba(10, 10, 15, 0.82) 0%,
+				rgba(10, 10, 15, 0.48) 44%,
+				rgba(10, 10, 15, 0.18) 100%
+			),
+			linear-gradient(
+				0deg,
+				rgba(10, 10, 15, 0.72) 0%,
+				rgba(10, 10, 15, 0.08) 50%,
+				rgba(10, 10, 15, 0.42) 100%
+			);
+	}
+
+	@keyframes page-hero-drift {
+		from {
+			transform: scale(1.01);
+		}
+		to {
+			transform: scale(1.055);
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		:global(.page-hero-image img),
+		:global(.page-hero-image) {
+			animation: none;
+			transform: none;
+		}
+	}
+
+	@media (max-width: 767px) {
+		.page-hero-shade {
+			background:
+				linear-gradient(
+					0deg,
+					rgba(10, 10, 15, 0.8) 0%,
+					rgba(10, 10, 15, 0.34) 54%,
+					rgba(10, 10, 15, 0.72) 100%
+				),
+				linear-gradient(90deg, rgba(10, 10, 15, 0.6), rgba(10, 10, 15, 0.18));
+		}
+	}
+</style>

@@ -161,7 +161,6 @@
 		opacity: 1;
 	}
 
-	.hero-bg-video,
 	.hero-bg-image {
 		animation: hero-ken-burns 20s ease-in-out infinite alternate;
 	}

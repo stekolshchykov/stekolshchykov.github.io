@@ -13,7 +13,7 @@
 </script>
 
 <a
-	href="/projects/{project.slug}/"
+	href="/en/projects/{project.slug}/"
 	class={cx(
 		'group relative block overflow-hidden',
 		featured ? 'aspect-[16/10] md:col-span-2' : 'aspect-[4/5]',
@@ -30,11 +30,11 @@
 		/>
 	</div>
 	<div
-		class="absolute inset-0 bg-gradient-to-t from-bg-primary/80 via-bg-primary/20 to-transparent opacity-0 transition-opacity duration-500 ease-ui group-hover:opacity-100"
+		class="absolute inset-0 bg-gradient-to-t from-bg-primary/86 via-bg-primary/24 to-transparent opacity-100 transition-opacity duration-500 ease-ui md:opacity-0 md:group-hover:opacity-100"
 	></div>
 
 	<div
-		class="absolute inset-x-0 bottom-0 translate-y-2 p-5 md:p-6 transition-transform duration-500 ease-ui delay-100 group-hover:translate-y-0"
+		class="absolute inset-x-0 bottom-0 translate-y-0 p-5 transition-transform duration-500 ease-ui delay-100 md:translate-y-2 md:p-6 md:group-hover:translate-y-0"
 	>
 		<p class="mb-1 font-sans text-[11px] uppercase tracking-[0.12em] text-text-secondary">
 			{project.category} / {project.specs.year}
@@ -49,7 +49,7 @@
 		</h3>
 
 		<span
-			class="mt-3 inline-flex items-center gap-1.5 font-sans text-xs uppercase tracking-widest text-text-primary opacity-0 transition-all duration-500 ease-ui group-hover:text-accent group-hover:opacity-100"
+			class="mt-3 inline-flex items-center gap-1.5 font-sans text-xs uppercase tracking-widest text-text-primary opacity-100 transition-all duration-500 ease-ui group-hover:text-accent md:opacity-0 md:group-hover:opacity-100"
 		>
 			{$t('projects.view_project')}
 			<span class="inline-block transition-transform duration-300 ease-ui group-hover:translate-x-1"

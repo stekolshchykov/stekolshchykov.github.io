@@ -18,10 +18,12 @@
 	);
 </script>
 
-<header class="bg-bg-primary pt-28 md:pt-32">
+<header class="bg-bg-primary pt-24 md:pt-28">
 	<div class="mx-auto max-w-[1440px] px-6 md:px-12 lg:px-16">
 		<nav aria-label="Breadcrumb" class="mb-8">
-			<ol class="flex items-center gap-2 font-sans text-sm text-text-secondary">
+			<ol
+				class="flex flex-wrap items-center gap-2 font-sans text-xs uppercase tracking-[0.12em] text-text-secondary"
+			>
 				<li>
 					<a href="/en/" class="transition-colors hover:text-accent">{$_('nav.home')}</a>
 				</li>
@@ -37,8 +39,8 @@
 		</nav>
 	</div>
 
-	<div class="relative mx-auto max-w-[1440px]">
-		<div class="aspect-[16/10] w-full overflow-hidden md:aspect-[21/9] md:max-h-[80vh]">
+	<div class="relative mx-auto max-w-[1440px] overflow-hidden border-y border-text-primary/10">
+		<div class="aspect-[5/4] w-full overflow-hidden md:aspect-[21/9] md:max-h-[82vh]">
 			<Image
 				src={project.media.hero.src}
 				alt={project.media.hero.alt}
@@ -48,14 +50,40 @@
 			/>
 		</div>
 
-		<div class="absolute bottom-0 left-0 w-full px-6 pb-10 md:px-12 md:pb-16 lg:px-16 lg:pb-20">
-			<div class="mx-auto max-w-[1440px]">
-				<Text variant="caption" class="mb-3 text-stone">
+		<div
+			class="absolute inset-0 bg-gradient-to-r from-bg-primary/78 via-bg-primary/32 to-bg-primary/10"
+			aria-hidden="true"
+		></div>
+
+		<div class="absolute bottom-0 left-0 w-full px-6 pb-8 md:px-12 md:pb-14 lg:px-16 lg:pb-18">
+			<div class="mx-auto max-w-[1440px] border-l border-text-primary/14 pl-6 md:pl-8">
+				<Text variant="caption" class="mb-4 uppercase tracking-[0.16em] text-accent">
 					{metadata}
 				</Text>
-				<Heading as="h1" variant="display" class="max-w-4xl text-text-primary">
+				<Heading as="h1" variant="display" class="max-w-4xl text-5xl text-text-primary md:text-7xl">
 					{project.title}
 				</Heading>
+			</div>
+		</div>
+
+		<div
+			class="absolute bottom-0 right-0 hidden w-[min(520px,42vw)] grid-cols-3 divide-x divide-text-primary/10 border-l border-t border-text-primary/10 bg-bg-primary/34 backdrop-blur-[2px] md:grid"
+		>
+			<div class="p-4">
+				<p class="font-sans text-[10px] uppercase tracking-[0.16em] text-text-secondary">Scope</p>
+				<p class="mt-1 font-sans text-sm text-text-primary">{project.specs.scope}</p>
+			</div>
+			<div class="p-4">
+				<p class="font-sans text-[10px] uppercase tracking-[0.16em] text-text-secondary">
+					Materials
+				</p>
+				<p class="mt-1 truncate font-sans text-sm text-text-primary">{project.specs.materials}</p>
+			</div>
+			<div class="p-4">
+				<p class="font-sans text-[10px] uppercase tracking-[0.16em] text-text-secondary">
+					Timeline
+				</p>
+				<p class="mt-1 font-sans text-sm text-text-primary">{project.specs.timeline}</p>
 			</div>
 		</div>
 	</div>

@@ -8,6 +8,7 @@
 		"dev": "vite dev",
 		"build": "pnpm generate-sitemap && vite build",
 		"preview": "vite preview",
+		"preview:prod": "pnpm build && vite preview --host 127.0.0.1 --port 4185",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
