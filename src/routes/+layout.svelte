@@ -13,6 +13,7 @@
 	import PageTransition from '$lib/components/atoms/PageTransition.svelte';
 	import NoiseOverlay from '$lib/components/atoms/NoiseOverlay.svelte';
 	import ScrollProgress from '$lib/components/atoms/ScrollProgress.svelte';
+	import LuxuryCursor from '$lib/components/atoms/LuxuryCursor.svelte';
 	import { cookieConsent } from '$lib/stores/cookieConsent.svelte';
 
 	addMessages('en', en);
@@ -33,6 +34,11 @@
 	<PageTransition />
 	<NoiseOverlay />
 	<ScrollProgress />
+	<LuxuryCursor />
+	<div class="luxury-ambient" aria-hidden="true">
+		<span></span>
+		<span></span>
+	</div>
 
 	<Navigation />
 

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Service } from '$lib/types/furniture';
 	import { cx } from '$lib/utils/helpers';
+	import { ArrowUpRight, Gem } from 'lucide-svelte';
 
 	interface Props {
 		service: Service;
@@ -28,12 +29,12 @@
 	<a
 		href={resolvedHref}
 		class={cx(
-			'group relative block aspect-[4/5] overflow-hidden border border-text-primary/8 bg-bg-secondary transition-transform duration-500 ease-ui hover:-translate-y-1',
+			'luxury-corners group relative block aspect-[4/5] overflow-hidden border border-text-primary/8 bg-bg-secondary transition-all duration-500 ease-ui hover:-translate-y-1 hover:border-accent/45',
 			className
 		)}
 		style="aspect-ratio: 4 / 5;"
 	>
-		<div class="image-warm-overlay absolute inset-0 overflow-hidden">
+		<div class="luxury-surface image-warm-overlay absolute inset-0 overflow-hidden">
 			<img
 				src={service.image.src}
 				alt={service.image.alt}
@@ -55,13 +56,9 @@
 			<p class="mb-4 max-w-md font-sans text-sm leading-relaxed text-text-secondary line-clamp-2">
 				{service.description}
 			</p>
-			<span
-				class="inline-flex items-center gap-2 font-sans text-xs uppercase tracking-widest text-text-primary transition-colors group-hover:text-accent"
-			>
+			<span class="inline-flex items-center gap-2 font-sans text-xs uppercase tracking-widest text-text-primary transition-colors group-hover:text-accent">
 				Explore Service
-				<span class="inline-block transition-transform duration-300 group-hover:translate-x-1"
-					>→</span
-				>
+				<ArrowUpRight class="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
 			</span>
 		</div>
 	</a>
@@ -77,7 +74,7 @@
 	>
 		{#if resolvedLayout === 'editorial'}
 			<div
-				class="image-warm-overlay relative aspect-[4/3] w-full overflow-hidden md:aspect-[16/10] md:w-1/2"
+				class="luxury-surface luxury-corners image-warm-overlay relative aspect-[4/3] w-full overflow-hidden border border-text-primary/10 md:aspect-[16/10] md:w-1/2"
 				style="aspect-ratio: 4 / 3;"
 			>
 				<img
@@ -90,7 +87,8 @@
 		{/if}
 
 		<div class="flex flex-col gap-4 md:gap-5">
-			<p class="font-sans text-[11px] uppercase tracking-[0.12em] text-text-secondary">
+			<p class="inline-flex items-center gap-2 font-sans text-[11px] uppercase tracking-[0.12em] text-text-secondary">
+				<Gem class="h-3.5 w-3.5 text-accent" />
 				{service.category}
 			</p>
 			<h3 class="font-serif text-2xl md:text-3xl text-text-primary">{service.title}</h3>
@@ -104,9 +102,7 @@
 				class="inline-flex items-center gap-2 self-start font-sans text-xs uppercase tracking-widest text-text-primary transition-colors hover:text-accent"
 			>
 				Explore Service
-				<span class="inline-block transition-transform duration-300 group-hover:translate-x-1"
-					>→</span
-				>
+				<ArrowUpRight class="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
 			</a>
 		</div>
 	</div>

@@ -41,7 +41,7 @@
 
 <footer class="border-t border-text-secondary/20 bg-bg-secondary">
 	<Container class="py-20 md:py-32">
-		<div class="grid gap-16 lg:grid-cols-2 lg:gap-24">
+		<div class="grid gap-16 xl:grid-cols-[0.9fr_1.1fr] xl:gap-24">
 			<div class="space-y-8">
 				<Heading as="h2" variant="display" class="max-w-md text-4xl text-text-primary md:text-5xl">
 					{$_('footer.cta_title')}
@@ -54,8 +54,8 @@
 				</Button>
 			</div>
 
-			<div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-				<div>
+			<div class="grid min-w-0 gap-10 sm:grid-cols-2 xl:grid-cols-4">
+				<div class="min-w-0">
 					<Heading
 						as="h3"
 						variant="sans"
@@ -77,7 +77,7 @@
 					</ul>
 				</div>
 
-				<div>
+				<div class="min-w-0">
 					<Heading
 						as="h3"
 						variant="sans"
@@ -99,7 +99,7 @@
 					</ul>
 				</div>
 
-				<div>
+				<div class="min-w-0">
 					<Heading
 						as="h3"
 						variant="sans"
@@ -121,7 +121,7 @@
 					</ul>
 				</div>
 
-				<div>
+				<div class="min-w-0">
 					<Heading
 						as="h3"
 						variant="sans"
@@ -131,19 +131,21 @@
 					</Heading>
 					<ul class="space-y-3 font-sans text-text-primary/80">
 						<li>
-							<a href="mailto:{site.email}" class="transition-colors duration-200 hover:text-accent"
+							<a
+								href="mailto:{site.email}"
+								class="block max-w-full break-all transition-colors duration-200 hover:text-accent"
 								>{site.email}</a
 							>
 						</li>
 						<li>
 							<a
 								href="https://wa.me/{site.whatsapp.replace(/\D/g, '')}"
-								class="transition-colors duration-200 hover:text-accent"
+								class="block max-w-full transition-colors duration-200 hover:text-accent"
 							>
 								{site.whatsapp}
 							</a>
 						</li>
-						<li>{site.address}</li>
+						<li class="max-w-[18rem]">{site.address}</li>
 					</ul>
 				</div>
 			</div>
@@ -188,30 +190,35 @@
 
 		<Divider class="my-16" />
 
-		<div class="flex flex-col items-center justify-between gap-8 md:flex-row">
+		<div class="flex flex-col items-start justify-between gap-8 xl:flex-row xl:items-center">
 			<Text variant="caption" class="text-center text-text-secondary md:text-left">
 				© {currentYear}
 				{site.companyLegalName} trading as {site.brand}. {$_('footer.rights')}
 				<span class="md:ml-1">Handcrafted in Ireland.</span>
 			</Text>
 
-			<div class="flex flex-wrap items-center justify-center gap-6">
-				{#each legalLinks as link}
-					<a
-						href={link.href}
-						class="font-sans text-sm text-text-secondary transition-colors duration-200 hover:text-accent"
-					>
-						{$_(link.label)}
-					</a>
-				{/each}
+			<div class="flex w-full flex-col gap-5 sm:flex-row sm:items-center sm:justify-between xl:w-auto xl:justify-end">
+				<nav
+					aria-label="Legal links"
+					class="flex flex-wrap items-center gap-x-4 gap-y-2 font-sans text-[11px] uppercase tracking-[0.12em] text-text-secondary"
+				>
+					{#each legalLinks as link, i}
+						<a href={link.href} class="transition-colors duration-200 hover:text-accent">
+							{$_(link.label)}
+						</a>
+						{#if i < legalLinks.length - 1}
+							<span class="h-px w-4 bg-text-secondary/30" aria-hidden="true"></span>
+						{/if}
+					{/each}
+				</nav>
 
-				<div class="flex items-center gap-4">
+				<div class="flex items-center gap-2">
 					{#each site.social as social}
 						<a
 							href={social.url}
 							target="_blank"
 							rel="noopener noreferrer"
-							class="text-text-secondary transition-colors duration-200 hover:text-accent"
+							class="flex h-9 w-9 items-center justify-center border border-text-primary/10 text-text-secondary transition-colors duration-200 hover:border-accent/60 hover:text-accent"
 							aria-label={social.platform}
 						>
 							{#if social.platform === 'Instagram'}

@@ -1,7 +1,7 @@
-import { PUBLIC_SITE_URL } from '$env/static/public';
+import { env } from '$env/dynamic/public';
 import type { SiteConfig, WhyUsItem } from '$lib/types/furniture';
 
-const siteUrl = PUBLIC_SITE_URL?.replace(/\/$/, '') || 'https://arasliving.ie';
+const siteUrl = env.PUBLIC_SITE_URL?.replace(/\/$/, '') || 'https://arasliving.ie';
 
 export const site: SiteConfig = {
 	brand: 'Áras Living',

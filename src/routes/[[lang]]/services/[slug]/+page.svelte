@@ -8,6 +8,7 @@
 	import { imageWithFallback } from '$lib/utils/imageFallback';
 
 	import Section from '$lib/components/atoms/Section.svelte';
+	import SectionHeader from '$lib/components/atoms/SectionHeader.svelte';
 	import Heading from '$lib/components/atoms/Heading.svelte';
 	import Button from '$lib/components/atoms/Button.svelte';
 	import SeoHead from '$lib/components/molecules/SeoHead.svelte';
@@ -74,6 +75,49 @@
 			{#if service.testimonial}
 				<TestimonialCard {...service.testimonial} variant="default" />
 			{/if}
+		</div>
+	</div>
+</Section>
+
+<Section container="content">
+	<div class="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+		<SectionHeader
+			eyebrow="Planning notes"
+			headline="Designed before anything reaches the workshop."
+			statement="A successful bespoke furniture project depends on decisions that are made early: how the room is used, where the light falls, what needs daily access, and what should quietly disappear."
+			class="mb-0"
+		/>
+		<div class="grid gap-6 md:grid-cols-3">
+			<div class="border-t border-text-primary/10 pt-5">
+				<p class="mb-3 font-serif text-2xl text-accent">01</p>
+				<h2 class="mb-3 font-sans text-xs uppercase tracking-[0.15em] text-text-primary">
+					Room logic
+				</h2>
+				<p class="font-sans text-sm leading-relaxed text-text-secondary">
+					We map circulation, door swings, power, heating, and daily routines before fixing the
+					layout for {service.title.toLowerCase()}.
+				</p>
+			</div>
+			<div class="border-t border-text-primary/10 pt-5">
+				<p class="mb-3 font-serif text-2xl text-accent">02</p>
+				<h2 class="mb-3 font-sans text-xs uppercase tracking-[0.15em] text-text-primary">
+					Material behaviour
+				</h2>
+				<p class="font-sans text-sm leading-relaxed text-text-secondary">
+					Finishes are selected for the amount of touch, daylight, moisture, and maintenance the
+					room will see over years of use.
+				</p>
+			</div>
+			<div class="border-t border-text-primary/10 pt-5">
+				<p class="mb-3 font-serif text-2xl text-accent">03</p>
+				<h2 class="mb-3 font-sans text-xs uppercase tracking-[0.15em] text-text-primary">
+					Installation path
+				</h2>
+				<p class="font-sans text-sm leading-relaxed text-text-secondary">
+					Access, protection, sequencing, and final adjustment are planned with the drawings so
+					the finished piece lands cleanly on site.
+				</p>
+			</div>
 		</div>
 	</div>
 </Section>

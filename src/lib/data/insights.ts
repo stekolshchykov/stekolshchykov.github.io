@@ -35,6 +35,13 @@ export const insights: Insight[] = [
 					'At Áras Living, we design handleless kitchens with careful attention to the finger gap: the height, the shadow line, and the way the door edge feels. It is a small detail, but it is what separates a cheap handleless look from a refined one.',
 					'We also avoid forcing the style where it does not belong. In a heavily period property, a shaker door with a discreet handle may be the more respectful choice. The future-proof option is not always the most contemporary one.'
 				]
+			},
+			{
+				heading: 'What makes the difference on site',
+				paragraphs: [
+					'The best handleless kitchens are resolved in millimetres. Drawer banks need consistent reveals, tall doors need enough weight and hinge quality to close cleanly, and appliance runs need shadow gaps that look deliberate rather than accidental.',
+					'We also test how the kitchen will be used under pressure: school mornings, grocery unloading, dinner preparation, and cleaning. If the visual calm makes the practical routine harder, the design is not finished.'
+				]
 			}
 		],
 		quote: {
@@ -77,6 +84,13 @@ export const insights: Insight[] = [
 					"Walnut darkens gently in response to light, developing a deeper, richer tone over the first few years. This is not a flaw; it is part of the material's character.",
 					'Daily care is simple: dust with a soft cloth and wipe spills promptly. An annual application of natural wax keeps the surface feeling alive.'
 				]
+			},
+			{
+				heading: 'Specifying walnut well',
+				paragraphs: [
+					'The important decision is not simply solid timber versus veneer. It is where each should be used. Solid walnut belongs on edges, rails, handles, and tactile details; veneer gives broad door faces the stability and calm grain continuity they need.',
+					'We usually present walnut beside the actual metals, leathers, linens, and stone samples being considered for the room. It is a warm material, but its final character depends on what sits beside it.'
+				]
 			}
 		],
 		quote: {
@@ -118,6 +132,13 @@ export const insights: Insight[] = [
 				paragraphs: [
 					'Lifestyles change. A wardrobe built entirely for hanging suits may not suit someone who later lives in knitwear and denim. We design adjustable shelving, removable dividers, and spare capacity so the storage can evolve.',
 					'The best storage does not just organise your possessions. It organises your day.'
+				]
+			},
+			{
+				heading: 'The small frictions matter',
+				paragraphs: [
+					'Poor storage usually reveals itself in tiny daily irritations: a drawer that opens into a door, a shelf that is too deep to see, or a vacuum that never quite fits anywhere. We ask about these moments because they are often more important than the headline aesthetic.',
+					'When the plan is right, the furniture disappears into the routine. Doors open in the expected direction, lighting comes on where your hand naturally reaches, and the room resets quickly at the end of the day.'
 				]
 			}
 		],

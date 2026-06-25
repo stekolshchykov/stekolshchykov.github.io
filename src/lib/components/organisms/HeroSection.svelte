@@ -49,6 +49,13 @@
 		<div class="hero-light absolute inset-0"></div>
 	</div>
 
+	<div class="hero-measure hero-measure--top" aria-hidden="true">
+		<span></span><span></span><span></span><span></span><span></span>
+	</div>
+	<div class="hero-measure hero-measure--side" aria-hidden="true">
+		<span></span><span></span><span></span><span></span>
+	</div>
+
 	<div class="relative z-10 w-full px-6 pb-44 pt-32 md:px-12 md:pb-24 lg:px-16">
 		<div class="mx-auto max-w-[1440px]">
 			<div class="max-w-4xl text-left">
@@ -92,10 +99,10 @@
 						: item.label === 'Featured material'
 							? '/en/materials/american-walnut/'
 							: '/en/about/'}
-					class="group grid grid-cols-[64px_minmax(0,1fr)_28px] items-center gap-4 border-b border-text-primary/12 pb-4"
+					class="luxury-corners group grid grid-cols-[64px_minmax(0,1fr)_28px] items-center gap-4 border-b border-text-primary/12 p-3 pb-4 transition-colors hover:border-accent/45"
 				>
 					<span
-						class="block aspect-square overflow-hidden border border-text-primary/15 bg-bg-secondary"
+						class="luxury-surface block aspect-square overflow-hidden border border-text-primary/15 bg-bg-secondary"
 					>
 						<img
 							src={item.label === 'Featured material'
@@ -177,6 +184,77 @@
 		mix-blend-mode: screen;
 	}
 
+	.hero-measure {
+		position: absolute;
+		z-index: 8;
+		pointer-events: none;
+		opacity: 0;
+		animation: hero-measure-in 1s cubic-bezier(0.22, 1, 0.36, 1) 0.9s forwards;
+	}
+
+	.hero-measure--top {
+		left: clamp(1.5rem, 6vw, 5rem);
+		right: clamp(1.5rem, 6vw, 5rem);
+		top: 118px;
+		height: 1px;
+		background: linear-gradient(90deg, transparent, rgba(196, 149, 106, 0.42), transparent);
+	}
+
+	.hero-measure--side {
+		right: clamp(2rem, 5vw, 5rem);
+		top: 22%;
+		bottom: 24%;
+		width: 1px;
+		background: linear-gradient(180deg, transparent, rgba(196, 149, 106, 0.45), transparent);
+		animation-delay: 1.05s;
+	}
+
+	.hero-measure span {
+		position: absolute;
+		background: rgba(196, 149, 106, 0.72);
+	}
+
+	.hero-measure--top span {
+		top: -4px;
+		width: 1px;
+		height: 9px;
+	}
+
+	.hero-measure--top span:nth-child(1) {
+		left: 8%;
+	}
+	.hero-measure--top span:nth-child(2) {
+		left: 29%;
+	}
+	.hero-measure--top span:nth-child(3) {
+		left: 50%;
+	}
+	.hero-measure--top span:nth-child(4) {
+		left: 71%;
+	}
+	.hero-measure--top span:nth-child(5) {
+		left: 92%;
+	}
+
+	.hero-measure--side span {
+		left: -4px;
+		width: 9px;
+		height: 1px;
+	}
+
+	.hero-measure--side span:nth-child(1) {
+		top: 12%;
+	}
+	.hero-measure--side span:nth-child(2) {
+		top: 38%;
+	}
+	.hero-measure--side span:nth-child(3) {
+		top: 64%;
+	}
+	.hero-measure--side span:nth-child(4) {
+		top: 90%;
+	}
+
 	.hero-fade {
 		opacity: 0;
 		transform: translateY(40px);
@@ -221,6 +299,17 @@
 		}
 	}
 
+	@keyframes hero-measure-in {
+		from {
+			opacity: 0;
+			transform: scaleX(0.72);
+		}
+		to {
+			opacity: 1;
+			transform: scaleX(1);
+		}
+	}
+
 	@keyframes scroll-line {
 		0% {
 			transform: scaleY(0);
@@ -247,7 +336,8 @@
 		.hero-bg-inner,
 		.hero-bg-image,
 		.hero-fade,
-		.scroll-indicator {
+		.scroll-indicator,
+		.hero-measure {
 			animation: none;
 			opacity: 1;
 			transform: none;
@@ -269,6 +359,10 @@
 					rgba(10, 10, 15, 0.72) 100%
 				),
 				linear-gradient(90deg, rgba(10, 10, 15, 0.56), rgba(10, 10, 15, 0.18));
+		}
+
+		.hero-measure {
+			display: none;
 		}
 	}
 </style>

@@ -75,6 +75,15 @@
 		<div class="page-hero-shade absolute inset-0"></div>
 	</div>
 
+	<div class="page-hero-rail page-hero-rail--left" aria-hidden="true"></div>
+	<div class="page-hero-rail page-hero-rail--right" aria-hidden="true"></div>
+	<div class="page-hero-measure hidden md:block" aria-hidden="true">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+
 	<div
 		class="relative z-10 mx-auto w-full max-w-[1440px] px-6 py-32 pb-16 md:px-12 md:pb-20 lg:px-16"
 	>
@@ -149,6 +158,66 @@
 			);
 	}
 
+	.page-hero-rail {
+		position: absolute;
+		z-index: 6;
+		top: 18%;
+		bottom: 18%;
+		width: 1px;
+		background: linear-gradient(
+			180deg,
+			transparent,
+			rgba(196, 149, 106, 0.45),
+			rgba(240, 235, 227, 0.08),
+			transparent
+		);
+		opacity: 0.72;
+		transform-origin: top;
+		animation: page-hero-rail 1200ms cubic-bezier(0.22, 1, 0.36, 1) both;
+	}
+
+	.page-hero-rail--left {
+		left: clamp(1.5rem, 5vw, 4rem);
+	}
+
+	.page-hero-rail--right {
+		right: clamp(1.5rem, 5vw, 4rem);
+		animation-delay: 160ms;
+	}
+
+	.page-hero-measure {
+		position: absolute;
+		z-index: 6;
+		right: clamp(3rem, 8vw, 7rem);
+		top: 50%;
+		width: min(18vw, 220px);
+		height: 1px;
+		background: rgba(240, 235, 227, 0.2);
+		opacity: 0;
+		animation: page-hero-measure 900ms cubic-bezier(0.22, 1, 0.36, 1) 500ms both;
+	}
+
+	.page-hero-measure span {
+		position: absolute;
+		top: -5px;
+		width: 1px;
+		height: 11px;
+		background: rgba(196, 149, 106, 0.72);
+	}
+
+	.page-hero-measure span:nth-child(1) {
+		left: 0;
+	}
+	.page-hero-measure span:nth-child(2) {
+		left: 33%;
+	}
+	.page-hero-measure span:nth-child(3) {
+		left: 66%;
+	}
+	.page-hero-measure span:nth-child(4) {
+		right: 0;
+	}
+
 	@keyframes page-hero-drift {
 		from {
 			transform: scale(1.01);
@@ -158,9 +227,33 @@
 		}
 	}
 
+	@keyframes page-hero-rail {
+		from {
+			transform: scaleY(0);
+			opacity: 0;
+		}
+		to {
+			transform: scaleY(1);
+			opacity: 0.72;
+		}
+	}
+
+	@keyframes page-hero-measure {
+		from {
+			opacity: 0;
+			transform: translateX(28px) scaleX(0.65);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0) scaleX(1);
+		}
+	}
+
 	@media (prefers-reduced-motion: reduce) {
 		:global(.page-hero-image img),
-		:global(.page-hero-image) {
+		:global(.page-hero-image),
+		.page-hero-rail,
+		.page-hero-measure {
 			animation: none;
 			transform: none;
 		}

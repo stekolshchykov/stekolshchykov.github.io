@@ -13,9 +13,12 @@
 	import Heading from '$lib/components/atoms/Heading.svelte';
 
 	let query = $state('');
-	let openItems = new SvelteSet<string>();
 
 	const categories = Array.from(new Set(faqItems.map((f) => f.category)));
+	const initiallyOpenItemIds = categories
+		.map((category) => faqItems.find((item) => item.category === category)?.id)
+		.filter((id): id is string => !!id);
+	let openItems = new SvelteSet<string>(initiallyOpenItemIds);
 
 	const filteredItems = $derived(
 		faqItems.filter(
@@ -65,6 +68,11 @@
 		<Heading as="h2" variant="serif" class="mb-8 text-3xl text-text-primary md:text-4xl">
 			<SplitTextReveal as="span" text={$_('faq.hero_headline')} />
 		</Heading>
+		<p class="mb-8 max-w-2xl font-sans leading-relaxed text-text-secondary">
+			Use this page to understand budgets, timelines, material choices, installation, and aftercare
+			before you book a consultation. The first answer in each category is open by default so you can
+			scan the essentials quickly.
+		</p>
 		<Input
 			name="faq-search"
 			type="search"

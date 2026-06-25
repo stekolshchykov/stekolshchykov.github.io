@@ -40,6 +40,11 @@
 
 <div class={wrapperClasses}>
 	<div class={cx(align === 'between' && 'max-w-2xl')}>
+		<div class="mb-5 flex items-center gap-3 text-accent" aria-hidden="true">
+			<span class="h-px w-8 bg-accent/70"></span>
+			<span class="h-1.5 w-1.5 rotate-45 border border-accent/70"></span>
+			<span class="h-px w-4 bg-accent/35"></span>
+		</div>
 		{#if eyebrow}
 			<Eyebrow text={eyebrow} class="mb-4" />
 		{/if}

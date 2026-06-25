@@ -9,6 +9,7 @@
 	import SplitTextReveal from '$lib/components/molecules/SplitTextReveal.svelte';
 	import MagneticCard from '$lib/components/molecules/MagneticCard.svelte';
 	import Section from '$lib/components/atoms/Section.svelte';
+	import SectionHeader from '$lib/components/atoms/SectionHeader.svelte';
 	import Heading from '$lib/components/atoms/Heading.svelte';
 
 	const heroInsight = insights[0];
@@ -29,6 +30,46 @@
 	image={imageWithFallback(heroInsight?.heroImage.src, '/images/hero-poster.jpg')}
 	height="large"
 />
+
+<Section tone="secondary" container="content">
+	<div class="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+		<SectionHeader
+			eyebrow="Journal"
+			headline="Notes from the design table and workshop."
+			statement="These articles explain the decisions clients ask about most often: how to choose materials, when a detail will date, and how storage should support the way a room is actually used."
+			class="mb-0"
+		/>
+		<div class="grid gap-6 md:grid-cols-3">
+			<div class="border-t border-text-primary/10 pt-5">
+				<h2 class="mb-3 font-sans text-xs uppercase tracking-[0.15em] text-accent">
+					Design
+				</h2>
+				<p class="font-sans text-sm leading-relaxed text-text-secondary">
+					Why certain joinery languages endure, where contemporary detailing works, and when
+					restraint is the more luxurious choice.
+				</p>
+			</div>
+			<div class="border-t border-text-primary/10 pt-5">
+				<h2 class="mb-3 font-sans text-xs uppercase tracking-[0.15em] text-accent">
+					Materials
+				</h2>
+				<p class="font-sans text-sm leading-relaxed text-text-secondary">
+					Plain-English notes on timber, veneer, lacquer, stone, brass, care, ageing, and how
+					samples behave in real Irish light.
+				</p>
+			</div>
+			<div class="border-t border-text-primary/10 pt-5">
+				<h2 class="mb-3 font-sans text-xs uppercase tracking-[0.15em] text-accent">
+					Process
+				</h2>
+				<p class="font-sans text-sm leading-relaxed text-text-secondary">
+					How we turn a brief into drawings, workshop decisions, installation sequencing, and a
+					room that feels resolved after handover.
+				</p>
+			</div>
+		</div>
+	</div>
+</Section>
 
 <Section>
 	<Heading as="h2" variant="serif" class="mb-12 text-3xl text-text-primary md:text-4xl lg:text-5xl">

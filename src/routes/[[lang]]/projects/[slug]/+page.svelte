@@ -79,6 +79,52 @@
 	</div>
 </Section>
 
+<Section tone="secondary" container="content">
+	<div class="grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+		<div>
+			<SectionHeader
+				eyebrow="Craft notes"
+				headline="The decisions behind the finish."
+				statement={project.craftNotes}
+				class="mb-0"
+			/>
+		</div>
+		<div class="space-y-10">
+			<div>
+				<h2 class="mb-4 font-sans text-xs uppercase tracking-[0.15em] text-accent">
+					Client outcome
+				</h2>
+				<p class="font-sans leading-relaxed text-text-secondary">{project.clientOutcome}</p>
+			</div>
+			<div>
+				<h2 class="mb-4 font-sans text-xs uppercase tracking-[0.15em] text-accent">
+					Workshop team
+				</h2>
+				<ul class="space-y-2">
+					{#each project.makerCredits as credit}
+						<li class="flex items-start gap-3 font-sans text-text-secondary">
+							<span class="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-accent"></span>
+							{credit}
+						</li>
+					{/each}
+				</ul>
+			</div>
+			<div>
+				<h2 class="mb-4 font-sans text-xs uppercase tracking-[0.15em] text-accent">
+					Design language
+				</h2>
+				<div class="flex flex-wrap gap-2">
+					{#each project.tags as tag}
+						<span class="border border-text-primary/10 px-3 py-1 font-sans text-xs text-text-secondary">
+							{tag}
+						</span>
+					{/each}
+				</div>
+			</div>
+		</div>
+	</div>
+</Section>
+
 <ProjectGallery media={project.media.gallery} />
 
 <SpecificationsTable specs={project.specs} />

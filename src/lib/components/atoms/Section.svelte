@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 	import { cx } from '$lib/utils/helpers';
+	import { sectionReveal } from '$lib/actions/sectionReveal';
 	import Container from '$lib/components/atoms/Container.svelte';
 
 	interface Props {
@@ -9,6 +10,7 @@
 		border?: 'none' | 'top' | 'bottom' | 'y';
 		container?: 'wide' | 'content' | 'narrow' | 'none';
 		align?: 'left' | 'center';
+		reveal?: boolean;
 		class?: string;
 		containerClass?: string;
 		element?: HTMLElement;
@@ -21,6 +23,7 @@
 		border = 'none',
 		container = 'wide',
 		align = 'left',
+		reveal = true,
 		class: className = '',
 		containerClass = '',
 		element = $bindable(),
@@ -48,12 +51,19 @@
 
 <section
 	bind:this={element}
-	class={cx(toneClasses[tone], spacingClasses[spacing], borderClasses[border], className)}
+	use:sectionReveal={{ enabled: reveal && container === 'none' }}
+	class={cx(
+		'luxury-section',
+		toneClasses[tone],
+		spacingClasses[spacing],
+		borderClasses[border],
+		className
+	)}
 >
 	{#if container === 'none'}
 		{@render children()}
 	{:else}
-		<Container size={container} {align} class={containerClass}>
+		<Container size={container} {align} reveal={reveal} class={containerClass}>
 			{@render children()}
 		</Container>
 	{/if}

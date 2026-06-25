@@ -7,6 +7,7 @@
 	import Heading from '$lib/components/atoms/Heading.svelte';
 	import Text from '$lib/components/atoms/Text.svelte';
 	import Button from '$lib/components/atoms/Button.svelte';
+	import { Mail, MapPin, MessageCircle, Phone } from 'lucide-svelte';
 
 	let section: HTMLElement;
 
@@ -79,24 +80,42 @@
 
 		<div class="contact-fade">
 			{#each items as item}
-				<div class="border-b border-border py-6 first:border-t md:text-right">
-					<p
-						class="mb-1 font-sans text-xs font-medium uppercase tracking-widest text-text-secondary"
+				<div
+					class="group grid grid-cols-[40px_minmax(0,1fr)] gap-5 border-b border-border py-6 transition-colors duration-300 first:border-t hover:border-accent/45 md:grid-cols-[minmax(0,1fr)_40px] md:text-right"
+				>
+					<div
+						class="flex h-10 w-10 items-center justify-center border border-text-primary/10 text-accent transition-colors duration-300 group-hover:border-accent/60 md:order-2"
+						aria-hidden="true"
 					>
-						{$_(item.label)}
-					</p>
-					{#if item.href}
-						<a
-							href={item.href}
-							target={item.href.startsWith('http') ? '_blank' : undefined}
-							rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-							class="font-sans text-lg text-text-primary transition-colors hover:text-accent"
+						{#if item.label === 'contact.email_label'}
+							<Mail class="h-4 w-4" />
+						{:else if item.label === 'contact.phone_label'}
+							<Phone class="h-4 w-4" />
+						{:else if item.label === 'contact.whatsapp_label'}
+							<MessageCircle class="h-4 w-4" />
+						{:else}
+							<MapPin class="h-4 w-4" />
+						{/if}
+					</div>
+					<div class="min-w-0">
+						<p
+							class="mb-1 font-sans text-xs font-medium uppercase tracking-widest text-text-secondary"
 						>
-							{item.value}
-						</a>
-					{:else}
-						<p class="font-sans text-lg text-text-primary">{item.value}</p>
-					{/if}
+							{$_(item.label)}
+						</p>
+						{#if item.href}
+							<a
+								href={item.href}
+								target={item.href.startsWith('http') ? '_blank' : undefined}
+								rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+								class="break-words font-sans text-lg text-text-primary transition-colors hover:text-accent"
+							>
+								{item.value}
+							</a>
+						{:else}
+							<p class="font-sans text-lg text-text-primary">{item.value}</p>
+						{/if}
+					</div>
 				</div>
 			{/each}
 		</div>

@@ -112,6 +112,56 @@
 	</div>
 </Section>
 
+<Section tone="secondary" container="content">
+	<div class="grid gap-12 lg:grid-cols-[0.95fr_1.05fr]">
+		<SectionHeader
+			eyebrow="Specification notes"
+			headline="Chosen for touch, light, and long-term behaviour."
+			statement="Materials are not selected from a screen. We review grain direction, sheen, edge detail, and maintenance in the room where the furniture will live."
+			class="mb-0"
+		/>
+		<div class="grid gap-6 md:grid-cols-2">
+			<div class="border-t border-text-primary/10 pt-5">
+				<h2 class="mb-3 font-sans text-xs uppercase tracking-[0.15em] text-accent">
+					How it is used
+				</h2>
+				<p class="font-sans text-sm leading-relaxed text-text-secondary">
+					{material.name} works best when the detail matches the scale of the room: broad calm
+					planes for large elevations, tighter grain or edge details where hands meet the
+					furniture.
+				</p>
+			</div>
+			<div class="border-t border-text-primary/10 pt-5">
+				<h2 class="mb-3 font-sans text-xs uppercase tracking-[0.15em] text-accent">
+					What we check
+				</h2>
+				<p class="font-sans text-sm leading-relaxed text-text-secondary">
+					We compare samples under daylight and warm evening light, then confirm how the finish
+					pairs with hardware, stone, wall colour, and adjacent flooring.
+				</p>
+			</div>
+			<div class="border-t border-text-primary/10 pt-5">
+				<h2 class="mb-3 font-sans text-xs uppercase tracking-[0.15em] text-accent">
+					Where it sits
+				</h2>
+				<p class="font-sans text-sm leading-relaxed text-text-secondary">
+					For {material.family}, the surrounding palette matters: shadow lines, handles, and
+					interior carcass colours all affect how premium the finished piece feels.
+				</p>
+			</div>
+			<div class="border-t border-text-primary/10 pt-5">
+				<h2 class="mb-3 font-sans text-xs uppercase tracking-[0.15em] text-accent">
+					Handover advice
+				</h2>
+				<p class="font-sans text-sm leading-relaxed text-text-secondary">
+					Each project receives care notes specific to the chosen surface, including cleaning
+					products to avoid and the expected way the material will age.
+				</p>
+			</div>
+		</div>
+	</div>
+</Section>
+
 <Section tone="secondary">
 	<div class="grid gap-6 md:grid-cols-2">
 		<ImageReveal

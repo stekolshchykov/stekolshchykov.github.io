@@ -142,30 +142,27 @@
 			<MagneticCard intensity={0.12}>
 				<a
 					href="/en/materials/{material.id}/"
-					class="group relative block aspect-[4/5] overflow-hidden bg-bg-secondary"
+					class="luxury-corners group grid h-full overflow-hidden border border-text-primary/10 bg-bg-secondary transition-all duration-500 hover:-translate-y-1 hover:border-accent/45"
 				>
-					<ImageReveal
-						src={imageWithFallback(
-							material.images.swatch.src,
-							'/images/materials/european-oak.jpg'
-						)}
-						alt={material.images.swatch.alt}
-						class="absolute inset-0 h-full w-full"
-						direction="up"
-					/>
-					<div
-						class="absolute inset-0 bg-gradient-to-t from-bg-primary/96 via-bg-primary/34 to-transparent opacity-88 transition-opacity duration-500 group-hover:opacity-95"
-					></div>
-					<div
-						class="absolute inset-x-0 bottom-0 p-6 opacity-100 transition-all duration-500 ease-ui md:p-7"
-					>
-						<p class="mb-2 font-sans text-xs uppercase tracking-[0.2em] text-accent">
+					<div class="luxury-surface image-warm-overlay relative aspect-[4/3] overflow-hidden bg-bg-primary">
+						<img
+							src={imageWithFallback(
+								material.images.swatch.src,
+								'/images/materials/european-oak.jpg'
+							)}
+							alt={material.images.swatch.alt}
+							loading="lazy"
+							class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+						/>
+					</div>
+					<div class="grid min-h-[164px] content-start p-6 md:min-h-[180px] md:p-7">
+						<p class="mb-3 font-sans text-[11px] uppercase tracking-[0.18em] text-accent">
 							{material.family}
 						</p>
-						<h3 class="mb-2 font-serif text-2xl text-text-primary md:text-3xl">
+						<h3 class="mb-3 min-h-[2.1em] font-serif text-2xl leading-none text-text-primary md:text-3xl">
 							{material.name}
 						</h3>
-						<p class="max-w-xs font-sans text-sm leading-relaxed text-text-secondary">
+						<p class="max-w-xs font-sans text-sm leading-relaxed text-text-secondary line-clamp-2">
 							{material.tagline}
 						</p>
 					</div>

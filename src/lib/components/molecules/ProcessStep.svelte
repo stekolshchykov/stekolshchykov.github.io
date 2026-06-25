@@ -38,15 +38,20 @@
 		</p>
 	</div>
 {:else}
-	<div class={cx('relative pl-8 md:pl-12', className)}>
+	<div
+		class={cx(
+			'luxury-corners group relative border border-transparent bg-transparent py-2 pl-8 transition-colors duration-500 hover:border-text-primary/10 hover:bg-bg-primary/25 md:pl-12',
+			className
+		)}
+	>
 		{#if showConnector}
 			<div class="absolute left-[11px] top-10 h-full w-px bg-white/10 md:left-[13px]"></div>
 		{/if}
 
 		<div
-			class="absolute left-0 top-0 flex h-6 w-6 items-center justify-center rounded-full border border-white/20 md:h-7 md:w-7"
+			class="absolute left-0 top-2 flex h-6 w-6 items-center justify-center rounded-full border border-accent/45 bg-bg-secondary shadow-[0_0_24px_rgba(196,149,106,0.16)] transition-colors duration-300 group-hover:border-accent md:h-7 md:w-7"
 		>
-			<span class="font-sans text-[10px] text-text-secondary">{number}</span>
+			<span class="font-sans text-[10px] text-accent">{number}</span>
 		</div>
 
 		<div class="relative">

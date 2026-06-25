@@ -161,9 +161,13 @@
 				{/each}
 			</div>
 
-			<div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
-				<Button variant="primary" size="lg" href="/en/contact/">Book material consultation</Button>
-				<Button variant="secondary" size="lg" href="/en/showroom/">Visit the showroom</Button>
+			<div class="mt-8 grid gap-4 sm:grid-cols-2">
+				<Button variant="primary" size="lg" href="/en/contact/" class="w-full justify-center">
+					Book material consultation
+				</Button>
+				<Button variant="secondary" size="lg" href="/en/showroom/" class="w-full justify-center">
+					Visit the showroom
+				</Button>
 			</div>
 		</div>
 
@@ -190,11 +194,11 @@
 					</h3>
 				</div>
 
-				<div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+				<div class="grid grid-cols-1 gap-3 2xl:grid-cols-2">
 					{#each consultationMaterials as material}
 						<a
 							href="/en/materials/{material.id}/"
-							class="group grid grid-cols-[72px_minmax(0,1fr)] items-center gap-4 border border-text-primary/12 bg-bg-primary/72 p-3 backdrop-blur-sm transition-colors hover:border-accent/70"
+							class="group grid min-w-0 grid-cols-[64px_minmax(0,1fr)] items-center gap-3 border border-text-primary/12 bg-bg-primary/72 p-3 backdrop-blur-sm transition-colors hover:border-accent/70 sm:grid-cols-[72px_minmax(0,1fr)]"
 						>
 							<img
 								src={imageWithFallback(
@@ -205,13 +209,13 @@
 								loading="lazy"
 								class="aspect-square w-full object-cover"
 							/>
-							<span>
+							<span class="min-w-0">
 								<span
-									class="mb-1 block font-sans text-[10px] uppercase tracking-[0.14em] text-accent"
+									class="mb-1 block text-wrap font-sans text-[10px] uppercase leading-snug tracking-[0.12em] text-accent"
 								>
 									{material.family}
 								</span>
-								<span class="block font-serif text-lg leading-tight text-text-primary">
+								<span class="block text-wrap font-serif text-lg leading-tight text-text-primary">
 									{material.name}
 								</span>
 							</span>

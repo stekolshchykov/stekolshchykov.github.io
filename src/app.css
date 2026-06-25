@@ -65,9 +65,151 @@
 }
 
 html {
+	min-height: 100%;
+	background-color: #0a0a0f;
+	background-image:
+		radial-gradient(circle at 14% 0%, rgba(196, 149, 106, 0.08), transparent 30rem),
+		linear-gradient(180deg, #0a0a0f 0%, #111118 100%);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
+}
+
+body {
+	min-height: 100%;
+	background-color: var(--color-bg-primary);
+	background:
+		radial-gradient(circle at 14% 8%, rgba(196, 149, 106, 0.08), transparent 28rem),
+		radial-gradient(circle at 88% 18%, rgba(240, 235, 227, 0.045), transparent 30rem),
+		var(--color-bg-primary);
+}
+
+.luxury-ambient {
+	position: fixed;
+	inset: 0;
+	z-index: 1;
+	pointer-events: none;
+	overflow: hidden;
+	mix-blend-mode: screen;
+}
+
+.luxury-ambient span {
+	position: absolute;
+	width: 42rem;
+	height: 42rem;
+	border-radius: 999px;
+	background: radial-gradient(circle, rgba(196, 149, 106, 0.13), transparent 62%);
+	filter: blur(18px);
+	opacity: 0.42;
+	animation: ambient-drift 18s ease-in-out infinite alternate;
+}
+
+.luxury-ambient span:first-child {
+	left: -18rem;
+	top: 12vh;
+}
+
+.luxury-ambient span:last-child {
+	right: -20rem;
+	bottom: 6vh;
+	animation-delay: -7s;
+	opacity: 0.28;
+}
+
+.luxury-section {
+	position: relative;
+	isolation: isolate;
+}
+
+.luxury-section::before {
+	content: '';
+	position: absolute;
+	left: max(1.5rem, calc((100vw - 1440px) / 2 + 4rem));
+	right: max(1.5rem, calc((100vw - 1440px) / 2 + 4rem));
+	top: 0;
+	height: 1px;
+	background: linear-gradient(90deg, transparent, rgba(196, 149, 106, 0.22), transparent);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 700ms ease;
+}
+
+.luxury-section:hover::before {
+	opacity: 1;
+}
+
+.luxury-surface {
+	position: relative;
+	overflow: hidden;
+}
+
+.luxury-surface::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: 2;
+	background: linear-gradient(
+		115deg,
+		transparent 0%,
+		transparent 36%,
+		rgba(240, 235, 227, 0.12) 48%,
+		transparent 58%,
+		transparent 100%
+	);
+	opacity: 0;
+	transform: translateX(-42%);
+	transition:
+		opacity 420ms ease,
+		transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+	pointer-events: none;
+}
+
+.group:hover .luxury-surface::before,
+.luxury-surface:hover::before {
+	opacity: 1;
+	transform: translateX(42%);
+}
+
+.luxury-corners {
+	position: relative;
+}
+
+.luxury-corners::before,
+.luxury-corners::after {
+	content: '';
+	position: absolute;
+	z-index: 4;
+	width: 34px;
+	height: 34px;
+	pointer-events: none;
+	opacity: 0;
+	transition:
+		opacity 300ms ease,
+		transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.luxury-corners::before {
+	left: 12px;
+	top: 12px;
+	border-left: 1px solid rgba(196, 149, 106, 0.76);
+	border-top: 1px solid rgba(196, 149, 106, 0.76);
+	transform: translate(6px, 6px);
+}
+
+.luxury-corners::after {
+	right: 12px;
+	bottom: 12px;
+	border-right: 1px solid rgba(196, 149, 106, 0.76);
+	border-bottom: 1px solid rgba(196, 149, 106, 0.76);
+	transform: translate(-6px, -6px);
+}
+
+.group:hover .luxury-corners::before,
+.group:hover .luxury-corners::after,
+.luxury-corners:hover::before,
+.luxury-corners:hover::after {
+	opacity: 1;
+	transform: translate(0, 0);
 }
 
 .image-warm-overlay {
@@ -105,6 +247,33 @@ html {
 	color: var(--color-accent);
 }
 
+.section-reveal-item {
+	opacity: 0;
+	transform: translate3d(0, var(--section-reveal-y, 28px), 0);
+	filter: blur(3px);
+	transition:
+		opacity 780ms cubic-bezier(0.22, 1, 0.36, 1),
+		transform 920ms cubic-bezier(0.22, 1, 0.36, 1),
+		filter 920ms cubic-bezier(0.22, 1, 0.36, 1);
+	transition-delay: var(--section-reveal-delay, 0ms);
+	will-change: opacity, transform, filter;
+}
+
+.section-reveal-item--visible {
+	opacity: 1;
+	transform: translate3d(0, 0, 0);
+	filter: blur(0);
+}
+
+@keyframes ambient-drift {
+	from {
+		transform: translate3d(0, 0, 0) scale(1);
+	}
+	to {
+		transform: translate3d(6vw, -4vh, 0) scale(1.12);
+	}
+}
+
 @media (prefers-reduced-motion: reduce) {
 	*,
 	*::before,
@@ -112,5 +281,16 @@ html {
 		animation-duration: 0.01ms !important;
 		animation-iteration-count: 1 !important;
 		transition-duration: 0.01ms !important;
+	}
+
+	.section-reveal-item {
+		opacity: 1 !important;
+		transform: none !important;
+		filter: none !important;
+		transition: none !important;
+	}
+
+	.luxury-ambient span {
+		animation: none !important;
 	}
 }

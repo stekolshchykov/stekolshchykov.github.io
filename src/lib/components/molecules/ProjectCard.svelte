@@ -2,6 +2,7 @@
 	import type { Project } from '$lib/types/furniture';
 	import { cx } from '$lib/utils/helpers';
 	import { t } from 'svelte-i18n';
+	import { ArrowUpRight } from 'lucide-svelte';
 
 	interface Props {
 		project: Project;
@@ -17,14 +18,14 @@
 	class={cx(
 		'group block overflow-hidden bg-bg-secondary',
 		featured
-			? 'relative aspect-[16/10] md:col-span-2'
-			: 'border border-text-primary/10 transition-colors duration-300 hover:border-accent/40',
+			? 'luxury-corners relative aspect-[16/10] md:col-span-2'
+			: 'luxury-corners border border-text-primary/10 transition-all duration-500 hover:-translate-y-1 hover:border-accent/45 hover:bg-bg-tertiary',
 		className
 	)}
 	style={featured ? 'aspect-ratio: 16 / 10;' : undefined}
 >
 	{#if featured}
-		<div class="image-warm-overlay absolute inset-0 overflow-hidden">
+		<div class="luxury-surface image-warm-overlay absolute inset-0 overflow-hidden">
 			<img
 				src={project.media.hero.src}
 				alt={project.media.hero.alt}
@@ -50,14 +51,11 @@
 				class="mt-3 inline-flex items-center gap-1.5 font-sans text-xs uppercase tracking-widest text-text-primary opacity-100 transition-all duration-500 ease-ui group-hover:text-accent md:opacity-0 md:group-hover:opacity-100"
 			>
 				{$t('projects.view_project')}
-				<span
-					class="inline-block transition-transform duration-300 ease-ui group-hover:translate-x-1"
-					>→</span
-				>
+				<ArrowUpRight class="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
 			</span>
 		</div>
 	{:else}
-		<div class="image-warm-overlay aspect-[4/3] overflow-hidden bg-bg-primary">
+		<div class="luxury-surface image-warm-overlay aspect-[4/3] overflow-hidden bg-bg-primary">
 			<img
 				src={project.media.hero.src}
 				alt={project.media.hero.alt}
@@ -76,10 +74,7 @@
 				class="mt-5 inline-flex items-center gap-1.5 font-sans text-xs uppercase tracking-widest text-text-primary transition-colors duration-300 group-hover:text-accent"
 			>
 				{$t('projects.view_project')}
-				<span
-					class="inline-block transition-transform duration-300 ease-ui group-hover:translate-x-1"
-					>→</span
-				>
+				<ArrowUpRight class="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
 			</span>
 		</div>
 	{/if}
