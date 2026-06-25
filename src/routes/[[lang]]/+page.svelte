@@ -178,8 +178,8 @@
 <ServicesPreviewSection />
 
 <!-- By the Numbers -->
-<Section tone="secondary" border="y">
-	<div class="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-12">
+<Section tone="secondary" border="y" spacing="none" containerClass="py-14 md:py-16 lg:py-20">
+	<div class="grid grid-cols-2 items-center gap-8 md:grid-cols-4 md:gap-12">
 		{#each stats as stat}
 			<div class="text-center md:text-left">
 				<p class="mb-2 font-serif text-5xl text-accent md:text-6xl lg:text-7xl">{stat.value}</p>
