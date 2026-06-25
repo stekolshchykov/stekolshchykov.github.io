@@ -27,6 +27,16 @@
 			image: imageWithFallback(m.images.swatch.src, '/images/materials/european-oak.jpg')
 		}))
 	);
+
+	const consultationMaterials = materialsDetailed.filter((material) =>
+		['american-walnut', 'european-oak', 'aged-brass', 'honed-quartz'].includes(material.id)
+	);
+
+	const consultationSteps = [
+		{ label: '01', value: 'Bring room dimensions or drawings' },
+		{ label: '02', value: 'Compare timber, lacquer, stone, and hardware in daylight' },
+		{ label: '03', value: 'Leave with a practical shortlist for your quote' }
+	];
 </script>
 
 <SeoHead
@@ -118,16 +128,108 @@
 	</div>
 </section>
 
-<section class="bg-bg-primary py-20 md:py-28">
-	<div class="mx-auto max-w-4xl px-6 text-center lg:px-8">
-		<h2 class="mb-6 font-serif text-3xl font-light text-text-primary md:text-4xl">
-			{$_('materials.cta_headline')}
-		</h2>
-		<a
-			href="/en/contact/"
-			class="inline-flex items-center gap-3 border border-text-primary px-8 py-3 font-sans text-sm font-medium uppercase tracking-[0.06em] text-text-primary transition-colors duration-200 hover:border-accent hover:text-accent"
+<section class="relative overflow-hidden border-y border-text-primary/10 bg-bg-primary">
+	<div class="absolute inset-0 opacity-80" aria-hidden="true">
+		<div
+			class="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/60 to-transparent"
+		></div>
+		<div
+			class="absolute right-0 top-0 h-full w-1/2 bg-[radial-gradient(circle_at_center,rgba(196,149,106,0.12),transparent_55%)]"
+		></div>
+	</div>
+
+	<div class="relative mx-auto grid max-w-[1440px] gap-0 lg:grid-cols-[1.05fr_0.95fr]">
+		<div class="px-6 py-20 md:px-12 md:py-28 lg:px-16 lg:py-32">
+			<p class="mb-5 font-sans text-[11px] uppercase tracking-[0.18em] text-accent">
+				Material consultation
+			</p>
+			<h2
+				class="max-w-3xl font-serif text-4xl font-light leading-tight text-text-primary md:text-5xl lg:text-6xl"
+			>
+				{$_('materials.cta_headline')}
+			</h2>
+			<p class="mt-6 max-w-2xl font-sans text-base leading-relaxed text-text-secondary md:text-lg">
+				Bring a room, a mood, or a difficult finish decision. We will compare samples under real
+				light, explain how each surface ages, and shape a palette that can be priced and built.
+			</p>
+
+			<div class="mt-10 grid gap-4 border-y border-text-primary/10 py-6 md:grid-cols-3">
+				{#each consultationSteps as step}
+					<div class="grid grid-cols-[40px_minmax(0,1fr)] gap-4 md:block">
+						<span class="font-serif text-2xl text-accent md:mb-3 md:block">{step.label}</span>
+						<p class="font-sans text-sm leading-relaxed text-text-secondary">{step.value}</p>
+					</div>
+				{/each}
+			</div>
+
+			<div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+				<a
+					href="/en/contact/"
+					class="inline-flex items-center justify-center bg-accent px-8 py-4 font-sans text-sm font-medium uppercase tracking-[0.06em] text-bg-primary transition-all duration-200 hover:-translate-y-px hover:bg-[#D4A57A]"
+				>
+					Book material consultation
+				</a>
+				<a
+					href="/en/showroom/"
+					class="inline-flex items-center justify-center border border-text-primary/18 px-8 py-4 font-sans text-sm font-medium uppercase tracking-[0.06em] text-text-primary transition-colors duration-200 hover:border-accent hover:text-accent"
+				>
+					Visit the showroom
+				</a>
+			</div>
+		</div>
+
+		<div
+			class="relative min-h-[520px] border-t border-text-primary/10 bg-bg-secondary lg:border-l lg:border-t-0"
 		>
-			{$_('materials.cta_button')}
-		</a>
+			<img
+				src="/images/generated/material-detail.webp"
+				alt="Walnut, brass, stone and lacquer samples arranged for specification"
+				loading="lazy"
+				class="absolute inset-0 h-full w-full object-cover opacity-55"
+			/>
+			<div
+				class="absolute inset-0 bg-gradient-to-t from-bg-primary via-bg-primary/52 to-bg-primary/10"
+			></div>
+
+			<div class="relative z-10 flex h-full flex-col justify-end p-6 md:p-10 lg:p-12">
+				<div class="mb-8 max-w-sm">
+					<p class="mb-3 font-sans text-[11px] uppercase tracking-[0.18em] text-text-secondary">
+						Starter palette
+					</p>
+					<h3 class="font-serif text-3xl font-light text-text-primary md:text-4xl">
+						Warm timber, aged metal, quiet stone.
+					</h3>
+				</div>
+
+				<div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+					{#each consultationMaterials as material}
+						<a
+							href="/en/materials/{material.id}/"
+							class="group grid grid-cols-[72px_minmax(0,1fr)] items-center gap-4 border border-text-primary/12 bg-bg-primary/72 p-3 backdrop-blur-sm transition-colors hover:border-accent/70"
+						>
+							<img
+								src={imageWithFallback(
+									material.images.swatch.src,
+									'/images/materials/european-oak.jpg'
+								)}
+								alt={material.images.swatch.alt}
+								loading="lazy"
+								class="aspect-square w-full object-cover"
+							/>
+							<span>
+								<span
+									class="mb-1 block font-sans text-[10px] uppercase tracking-[0.14em] text-accent"
+								>
+									{material.family}
+								</span>
+								<span class="block font-serif text-lg leading-tight text-text-primary">
+									{material.name}
+								</span>
+							</span>
+						</a>
+					{/each}
+				</div>
+			</div>
+		</div>
 	</div>
 </section>
