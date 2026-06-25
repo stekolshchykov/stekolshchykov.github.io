@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { _ } from 'svelte-i18n';
-	import { fade } from 'svelte/transition';
-	import { prefersReducedMotion } from '$lib/utils/motion';
 	import gsap from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	import type { Testimonial } from '$lib/types/furniture';
@@ -18,14 +16,17 @@
 	let { testimonials }: Props = $props();
 	let section = $state<HTMLElement | undefined>(undefined);
 	let index = $state(0);
+	let direction = $state(1);
 
 	const current = $derived(testimonials[index]);
 
 	function next() {
+		direction = 1;
 		index = (index + 1) % testimonials.length;
 	}
 
 	function prev() {
+		direction = -1;
 		index = (index - 1 + testimonials.length) % testimonials.length;
 	}
 
@@ -58,14 +59,26 @@
 	/>
 
 	<div class="testimonials-fade relative">
-		{#key current}
-			<div
-				transition:fade={{ duration: prefersReducedMotion() ? 0 : 400 }}
-				class="mx-auto max-w-4xl"
-			>
-				<TestimonialCard {...current} variant="large" />
-			</div>
-		{/key}
+		<div class="mx-auto grid max-w-4xl">
+			{#each testimonials as testimonial, i}
+				<div
+					class="col-start-1 row-start-1 transition-[opacity,transform] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none"
+					class:opacity-100={i === index}
+					class:opacity-0={i !== index}
+					class:translate-x-0={i === index}
+					class:translate-x-6={i !== index && direction > 0}
+					class:-translate-x-6={i !== index && direction < 0}
+					class:pointer-events-none={i !== index}
+					aria-hidden={i !== index}
+				>
+					<TestimonialCard {...testimonial} variant="large" />
+				</div>
+			{/each}
+		</div>
+
+		<div class="sr-only" aria-live="polite">
+			{current.quote} — {current.name}, {current.location}
+		</div>
 
 		{#if testimonials.length > 1}
 			<div class="mt-12 flex items-center justify-center gap-6">
