@@ -143,56 +143,6 @@ export interface FAQItem {
 	answer: string;
 }
 
-export interface CommercialSector {
-	id: string;
-	title: string;
-	description: string;
-	image: MediaItem;
-}
-
-export interface CommercialCaseStudy {
-	id: string;
-	client: string;
-	sector: string;
-	location: string;
-	scope: string;
-	outcome: string;
-	image: MediaItem;
-}
-
-export interface CommercialPageData {
-	sectors: CommercialSector[];
-	caseStudies: CommercialCaseStudy[];
-	b2bDifferences: string[];
-	formFields: string[];
-}
-
-export interface ShowroomSpotlight {
-	name: string;
-	role: string;
-	quote: string;
-	image: MediaItem;
-}
-
-export interface Showroom {
-	address: string;
-	location: string;
-	directions: string;
-	hours: {
-		monday: string;
-		tuesday: string;
-		wednesday: string;
-		thursday: string;
-		friday: string;
-		saturday: string;
-		sunday: string;
-	};
-	atmosphere: string;
-	spotlights: ShowroomSpotlight[];
-	bookingCta: string;
-	virtualTourTeaser: string;
-}
-
 export interface ServiceDetail {
 	serviceId: string;
 	longDescription: string;

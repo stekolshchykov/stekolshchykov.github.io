@@ -177,15 +177,6 @@ def main() -> None:
     for filename, label in materials:
         make_image(ROOT / "materials" / filename, 600, 600, label, "Material")
 
-    team = [
-        ("founder.jpg", "Founder & Lead Designer"),
-        ("workshop-manager.jpg", "Workshop Manager"),
-        ("senior-craftsman.jpg", "Senior Craftsman"),
-        ("design-consultant.jpg", "Design Consultant"),
-    ]
-    for filename, label in team:
-        make_image(ROOT / "team" / filename, 800, 1000, label, "Áras Living Team")
-
     services = [
         ("custom-wardrobes.jpg", "Custom Wardrobes"),
         ("bespoke-kitchens.jpg", "Bespoke Kitchens"),
@@ -199,13 +190,11 @@ def main() -> None:
     for filename, label in services:
         make_image(ROOT / "services" / filename, 1200, 800, label, "Áras Living Service")
 
-    make_image(ROOT / "about" / "workshop.jpg", 1200, 800, "Áras Living Workshop", "Dublin, Ireland")
-    make_image(ROOT / "hero-poster.jpg", 1920, 1080, "Áras Living", "Handcrafted Furniture")
-    make_image(ROOT / "about-hero.jpg", 1920, 1080, "About Áras Living", "Craft & Care")
-    make_image(ROOT / "services-hero.jpg", 1920, 1080, "Services", "Bespoke Interiors")
-    make_image(ROOT / "projects-hero.jpg", 1920, 1080, "Projects", "Selected Work")
+    make_image(ROOT / "hero-poster.jpg", 1920, 1080, "Áras Living", "Fitted Cabinetry")
+    make_image(ROOT / "services-hero.jpg", 1920, 1080, "Services", "Fitted Cabinetry")
+    make_image(ROOT / "projects-hero.jpg", 1920, 1080, "Examples", "Selected Cabinetry")
     make_image(ROOT / "contact-hero.jpg", 1920, 1080, "Contact", "Start a Project")
-    make_image(ROOT / "craftsmanship.jpg", 1200, 800, "Craftsmanship", "Precision Joinery")
+    make_image(ROOT / "craftsmanship.jpg", 1200, 800, "Craftsmanship", "Precise Cabinetry")
 
 
 if __name__ == "__main__":

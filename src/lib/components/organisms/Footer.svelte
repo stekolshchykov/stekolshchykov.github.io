@@ -32,6 +32,35 @@
 	];
 
 	const serviceLinks = services.slice(0, 7);
+	const contactLinks = [
+		site.email
+			? {
+					label: 'Email',
+					value: site.email,
+					href: `mailto:${site.email}`
+				}
+			: undefined,
+		site.phone
+			? {
+					label: 'Phone',
+					value: site.phone,
+					href: `tel:${site.phone.replace(/\s/g, '')}`
+				}
+			: undefined,
+		site.whatsapp
+			? {
+					label: 'WhatsApp',
+					value: site.whatsapp,
+					href: `https://wa.me/${site.whatsapp.replace(/\D/g, '')}`
+				}
+			: undefined,
+		site.address
+			? {
+					label: 'Address',
+					value: site.address
+				}
+			: undefined
+	].filter((item): item is { label: string; value: string; href?: string } => Boolean(item));
 </script>
 
 <footer class="border-t border-text-secondary/20 bg-bg-secondary">
@@ -126,22 +155,20 @@
 						{$_('footer.contact_title')}
 					</Heading>
 					<ul class="space-y-3 font-sans text-text-primary/80">
-						<li>
-							<a
-								href="mailto:{site.email}"
-								class="block max-w-full break-all transition-colors duration-200 hover:text-accent"
-								>{site.email}</a
-							>
-						</li>
-						<li>
-							<a
-								href="https://wa.me/{site.whatsapp.replace(/\D/g, '')}"
-								class="block max-w-full transition-colors duration-200 hover:text-accent"
-							>
-								{site.whatsapp}
-							</a>
-						</li>
-						<li class="max-w-[18rem]">{site.address}</li>
+						{#each contactLinks as item}
+							<li>
+								{#if item.href}
+									<a
+										href={item.href}
+										class="block max-w-full break-words transition-colors duration-200 hover:text-accent"
+									>
+										{item.value}
+									</a>
+								{:else}
+									<span class="block max-w-[18rem]">{item.value}</span>
+								{/if}
+							</li>
+						{/each}
 					</ul>
 				</div>
 			</div>

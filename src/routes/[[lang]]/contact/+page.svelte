@@ -19,11 +19,21 @@
 	let timeline = $state('');
 	let budget = $state('');
 	let message = $state('');
+	let honeypot = $state('');
+	let files = $state<FileList | null>(null);
 
 	function handleSubmit(e: SubmitEvent) {
 		e.preventDefault();
+		if (honeypot) return;
+		const fileSummary =
+			files && files.length > 0
+				? Array.from(files)
+						.slice(0, 5)
+						.map((file) => file.name)
+						.join(', ')
+				: 'No files selected';
 		const body = encodeURIComponent(
-			`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nProject type: ${projectType}\nLocation: ${location}\nTimeline: ${timeline}\nBudget: ${budget}\n\nMessage:\n${message}`
+			`Name: ${name}\nEmail: ${email}\nPhone: ${phone || 'Optional / not provided'}\nProject type: ${projectType}\nLocation: ${location}\nTimeline: ${timeline}\nBudget: ${budget || 'Not provided'}\nFiles selected: ${fileSummary}\n\nMessage:\n${message}\n\nNote: files selected on the site are not attached to this email draft. Please attach plans, photos or drawings before sending if relevant.`
 		);
 		window.location.href = `mailto:${site.email}?subject=Project enquiry&body=${body}`;
 	}
@@ -65,24 +75,50 @@
 		<SectionHeader
 			eyebrow="Project Enquiry"
 			headline="Tell us what you are planning."
-			statement="Share the room, project type, location, timeline and any drawings or photos you already have. File upload will be connected with the final form endpoint; for now, send files by email after the enquiry."
+			statement="Share the room, project type, location, timeline and any drawings or photos you already have. This launch form opens an email draft; attach selected files before sending if relevant."
 			class="mb-0"
 		/>
 		<form onsubmit={handleSubmit} class="space-y-8">
+			<input
+				type="text"
+				name="website"
+				bind:value={honeypot}
+				tabindex="-1"
+				autocomplete="off"
+				class="hidden"
+				aria-hidden="true"
+			/>
 			<div class="grid gap-6 md:grid-cols-2">
 				<Input name="name" label="Name" required bind:value={name} />
 				<Input name="email" type="email" label="Email" required bind:value={email} />
 			</div>
 			<div class="grid gap-6 md:grid-cols-2">
 				<Input name="phone" label="Phone optional" bind:value={phone} />
-				<Input name="projectType" label="Project type" bind:value={projectType} />
+				<Input name="projectType" label="Project type" required bind:value={projectType} />
 			</div>
 			<div class="grid gap-6 md:grid-cols-2">
-				<Input name="location" label="Location in Ireland" bind:value={location} />
-				<Input name="timeline" label="Timeline" bind:value={timeline} />
+				<Input name="location" label="Location in Ireland" required bind:value={location} />
+				<Input name="timeline" label="Timeline" required bind:value={timeline} />
 			</div>
 			<Input name="budget" label="Approximate budget, if you have one" bind:value={budget} />
-			<Textarea name="message" label="Message" bind:value={message} />
+			<Textarea name="message" label="Message" required bind:value={message} />
+			<div>
+				<label for="contact-files" class="mb-2 block font-sans text-sm text-text-secondary">
+					Upload plans/photos optional
+				</label>
+				<input
+					id="contact-files"
+					name="files"
+					type="file"
+					multiple
+					accept=".pdf,.jpg,.jpeg,.png,.dwg,.dxf"
+					onchange={(e) => (files = e.currentTarget.files)}
+					class="block w-full border-b border-text-secondary/30 bg-transparent py-4 font-sans text-sm text-text-primary file:mr-4 file:border-0 file:bg-accent file:px-4 file:py-2 file:font-sans file:text-xs file:uppercase file:tracking-[0.08em] file:text-bg-primary"
+				/>
+				<p class="mt-2 font-sans text-xs leading-relaxed text-text-secondary">
+					PDF, JPG, PNG, DWG/CAD where possible. Up to 20MB per file and 5 files recommended.
+				</p>
+			</div>
 			<Button variant="primary" type="submit">Discuss a Project</Button>
 		</form>
 	</div>

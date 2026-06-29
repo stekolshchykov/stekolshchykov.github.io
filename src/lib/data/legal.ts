@@ -23,10 +23,9 @@ export const legal: Record<'privacy' | 'terms' | 'cookies', LegalPage> = {
 				content: [
 					`This Privacy Policy explains how ${site.companyLegalName} (trading as Áras Living) collects, uses, and protects your personal data.`,
 					`Data controller: ${site.companyLegalName}`,
-					`Registered address: ${site.address}.`,
-					`Operational address: ${site.address}.`,
-					`Email: ${site.email}`,
-					`Telephone: ${site.phone}`
+					'Registered address: TBC.',
+					'Operational address: TBC.',
+					`Email: ${site.email}`
 				]
 			},
 			{
@@ -40,7 +39,7 @@ export const legal: Record<'privacy' | 'terms' | 'cookies', LegalPage> = {
 				id: 'categories',
 				title: '3. Categories of Personal Data Collected',
 				content: [
-					'We collect personal data that you provide through our contact form, email, telephone, or in-person consultations. This may include your name, email address, phone number, project location, project type, budget range, message, and any files or images you upload.',
+					'We collect personal data that you provide through our contact form or email. This may include your name, email address, optional phone number, project location, project type, budget range, message, and any files or images you choose to send.',
 					'We also collect technical data via cookies and similar technologies when you browse our website, including IP address, browser type, device information, and pages visited.'
 				]
 			},
@@ -50,7 +49,7 @@ export const legal: Record<'privacy' | 'terms' | 'cookies', LegalPage> = {
 				content: [
 					'We process your personal data for the following purposes and on the following legal bases:',
 					'(a) To respond to enquiries and provide quotes — performance of pre-contractual measures or contract.',
-					'(b) To manage projects, communicate during design and installation — performance of contract.',
+					'(b) To manage enquiries, specifications, delivery and installation coordination — performance of contract.',
 					'(c) To send occasional project updates or marketing communications — consent, which you can withdraw at any time.',
 					'(d) To improve our website and understand visitor behaviour — legitimate interest, where consent is not required, or consent for non-essential cookies.'
 				]
@@ -75,7 +74,7 @@ export const legal: Record<'privacy' | 'terms' | 'cookies', LegalPage> = {
 				title: '7. Retention Periods',
 				content: [
 					'We retain your personal data only for as long as necessary to fulfil the purposes for which it was collected. Enquiry data is typically retained for up to two years unless you request deletion earlier.',
-					'Project records, including contracts and correspondence, are retained for the duration required by applicable law, including tax and warranty obligations.'
+					'Project records, including contracts and correspondence, are retained for the duration required by applicable law.'
 				]
 			},
 			{
@@ -112,7 +111,7 @@ export const legal: Record<'privacy' | 'terms' | 'cookies', LegalPage> = {
 				id: 'scope',
 				title: '1. Scope of Services',
 				content: [
-					`Áras Living, operated by ${site.companyLegalName}, provides bespoke furniture design, manufacturing, and installation services for residential and commercial clients in Ireland.`,
+					`Áras Living, operated by ${site.companyLegalName}, provides fitted cabinetry specification, delivery coordination and installation coordination for residential and commercial clients in Ireland.`,
 					`All work is carried out subject to a written quotation and, where applicable, a signed contract between the client and ${site.companyLegalName}.`
 				]
 			},
@@ -136,16 +135,16 @@ export const legal: Record<'privacy' | 'terms' | 'cookies', LegalPage> = {
 				id: 'cancellations',
 				title: '4. Cancellations & Refunds',
 				content: [
-					'Orders for bespoke goods are custom-made to your specifications and cannot be cancelled once manufacturing has commenced.',
-					'If cancellation is requested prior to manufacturing, any deposit may be retained to cover design work, material ordering, and administration costs.'
+					'Orders are prepared around an approved specification and cancellation terms will be confirmed in the written quotation or contract.',
+					'If cancellation is requested after specification work has begun, any retained amount will be set out in the written quotation or contract.'
 				]
 			},
 			{
 				id: 'warranty',
 				title: '5. Warranty on Workmanship',
 				content: [
-					`${site.companyLegalName} warrants that goods will be free from defects in workmanship for a period of two years from the date of installation, subject to normal use and proper care.`,
-					'This warranty does not cover damage caused by misuse, neglect, unauthorised modifications, environmental factors, or normal wear and tear.'
+					'Warranty terms are TBC and will be confirmed in writing before publication.',
+					'No public warranty claim should be treated as final until approved by the brand owner or legal adviser.'
 				]
 			},
 			{
@@ -198,9 +197,8 @@ export const legal: Record<'privacy' | 'terms' | 'cookies', LegalPage> = {
 				title: '3. Cookies We Use',
 				content: [
 					`Cookie: aras-living-consent. Purpose: Stores your cookie consent preferences. Duration: 1 year. Controller: ${site.companyLegalName}.`,
-					'Cookie: _ga. Purpose: Google Analytics identifier. Duration: 2 years. Controller: Google LLC.',
-					'Cookie: _gid. Purpose: Google Analytics session identifier. Duration: 24 hours. Controller: Google LLC.',
-					'Cookie: _fbp. Purpose: Meta Pixel identifier for advertising. Duration: 3 months. Controller: Meta Platforms, Inc.'
+					'Analytics or marketing cookies may be added later only after the relevant tools are confirmed and consent behaviour is approved.',
+					'Google Analytics, Meta Pixel or similar services are TBC and should not be treated as active until configured.'
 				]
 			},
 			{

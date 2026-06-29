@@ -42,7 +42,7 @@
 		projectType: z.enum(['residential', 'commercial', 'not-sure']),
 		name: z.string().min(1, 'This field is required'),
 		email: z.string().email('Please enter a valid email address'),
-		phone: z.string().min(1, 'This field is required'),
+		phone: z.string(),
 		location: z.string().min(1, 'This field is required'),
 		message: z.string().min(1, 'This field is required'),
 		honeypot: z.string().max(0, 'Bot detected')
@@ -87,8 +87,8 @@
 	function handleFiles(files: FileList | null) {
 		if (!files) return;
 		const accepted = Array.from(files).filter((f) => {
-			const valid = /\.(png|jpe?g|pdf)$/i.test(f.name);
-			const withinSize = f.size <= 10 * 1024 * 1024;
+			const valid = /\.(png|jpe?g|pdf|dwg|dxf)$/i.test(f.name);
+			const withinSize = f.size <= 20 * 1024 * 1024;
 			return valid && withinSize;
 		});
 		fileList = [...fileList, ...accepted].slice(0, 5);
@@ -183,7 +183,7 @@
 					>
 						Áras Living
 					</p>
-					<p class="font-serif text-2xl text-text-primary">Bespoke Joinery</p>
+					<p class="font-serif text-2xl text-text-primary">Fitted Cabinetry</p>
 				</div>
 			</div>
 
@@ -425,7 +425,7 @@
 										<input
 											id="file-input"
 											type="file"
-											accept=".png,.jpg,.jpeg,.pdf"
+											accept=".png,.jpg,.jpeg,.pdf,.dwg,.dxf"
 											multiple
 											class="hidden"
 											onchange={(e) => handleFiles(e.currentTarget.files)}

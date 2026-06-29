@@ -63,7 +63,7 @@ export const processMoments: ProcessMoment[] = [
 		description:
 			'Once the specification is approved, the cabinetry package is prepared for production with the details needed for delivery and installation.',
 		paragraphs: [
-			'The site should not overstate one factory, workshop or country of production. The important promise for launch is clarity: a controlled specification and a managed route from brief to installation.',
+			'The important promise for launch is clarity: a controlled specification and a managed route from brief to installation.',
 			'Any manufacturer-specific statistics, warranty language or production claims remain off-site until confirmed.'
 		],
 		craftNote: 'Clarity before production keeps the result calm.',

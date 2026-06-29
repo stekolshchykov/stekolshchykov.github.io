@@ -56,13 +56,23 @@
 	let timeline = $state('');
 	let budget = $state('');
 	let message = $state('');
+	let honeypot = $state('');
+	let files = $state<FileList | null>(null);
 
 	function handleSubmit(e: SubmitEvent) {
 		e.preventDefault();
+		if (honeypot) return;
+		const fileSummary =
+			files && files.length > 0
+				? Array.from(files)
+						.slice(0, 5)
+						.map((file) => file.name)
+						.join(', ')
+				: 'No files selected';
 		const body = encodeURIComponent(
-			`Name: ${name}\nCompany: ${company}\nEmail: ${email}\nProject type: ${projectType}\nLocation: ${location}\nUnits / scale: ${scale}\nTimeline: ${timeline}\nBudget: ${budget}\n\nMessage:\n${message}`
+			`Name: ${name}\nCompany: ${company}\nEmail: ${email}\nProject type: ${projectType}\nLocation: ${location}\nUnits / scale: ${scale}\nTimeline: ${timeline}\nBudget: ${budget || 'Not provided'}\nFiles selected: ${fileSummary}\n\nMessage:\n${message}\n\nNote: files selected on the site are not attached to this email draft. Please attach drawings, plans, photos or moodboards before sending if relevant.`
 		);
-		window.location.href = `mailto:${site.email}?subject=Trade enquiry&body=${body}`;
+		window.location.href = `mailto:trade@arasliving.ie?cc=${site.email}&subject=Trade enquiry&body=${body}`;
 	}
 </script>
 
@@ -136,31 +146,57 @@
 				Send a Trade Enquiry
 			</Heading>
 			<p class="max-w-md font-sans text-body-lg text-text-secondary">
-				Send drawings, plans, photos or moodboards if you already have them. Files can be added
-				when the final form endpoint is connected.
+				Send drawings, plans, photos or moodboards if you already have them. This launch form opens
+				an email draft; attach selected files before sending if relevant.
 			</p>
 			<p class="max-w-md font-sans text-sm leading-relaxed text-text-secondary">
 				Planned route: trade@arasliving.ie. Temporary route: arasliving26@gmail.com.
 			</p>
 		</div>
 		<form onsubmit={handleSubmit} class="space-y-8">
+			<input
+				type="text"
+				name="website"
+				bind:value={honeypot}
+				tabindex="-1"
+				autocomplete="off"
+				class="hidden"
+				aria-hidden="true"
+			/>
 			<div class="grid gap-6 md:grid-cols-2">
 				<Input name="name" label="Name" required bind:value={name} />
 				<Input name="company" label="Company" required bind:value={company} />
 			</div>
 			<div class="grid gap-6 md:grid-cols-2">
 				<Input name="email" type="email" label="Email" required bind:value={email} />
-				<Input name="projectType" label="Project type" bind:value={projectType} />
+				<Input name="projectType" label="Project type" required bind:value={projectType} />
 			</div>
 			<div class="grid gap-6 md:grid-cols-2">
-				<Input name="location" label="Location in Ireland" bind:value={location} />
-				<Input name="scale" label="Number of units / project scale" bind:value={scale} />
+				<Input name="location" label="Location in Ireland" required bind:value={location} />
+				<Input name="scale" label="Number of units / project scale" required bind:value={scale} />
 			</div>
 			<div class="grid gap-6 md:grid-cols-2">
-				<Input name="timeline" label="Timeline" bind:value={timeline} />
+				<Input name="timeline" label="Timeline" required bind:value={timeline} />
 				<Input name="budget" label="Approximate budget, if you have one" bind:value={budget} />
 			</div>
-			<Textarea name="message" label="Message" bind:value={message} />
+			<Textarea name="message" label="Message" required bind:value={message} />
+			<div>
+				<label for="trade-files" class="mb-2 block font-sans text-sm text-text-secondary">
+					Upload drawings, plans, photos or moodboards
+				</label>
+				<input
+					id="trade-files"
+					name="files"
+					type="file"
+					multiple
+					accept=".pdf,.jpg,.jpeg,.png,.dwg,.dxf"
+					onchange={(e) => (files = e.currentTarget.files)}
+					class="block w-full border-b border-text-secondary/30 bg-transparent py-4 font-sans text-sm text-text-primary file:mr-4 file:border-0 file:bg-accent file:px-4 file:py-2 file:font-sans file:text-xs file:uppercase file:tracking-[0.08em] file:text-bg-primary"
+				/>
+				<p class="mt-2 font-sans text-xs leading-relaxed text-text-secondary">
+					PDF, JPG, PNG, DWG/CAD where possible. Up to 20MB per file and 5 files recommended.
+				</p>
+			</div>
 			<Button variant="primary" type="submit">Send a Trade Enquiry</Button>
 		</form>
 	</div>

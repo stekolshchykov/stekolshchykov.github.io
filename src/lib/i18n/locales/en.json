@@ -1,14 +1,11 @@
 {
 	"nav": {
 		"home": "Home",
-		"about": "About",
 		"services": "Services",
 		"projects": "Examples",
 		"materials": "Materials",
 		"process": "Process",
-		"showroom": "Showroom",
 		"commercial": "Trade",
-		"insights": "Insights",
 		"faq": "FAQ",
 		"contact": "Contact",
 		"discuss_project": "Discuss a Project",
@@ -36,8 +33,6 @@
 		"projects_cta": "View Examples",
 		"process_eyebrow": "Process",
 		"process_headline": "From first idea to installed cabinetry.",
-		"testimonials_eyebrow": "Client Words",
-		"testimonials_headline": "What They Say",
 		"cta_headline": "Start with the room. We will help shape the specification.",
 		"cta_subheadline": "Tell us what you are planning. We will help shape the cabinetry around the space, budget and finish you want.",
 		"cta_button": "Discuss a Project",
@@ -57,32 +52,7 @@
 		"trust_warranty_value": "04",
 		"journal_teaser_eyebrow": "",
 		"journal_teaser_headline": "",
-		"journal_teaser_cta": "",
-		"showroom_invitation_eyebrow": "",
-		"showroom_invitation_headline": "",
-		"showroom_invitation_body": "",
-		"showroom_invitation_cta": ""
-	},
-	"about": {
-		"meta_title": "About — Áras Living",
-		"meta_description": "Áras Living creates fitted cabinetry for homes and commercial spaces across Ireland.",
-		"hero_eyebrow": "About",
-		"hero_headline": "Craftsmanship, considered",
-		"hero_subheadline": "Fitted cabinetry for homes and commercial spaces across Ireland.",
-		"story_eyebrow": "Our Story",
-		"story_headline": "Built on patience and precision",
-		"story_body_1": "Áras Living was founded on the belief that enduring furniture is made slowly, by people who understand timber. From the first sketch to the final installation, every decision is guided by proportion, material, and purpose.",
-		"story_body_2": "We work with architects, interior designers, and private clients across Ireland, turning complex spaces into calm, considered interiors.",
-		"craft_eyebrow": "Craft",
-		"craft_headline": "Materials that endure",
-		"craft_body": "We source solid hardwoods and curated veneers from trusted European suppliers. Our finishes are applied by hand, and our hardware is chosen for how it feels after years of daily use.",
-		"team_eyebrow": "People",
-		"team_headline": "The Team",
-		"team_body": "A small team of designers, makers, and installers. Everyone who works on your project shares the same standard: would this sit comfortably in our own home?",
-		"why_us_eyebrow": "Why Áras Living",
-		"why_us_headline": "The Difference",
-		"cta_headline": "Begin your project.",
-		"cta_button": "Arrange a Consultation"
+		"journal_teaser_cta": ""
 	},
 	"services": {
 		"meta_title": "Services — Áras Living",
@@ -200,7 +170,7 @@
 		"referral_previous_client": "Previous Client",
 		"referral_other": "Other",
 		"files_label": "Upload Photos or Plans",
-		"files_helper": "PDF, JPG or PNG. Up to 20MB per file.",
+		"files_helper": "PDF, JPG, PNG, DWG/CAD where possible. Up to 20MB per file, up to 5 files.",
 		"consent_label": "I agree to be contacted about my project",
 		"submit": "Send Enquiry",
 		"submitting": "Sending...",
@@ -227,7 +197,6 @@
 		"rights": "All rights reserved.",
 		"company_placeholder": "Áras Living Furniture & Interiors Ltd",
 		"journal_title": "",
-		"showroom_title": "",
 		"explore_title": "Explore"
 	},
 	"cookie_banner": {
@@ -273,29 +242,14 @@
 	},
 	"process": {
 		"meta_title": "Process — Áras Living",
-		"meta_description": "From discovery to installation: how Áras Living designs and builds bespoke furniture in Dublin.",
+		"meta_description": "From brief to installation: how Áras Living shapes fitted cabinetry specifications across Ireland.",
 		"hero_eyebrow": "Process",
-		"hero_headline": "From sketch to space",
-		"hero_subheadline": "Eight considered moments between your first idea and the finished room.",
+		"hero_headline": "From first idea to installed cabinetry.",
+		"hero_subheadline": "Five clear steps from brief and site measure to specification, production, delivery and installation.",
 		"duration_label": "Typical duration",
 		"craft_note_label": "Craft note",
 		"cta_headline": "Begin your project.",
-		"cta_button": "Arrange a Consultation"
-	},
-	"showroom": {
-		"meta_title": "Showroom — Áras Living",
-		"meta_description": "Visit the Áras Living showroom in Dublin to explore bespoke kitchens, wardrobes, and materials.",
-		"hero_eyebrow": "Showroom",
-		"hero_headline": "See, touch, and open",
-		"hero_subheadline": "A quiet space in Dublin 3 to explore full-size installations and material samples.",
-		"address_label": "Address",
-		"directions_label": "Directions",
-		"hours_label": "Hours",
-		"atmosphere_label": "The Space",
-		"spotlights_label": "Meet the Makers",
-		"booking_cta_title": "Book an Appointment",
-		"booking_cta_button": "Schedule a Visit",
-		"virtual_tour_label": "Virtual Tour"
+		"cta_button": "Discuss a Project"
 	},
 	"commercial": {
 		"meta_title": "Trade — Áras Living",
@@ -311,19 +265,6 @@
 		"cta_headline": "Discuss a commercial project.",
 		"cta_button": "Get in Touch",
 		"commercial_body": "Cabinetry packages for residential developments, offices, retail, hospitality and specialist spaces."
-	},
-	"insights": {
-		"meta_title": "Insights — Áras Living",
-		"meta_description": "Design thinking, material guides, and process notes from the Áras Living studio.",
-		"hero_eyebrow": "Insights",
-		"hero_headline": "Notes from the studio",
-		"hero_subheadline": "Design thinking, material guides, and process notes for people who care about craft.",
-		"category_label": "Category",
-		"read_time_label": "Read time",
-		"date_label": "Date",
-		"author_label": "By",
-		"related_projects_label": "Related Work",
-		"back_to_insights": "Back to Insights"
 	},
 	"faq": {
 		"meta_title": "FAQ — Áras Living",

@@ -119,12 +119,12 @@
 		<div class="order-2 space-y-8 lg:order-1">
 			<SectionHeader
 				headline="The detail is the design."
-				statement="Every handle, veneer run and drawer shadow is resolved before a board reaches the saw."
+				statement="Every handle, veneer run and drawer shadow is resolved before the specification is approved."
 				size="large"
 				class="mb-0"
 			/>
 			<div class="divide-y divide-text-primary/10 border-y border-text-primary/10">
-				{#each [['01', 'Matched grain sets across every visible elevation'], ['02', 'Brass and stone specified by touch, not catalogue code'], ['03', 'Workshop drawings checked against the room millimetre by millimetre']] as detail}
+				{#each [['01', 'Matched grain sets across every visible elevation'], ['02', 'Brass and stone specified by touch, not catalogue code'], ['03', 'Technical drawings checked against the room millimetre by millimetre']] as detail}
 					<div class="grid grid-cols-[48px_minmax(0,1fr)] gap-5 py-5">
 						<span class="font-serif text-2xl text-accent">{detail[0]}</span>
 						<p class="font-sans text-sm leading-relaxed text-text-primary/84">{detail[1]}</p>
