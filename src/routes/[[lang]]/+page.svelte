@@ -2,9 +2,6 @@
 	import { _ } from 'svelte-i18n';
 	import { site } from '$lib/data/site';
 	import { projects } from '$lib/data/projects';
-	import { testimonials } from '$lib/data/testimonials';
-	import { materialsDetailed } from '$lib/data/materialsDetailed';
-	import { insights } from '$lib/data/insights';
 	import { imageWithFallback } from '$lib/utils/imageFallback';
 
 	import SeoHead from '$lib/components/molecules/SeoHead.svelte';
@@ -13,7 +10,6 @@
 	import ServicesPreviewSection from '$lib/components/organisms/ServicesPreviewSection.svelte';
 	import FeaturedProjectsSection from '$lib/components/organisms/FeaturedProjectsSection.svelte';
 	import ProcessOverviewSection from '$lib/components/organisms/ProcessOverviewSection.svelte';
-	import TestimonialsSection from '$lib/components/organisms/TestimonialsSection.svelte';
 	import CTABannerSection from '$lib/components/organisms/CTABannerSection.svelte';
 	import Section from '$lib/components/atoms/Section.svelte';
 	import SectionHeader from '$lib/components/atoms/SectionHeader.svelte';
@@ -25,14 +21,47 @@
 	import MagneticCard from '$lib/components/molecules/MagneticCard.svelte';
 
 	const featuredProjects = projects.filter((p) => p.featured);
-	const materialWorld = materialsDetailed.slice(0, 3);
-	const journalTeaser = insights.slice(0, 2);
+	const materialWorld = [
+		{
+			family: 'Painted & lacquered fronts',
+			name: 'Calm colour. Clean lines.',
+			tagline: 'A finished room begins with the surface you see every day.',
+			images: {
+				swatch: {
+					src: '/images/materials/satin-lacquer/swatch.webp',
+					alt: 'Painted and lacquered cabinetry front sample'
+				}
+			}
+		},
+		{
+			family: 'Wood veneers & warm finishes',
+			name: 'Warmth before touch.',
+			tagline: 'Grain, depth and tone chosen for how the space should feel.',
+			images: {
+				swatch: {
+					src: '/images/materials/crown-walnut-veneer/swatch.webp',
+					alt: 'Warm wood veneer cabinetry finish'
+				}
+			}
+		},
+		{
+			family: 'Worktops, hardware & details',
+			name: 'Surface, movement, touch.',
+			tagline: 'Stone, metal, glass and internal systems resolved as one layer.',
+			images: {
+				swatch: {
+					src: '/images/generated/material-detail.webp',
+					alt: 'Worktop, hardware and detail samples'
+				}
+			}
+		}
+	];
 
 	const stats = [
-		{ value: $_('home.trust_years_value'), label: $_('home.trust_years_label') },
-		{ value: $_('home.trust_projects_value'), label: $_('home.trust_projects_label') },
-		{ value: $_('home.trust_makers_value'), label: $_('home.trust_makers_label') },
-		{ value: $_('home.trust_warranty_value'), label: $_('home.trust_warranty_label') }
+		{ value: '01', label: 'Site measure in Ireland' },
+		{ value: '02', label: 'Clear specification' },
+		{ value: '03', label: 'Export-ready production' },
+		{ value: '04', label: 'Coordinated installation' }
 	];
 
 	const localBusinessSchema = {
@@ -42,12 +71,6 @@
 		description: site.subTagline,
 		url: site.seo.siteUrl,
 		email: site.email,
-		telephone: site.phone,
-		address: {
-			'@type': 'PostalAddress',
-			addressLocality: 'Dublin',
-			addressCountry: 'IE'
-		},
 		image: `${site.seo.siteUrl}${site.seo.defaultImage}`,
 		priceRange: '€€€'
 	};
@@ -141,7 +164,7 @@
 		{#each materialWorld as material}
 			<MagneticCard intensity={0.12}>
 				<a
-					href="/en/materials/{material.id}/"
+					href="/en/materials/"
 					class="luxury-corners group grid h-full overflow-hidden border border-text-primary/10 bg-bg-secondary transition-all duration-500 hover:-translate-y-1 hover:border-accent/45"
 				>
 					<div class="luxury-surface image-warm-overlay relative aspect-[4/3] overflow-hidden bg-bg-primary">
@@ -191,84 +214,6 @@
 <FeaturedProjectsSection projects={featuredProjects} />
 
 <ProcessOverviewSection />
-
-<!-- Journal Teaser -->
-<Section tone="secondary">
-	<SectionHeader
-		eyebrow={$_('home.journal_teaser_eyebrow')}
-		headline={$_('home.journal_teaser_headline')}
-		align="between"
-		size="large"
-	>
-		{#snippet actions()}
-			<Button variant="ghost" href="/en/insights/">
-				{$_('home.journal_teaser_cta')}
-			</Button>
-		{/snippet}
-	</SectionHeader>
-
-	<div class="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
-		{#each journalTeaser as article}
-			<article class="group">
-				<a href="/en/insights/{article.slug}/" class="block">
-					<div
-						class="image-warm-overlay relative mb-6 aspect-[16/10] overflow-hidden bg-bg-primary"
-					>
-						<img
-							src={imageWithFallback(article.heroImage.src, '/images/hero-poster.jpg')}
-							alt={article.heroImage.alt}
-							loading="lazy"
-							class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-						/>
-					</div>
-					<div
-						class="mb-3 flex items-center gap-4 font-sans text-xs uppercase tracking-[0.12em] text-text-secondary"
-					>
-						<span>{article.category}</span>
-						<span class="h-px w-6 bg-text-secondary/40"></span>
-						<span>{article.readTime}</span>
-					</div>
-					<h3
-						class="mb-3 font-serif text-2xl text-text-primary transition-colors group-hover:text-accent md:text-3xl"
-					>
-						{article.title}
-					</h3>
-					<p class="max-w-xl font-sans text-sm leading-relaxed text-text-secondary line-clamp-3">
-						{article.excerpt}
-					</p>
-				</a>
-			</article>
-		{/each}
-	</div>
-</Section>
-
-<TestimonialsSection {testimonials} />
-
-<!-- Showroom Invitation -->
-<Section>
-	<div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-		<div class="order-2 lg:order-1">
-			<ImageReveal
-				src={imageWithFallback('/images/showroom/interior.webp', '/images/craftsmanship.jpg')}
-				alt="Áras Living showroom interior with full-size installations and material samples"
-				class="aspect-[4/3] w-full"
-				direction="left"
-			/>
-		</div>
-		<div class="order-1 space-y-8 lg:order-2">
-			<SectionHeader
-				eyebrow={$_('home.showroom_invitation_eyebrow')}
-				headline={$_('home.showroom_invitation_headline')}
-				statement={$_('home.showroom_invitation_body')}
-				size="large"
-				class="mb-0"
-			/>
-			<Button variant="primary" size="md" href="/en/showroom/">
-				{$_('home.showroom_invitation_cta')}
-			</Button>
-		</div>
-	</div>
-</Section>
 
 <CTABannerSection
 	headline={$_('home.cta_headline')}

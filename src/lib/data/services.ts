@@ -1,469 +1,143 @@
 import type { Service } from '$lib/types/furniture';
 
+const tbcImage = '/images/placeholders/needs-photo.svg';
+
 export const services: Service[] = [
-	// Residential
 	{
-		id: 'custom-wardrobes',
-		title: 'Wardrobes & Dressing Rooms',
-		description:
-			'Fitted wardrobes designed around the architecture of your room and the rhythm of your day.',
-		longDescription:
-			'Our wardrobes are drawn around alcoves, ceiling lines, and awkward corners that off-the-shelf furniture cannot reach. Every hanging rail, drawer, and shelf is positioned for the garments and routines you actually have.',
-		features: [
-			'Fitted designs that follow ceiling lines and alcoves',
-			'Hinged, sliding, or flush door options',
-			'Integrated lighting and tailored interiors'
-		],
-		process: [
-			'In-home consultation and measurement',
-			'Concept drawings and 3D visuals',
-			'Material and hardware selection',
-			'Workshop fabrication',
-			'Installation and final adjustment'
-		],
-		deliverables: [
-			'Scale drawings and renders',
-			'Fitted wardrobe carcasses and doors',
-			'Internal hardware and lighting',
-			'Care and maintenance guide'
-		],
-		relatedMaterials: [
-			'european-oak',
-			'american-walnut',
-			'crown-walnut-veneer',
-			'satin-lacquer',
-			'aged-brass'
-		],
-		gallery: [
-			{
-				src: '/images/services/custom-wardrobes/detail-1.webp',
-				alt: 'Wardrobe interior with integrated lighting and drawers'
-			},
-			{
-				src: '/images/services/custom-wardrobes/detail-2.webp',
-				alt: 'Flush wardrobe doors in a muted lacquer finish'
-			},
-			{
-				src: '/images/services/custom-wardrobes/detail-3.webp',
-				alt: 'Brass hanging rail and shoe shelving detail'
-			}
-		],
-		testimonial: {
-			quote:
-				'Every drawer, every light, every joint feels considered. The dressing room has become the calmest room in the house.',
-			name: 'Sarah M.',
-			location: 'Dublin 6'
-		},
-		image: {
-			src: '/images/generated/services/custom-wardrobes-luxury.webp',
-			alt: 'Bespoke fitted wardrobe with soft-close drawers and integrated lighting'
-		},
-		category: 'residential'
-	},
-	{
-		id: 'bespoke-kitchens',
+		id: 'kitchens',
 		title: 'Kitchens',
 		description:
-			'Kitchens built for how you cook, gather, and live. Handleless contemporary, classic timber, or something quietly in between.',
+			'Fitted kitchens, islands, pantry storage, tall cabinetry and worktops planned around the room, the budget and daily use.',
 		longDescription:
-			'An Áras Living kitchen is planned around workflow, light, and the social rhythm of the household. We design cabinetry, islands, pantries, and appliance housing as one coherent piece of joinery rather than a collection of units.',
-		features: [
-			'Handleless, timber, or painted cabinetry',
-			'Stone, timber, or composite worktops',
-			'Integrated appliances and custom pantries'
-		],
-		process: [
-			'Discovery meeting and site survey',
-			'Layout and elevation design',
-			'Worktop, appliance, and material specification',
-			'Carcass and door fabrication',
-			'Installation, templating, and worktop fitting'
-		],
-		deliverables: [
-			'Kitchen layout and elevation drawings',
-			'Bespoke cabinetry and doors',
-			'Worktop supply and installation',
-			'Integrated appliance coordination'
-		],
-		relatedMaterials: [
-			'deep-charcoal-lacquer',
-			'european-oak',
-			'honed-quartz',
-			'satin-lacquer',
-			'aged-brass'
-		],
-		gallery: [
-			{
-				src: '/images/services/bespoke-kitchens/detail-1.webp',
-				alt: 'Handleless kitchen island with stone worktop'
-			},
-			{
-				src: '/images/services/bespoke-kitchens/detail-2.webp',
-				alt: 'Integrated appliances behind handleless cabinetry'
-			},
-			{
-				src: '/images/services/bespoke-kitchens/detail-3.webp',
-				alt: 'Breakfast pantry with pull-out storage'
-			}
-		],
-		testimonial: {
-			quote:
-				'They understood the house before they designed the kitchen. The result respects the original rooms and works for how we live.',
-			name: 'David & Aileen K.',
-			location: 'Blackrock'
-		},
+			'Kitchen cabinetry should feel architectural before it feels technical. We shape storage, surfaces and internal movement around the rhythm of the home, from quiet morning routines to rooms made for gathering.',
+		features: ['Fitted kitchens', 'Islands', 'Pantry and larder storage', 'Tall storage', 'Worktops'],
+		process: ['Brief', 'Site measure', 'Specification', 'Production', 'Delivery & installation'],
+		deliverables: ['Layout direction', 'Finish specification', 'Internal storage brief', 'Installation coordination'],
+		relatedMaterials: ['painted-fronts', 'wood-veneers', 'stone-worktops', 'hardware-systems'],
+		gallery: [],
 		image: {
 			src: '/images/services/bespoke-kitchens.jpg',
-			alt: 'Bespoke kitchen with island, stone worktop, and integrated appliances'
+			alt: 'Premium fitted kitchen with island, storage and calm architectural cabinetry'
 		},
 		category: 'residential'
 	},
 	{
-		id: 'walk-in-closets',
-		title: 'Dressing Rooms',
+		id: 'wardrobes-dressing-rooms',
+		title: 'Wardrobes & Dressing Rooms',
 		description:
-			'Calm, organised dressing rooms where every garment has its place and every morning starts with ease.',
+			'Built-in wardrobes, dressing rooms, sliding or hinged doors and internal storage designed around proportion, order and calm.',
 		longDescription:
-			'Dressing rooms are among the most personal spaces we design. We map every category of clothing and accessory, then arrange storage so the daily routine feels effortless and the room feels like a private boutique.',
+			'Wardrobes should make a room quieter. We consider door rhythm, internal access, lighting, mirrors and storage zones so the cabinetry feels fitted to the way the room is used.',
 		features: [
-			'Central islands with accessory storage',
-			'Full-height mirrors and dressing areas',
-			'Sensor or automated lighting'
+			'Built-in wardrobes',
+			'Dressing rooms',
+			'Sliding and hinged doors',
+			'Internal storage',
+			'Mirrors and lighting where specified'
 		],
-		process: [
-			'Wardrobe audit and lifestyle interview',
-			'3D visualisation of the dressing room',
-			'Material and lighting selection',
-			'Cabinetry and island fabrication',
-			'Installation and lighting commissioning'
-		],
-		deliverables: [
-			'Detailed layout and renders',
-			'Full-height cabinetry and island',
-			'Jewellery, watch, and accessory storage',
-			'Integrated lighting and mirror panels'
-		],
-		relatedMaterials: [
-			'american-walnut',
-			'crown-walnut-veneer',
-			'aged-brass',
-			'satin-lacquer',
-			'honed-quartz'
-		],
-		gallery: [
-			{
-				src: '/images/services/walk-in-closets/detail-1.webp',
-				alt: 'Central island with glass-top jewellery display'
-			},
-			{
-				src: '/images/services/walk-in-closets/detail-2.webp',
-				alt: 'Full-height mirror reflecting walnut cabinetry'
-			},
-			{
-				src: '/images/services/walk-in-closets/detail-3.webp',
-				alt: 'Sensor-activated LED lighting in shelving'
-			}
-		],
-		testimonial: {
-			quote:
-				'Every drawer, every light, every joint feels considered. The dressing room has become the calmest room in the house.',
-			name: 'Sarah M.',
-			location: 'Dublin 6'
-		},
+		process: ['Brief', 'Site measure', 'Specification', 'Production', 'Delivery & installation'],
+		deliverables: ['Storage brief', 'Door and finish direction', 'Interior configuration', 'Installation coordination'],
+		relatedMaterials: ['wood-veneers', 'painted-fronts', 'glass-mirrors', 'hardware-systems'],
+		gallery: [],
 		image: {
-			src: '/images/services/walk-in-closets.jpg',
-			alt: 'Boutique-style walk-in closet with central island and mirror'
+			src: '/images/generated/services/custom-wardrobes-luxury.webp',
+			alt: 'Built-in wardrobe and dressing room cabinetry with warm lighting'
 		},
 		category: 'residential'
 	},
 	{
-		id: 'living-spaces',
-		title: 'Living Joinery',
+		id: 'bathroom-furniture',
+		title: 'Bathroom Furniture',
 		description:
-			'Media walls, libraries, alcove cabinets, and window seats that bring order and warmth to the rooms you use most.',
+			'Vanity units, bathroom storage, mirror cabinets and fitted bathroom pieces that make smaller rooms feel composed.',
 		longDescription:
-			'Living joinery turns walls into architecture. Whether it is a media unit that hides cables, a library that frames a fireplace, or a window seat that conceals storage, each piece is built to fit the room exactly.',
-		features: [
-			'Media walls with concealed cable management',
-			'Alcove shelving and window seats',
-			'Bookshelves and display units'
-		],
-		process: [
-			'Room survey and function brief',
-			'Design of shelving, storage, and seating',
-			'Material and finish selection',
-			'Workshop fabrication',
-			'Scribed installation and lighting setup'
-		],
-		deliverables: [
-			'Elevation drawings and renders',
-			'Built-in joinery and shelving',
-			'Concealed storage and cable routing',
-			'Lighting integration where specified'
-		],
-		relatedMaterials: [
-			'european-oak',
-			'fumed-oak',
-			'satin-lacquer',
-			'deep-charcoal-lacquer',
-			'aged-brass'
-		],
-		gallery: [
-			{
-				src: '/images/services/living-spaces/detail-1.webp',
-				alt: 'Built-in media wall with painted cabinets and oak shelving'
-			},
-			{
-				src: '/images/services/living-spaces/detail-2.webp',
-				alt: 'Alcove library with window seat and integrated lighting'
-			},
-			{
-				src: '/images/services/living-spaces/detail-3.webp',
-				alt: 'Bookshelves scribed to period walls'
-			}
-		],
-		testimonial: {
-			quote:
-				'They understood the house before they designed the kitchen. The result respects the original rooms and works for how we live.',
-			name: 'David & Aileen K.',
-			location: 'Blackrock'
+			'Bathroom furniture needs to feel precise without becoming clinical. We focus on storage, surface, reflection and moisture-aware detailing while keeping the room calm and desirable.',
+		features: ['Vanity units', 'Bathroom storage', 'Mirror cabinets', 'Fitted bathroom pieces'],
+		process: ['Brief', 'Site measure', 'Specification', 'Production', 'Delivery & installation'],
+		deliverables: ['Bathroom storage plan', 'Finish direction', 'Mirror and surface notes', 'Installation coordination'],
+		relatedMaterials: ['painted-fronts', 'stone-worktops', 'glass-mirrors', 'hardware-systems'],
+		gallery: [],
+		image: {
+			src: tbcImage,
+			alt: 'Photo to be supplied for premium fitted bathroom furniture'
 		},
+		category: 'residential'
+	},
+	{
+		id: 'utility-laundry-rooms',
+		title: 'Utility & Laundry Rooms',
+		description:
+			'Utility units, laundry storage, tall cabinets and practical fitted storage made calm, durable and easy to use.',
+		longDescription:
+			'The most practical rooms deserve the same visual discipline as the kitchen. We make storage legible, appliances integrated and daily tasks feel less exposed.',
+		features: ['Utility units', 'Laundry storage', 'Tall cabinets', 'Practical fitted storage'],
+		process: ['Brief', 'Site measure', 'Specification', 'Production', 'Delivery & installation'],
+		deliverables: ['Utility storage plan', 'Appliance integration notes', 'Finish direction', 'Installation coordination'],
+		relatedMaterials: ['painted-fronts', 'hardware-systems', 'stone-worktops'],
+		gallery: [],
+		image: {
+			src: tbcImage,
+			alt: 'Photo to be supplied for premium utility and laundry cabinetry'
+		},
+		category: 'residential'
+	},
+	{
+		id: 'living-rooms-media-walls',
+		title: 'Living Rooms & Media Walls',
+		description:
+			'Media walls, TV units, storage walls, shelving and wall panels that make technology and storage feel architectural.',
+		longDescription:
+			'Living cabinetry should settle into the room rather than dominate it. We use fitted storage, panels, shelving and media integration to create a quieter visual field.',
+		features: ['Media walls', 'TV units', 'Storage walls', 'Shelving', 'Wall panels'],
+		process: ['Brief', 'Site measure', 'Specification', 'Production', 'Delivery & installation'],
+		deliverables: ['Elevation direction', 'Storage brief', 'Cable and equipment notes', 'Installation coordination'],
+		relatedMaterials: ['wood-veneers', 'painted-fronts', 'hardware-systems'],
+		gallery: [],
 		image: {
 			src: '/images/services/living-spaces.jpg',
-			alt: 'Built-in living room shelving and media unit with warm lighting'
+			alt: 'Fitted living room storage and media wall cabinetry'
 		},
 		category: 'residential'
 	},
-	// Commercial
 	{
-		id: 'office-fit-outs',
-		title: 'Workplaces',
+		id: 'hallway-built-in-storage',
+		title: 'Hallway & Built-in Storage',
 		description:
-			'Reception desks, boardroom tables, and breakout joinery that communicate quality before anyone sits down.',
+			'Entrance furniture, cloakroom storage, shoe storage and fitted hallway solutions that bring order before the room begins.',
 		longDescription:
-			'Workplace joinery must balance durability with atmosphere. We design reception desks, meeting tables, storage walls, and breakout kitchens that feel considered and perform under constant daily use.',
-		features: [
-			'Reception desks and boardroom tables',
-			'Breakout kitchens and storage',
-			'Acoustic and cable-management systems'
-		],
-		process: [
-			'Space planning and workplace audit',
-			'Joinery design with power and data integration',
-			'Durability and material specification',
-			'Workshop fabrication',
-			'Out-of-hours or phased installation'
-		],
-		deliverables: [
-			'Joinery layout and technical drawings',
-			'Reception, meeting, and breakout furniture',
-			'Cable management and power integration',
-			'Handover pack and aftercare schedule'
-		],
-		relatedMaterials: [
-			'white-ash',
-			'satin-lacquer',
-			'honed-quartz',
-			'deep-charcoal-lacquer',
-			'aged-brass'
-		],
-		gallery: [
-			{
-				src: '/images/services/office-fit-outs/detail-1.webp',
-				alt: 'Reception desk with integrated lighting'
-			},
-			{
-				src: '/images/services/office-fit-outs/detail-2.webp',
-				alt: 'Boardroom table seating fourteen'
-			},
-			{
-				src: '/images/services/office-fit-outs/detail-3.webp',
-				alt: 'Breakout kitchen with Fenix worktops'
-			}
-		],
-		testimonial: {
-			quote:
-				'Our customers notice the joinery before they notice the product. That is exactly what we wanted.',
-			name: 'James T.',
-			location: 'Dublin 2'
-		},
+			'Entrances carry coats, shoes, keys, bags and first impressions. We turn those practical needs into fitted storage that feels intentional rather than improvised.',
+		features: ['Hallway furniture', 'Cloakroom storage', 'Shoe storage', 'Fitted entrance solutions'],
+		process: ['Brief', 'Site measure', 'Specification', 'Production', 'Delivery & installation'],
+		deliverables: ['Entrance storage brief', 'Finish direction', 'Internal layout notes', 'Installation coordination'],
+		relatedMaterials: ['painted-fronts', 'wood-veneers', 'hardware-systems'],
+		gallery: [],
 		image: {
-			src: '/images/generated/services/workplaces-luxury.webp',
-			alt: 'Modern office reception desk and boardroom joinery'
+			src: tbcImage,
+			alt: 'Photo to be supplied for premium hallway and built-in storage'
 		},
-		category: 'commercial'
+		category: 'residential'
 	},
 	{
-		id: 'retail-interiors',
-		title: 'Retail Spaces',
+		id: 'commercial-trade-packages',
+		title: 'Commercial & Trade Packages',
 		description:
-			'Display shelving, counters, and fitting-room joinery that let the merchandise speak.',
+			'Cabinetry packages for residential developments, offices, retail, hospitality, clinics and salons.',
 		longDescription:
-			'Retail joinery needs to be flexible, durable, and visually quiet. We design display systems, counters, and fitting rooms that adapt to seasonal changes and withstand constant customer traffic.',
+			'Trade and commercial work needs clear specification, consistent packages and calm coordination. We help turn drawings, plans or a brief into cabinetry that can be priced, produced and installed with confidence.',
 		features: [
-			'Display shelving and counters',
-			'Fitting rooms and mirrors',
-			'Seasonal reconfiguration'
+			'Residential developments',
+			'Offices',
+			'Retail',
+			'Hospitality',
+			'Clinics and salons'
 		],
-		process: [
-			'Brand and merchandising brief',
-			'Space planning and customer flow design',
-			'Prototype sampling for key pieces',
-			'Batch fabrication and finishing',
-			'Installation during closed hours'
-		],
-		deliverables: [
-			'Retail layout and fixture drawings',
-			'Display shelving, counters, and mirrors',
-			'Fitting-room joinery',
-			'Reconfiguration guide for seasonal change'
-		],
-		relatedMaterials: [
-			'european-oak',
-			'aged-brass',
-			'honed-quartz',
-			'satin-lacquer',
-			'crown-walnut-veneer'
-		],
-		gallery: [
-			{
-				src: '/images/services/retail-interiors/detail-1.webp',
-				alt: 'Display shelving with brass rods and seasonal products'
-			},
-			{
-				src: '/images/services/retail-interiors/detail-2.webp',
-				alt: 'Sales counter in oak and micro-cement'
-			},
-			{
-				src: '/images/services/retail-interiors/detail-3.webp',
-				alt: 'Fitting-room doors with full-height mirrors'
-			}
-		],
-		testimonial: {
-			quote:
-				'Our customers notice the joinery before they notice the product. That is exactly what we wanted.',
-			name: 'James T.',
-			location: 'Dublin 2'
-		},
+		process: ['Brief', 'Drawings review', 'Specification', 'Production', 'Delivery & installation'],
+		deliverables: ['Cabinetry package brief', 'Finish direction', 'Project scale notes', 'Trade enquiry route'],
+		relatedMaterials: ['painted-fronts', 'wood-veneers', 'stone-worktops', 'hardware-systems'],
+		gallery: [],
 		image: {
-			src: '/images/services/retail-interiors.jpg',
-			alt: 'Retail interior with bespoke display shelving and counter'
-		},
-		category: 'commercial'
-	},
-	{
-		id: 'hospitality',
-		title: 'Hotels & Restaurants',
-		description:
-			'Bars, banquettes, wardrobes, and reception joinery built to endure daily use without losing character.',
-		longDescription:
-			'Hospitality spaces demand joinery that looks refined after years of service. We design bars, banquette seating, reception desks, and guest-room furniture to meet fire, durability, and cleaning standards without sacrificing warmth.',
-		features: [
-			'Banquette seating and bar joinery',
-			'Hotel wardrobes and headboards',
-			'Reception and lobby furniture'
-		],
-		process: [
-			'Operational brief and compliance review',
-			'Concept design and sample prototyping',
-			'Fire-retardant and durability specification',
-			'Workshop fabrication in batches',
-			'Overnight or phased installation'
-		],
-		deliverables: [
-			'Joinery package drawings',
-			'Bar, banquette, and reception pieces',
-			'Guest-room wardrobes and headboards',
-			'Compliance and care documentation'
-		],
-		relatedMaterials: [
-			'american-walnut',
-			'crown-walnut-veneer',
-			'aged-brass',
-			'deep-charcoal-lacquer',
-			'honed-quartz'
-		],
-		gallery: [
-			{
-				src: '/images/services/hospitality/detail-1.webp',
-				alt: 'Hotel reception desk with brass inlay'
-			},
-			{
-				src: '/images/services/hospitality/detail-2.webp',
-				alt: 'Banquette seating with walnut frames'
-			},
-			{
-				src: '/images/services/hospitality/detail-3.webp',
-				alt: 'Hotel wardrobe with integrated lighting'
-			}
-		],
-		testimonial: {
-			quote:
-				'Our customers notice the joinery before they notice the product. That is exactly what we wanted.',
-			name: 'James T.',
-			location: 'Dublin 2'
-		},
-		image: {
-			src: '/images/services/hospitality.jpg',
-			alt: 'Hospitality interior with banquette seating and bar joinery'
-		},
-		category: 'commercial'
-	},
-	{
-		id: 'custom-solutions',
-		title: 'One-Off Commissions',
-		description:
-			'Unusual briefs and singular pieces. If the drawing exists, we can find the right way to make it.',
-		longDescription:
-			'Some projects do not fit a category. We work with architects, designers, and private clients on singular pieces — sculptural tables, experimental storage, heritage repairs, and bespoke installations that require inventive making.',
-		features: [
-			'Singular pieces and unusual briefs',
-			'Prototype and concept development',
-			'Collaboration with architects and designers'
-		],
-		process: [
-			'Brief exploration and feasibility study',
-			'Sketch design and prototype options',
-			'Material research and sample making',
-			'Full-scale fabrication',
-			'Delivery and installation'
-		],
-		deliverables: [
-			'Sketches, renders, or prototypes',
-			'Bespoke finished piece or installation',
-			'Fitting and adjustment on site',
-			'Documentation for future reference'
-		],
-		relatedMaterials: [
-			'american-walnut',
-			'european-oak',
-			'fumed-oak',
-			'aged-brass',
-			'honed-quartz'
-		],
-		gallery: [
-			{
-				src: '/images/services/custom-solutions/detail-1.webp',
-				alt: 'Unique sculptural table in walnut and brass'
-			},
-			{
-				src: '/images/services/custom-solutions/detail-2.webp',
-				alt: 'Bespoke storage piece in an architectural setting'
-			},
-			{
-				src: '/images/services/custom-solutions/detail-3.webp',
-				alt: 'Detail of an unusual joinery commission'
-			}
-		],
-		testimonial: {
-			quote:
-				'Our customers notice the joinery before they notice the product. That is exactly what we wanted.',
-			name: 'James T.',
-			location: 'Dublin 2'
-		},
-		image: {
-			src: '/images/services/custom-solutions.jpg',
-			alt: 'Unique custom furniture piece in a contemporary interior'
+			src: tbcImage,
+			alt: 'Photo to be supplied for commercial and trade cabinetry packages'
 		},
 		category: 'commercial'
 	}

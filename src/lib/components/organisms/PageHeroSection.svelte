@@ -121,15 +121,15 @@
 			class="mx-auto grid max-w-[1440px] grid-cols-3 divide-x divide-text-primary/10 px-12 lg:px-16"
 		>
 			<span class="py-4 font-sans text-[10px] uppercase tracking-[0.18em] text-text-secondary">
-				Dublin workshop
+				Site measure in Ireland
 			</span>
 			<span class="px-8 py-4 font-sans text-[10px] uppercase tracking-[0.18em] text-text-secondary">
-				Measured interiors
+				Clear specification
 			</span>
 			<span
 				class="px-8 py-4 text-right font-sans text-[10px] uppercase tracking-[0.18em] text-text-secondary"
 			>
-				Built in Ireland
+				Coordinated installation
 			</span>
 		</div>
 	</div>

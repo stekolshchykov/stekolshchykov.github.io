@@ -5,15 +5,15 @@ const siteUrl = env.PUBLIC_SITE_URL?.replace(/\/$/, '') || 'https://arasliving.i
 
 export const site: SiteConfig = {
 	brand: 'Áras Living',
-	tagline: 'Furniture, measured in millimetres.',
-	subTagline: 'Bespoke wardrobes, kitchens, and interior joinery from our Dublin workshop.',
+	tagline: 'Fitted cabinetry for Irish homes and commercial spaces.',
+	subTagline: 'Designed with precision and managed from brief to installation.',
 	ctaLabel: 'Discuss a Project',
 	footerCta: 'Begin your project.',
-	companyLegalName: 'Áras Living Furniture & Interiors Ltd',
-	address: 'Unit 4, Grand Canal Street Lower, Dublin 2, D02 A342, Ireland',
-	email: 'hello@arasliving.ie',
-	phone: '+353 1 234 5678',
-	whatsapp: '+353 1 234 5678',
+	companyLegalName: 'Legal company name TBC',
+	address: '',
+	email: 'arasliving26@gmail.com',
+	phone: '',
+	whatsapp: '',
 	businessHours: {
 		monday: '09:00 – 17:30',
 		tuesday: '09:00 – 17:30',
@@ -23,75 +23,59 @@ export const site: SiteConfig = {
 		saturday: 'By appointment',
 		sunday: 'Closed'
 	},
-	social: [
-		{
-			platform: 'Instagram',
-			url: 'https://instagram.com/arasliving',
-			handle: '@arasliving'
-		},
-		{
-			platform: 'Pinterest',
-			url: 'https://pinterest.com/arasliving',
-			handle: '@arasliving'
-		},
-		{
-			platform: 'LinkedIn',
-			url: 'https://linkedin.com/company/aras-living',
-			handle: 'Áras Living'
-		}
-	],
+	social: [],
 	seo: {
 		titleTemplate: '%s — Áras Living',
-		defaultTitle: 'Áras Living — Bespoke Furniture & Interiors, Dublin',
+		defaultTitle: 'Áras Living — Fitted Cabinetry for Irish Homes and Commercial Spaces',
 		defaultDescription:
-			'Wardrobes, kitchens, and interior joinery designed around Irish homes and built in our Dublin workshop.',
+			'Fitted cabinetry, kitchens, wardrobes and furniture packages for private homes, trade professionals and residential developments across Ireland.',
 		defaultImage: '/og-default.jpg',
 		siteUrl,
-		twitterHandle: '@arasliving'
+		twitterHandle: ''
 	}
 };
 
 export const whyUsItems: WhyUsItem[] = [
 	{
 		id: 'bespoke-design',
-		title: 'Made to Measure',
+		title: 'Site Measure in Ireland',
 		description:
-			'Every piece is drawn around your room, your habits, and the light. No standard sizes. No concessions.',
+			'Rooms are measured carefully before specification, so cabinetry can be shaped around real walls, light and movement.',
 		icon: 'ruler'
 	},
 	{
-		id: 'irish-craft',
-		title: 'Dublin Workshop',
+		id: 'clear-specification',
+		title: 'Clear Specification',
 		description:
-			'Built in our Dublin workshop by makers who understand timber, tolerance, and the weight of a well-made joint.',
-		icon: 'hammer'
-	},
-	{
-		id: 'premium-materials',
-		title: 'Materials First',
-		description:
-			'Solid hardwoods, curated veneers, and European hardware chosen for how they age, not just how they look.',
-		icon: 'gem'
-	},
-	{
-		id: 'full-service',
-		title: 'One Studio',
-		description:
-			'From first drawing to final installation, the same team designs, builds, and sets every piece in place.',
+			'Layouts, finishes, internal storage and hardware are clarified before production begins.',
 		icon: 'clipboard-list'
 	},
 	{
-		id: 'quiet-luxury',
-		title: 'Quiet Luxury',
+		id: 'premium-materials',
+		title: 'Materials with Mood',
 		description:
-			'Understated detailing, refined proportions, and finishes that settle into a room over decades.',
+			'Painted fronts, warm wood finishes, worktops, glass and hardware are chosen for how the room should feel.',
+		icon: 'gem'
+	},
+	{
+		id: 'coordinated-install',
+		title: 'Coordinated Installation',
+		description:
+			'Delivery and installation are coordinated in Ireland through the Áras Living team and trusted local fitters.',
+		icon: 'square-check'
+	},
+	{
+		id: 'across-ireland',
+		title: 'Across Ireland',
+		description:
+			'Private homes, commercial interiors and residential developments can be discussed across Ireland.',
 		icon: 'sparkles'
 	},
 	{
-		id: 'guaranteed-fit',
-		title: 'Precision Fit',
+		id: 'export-ready-production',
+		title: 'Export-Ready Production',
 		description:
-			'Site surveys and meticulous templating ensure every unit sits exactly — even in rooms that refuse straight lines.',
-		icon: 'square-check'
+			'Cabinetry packages are prepared from approved specifications so the process stays controlled and legible.',
+		icon: 'hammer'
 	}
 ];

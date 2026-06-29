@@ -40,6 +40,33 @@
 		{ label: '02', value: 'Compare timber, lacquer, stone, and hardware in daylight' },
 		{ label: '03', value: 'Leave with a practical shortlist for your quote' }
 	];
+
+	const internalSolutions = [
+		{
+			title: 'Larders & Workstations',
+			text: 'Tall storage, breakfast spaces and hidden work zones that make daily routines feel composed.'
+		},
+		{
+			title: 'Drawers & Inserts',
+			text: 'Cutlery, utensils, pans and small objects held in a way that feels calm each time a drawer opens.'
+		},
+		{
+			title: 'Clever Storage',
+			text: 'Corners, pull-outs, tall units and awkward spaces resolved before they become visual noise.'
+		},
+		{
+			title: 'Wardrobe Interiors',
+			text: 'Hanging, drawers, shoes, mirrors and lighting considered as part of the room experience.'
+		},
+		{
+			title: 'Integrated Lighting',
+			text: 'Soft internal light for shelves, wardrobes and display details where it adds function and atmosphere.'
+		},
+		{
+			title: 'Seating & Integrated Details',
+			text: 'Benches, edges, handles, glass and small details that make fitted cabinetry feel effortless.'
+		}
+	];
 </script>
 
 <SeoHead
@@ -88,7 +115,7 @@
 	<div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
 		{#each filteredMaterials as material, i}
 			<MagneticCard intensity={0.1} revealDelay={(i % 6) * 70}>
-				<a href="/en/materials/{material.id}/" class="group block bg-bg-secondary">
+				<a href="/en/materials/" class="group block bg-bg-secondary">
 					<div class="image-warm-overlay relative aspect-square overflow-hidden bg-bg-primary">
 						<img
 							src={imageWithFallback(
@@ -123,6 +150,36 @@
 		statement="Select up to four materials to request samples or discuss on your project."
 	/>
 	<MaterialPaletteBuilder materials={paletteMaterials} />
+</Section>
+
+<Section>
+	<SectionHeader
+		eyebrow="Internal Solutions"
+		headline="Storage, movement and small details that make cabinetry feel effortless."
+		statement="Inspired by how a room is used every day, internal solutions are presented as part of the premium experience rather than a technical catalogue."
+		size="large"
+	/>
+	<div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+		{#each internalSolutions as item, i}
+			<div
+				class="luxury-corners group grid min-h-[260px] overflow-hidden border border-text-primary/10 bg-bg-secondary transition-all duration-500 hover:-translate-y-1 hover:border-accent/45"
+			>
+				<div class="image-warm-overlay relative aspect-[16/8] overflow-hidden bg-bg-primary">
+					<img
+						src="/images/placeholders/needs-photo.svg"
+						alt="Photo to be supplied for {item.title}"
+						loading="lazy"
+						class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+					/>
+				</div>
+				<div class="p-6">
+					<p class="mb-3 font-serif text-2xl text-accent">{String(i + 1).padStart(2, '0')}</p>
+					<h3 class="mb-3 font-serif text-2xl leading-tight text-text-primary">{item.title}</h3>
+					<p class="font-sans text-sm leading-relaxed text-text-secondary">{item.text}</p>
+				</div>
+			</div>
+		{/each}
+	</div>
 </Section>
 
 <Section border="y" container="none" class="relative overflow-hidden">
@@ -165,8 +222,8 @@
 				<Button variant="primary" size="lg" href="/en/contact/" class="w-full justify-center">
 					Book material consultation
 				</Button>
-				<Button variant="secondary" size="lg" href="/en/showroom/" class="w-full justify-center">
-					Visit the showroom
+				<Button variant="secondary" size="lg" href="/en/contact/" class="w-full justify-center">
+					Discuss internal solutions
 				</Button>
 			</div>
 		</div>
@@ -197,7 +254,7 @@
 				<div class="grid grid-cols-1 gap-3 2xl:grid-cols-2">
 					{#each consultationMaterials as material}
 						<a
-							href="/en/materials/{material.id}/"
+							href="/en/materials/"
 							class="group grid min-w-0 grid-cols-[64px_minmax(0,1fr)] items-center gap-3 border border-text-primary/12 bg-bg-primary/72 p-3 backdrop-blur-sm transition-colors hover:border-accent/70 sm:grid-cols-[72px_minmax(0,1fr)]"
 						>
 							<img

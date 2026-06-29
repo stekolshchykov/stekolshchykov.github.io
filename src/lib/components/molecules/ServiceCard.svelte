@@ -22,7 +22,7 @@
 	}: Props = $props();
 
 	const resolvedLayout = $derived(layout ?? (variant === 'horizontal' ? 'editorial' : variant));
-	const resolvedHref = $derived(href ?? `/en/services/${service.id}/`);
+	const resolvedHref = $derived(href ?? '/en/services/');
 </script>
 
 {#if variant === 'featured'}
@@ -57,7 +57,7 @@
 				{service.description}
 			</p>
 			<span class="inline-flex items-center gap-2 font-sans text-xs uppercase tracking-widest text-text-primary transition-colors group-hover:text-accent">
-				Explore Service
+				View on Services
 				<ArrowUpRight class="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
 			</span>
 		</div>
@@ -101,7 +101,7 @@
 				href={resolvedHref}
 				class="inline-flex items-center gap-2 self-start font-sans text-xs uppercase tracking-widest text-text-primary transition-colors hover:text-accent"
 			>
-				Explore Service
+				View on Services
 				<ArrowUpRight class="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
 			</a>
 		</div>

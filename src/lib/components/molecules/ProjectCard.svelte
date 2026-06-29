@@ -14,7 +14,7 @@
 </script>
 
 <a
-	href="/en/projects/{project.slug}/"
+	href="/en/projects/"
 	class={cx(
 		'group block overflow-hidden bg-bg-secondary',
 		featured

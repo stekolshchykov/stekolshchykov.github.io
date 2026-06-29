@@ -38,40 +38,39 @@
 <Section tone="secondary" container="content">
 	<div class="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
 		<SectionHeader
-			eyebrow="How to read the work"
-			headline="Each project shows a different kind of constraint."
-			statement="The portfolio is arranged to show how Áras Living handles real rooms: awkward ceiling lines, period proportions, heavy daily use, commercial deadlines, and material palettes that need to age quietly."
+			eyebrow="How to read the examples"
+			headline="Reference imagery, not completed Áras Living projects."
+			statement="These examples show the type of cabinetry language, material mood and room categories Áras Living can shape. Final photography and permissions will be confirmed separately before launch."
 			class="mb-0"
 		/>
 		<div class="grid gap-6 md:grid-cols-3">
 			<div class="border-t border-text-primary/10 pt-5">
 				<p class="mb-3 font-serif text-2xl text-accent">01</p>
 				<h2 class="mb-3 font-sans text-xs uppercase tracking-[0.15em] text-text-primary">
-					The room
+					The category
 				</h2>
 				<p class="font-sans text-sm leading-relaxed text-text-secondary">
-					Look at how the furniture meets existing architecture: chimney breasts, skirting,
-					windows, floor lines, and circulation.
+					Kitchen, wardrobe, fitted furniture and commercial examples are separated so visitors
+					can quickly understand the range.
 				</p>
 			</div>
 			<div class="border-t border-text-primary/10 pt-5">
 				<p class="mb-3 font-serif text-2xl text-accent">02</p>
 				<h2 class="mb-3 font-sans text-xs uppercase tracking-[0.15em] text-text-primary">
-					The material
+					The mood
 				</h2>
 				<p class="font-sans text-sm leading-relaxed text-text-secondary">
-					Each case study records the timber, lacquer, stone, hardware, and finish decisions that
-					create the final atmosphere.
+					Each example is there to communicate calm lines, warm finishes, storage logic and the
+					feeling of a completed room.
 				</p>
 			</div>
 			<div class="border-t border-text-primary/10 pt-5">
 				<p class="mb-3 font-serif text-2xl text-accent">03</p>
 				<h2 class="mb-3 font-sans text-xs uppercase tracking-[0.15em] text-text-primary">
-					The outcome
+					The next step
 				</h2>
 				<p class="font-sans text-sm leading-relaxed text-text-secondary">
-					The strongest projects are not only photographed well. They change how the room works
-					after handover.
+					When approved photography is supplied, examples can be expanded into richer galleries.
 				</p>
 			</div>
 		</div>
@@ -86,24 +85,20 @@
 	<div class="grid gap-10 md:grid-cols-2">
 		<div>
 			<h2 class="mb-4 font-sans text-xs uppercase tracking-[0.15em] text-accent">
-				Residential work
+				Home cabinetry
 			</h2>
 			<p class="font-sans leading-relaxed text-text-secondary">
-				Residential projects usually begin with a room that is almost working: a wardrobe with wasted
-				height, a kitchen that interrupts family routine, or a living room where storage has become
-				visual noise. We use the case studies to show how fitted furniture can make those rooms calmer
-				without making them feel over-designed.
+				Home examples focus on the spaces clients ask about most often: kitchens, wardrobes,
+				bathrooms, utilities, living rooms, media walls and hallway storage.
 			</p>
 		</div>
 		<div>
 			<h2 class="mb-4 font-sans text-xs uppercase tracking-[0.15em] text-accent">
-				Commercial work
+				Commercial spaces
 			</h2>
 			<p class="font-sans leading-relaxed text-text-secondary">
-				Commercial projects are judged by a different pressure: footfall, programme, maintenance,
-				brand consistency, and the quality of the first impression. Reception desks, retail fittings,
-				workplaces, and hospitality joinery are designed to be handled every day and still feel
-				considered.
+				Commercial examples show how cabinetry can support residential developments, offices,
+				retail, hospitality and professional rooms without losing a premium visual standard.
 			</p>
 		</div>
 	</div>

@@ -4,25 +4,34 @@
 	import gsap from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 	import { services as allServices } from '$lib/data/services';
-	import type { Service } from '$lib/types/furniture';
 	import Button from '$lib/components/atoms/Button.svelte';
 	import Section from '$lib/components/atoms/Section.svelte';
 	import SectionHeader from '$lib/components/atoms/SectionHeader.svelte';
-	import ServiceCard from '$lib/components/molecules/ServiceCard.svelte';
 	import MagneticCard from '$lib/components/molecules/MagneticCard.svelte';
 	import SplitTextReveal from '$lib/components/molecules/SplitTextReveal.svelte';
+	import { ArrowUpRight } from 'lucide-svelte';
+
+	type PreviewService = (typeof allServices)[number];
 
 	interface Props {
-		services?: Service[];
+		services?: typeof allServices;
 	}
 
 	let { services = allServices }: Props = $props();
 	let section = $state<HTMLElement | undefined>(undefined);
 
-	const residential = $derived(services.find((s) => s.category === 'residential'));
-	const commercial = $derived(services.find((s) => s.category === 'commercial'));
-	const secondary = $derived(
-		services.filter((s) => s !== residential && s !== commercial).slice(0, 6)
+	const preview = $derived(
+		[
+			services.find((s) => s.id === 'kitchens'),
+			services.find((s) => s.id === 'wardrobes-dressing-rooms'),
+			{
+				...services.find((s) => s.id === 'living-rooms-media-walls')!,
+				title: 'Fitted Furniture',
+				description:
+					'Bathroom furniture, utility units, storage, wall units and considered fitted pieces.'
+			},
+			services.find((s) => s.id === 'commercial-trade-packages')
+		].filter((service): service is PreviewService => Boolean(service))
 	);
 
 	onMount(() => {
@@ -59,47 +68,42 @@
 		{/snippet}
 	</SectionHeader>
 
-	<div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
-		{#if residential}
+	<div class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4 md:gap-6">
+		{#each preview as service}
 			<div class="services-fade">
 				<MagneticCard intensity={0.12}>
-					<ServiceCard
-						service={residential}
-						variant="featured"
-						href="/en/services/{residential.id}/"
-					/>
-				</MagneticCard>
-			</div>
-		{/if}
-		{#if commercial}
-			<div class="services-fade">
-				<MagneticCard intensity={0.12}>
-					<ServiceCard
-						service={commercial}
-						variant="featured"
-						href="/en/services/{commercial.id}/"
-					/>
-				</MagneticCard>
-			</div>
-		{/if}
-	</div>
-
-	{#if secondary.length}
-		<div class="services-fade mt-12 border-t border-text-primary/10 pt-8 md:mt-16">
-			<p class="mb-6 font-sans text-xs font-medium uppercase tracking-[0.2em] text-text-secondary">
-				{$_('home.services_cta')}
-			</p>
-			<div class="grid gap-x-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
-				{#each secondary as service}
 					<a
-						href="/en/services/{service.id}/"
-						class="group flex items-center justify-between border-b border-text-primary/10 pb-4 font-sans text-text-primary transition-colors hover:text-accent"
+						href={service.id === 'commercial-trade-packages' ? '/en/trade/' : '/en/services/'}
+						class="luxury-corners group relative grid min-h-[460px] overflow-hidden border border-text-primary/8 bg-bg-secondary transition-all duration-500 hover:-translate-y-1 hover:border-accent/45"
 					>
-						<span>{service.title}</span>
-						<span class="h-px w-0 bg-accent transition-all duration-300 group-hover:w-6"></span>
+						<div class="luxury-surface image-warm-overlay relative aspect-[4/3] overflow-hidden bg-bg-primary">
+							<img
+								src={service.image.src}
+								alt={service.image.alt}
+								loading="lazy"
+								class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+							/>
+						</div>
+						<div class="grid content-between gap-8 p-6">
+							<div>
+								<p class="mb-3 font-sans text-[11px] uppercase tracking-[0.16em] text-accent">
+									{service.id === 'commercial-trade-packages' ? 'Trade' : 'Residential'}
+								</p>
+								<h3 class="mb-3 font-serif text-2xl leading-tight text-text-primary">
+									{service.title}
+								</h3>
+								<p class="font-sans text-sm leading-relaxed text-text-secondary">
+									{service.description}
+								</p>
+							</div>
+							<span class="inline-flex items-center gap-2 font-sans text-xs uppercase tracking-widest text-text-primary transition-colors group-hover:text-accent">
+								{service.id === 'commercial-trade-packages' ? 'View Trade' : 'View Services'}
+								<ArrowUpRight class="h-3.5 w-3.5" />
+							</span>
+						</div>
 					</a>
-				{/each}
+				</MagneticCard>
 			</div>
-		</div>
-	{/if}
+		{/each}
+	</div>
 </Section>

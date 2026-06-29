@@ -21,21 +21,27 @@
 			value: site.email,
 			href: `mailto:${site.email}`
 		},
-		{
+		site.phone
+			? {
 			label: 'contact.phone_label',
 			value: site.phone,
 			href: `tel:${site.phone.replace(/\s/g, '')}`
-		},
-		{
+				}
+			: undefined,
+		site.whatsapp
+			? {
 			label: 'contact.whatsapp_label',
 			value: site.whatsapp,
 			href: `https://wa.me/${site.whatsapp.replace(/\D/g, '')}`
-		},
-		{
+				}
+			: undefined,
+		site.address
+			? {
 			label: 'contact.address_label',
 			value: site.address
-		}
-	];
+				}
+			: undefined
+	].filter((item): item is { label: string; value: string; href?: string } => Boolean(item));
 
 	onMount(() => {
 		const ctx = gsap.context(() => {

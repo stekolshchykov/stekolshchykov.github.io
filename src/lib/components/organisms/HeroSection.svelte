@@ -22,9 +22,9 @@
 	}: Props = $props();
 
 	const proofItems = [
-		{ label: 'Recent project', value: 'Dublin Bay Dressing Room' },
-		{ label: 'Featured material', value: 'American walnut + aged brass' },
-		{ label: 'Made in Ireland', value: 'Measured, built, installed' }
+		{ label: 'Kitchens', value: 'Fitted around the room and daily use' },
+		{ label: 'Wardrobes', value: 'Storage shaped around proportion and calm' },
+		{ label: 'Commercial spaces', value: 'Clear packages for professional interiors' }
 	];
 </script>
 
@@ -74,10 +74,10 @@
 						{ctaLabel ?? $_('home.hero_cta')}
 					</Button>
 					<a
-						href="/en/projects/penthouse-wardrobe-suite/"
+						href="/en/projects/"
 						class="group hidden items-center gap-3 font-sans text-xs font-medium uppercase tracking-[0.16em] text-text-primary/80 transition-colors hover:text-accent sm:inline-flex"
 					>
-						View flagship project
+						View examples
 						<span
 							class="h-px w-8 bg-text-primary/40 transition-all duration-300 group-hover:w-12 group-hover:bg-accent"
 							aria-hidden="true"
@@ -94,22 +94,18 @@
 		<div class="space-y-5">
 			{#each proofItems as item}
 				<a
-					href={item.label === 'Recent project'
-						? '/en/projects/penthouse-wardrobe-suite/'
-						: item.label === 'Featured material'
-							? '/en/materials/american-walnut/'
-							: '/en/about/'}
+					href={item.label === 'Commercial spaces' ? '/en/trade/' : '/en/services/'}
 					class="luxury-corners group grid grid-cols-[64px_minmax(0,1fr)_28px] items-center gap-4 border-b border-text-primary/12 p-3 pb-4 transition-colors hover:border-accent/45"
 				>
 					<span
 						class="luxury-surface block aspect-square overflow-hidden border border-text-primary/15 bg-bg-secondary"
 					>
 						<img
-							src={item.label === 'Featured material'
-								? '/images/generated/material-detail.webp'
-								: item.label === 'Recent project'
-									? '/images/generated/hero-wardrobe.webp'
-									: '/images/generated/workshop-makers.webp'}
+							src={item.label === 'Kitchens'
+								? '/images/services/bespoke-kitchens.jpg'
+								: item.label === 'Wardrobes'
+									? '/images/generated/services/custom-wardrobes-luxury.webp'
+									: '/images/placeholders/needs-photo.svg'}
 							alt=""
 							class="h-full w-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105"
 						/>

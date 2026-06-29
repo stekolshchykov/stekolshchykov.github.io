@@ -2,8 +2,6 @@
 	import { _ } from 'svelte-i18n';
 	import { site } from '$lib/data/site';
 	import { services } from '$lib/data/services';
-	import { insights } from '$lib/data/insights';
-	import { imageWithFallback } from '$lib/utils/imageFallback';
 	import Heading from '$lib/components/atoms/Heading.svelte';
 	import Text from '$lib/components/atoms/Text.svelte';
 	import Divider from '$lib/components/atoms/Divider.svelte';
@@ -14,29 +12,26 @@
 
 	const navLinks = [
 		{ href: '/en/', label: 'nav.home' },
-		{ href: '/en/about/', label: 'nav.about' },
 		{ href: '/en/services/', label: 'nav.services' },
-		{ href: '/en/projects/', label: 'nav.projects' },
+		{ href: '/en/materials/', label: 'nav.materials' },
+		{ href: '/en/trade/', label: 'nav.trade' },
+		{ href: '/en/projects/', label: 'nav.examples' },
 		{ href: '/en/contact/', label: 'nav.contact' }
 	];
 
 	const exploreLinks = [
-		{ href: '/en/materials/', label: 'nav.materials' },
 		{ href: '/en/process/', label: 'nav.process' },
-		{ href: '/en/showroom/', label: 'nav.showroom' },
-		{ href: '/en/commercial/', label: 'nav.commercial' },
-		{ href: '/en/insights/', label: 'nav.insights' },
-		{ href: '/en/faq/', label: 'nav.faq' }
+		{ href: '/en/faq/', label: 'nav.faq' },
+		{ href: '/en/privacy/', label: 'footer.privacy' },
+		{ href: '/en/cookies/', label: 'footer.cookies' }
 	];
 
 	const legalLinks = [
 		{ href: '/en/privacy/', label: 'footer.privacy' },
-		{ href: '/en/terms/', label: 'footer.terms' },
 		{ href: '/en/cookies/', label: 'footer.cookies' }
 	];
 
-	const serviceLinks = services.slice(0, 6);
-	const latestInsight = insights[0];
+	const serviceLinks = services.slice(0, 7);
 </script>
 
 <footer class="border-t border-text-secondary/20 bg-bg-secondary">
@@ -47,7 +42,8 @@
 					{$_('footer.cta_title')}
 				</Heading>
 				<Text variant="body-lg" class="max-w-md text-text-secondary">
-					{site.tagline}
+						Fitted cabinetry across Ireland, shaped around the room, the brief and the way the
+						space should feel.
 				</Text>
 				<Button variant="primary" size="md" href="/en/contact/">
 					{$_('footer.cta_button')}
@@ -151,50 +147,12 @@
 			</div>
 		</div>
 
-		{#if latestInsight}
-			<Divider class="my-16" />
-			<div class="grid gap-10 lg:grid-cols-2">
-				<div class="space-y-4">
-					<Heading
-						as="h3"
-						variant="sans"
-						class="text-xs uppercase tracking-[0.12em] text-text-secondary"
-					>
-						{$_('footer.journal_title')}
-					</Heading>
-					<a href="/en/insights/{latestInsight.slug}/" class="group block max-w-xl">
-						<h4
-							class="mb-2 font-serif text-2xl text-text-primary transition-colors group-hover:text-accent md:text-3xl"
-						>
-							{latestInsight.title}
-						</h4>
-						<p class="font-sans text-sm leading-relaxed text-text-secondary">
-							{latestInsight.excerpt}
-						</p>
-					</a>
-				</div>
-				<div
-					class="relative aspect-[16/9] overflow-hidden bg-bg-primary lg:aspect-auto lg:min-h-[240px]"
-				>
-					<a href="/en/insights/{latestInsight.slug}/" class="block h-full w-full">
-						<img
-							src={imageWithFallback(latestInsight.heroImage.src, '/images/hero-poster.jpg')}
-							alt={latestInsight.heroImage.alt}
-							loading="lazy"
-							class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-						/>
-					</a>
-				</div>
-			</div>
-		{/if}
-
 		<Divider class="my-16" />
 
 		<div class="flex flex-col items-start justify-between gap-8 xl:flex-row xl:items-center">
 			<Text variant="caption" class="text-center text-text-secondary md:text-left">
 				© {currentYear}
-				{site.companyLegalName} trading as {site.brand}. {$_('footer.rights')}
-				<span class="md:ml-1">Handcrafted in Ireland.</span>
+				{site.brand}. {$_('footer.rights')}
 			</Text>
 
 			<div class="flex w-full flex-col gap-5 sm:flex-row sm:items-center sm:justify-between xl:w-auto xl:justify-end">

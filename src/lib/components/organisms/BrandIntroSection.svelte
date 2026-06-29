@@ -47,7 +47,7 @@
 				{$_('home.intro_body')}
 			</Text>
 			<div class="brand-fade pt-2">
-				<Button variant="secondary" href="/en/about/">
+				<Button variant="secondary" href="/en/process/">
 					{$_('home.intro_cta')}
 				</Button>
 			</div>
@@ -55,8 +55,8 @@
 		<div class="brand-fade space-y-8">
 			<div class="relative">
 				<Image
-					src="/images/generated/workshop-makers.webp"
-					alt="Áras Living makers reviewing walnut joinery and brass details in the workshop"
+					src="/images/generated/material-detail.webp"
+					alt="Walnut, brass, stone and lacquer samples arranged for fitted cabinetry specification"
 					class="aspect-[4/5] w-full object-cover"
 					objectPosition="center"
 				/>

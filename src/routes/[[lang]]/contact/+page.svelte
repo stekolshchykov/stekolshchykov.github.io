@@ -3,24 +3,30 @@
 	import { site } from '$lib/data/site';
 
 	import Section from '$lib/components/atoms/Section.svelte';
-	import Heading from '$lib/components/atoms/Heading.svelte';
 	import SectionHeader from '$lib/components/atoms/SectionHeader.svelte';
+	import Input from '$lib/components/atoms/Input.svelte';
+	import Textarea from '$lib/components/atoms/Textarea.svelte';
+	import Button from '$lib/components/atoms/Button.svelte';
 	import SeoHead from '$lib/components/molecules/SeoHead.svelte';
 	import PageHeroSection from '$lib/components/organisms/PageHeroSection.svelte';
 	import ContactInfoSection from '$lib/components/organisms/ContactInfoSection.svelte';
-	import MapEmbed from '$lib/components/organisms/MapEmbed.svelte';
 
-	const { businessHours } = site;
+	let name = $state('');
+	let email = $state('');
+	let phone = $state('');
+	let projectType = $state('');
+	let location = $state('');
+	let timeline = $state('');
+	let budget = $state('');
+	let message = $state('');
 
-	const days = [
-		{ key: 'monday', label: 'Monday' },
-		{ key: 'tuesday', label: 'Tuesday' },
-		{ key: 'wednesday', label: 'Wednesday' },
-		{ key: 'thursday', label: 'Thursday' },
-		{ key: 'friday', label: 'Friday' },
-		{ key: 'saturday', label: 'Saturday' },
-		{ key: 'sunday', label: 'Sunday' }
-	] as const;
+	function handleSubmit(e: SubmitEvent) {
+		e.preventDefault();
+		const body = encodeURIComponent(
+			`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nProject type: ${projectType}\nLocation: ${location}\nTimeline: ${timeline}\nBudget: ${budget}\n\nMessage:\n${message}`
+		);
+		window.location.href = `mailto:${site.email}?subject=Project enquiry&body=${body}`;
+	}
 </script>
 
 <svelte:head>
@@ -52,6 +58,34 @@
 
 <Section>
 	<ContactInfoSection />
+</Section>
+
+<Section tone="secondary">
+	<div class="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+		<SectionHeader
+			eyebrow="Project Enquiry"
+			headline="Tell us what you are planning."
+			statement="Share the room, project type, location, timeline and any drawings or photos you already have. File upload will be connected with the final form endpoint; for now, send files by email after the enquiry."
+			class="mb-0"
+		/>
+		<form onsubmit={handleSubmit} class="space-y-8">
+			<div class="grid gap-6 md:grid-cols-2">
+				<Input name="name" label="Name" required bind:value={name} />
+				<Input name="email" type="email" label="Email" required bind:value={email} />
+			</div>
+			<div class="grid gap-6 md:grid-cols-2">
+				<Input name="phone" label="Phone optional" bind:value={phone} />
+				<Input name="projectType" label="Project type" bind:value={projectType} />
+			</div>
+			<div class="grid gap-6 md:grid-cols-2">
+				<Input name="location" label="Location in Ireland" bind:value={location} />
+				<Input name="timeline" label="Timeline" bind:value={timeline} />
+			</div>
+			<Input name="budget" label="Approximate budget, if you have one" bind:value={budget} />
+			<Textarea name="message" label="Message" bind:value={message} />
+			<Button variant="primary" type="submit">Discuss a Project</Button>
+		</form>
+	</div>
 </Section>
 
 <Section tone="secondary" container="content">
@@ -89,41 +123,10 @@
 					Agree the next step
 				</h2>
 				<p class="font-sans text-sm leading-relaxed text-text-secondary">
-					After the call we confirm whether a showroom visit, site survey, material consultation,
-					or commercial briefing session is the right path.
+					After the first message we confirm whether a site measure, material consultation, trade
+					briefing session or further specification work is the right path.
 				</p>
 			</div>
 		</div>
 	</div>
 </Section>
-
-<Section tone="secondary">
-	<div class="grid gap-12 lg:grid-cols-2">
-		<div>
-			<Heading as="h2" variant="serif" class="text-2xl font-light text-text-primary md:text-3xl">
-				{$_('contact.hours_label')}
-			</Heading>
-			<p class="mt-5 max-w-md font-sans leading-relaxed text-text-secondary">
-				Appointments are private and focused. We use showroom visits for materials and full-size
-				details, site surveys for measured layouts, and video calls for early commercial or remote
-				briefs before a project is formally priced. Each route ends with a clear next action.
-			</p>
-		</div>
-		<div>
-			<dl>
-				{#each days as day}
-					<div
-						class="flex justify-between gap-4 border-b border-border py-3 first:border-t md:text-right"
-					>
-						<dt class="font-sans text-xs font-medium uppercase tracking-widest text-text-secondary">
-							{day.label}
-						</dt>
-						<dd class="text-text-primary">{businessHours[day.key]}</dd>
-					</div>
-				{/each}
-			</dl>
-		</div>
-	</div>
-</Section>
-
-<MapEmbed />

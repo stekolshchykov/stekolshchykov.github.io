@@ -24,12 +24,7 @@
 		description: $_('services.meta_description'),
 		provider: {
 			'@type': 'LocalBusiness',
-			name: site.brand,
-			address: {
-				'@type': 'PostalAddress',
-				addressLocality: 'Dublin',
-				addressCountry: 'IE'
-			}
+			name: site.brand
 		},
 		areaServed: 'Ireland'
 	};

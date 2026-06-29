@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Image placeholder</title>
+  <desc id="desc">Red placeholder for a missing approved furniture photograph.</desc>
+  <rect width="1600" height="1200" fill="#b3121d"/>
+  <path d="M120 160h1360v880H120z" fill="none" stroke="#f0ebe3" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M220 280h1160M220 920h1160M360 160v880M1240 160v880" stroke="#f0ebe3" stroke-opacity=".16" stroke-width="1"/>
+  <text x="800" y="560" fill="#f0ebe3" font-family="Arial, sans-serif" font-size="72" font-weight="700" text-anchor="middle" letter-spacing="8">PHOTO TBC</text>
+  <text x="800" y="642" fill="#f0ebe3" fill-opacity=".82" font-family="Arial, sans-serif" font-size="30" text-anchor="middle" letter-spacing="3">APPROVED CABINETRY IMAGE REQUIRED</text>
+</svg>
