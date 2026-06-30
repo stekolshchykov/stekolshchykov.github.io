@@ -122,7 +122,7 @@
 	<div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
 		{#each sectors as item}
 			<div class="luxury-corners group overflow-hidden border border-text-primary/10 bg-bg-primary">
-				<div class="image-warm-overlay relative aspect-[16/10] overflow-hidden">
+				<div class="luxury-surface image-warm-overlay relative aspect-[16/10] overflow-hidden">
 					<img
 						src={item.image}
 						alt="Photo to be supplied for {item.title}"

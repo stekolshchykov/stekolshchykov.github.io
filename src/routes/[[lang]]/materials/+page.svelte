@@ -44,27 +44,33 @@
 	const internalSolutions = [
 		{
 			title: 'Larders & Workstations',
-			text: 'Tall storage, breakfast spaces and hidden work zones that make daily routines feel composed.'
+			text: 'Tall storage, breakfast spaces and hidden work zones that make daily routines feel composed.',
+			image: '/images/placeholders/needs-photo.svg'
 		},
 		{
 			title: 'Drawers & Inserts',
-			text: 'Cutlery, utensils, pans and small objects held in a way that feels calm each time a drawer opens.'
+			text: 'Cutlery, utensils, pans and small objects held in a way that feels calm each time a drawer opens.',
+			image: '/images/placeholders/needs-photo.svg'
 		},
 		{
 			title: 'Clever Storage',
-			text: 'Corners, pull-outs, tall units and awkward spaces resolved before they become visual noise.'
+			text: 'Corners, pull-outs, tall units and awkward spaces resolved before they become visual noise.',
+			image: '/images/placeholders/needs-photo.svg'
 		},
 		{
 			title: 'Wardrobe Interiors',
-			text: 'Hanging, drawers, shoes, mirrors and lighting considered as part of the room experience.'
+			text: 'Hanging, drawers, shoes, mirrors and lighting considered as part of the room experience.',
+			image: '/images/placeholders/needs-photo.svg'
 		},
 		{
 			title: 'Integrated Lighting',
-			text: 'Soft internal light for shelves, wardrobes and display details where it adds function and atmosphere.'
+			text: 'Soft internal light for shelves, wardrobes and display details where it adds function and atmosphere.',
+			image: '/images/placeholders/needs-photo.svg'
 		},
 		{
 			title: 'Seating & Integrated Details',
-			text: 'Benches, edges, handles, glass and small details that make fitted cabinetry feel effortless.'
+			text: 'Benches, edges, handles, glass and small details that make fitted cabinetry feel effortless.',
+			image: '/images/placeholders/needs-photo.svg'
 		}
 	];
 </script>
@@ -164,9 +170,9 @@
 			<div
 				class="luxury-corners group grid min-h-[260px] overflow-hidden border border-text-primary/10 bg-bg-secondary transition-all duration-500 hover:-translate-y-1 hover:border-accent/45"
 			>
-				<div class="image-warm-overlay relative aspect-[16/8] overflow-hidden bg-bg-primary">
+				<div class="luxury-surface image-warm-overlay relative aspect-[16/8] overflow-hidden bg-bg-primary">
 					<img
-						src="/images/placeholders/needs-photo.svg"
+						src={item.image}
 						alt="Photo to be supplied for {item.title}"
 						loading="lazy"
 						class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
