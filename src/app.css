@@ -95,6 +95,21 @@ body {
 	transform: translateZ(0);
 }
 
+@media (max-width: 767px) {
+	.cookie-banner-fixed.luxury-corners {
+		padding: 0.625rem !important;
+	}
+
+	.cookie-banner-fixed.luxury-corners p {
+		line-height: 1.35 !important;
+	}
+
+	.cookie-banner-fixed.luxury-corners button {
+		padding-top: 0.45rem !important;
+		padding-bottom: 0.45rem !important;
+	}
+}
+
 .luxury-ambient {
 	position: fixed;
 	inset: 0;
@@ -132,6 +147,12 @@ body {
 		left: auto;
 		right: 1.25rem;
 		bottom: max(1.25rem, env(safe-area-inset-bottom));
+		width: min(460px, calc(100vw - 2.5rem));
+	}
+}
+
+@media (min-width: 1024px) {
+	.cookie-banner-fixed.luxury-corners {
 		width: min(560px, calc(100vw - 2.5rem));
 	}
 }

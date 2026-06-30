@@ -56,13 +56,13 @@
 		<span></span><span></span><span></span><span></span>
 	</div>
 
-	<div class="relative z-10 w-full px-6 pb-44 pt-32 md:px-12 md:pb-24 lg:px-16">
+	<div class="relative z-10 w-full px-6 pb-44 pt-32 md:px-12 md:pb-40 lg:px-16 lg:pb-36">
 		<div class="mx-auto max-w-[1440px]">
 			<div class="max-w-4xl text-left">
 				<Heading
 					as="h1"
 					variant="display"
-					class="hero-fade hero-headline mb-6 max-w-[11ch] text-[clamp(4rem,10vw,8.5rem)] text-text-primary"
+					class="hero-fade hero-headline mb-6 max-w-[11.5ch] text-text-primary"
 				>
 					{headline ?? $_('home.hero_headline')}
 				</Heading>
@@ -144,6 +144,8 @@
 
 <style>
 	:global(.hero-headline) {
+		font-size: clamp(3rem, 4.8vw, 4.45rem) !important;
+		line-height: 1.05 !important;
 		text-shadow: 0 2px 46px rgba(0, 0, 0, 0.46);
 	}
 
