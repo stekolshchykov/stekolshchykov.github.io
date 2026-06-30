@@ -134,9 +134,17 @@
 		if (!element) return;
 		const audio = createContext();
 		if (!audio) return;
+		const soundsReady = loadSounds();
 		await audio.resume();
 		unlocked = true;
-		await loadSounds();
+
+		if (buffers.length === 0) {
+			void soundsReady.then(() => {
+				play('click', element);
+			});
+			return;
+		}
+
 		play('click', element);
 	}
 
@@ -145,18 +153,26 @@
 		const element = findInteractive(event.target);
 		if (!element) return;
 		if (event.relatedTarget instanceof Node && element.contains(event.relatedTarget)) return;
+		if (buffers.length === 0) {
+			void loadSounds();
+			return;
+		}
 		play('hover', element);
 	}
 
 	function handleFocusIn(event: FocusEvent) {
 		const element = findInteractive(event.target);
 		if (!element) return;
+		if (!unlocked) return;
+		if (buffers.length === 0) {
+			void loadSounds();
+			return;
+		}
 		play('focus', element);
 	}
 
 	onMount(() => {
 		if (shouldSkipAudio()) return;
-		void loadSounds();
 
 		document.addEventListener('pointerdown', unlockAndPlay, { capture: true });
 		document.addEventListener('keydown', unlockAndPlay, { capture: true });

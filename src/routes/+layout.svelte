@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../app.css';
+	import { onMount } from 'svelte';
 	import { addMessages, init } from 'svelte-i18n';
 	import en from '$lib/i18n/locales/en.json';
 	import { browser } from '$app/environment';
@@ -28,6 +29,29 @@
 	let { children } = $props();
 
 	let modalOpen = $state(false);
+	let enhancementsReady = $state(false);
+
+	onMount(() => {
+		type IdleCallback = (deadline: { didTimeout: boolean; timeRemaining: () => number }) => void;
+		const idleWindow = window as Window & {
+			requestIdleCallback?: (callback: IdleCallback, options?: { timeout?: number }) => number;
+			cancelIdleCallback?: (handle: number) => void;
+		};
+
+		if (idleWindow.requestIdleCallback) {
+			const idleHandle = idleWindow.requestIdleCallback(() => {
+				enhancementsReady = true;
+			}, { timeout: 900 });
+
+			return () => idleWindow.cancelIdleCallback?.(idleHandle);
+		}
+
+		const timeoutHandle = window.setTimeout(() => {
+			enhancementsReady = true;
+		}, 450);
+
+		return () => window.clearTimeout(timeoutHandle);
+	});
 </script>
 
 <div
@@ -37,8 +61,10 @@
 	<PageTransition />
 	<NoiseOverlay />
 	<ScrollProgress />
-	<LuxuryCursor />
-	<WoodSoundLayer />
+	{#if enhancementsReady}
+		<LuxuryCursor />
+		<WoodSoundLayer />
+	{/if}
 	<div class="luxury-ambient" aria-hidden="true">
 		<span></span>
 		<span></span>
