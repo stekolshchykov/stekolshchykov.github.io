@@ -1,91 +1,67 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { browser } from '$app/environment';
-	import Logo from '$lib/components/atoms/Logo.svelte';
 
-	let visible = $state(false);
-	let hiding = $state(false);
+	const STORAGE_KEY = 'aras_living_preloader_seen';
+
+	function delay(ms: number) {
+		return new Promise<void>((resolve) => window.setTimeout(resolve, ms));
+	}
+
+	function nextPaint() {
+		return new Promise<void>((resolve) => {
+			requestAnimationFrame(() => requestAnimationFrame(() => resolve()));
+		});
+	}
+
+	async function waitForHeroImage() {
+		const image = document.querySelector<HTMLImageElement>('.hero-bg-image');
+		if (!image) return;
+		if (image.complete && image.naturalWidth > 0) return;
+
+		await Promise.race([
+			new Promise<void>((resolve) => {
+				image.addEventListener('load', () => resolve(), { once: true });
+				image.addEventListener('error', () => resolve(), { once: true });
+			}),
+			delay(1200)
+		]);
+	}
 
 	onMount(() => {
 		if (!browser) return;
 
-		visible = true;
+		const root = document.documentElement;
+		const preloader = document.getElementById('aras-initial-preloader');
+		if (!preloader || root.classList.contains('aras-preloader-done')) return;
 
 		const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		const alreadySeen = sessionStorage.getItem(STORAGE_KEY) === '1';
+		const minimumDuration = prefersReducedMotion ? 120 : alreadySeen ? 360 : 1150;
+		const startedAt = performance.now();
 
-		const hide = () => {
-			if (prefersReducedMotion) {
-				visible = false;
-				return;
-			}
-			hiding = true;
-			setTimeout(() => {
-				visible = false;
-				hiding = false;
-			}, 650);
+		const finish = async () => {
+			const remaining = Math.max(0, minimumDuration - (performance.now() - startedAt));
+			await delay(remaining);
+			await nextPaint();
+
+			root.classList.add('aras-preloader-exit');
+			sessionStorage.setItem(STORAGE_KEY, '1');
+
+			window.setTimeout(
+				() => {
+					preloader.remove();
+					root.classList.add('aras-preloader-done');
+					root.classList.remove('aras-preloader-exit');
+				},
+				prefersReducedMotion ? 80 : 980
+			);
 		};
 
-		const fallback = setTimeout(hide, 600);
+		const fontsReady = document.fonts?.ready?.catch(() => undefined) ?? Promise.resolve();
 
-		document.fonts.ready.then(() => {
-			clearTimeout(fallback);
-			requestAnimationFrame(hide);
-		});
-
-		return () => {
-			clearTimeout(fallback);
-		};
+		Promise.race([Promise.all([fontsReady, waitForHeroImage()]), delay(2400)])
+			.then(finish)
+			.catch(finish);
 	});
 </script>
-
-{#if visible}
-	<div
-		class="preloader fixed inset-0 z-[100] flex flex-col items-center justify-center bg-bg-primary transition-transform duration-[650ms] ease-[cubic-bezier(0.65,0,0.35,1)]"
-		class:-translate-y-full={hiding}
-		aria-hidden="true"
-	>
-		<div class="preloader-logo mb-6 w-12">
-			<Logo mode="monogram" variant="light" class="block h-auto w-full" />
-		</div>
-		<div class="preloader-line h-px w-32 overflow-hidden bg-accent/20">
-			<div class="preloader-line-inner h-full w-full origin-left bg-accent"></div>
-		</div>
-	</div>
-{/if}
-
-<style>
-	.preloader-logo {
-		opacity: 0;
-		animation: fadeIn 0.6s ease forwards;
-	}
-
-	.preloader-line-inner {
-		transform: scaleX(0);
-		animation: growLine 1s ease-in-out 0.2s forwards;
-	}
-
-	@media (prefers-reduced-motion: reduce) {
-		.preloader-logo,
-		.preloader-line-inner {
-			animation: none;
-		}
-		.preloader-logo {
-			opacity: 1;
-		}
-		.preloader-line-inner {
-			transform: scaleX(1);
-		}
-	}
-
-	@keyframes fadeIn {
-		to {
-			opacity: 1;
-		}
-	}
-
-	@keyframes growLine {
-		to {
-			transform: scaleX(1);
-		}
-	}
-</style>

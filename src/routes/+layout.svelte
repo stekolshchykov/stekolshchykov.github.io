@@ -10,6 +10,7 @@
 	import Footer from '$lib/components/organisms/Footer.svelte';
 	import ContactFormModal from '$lib/components/organisms/ContactFormModal.svelte';
 	import CookieBanner from '$lib/components/molecules/CookieBanner.svelte';
+	import Preloader from '$lib/components/atoms/Preloader.svelte';
 	import PageTransition from '$lib/components/atoms/PageTransition.svelte';
 	import NoiseOverlay from '$lib/components/atoms/NoiseOverlay.svelte';
 	import ScrollProgress from '$lib/components/atoms/ScrollProgress.svelte';
@@ -32,6 +33,7 @@
 <div
 	class="relative min-h-screen overflow-x-hidden bg-bg-primary text-text-primary antialiased selection:bg-accent/30 selection:text-text-primary"
 >
+	<Preloader />
 	<PageTransition />
 	<NoiseOverlay />
 	<ScrollProgress />
